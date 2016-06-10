@@ -13,7 +13,7 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKZ-Q4-bbj">
                     <rect key="frame" x="0.0" y="2" width="134" height="30"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="2IT-li-y9U"/>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="gGv-PQ-dr0"/>
@@ -25,18 +25,18 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k53-GP-d6r">
                     <rect key="frame" x="147" y="2" width="134" height="30"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="9MH-ij-1fl"/>
                     </constraints>
-                    <state key="normal" title="Markating Ranking"/>
+                    <state key="normal" title="Market Ranking"/>
                     <connections>
                         <action selector="clickedMarketRankingButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="yzF-pf-AhN"/>
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ric-qS-6Yc">
                     <rect key="frame" x="139" y="2" width="3" height="30"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="3" id="oK5-SR-sh9"/>
                     </constraints>

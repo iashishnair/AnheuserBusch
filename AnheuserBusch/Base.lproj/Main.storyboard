@@ -77,14 +77,14 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eo8-3H-Qzs">
-                                <rect key="frame" x="16" y="46" width="335" height="67"/>
+                                <rect key="frame" x="16" y="46" width="335" height="52"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="PK4-lS-u6V"/>
+                                    <constraint firstAttribute="height" constant="52" id="PK4-lS-u6V"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AuM-79-arb">
-                                <rect key="frame" x="286" y="122" width="112" height="42"/>
+                                <rect key="frame" x="286" y="107" width="112" height="42"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="H5c-7N-bJO"/>
@@ -92,14 +92,14 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvl-Zk-yPh">
-                                <rect key="frame" x="16" y="172" width="382" height="150"/>
+                                <rect key="frame" x="16" y="157" width="382" height="150"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="nqz-Pe-0RO"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bge-M1-J1A">
-                                <rect key="frame" x="16" y="326" width="382" height="410"/>
+                                <rect key="frame" x="16" y="311" width="382" height="425"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>

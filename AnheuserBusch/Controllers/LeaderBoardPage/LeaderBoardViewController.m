@@ -59,28 +59,38 @@ RankingSwitchViewDataSource>
     }
 }
 
-#pragma mark -  RankingSwitchViewDataSource
+#pragma mark - RankingSwitchView
+
+#pragma mark - RankingSwitchViewDataSource
 
 - (nonnull UIColor *)textColor {
     
     return [UIColor blackColor];
 }
+
 - (nonnull UIColor *)colorInHighlightState {
     
     return [UIColor blackColor];
-
 }
-
 
 - (nonnull UIColor *)textColorInNormalState {
     
     return [UIColor blueColor];
-
 }
+
 - (nonnull UIColor *)textColorInHighlightState {
     
     return [UIColor blackColor];
+}
 
+#pragma mark  RankingSwitchViewDataSource
+
+- (void)clickedLocalRakingButton:(nonnull UIButton *)sender {
+    
+}
+
+- (void)clickedMarketRankingButton:(nonnull UIButton *)sender {
+    
 }
 
 @end

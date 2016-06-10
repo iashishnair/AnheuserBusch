@@ -28,9 +28,7 @@
     if(self == [super initWithCoder:aDecoder]) {
         
         self.selectedIndex = RankingStateLocal;
-        
     }
-    
     
     return self;
 }
@@ -44,15 +42,11 @@
     if(_datasource) {
         
         self.selectedIndex = RankingStateLocal;
-
-        
-        
     }
 }
 
 
 #pragma mark - Private Method
-
 
 // Setter Method
 
@@ -95,7 +89,6 @@
     
     
     UIColor *textColorInHighlightState =  [UIColor blackColor];
-    
     UIColor *textColorInNormalState =  [UIColor blackColor];
     
     if(_datasource && [_datasource respondsToSelector:@selector(textColorInNormalState)]) {
@@ -136,7 +129,6 @@
         
         [self.delegate clickedLocalRakingButton:sender];
     }
-    
 }
 
 
@@ -151,7 +143,6 @@
         
         [self.delegate clickedMarketRankingButton:sender];
     }
-    
 }
 
 @end
