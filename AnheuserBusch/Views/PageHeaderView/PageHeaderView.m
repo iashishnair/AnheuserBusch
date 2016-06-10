@@ -21,6 +21,7 @@
 @implementation PageHeaderView
 
 #pragma mark - Public Method
+
 -(void)setPageTitle:(nullable NSString *)pageTitle
 {
     
@@ -35,14 +36,14 @@
 
 - (IBAction)clickedMenuButton:(id)sender {
     
-    if(_delegate && [_delegate respondsToSelector:@selector(clickedMenuButton:)]){
+    if(_delegate && [_delegate respondsToSelector:@selector(clickedMenuButton:)]) {
         
         [_delegate clickedMenuButton:sender];
     }
 }
 - (IBAction)clickedNotificationButton:(id)sender {
     
-    if(_delegate && [_delegate respondsToSelector:@selector(clickedNotificationButton:)]){
+    if(_delegate && [_delegate respondsToSelector:@selector(clickedNotificationButton:)]) {
         
         [_delegate clickedNotificationButton:sender];
     }

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PageBaseViewController.h"
 
-@interface LeaderBoardViewController : UIViewController
+@interface LeaderBoardViewController : PageBaseViewController
 
 @end

@@ -30,3 +30,10 @@
 - (void)fitToParentView:(nullable UIView * ) toItem;
 
 @end
+
+
+@interface UIViewController (CurrentPageIndex)
+
+@property (nonatomic, assign) NSUInteger pageIndex;
+
+@end

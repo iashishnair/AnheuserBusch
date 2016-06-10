@@ -13,6 +13,6 @@
 
 -(void)setPageTitle:(nullable NSString *)pageTitle;
 
-@property (weak, nonatomic,nullable) id <PageHeaderViewDelegate> delegate;
+@property (weak, nonatomic, nullable) id <PageHeaderViewDelegate> delegate;
 
 @end

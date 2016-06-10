@@ -12,6 +12,13 @@
 
 @implementation NSObject (HelperUtil)
 
+/*!
+ *  Perform event in main thread after delay
+ *
+ *  @param delayInterval Delay Interval
+ *  @param completion    Completion block
+ */
+
 + (void)performInMainThreadAfterDelay:(NSTimeInterval)delayInterval
                           completion:(void(^)(void))completion {
     
@@ -57,4 +64,36 @@
     [toItem addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[selfView]|" options:0 metrics:nil views:@{@"selfView": self}]];
 
 }
+
+@end
+
+#import <objc/runtime.h>
+
+@implementation UIViewController (CurrentPageIndex)
+
+- (NSUInteger)pageIndex {
+	
+	id pageIndexObject = objc_getAssociatedObject(self, @selector(pageIndex));
+	
+	return [pageIndexObject integerValue];
+}
+
+- (void)setPageIndex:(NSUInteger)pageIndex {
+	
+	objc_setAssociatedObject(self, @selector(pageIndex), @(pageIndex), OBJC_ASSOCIATION_ASSIGN);
+}
+
+-(NSString*)pageTitle {
+	
+	id pageTitleObject = objc_getAssociatedObject(self, @selector(pageTitle));
+	
+	return pageTitleObject;
+	
+}
+
+- (void)setPageTitle:(NSString*)pageTitle {
+	
+	objc_setAssociatedObject(self, @selector(pageTitle), pageTitle,  OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
 @end

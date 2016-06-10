@@ -7,14 +7,12 @@
 //
 
 #import "LeaderBoardViewController.h"
-#import "Constants.h"
-
 #import "RankingSwitchView.h"
 
 @interface LeaderBoardViewController () <RankingSwitchViewDelegate,
 RankingSwitchViewDataSource>
-@property (weak, nonatomic) IBOutlet UILabel *weekelyLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *weekelyLabel;
 @property (weak, nonatomic) IBOutlet UIButton *calenderButton;
 @property (weak, nonatomic) IBOutlet UIView *rakingSwitchContainerView;
 @property (weak, nonatomic) IBOutlet UIView *salesTargetDropDownContainerView;
@@ -32,7 +30,7 @@ RankingSwitchViewDataSource>
     
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor purpleColor];
+    self.view.backgroundColor = [UIColor defaultPageBGColor];
 
     [self configureUI];
 }
@@ -50,12 +48,13 @@ RankingSwitchViewDataSource>
     RankingSwitchView *rankingSwitchView = [RankingSwitchView loadViewFromNIB];
    
     if(rankingSwitchView) {
+		
         rankingSwitchView.delegate = self;
-        rankingSwitchView.datasource =self;
+        rankingSwitchView.datasource = self;
         rankingSwitchView.translatesAutoresizingMaskIntoConstraints = NO;
-        [ self.rakingSwitchContainerView addSubview:rankingSwitchView ];
-
+        [self.rakingSwitchContainerView addSubview:rankingSwitchView];
         [rankingSwitchView fitToParentView:self.rakingSwitchContainerView];
+		
     }
 }
 

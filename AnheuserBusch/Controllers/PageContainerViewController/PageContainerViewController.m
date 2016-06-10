@@ -6,29 +6,27 @@
 //  Copyright © 2016 Cognizant. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "PageContainerViewController.h"
 #import "PageHeaderView.h"
 #import "Constants.h"
 #import "VKSideMenu.h"
 
-#import "UIViewController+CurrentPageIndex.h"
 #import "LoginViewController.h"
 #import "LeaderBoardViewController.h"
 #import "DashBoardViewController.h"
-#import "ContainerPageViewController.h"
 
-@interface BaseViewController () <PageHeaderViewDelegate, VKSideMenuDelegate,  VKSideMenuDataSource >
+@interface PageContainerViewController () <PageHeaderViewDelegate, VKSideMenuDelegate,  VKSideMenuDataSource >
 
 @property (strong, nonatomic) PageHeaderView *headerView;
 @property (strong, nonatomic) VKSideMenu *menuLeft;
-@property (strong, nonatomic) ContainerPageViewController *pageViewController;
+@property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (strong, nonatomic) NSMutableArray *activeViewControllers;
 @property (assign, nonatomic) NSUInteger currentPageIndex;
 @property (strong, nonatomic) NSArray *menuDataSource;
 
 @end
 
-@implementation BaseViewController
+@implementation PageContainerViewController
 
 
 
@@ -161,7 +159,7 @@
     
     if(!_pageViewController) {
                 
-        _pageViewController = [[ContainerPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
+        _pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
                                                                   navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
         [_pageViewController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     }

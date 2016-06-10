@@ -1,5 +1,5 @@
 //
-//  UIViewController+CurrentPageIndex.h
+//  BaseViewController.h
 //  AnheuserBusch
 //
 //  Created by Prsenjit Goswami on 10/06/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (CurrentPageIndex)
-
-@property (nonatomic, assign) NSUInteger pageIndex;
+@interface PageContainerViewController : UIViewController
 
 @end

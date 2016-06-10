@@ -114,12 +114,11 @@
 }
 
 
-
 #pragma mark - IB Action
 
 - (IBAction)clickedLocalRakingVIew:(id)sender {
-    
-    
+	
+	
     if(self.selectedIndex == RankingStateLocal) return;
     
     self.selectedIndex = RankingStateLocal;

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "NSObject+HelperUtil.h"
-
+#import "UIView+Common.h"
 /*!
  Enum for RankingState
  */
