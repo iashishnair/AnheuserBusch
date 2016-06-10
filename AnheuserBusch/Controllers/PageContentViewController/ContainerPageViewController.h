@@ -1,5 +1,5 @@
 //
-//  DashBoardViewController.h
+//  ContainerPageViewController.h
 //  AnheuserBusch
 //
 //  Created by Prsenjit Goswami on 10/06/16.
@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
 
-@interface DashBoardViewController : UIViewController
+@interface ContainerPageViewController : UIPageViewController
 
 @end

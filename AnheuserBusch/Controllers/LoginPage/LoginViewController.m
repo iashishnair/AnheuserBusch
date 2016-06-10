@@ -10,4 +10,13 @@
 
 @implementation LoginViewController
 
+#pragma mark - Viewcontroller Life Cycle
+
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor redColor];
+}
+
 @end

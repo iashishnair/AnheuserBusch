@@ -22,6 +22,14 @@
 		8468C9401D0AACFC00B30DCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468C93F1D0AACFC00B30DCF /* CoreGraphics.framework */; };
 		8468C9421D0AAD0300B30DCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468C9411D0AAD0300B30DCF /* Foundation.framework */; };
 		8468C9481D0AB12B00B30DCF /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9471D0AB12B00B30DCF /* BaseViewController.m */; };
+		8468C9561D0ABF7D00B30DCF /* PageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9541D0ABF7D00B30DCF /* PageHeaderView.m */; };
+		8468C9571D0ABF7D00B30DCF /* PageHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8468C9551D0ABF7D00B30DCF /* PageHeaderView.xib */; };
+		8468C95C1D0ADFCE00B30DCF /* VKSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C95B1D0ADFCE00B30DCF /* VKSideMenu.m */; };
+		8468C9621D0AE94700B30DCF /* UIViewController+CurrentPageIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9611D0AE94700B30DCF /* UIViewController+CurrentPageIndex.m */; };
+		8468C9661D0AF5CB00B30DCF /* ContainerPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9651D0AF5CB00B30DCF /* ContainerPageViewController.m */; };
+		8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9681D0AF78300B30DCF /* NSObject+HelperUtil.m */; };
+		8468C96D1D0B016000B30DCF /* RankingSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C96C1D0B016000B30DCF /* RankingSwitchView.m */; };
+		8468C96F1D0B016E00B30DCF /* RankingSwitchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8468C96E1D0B016E00B30DCF /* RankingSwitchView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +77,22 @@
 		8468C9441D0AB00800B30DCF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8468C9461D0AB12B00B30DCF /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		8468C9471D0AB12B00B30DCF /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		8468C9531D0ABF7D00B30DCF /* PageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageHeaderView.h; sourceTree = "<group>"; };
+		8468C9541D0ABF7D00B30DCF /* PageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageHeaderView.m; sourceTree = "<group>"; };
+		8468C9551D0ABF7D00B30DCF /* PageHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageHeaderView.xib; sourceTree = "<group>"; };
+		8468C9581D0AD91B00B30DCF /* PageHeaderViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageHeaderViewDelegate.h; sourceTree = "<group>"; };
+		8468C95A1D0ADFCE00B30DCF /* VKSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKSideMenu.h; sourceTree = "<group>"; };
+		8468C95B1D0ADFCE00B30DCF /* VKSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKSideMenu.m; sourceTree = "<group>"; };
+		8468C9601D0AE94700B30DCF /* UIViewController+CurrentPageIndex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CurrentPageIndex.h"; sourceTree = "<group>"; };
+		8468C9611D0AE94700B30DCF /* UIViewController+CurrentPageIndex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CurrentPageIndex.m"; sourceTree = "<group>"; };
+		8468C9641D0AF5CB00B30DCF /* ContainerPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerPageViewController.h; sourceTree = "<group>"; };
+		8468C9651D0AF5CB00B30DCF /* ContainerPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerPageViewController.m; sourceTree = "<group>"; };
+		8468C9671D0AF78300B30DCF /* NSObject+HelperUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HelperUtil.h"; sourceTree = "<group>"; };
+		8468C9681D0AF78300B30DCF /* NSObject+HelperUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HelperUtil.m"; sourceTree = "<group>"; };
+		8468C96B1D0B016000B30DCF /* RankingSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingSwitchView.h; sourceTree = "<group>"; };
+		8468C96C1D0B016000B30DCF /* RankingSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingSwitchView.m; sourceTree = "<group>"; };
+		8468C96E1D0B016E00B30DCF /* RankingSwitchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankingSwitchView.xib; sourceTree = "<group>"; };
+		8468C9701D0B115200B30DCF /* RankingSwitchViewProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingSwitchViewProtocols.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +200,7 @@
 		8468C9181D0AA82E00B30DCF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8468C9631D0AF5B200B30DCF /* PageContentViewController */,
 				8468C9451D0AB11E00B30DCF /* BaseViewController */,
 				8468C9191D0AA82E00B30DCF /* DashBoardPage */,
 				8468C91A1D0AA82E00B30DCF /* LeaderBoardPage */,
@@ -239,6 +264,10 @@
 		8468C9201D0AA82E00B30DCF /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				8468C9601D0AE94700B30DCF /* UIViewController+CurrentPageIndex.h */,
+				8468C9611D0AE94700B30DCF /* UIViewController+CurrentPageIndex.m */,
+				8468C9671D0AF78300B30DCF /* NSObject+HelperUtil.h */,
+				8468C9681D0AF78300B30DCF /* NSObject+HelperUtil.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -253,6 +282,9 @@
 		8468C9221D0AA82E00B30DCF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8468C96A1D0B013E00B30DCF /* RankingSwitchView */,
+				8468C9591D0ADFCE00B30DCF /* SlideMenuView */,
+				8468C9521D0ABF5500B30DCF /* PageHeaderView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -314,6 +346,46 @@
 				8468C9471D0AB12B00B30DCF /* BaseViewController.m */,
 			);
 			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		8468C9521D0ABF5500B30DCF /* PageHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				8468C9581D0AD91B00B30DCF /* PageHeaderViewDelegate.h */,
+				8468C9531D0ABF7D00B30DCF /* PageHeaderView.h */,
+				8468C9541D0ABF7D00B30DCF /* PageHeaderView.m */,
+				8468C9551D0ABF7D00B30DCF /* PageHeaderView.xib */,
+			);
+			path = PageHeaderView;
+			sourceTree = "<group>";
+		};
+		8468C9591D0ADFCE00B30DCF /* SlideMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				8468C95A1D0ADFCE00B30DCF /* VKSideMenu.h */,
+				8468C95B1D0ADFCE00B30DCF /* VKSideMenu.m */,
+			);
+			path = SlideMenuView;
+			sourceTree = "<group>";
+		};
+		8468C9631D0AF5B200B30DCF /* PageContentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8468C9641D0AF5CB00B30DCF /* ContainerPageViewController.h */,
+				8468C9651D0AF5CB00B30DCF /* ContainerPageViewController.m */,
+			);
+			path = PageContentViewController;
+			sourceTree = "<group>";
+		};
+		8468C96A1D0B013E00B30DCF /* RankingSwitchView */ = {
+			isa = PBXGroup;
+			children = (
+				8468C9701D0B115200B30DCF /* RankingSwitchViewProtocols.h */,
+				8468C96B1D0B016000B30DCF /* RankingSwitchView.h */,
+				8468C96C1D0B016000B30DCF /* RankingSwitchView.m */,
+				8468C96E1D0B016E00B30DCF /* RankingSwitchView.xib */,
+			);
+			path = RankingSwitchView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +491,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8468C9571D0ABF7D00B30DCF /* PageHeaderView.xib in Resources */,
+				8468C96F1D0B016E00B30DCF /* RankingSwitchView.xib in Resources */,
 				8468C8E61D0AA58B00B30DCF /* LaunchScreen.storyboard in Resources */,
 				8468C9301D0AA9A300B30DCF /* Assets.xcassets in Resources */,
 				8468C8DE1D0AA58B00B30DCF /* Main.storyboard in Resources */,
@@ -447,10 +521,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8468C8D51D0AA58B00B30DCF /* main.m in Sources */,
+				8468C9621D0AE94700B30DCF /* UIViewController+CurrentPageIndex.m in Sources */,
+				8468C95C1D0ADFCE00B30DCF /* VKSideMenu.m in Sources */,
 				8468C92C1D0AA8D900B30DCF /* LoginViewController.m in Sources */,
 				8468C9231D0AA82E00B30DCF /* AppDelegate.m in Sources */,
+				8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */,
 				8468C9261D0AA8B900B30DCF /* DashBoardViewController.m in Sources */,
+				8468C96D1D0B016000B30DCF /* RankingSwitchView.m in Sources */,
+				8468C9561D0ABF7D00B30DCF /* PageHeaderView.m in Sources */,
 				8468C9371D0AAA6F00B30DCF /* AnheuserBusch.xcdatamodeld in Sources */,
+				8468C9661D0AF5CB00B30DCF /* ContainerPageViewController.m in Sources */,
 				8468C9481D0AB12B00B30DCF /* BaseViewController.m in Sources */,
 				8468C9291D0AA8CA00B30DCF /* LeaderBoardViewController.m in Sources */,
 			);
@@ -678,6 +758,7 @@
 				8468C9021D0AA58B00B30DCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8468C9031D0AA58B00B30DCF /* Build configuration list for PBXNativeTarget "AnheuserBuschTests" */ = {
 			isa = XCConfigurationList;
@@ -686,6 +767,7 @@
 				8468C9051D0AA58B00B30DCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8468C9061D0AA58B00B30DCF /* Build configuration list for PBXNativeTarget "AnheuserBuschUITests" */ = {
 			isa = XCConfigurationList;
@@ -694,6 +776,7 @@
 				8468C9081D0AA58B00B30DCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

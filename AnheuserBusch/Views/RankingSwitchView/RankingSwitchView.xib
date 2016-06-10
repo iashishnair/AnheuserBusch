@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RankingSwitchView">
+            <rect key="frame" x="0.0" y="0.0" width="281" height="52"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKZ-Q4-bbj">
+                    <rect key="frame" x="0.0" y="2" width="134" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="2IT-li-y9U"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="gGv-PQ-dr0"/>
+                    </constraints>
+                    <state key="normal" title="Local Ranking "/>
+                    <connections>
+                        <action selector="clickedLocalRakingVIew:" destination="iN0-l3-epB" eventType="touchUpInside" id="Z2k-wl-mxE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k53-GP-d6r">
+                    <rect key="frame" x="147" y="2" width="134" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="9MH-ij-1fl"/>
+                    </constraints>
+                    <state key="normal" title="Market Ranking"/>
+                    <connections>
+                        <action selector="clickedMarketRankingButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="yzF-pf-AhN"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ric-qS-6Yc">
+                    <rect key="frame" x="139" y="2" width="3" height="30"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="3" id="oK5-SR-sh9"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YyQ-R1-sWU">
+                    <rect key="frame" x="0.0" y="37" width="134" height="5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="5" id="K9C-rD-QWk"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iYq-xr-thX">
+                    <rect key="frame" x="147" y="37" width="134" height="5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="5" id="pNO-Jb-zNc"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="YyQ-R1-sWU" firstAttribute="centerX" secondItem="WKZ-Q4-bbj" secondAttribute="centerX" id="5qk-BN-bNS"/>
+                <constraint firstAttribute="trailing" secondItem="k53-GP-d6r" secondAttribute="trailing" constant="20" id="6BM-Pn-vmY"/>
+                <constraint firstItem="WKZ-Q4-bbj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="A04-Rr-iwu"/>
+                <constraint firstItem="iYq-xr-thX" firstAttribute="top" secondItem="k53-GP-d6r" secondAttribute="bottom" constant="5" id="CVR-dq-tiN"/>
+                <constraint firstItem="Ric-qS-6Yc" firstAttribute="centerY" secondItem="k53-GP-d6r" secondAttribute="centerY" id="Et6-Sa-dt4"/>
+                <constraint firstItem="WKZ-Q4-bbj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="I3e-HH-wjb"/>
+                <constraint firstItem="k53-GP-d6r" firstAttribute="leading" secondItem="Ric-qS-6Yc" secondAttribute="trailing" constant="5" id="Nvf-Md-sI1"/>
+                <constraint firstItem="k53-GP-d6r" firstAttribute="leading" secondItem="Ric-qS-6Yc" secondAttribute="trailing" constant="14" id="OvP-rC-brU"/>
+                <constraint firstItem="YyQ-R1-sWU" firstAttribute="top" secondItem="WKZ-Q4-bbj" secondAttribute="bottom" constant="5" id="TFC-xe-qFf"/>
+                <constraint firstItem="YyQ-R1-sWU" firstAttribute="width" secondItem="WKZ-Q4-bbj" secondAttribute="width" id="Vvp-MU-FW1"/>
+                <constraint firstItem="Ric-qS-6Yc" firstAttribute="height" secondItem="k53-GP-d6r" secondAttribute="height" id="a1Z-RB-rg5"/>
+                <constraint firstItem="Ric-qS-6Yc" firstAttribute="leading" secondItem="WKZ-Q4-bbj" secondAttribute="trailing" constant="8" id="dKK-cS-qvQ"/>
+                <constraint firstItem="WKZ-Q4-bbj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="ghF-39-4lz"/>
+                <constraint firstAttribute="trailing" secondItem="k53-GP-d6r" secondAttribute="trailing" id="imK-fO-gd9"/>
+                <constraint firstItem="WKZ-Q4-bbj" firstAttribute="height" secondItem="Ric-qS-6Yc" secondAttribute="height" id="l70-YE-hhh"/>
+                <constraint firstItem="Ric-qS-6Yc" firstAttribute="leading" secondItem="WKZ-Q4-bbj" secondAttribute="trailing" constant="5" id="o2m-7S-0LZ"/>
+                <constraint firstItem="k53-GP-d6r" firstAttribute="width" secondItem="iYq-xr-thX" secondAttribute="width" id="pG0-Kl-mfP"/>
+                <constraint firstItem="WKZ-Q4-bbj" firstAttribute="centerY" secondItem="Ric-qS-6Yc" secondAttribute="centerY" id="qsW-4L-GaI"/>
+                <constraint firstItem="WKZ-Q4-bbj" firstAttribute="width" secondItem="k53-GP-d6r" secondAttribute="width" id="sqn-7v-v9I"/>
+                <constraint firstItem="WKZ-Q4-bbj" firstAttribute="width" secondItem="k53-GP-d6r" secondAttribute="width" id="t2f-fw-aiS"/>
+                <constraint firstItem="k53-GP-d6r" firstAttribute="centerX" secondItem="iYq-xr-thX" secondAttribute="centerX" id="xwd-T4-Ayo"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="ghF-39-4lz"/>
+                    <exclude reference="t2f-fw-aiS"/>
+                    <exclude reference="dKK-cS-qvQ"/>
+                    <exclude reference="6BM-Pn-vmY"/>
+                    <exclude reference="OvP-rC-brU"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="localRankingButton" destination="WKZ-Q4-bbj" id="ZNM-qt-8Jl"/>
+                <outlet property="localRankingHighlightImageView" destination="YyQ-R1-sWU" id="icT-FV-1Ym"/>
+                <outlet property="marketRakingButton" destination="k53-GP-d6r" id="NrY-mN-RVC"/>
+                <outlet property="marketRankingHighlightImageView" destination="iYq-xr-thX" id="gAa-Lu-5hE"/>
+                <outlet property="separatorView" destination="Ric-qS-6Yc" id="OnM-6m-E62"/>
+            </connections>
+            <point key="canvasLocation" x="260.5" y="31"/>
+        </view>
+    </objects>
+</document>
