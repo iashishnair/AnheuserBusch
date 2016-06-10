@@ -23,10 +23,12 @@
 @implementation RankingSwitchView
 
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)init {
     
-    if(self == [super initWithCoder:aDecoder]) {
-        
+    if(self == [super init]) {
+		
+		self = [RankingSwitchView loadViewFromNIB];
+		
         self.selectedIndex = RankingStateLocal;
     }
     

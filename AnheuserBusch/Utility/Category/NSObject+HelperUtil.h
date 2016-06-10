@@ -21,6 +21,17 @@
 
 
 /*!
+ *   NSString Helper
+ */
+
+@interface NSString (HelperUtil)
+
++ (BOOL)isNULLString:(nullable NSString *)aString;
+
+
+@end
+
+/*!
  *   UIView Helper
  */
 @interface  UIView (HelperUtil)

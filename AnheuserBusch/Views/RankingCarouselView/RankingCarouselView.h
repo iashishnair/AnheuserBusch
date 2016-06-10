@@ -10,4 +10,5 @@
 
 @interface RankingCarouselView : UIView
 
+@property (nonatomic, strong) NSArray *rankingDataSources;
 @end

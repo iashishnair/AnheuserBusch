@@ -32,6 +32,25 @@
 
 @end
 
+
+#pragma mark - NSString Helper
+
+@implementation NSString (HelperUtil)
+
+/*!
+ *  Check null string
+ *
+ *  @param aString Input string
+ *
+ */
++ (BOOL)isNULLString:(nullable NSString *)aString {
+	
+	
+	return (aString && aString.length);
+}
+
+@end
+
 #pragma mark - UIView Helper
 
 @implementation UIView (HelperUtil)
@@ -66,6 +85,8 @@
 }
 
 @end
+
+#pragma mark - UIViewController Helper
 
 #import <objc/runtime.h>
 

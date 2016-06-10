@@ -45,7 +45,7 @@ RankingSwitchViewDataSource>
 
 - (void)initialishedRankingSwitchView {
     
-    RankingSwitchView *rankingSwitchView = [RankingSwitchView loadViewFromNIB];
+    RankingSwitchView *rankingSwitchView = [[RankingSwitchView alloc]init];
    
     if(rankingSwitchView) {
 		
@@ -54,7 +54,6 @@ RankingSwitchViewDataSource>
         rankingSwitchView.translatesAutoresizingMaskIntoConstraints = NO;
         [self.rakingSwitchContainerView addSubview:rankingSwitchView];
         [rankingSwitchView fitToParentView:self.rakingSwitchContainerView];
-		
     }
 }
 
