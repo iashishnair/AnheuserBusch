@@ -17,7 +17,7 @@
 #import "DashBoardViewController.h"
 #import "ContainerPageViewController.h"
 
-@interface BaseViewController () <PageHeaderViewDelegate, VKSideMenuDelegate,  VKSideMenuDataSource, UIPageViewControllerDataSource>
+@interface BaseViewController () <PageHeaderViewDelegate, VKSideMenuDelegate,  VKSideMenuDataSource >
 
 @property (strong, nonatomic) PageHeaderView *headerView;
 @property (strong, nonatomic) VKSideMenu *menuLeft;
@@ -67,7 +67,7 @@
     
     if(!_headerView) {
         
-        _headerView = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([PageHeaderView class]) owner:self options:nil] firstObject];
+        _headerView = [PageHeaderView loadViewFromNIB];
         _headerView.delegate = self;
         _headerView.translatesAutoresizingMaskIntoConstraints = NO;
         
@@ -163,16 +163,7 @@
                 
         _pageViewController = [[ContainerPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
                                                                   navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
-        
-        if(_pageViewController) {
-            
-            _pageViewController.dataSource = self;
-            
-        }
-        
         [_pageViewController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-        _pageViewController.doubleSided = YES;
-        
     }
     
     return _pageViewController;

@@ -7,9 +7,26 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+/*!
+ *   UIView Helper
+ */
 
 @interface NSObject (HelperUtil)
 
 + (void)performInMainThreadAfterDelay:(NSTimeInterval)delayInterval
-                           completion:(void(^)(void))completion;
+                           completion:(void(^ _Nonnull)(void))completion;
+@end
+
+
+/*!
+ *   UIView Helper
+ */
+@interface  UIView (HelperUtil)
+
++ (nullable instancetype)loadViewFromNIB ;
+
+- (void)fitToParentView:(nullable UIView * ) toItem;
+
 @end

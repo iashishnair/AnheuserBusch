@@ -7,10 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-
 #import "NSObject+HelperUtil.h"
 
-// Class name
+/*!
+ Enum for RankingState
+ */
+typedef enum {
+    
+    RankingStateLocal = 0,
+    RankingStateMarket = 1,
+
+} RankingState;
+
+/*!
+ *  Class name
+ */
 
 static NSString * kClassNameLoginViewController = @"LoginViewController";
 static NSString * kClassNameLeaderBoardViewController = @"LeaderBoardViewController";

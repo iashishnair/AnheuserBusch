@@ -28,6 +28,8 @@
 		8468C9621D0AE94700B30DCF /* UIViewController+CurrentPageIndex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9611D0AE94700B30DCF /* UIViewController+CurrentPageIndex.m */; };
 		8468C9661D0AF5CB00B30DCF /* ContainerPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9651D0AF5CB00B30DCF /* ContainerPageViewController.m */; };
 		8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9681D0AF78300B30DCF /* NSObject+HelperUtil.m */; };
+		8468C96D1D0B016000B30DCF /* RankingSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C96C1D0B016000B30DCF /* RankingSwitchView.m */; };
+		8468C96F1D0B016E00B30DCF /* RankingSwitchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8468C96E1D0B016E00B30DCF /* RankingSwitchView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,10 @@
 		8468C9651D0AF5CB00B30DCF /* ContainerPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerPageViewController.m; sourceTree = "<group>"; };
 		8468C9671D0AF78300B30DCF /* NSObject+HelperUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HelperUtil.h"; sourceTree = "<group>"; };
 		8468C9681D0AF78300B30DCF /* NSObject+HelperUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HelperUtil.m"; sourceTree = "<group>"; };
+		8468C96B1D0B016000B30DCF /* RankingSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingSwitchView.h; sourceTree = "<group>"; };
+		8468C96C1D0B016000B30DCF /* RankingSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingSwitchView.m; sourceTree = "<group>"; };
+		8468C96E1D0B016E00B30DCF /* RankingSwitchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankingSwitchView.xib; sourceTree = "<group>"; };
+		8468C9701D0B115200B30DCF /* RankingSwitchViewProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingSwitchViewProtocols.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +282,7 @@
 		8468C9221D0AA82E00B30DCF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8468C96A1D0B013E00B30DCF /* RankingSwitchView */,
 				8468C9591D0ADFCE00B30DCF /* SlideMenuView */,
 				8468C9521D0ABF5500B30DCF /* PageHeaderView */,
 			);
@@ -368,6 +375,17 @@
 				8468C9651D0AF5CB00B30DCF /* ContainerPageViewController.m */,
 			);
 			path = PageContentViewController;
+			sourceTree = "<group>";
+		};
+		8468C96A1D0B013E00B30DCF /* RankingSwitchView */ = {
+			isa = PBXGroup;
+			children = (
+				8468C9701D0B115200B30DCF /* RankingSwitchViewProtocols.h */,
+				8468C96B1D0B016000B30DCF /* RankingSwitchView.h */,
+				8468C96C1D0B016000B30DCF /* RankingSwitchView.m */,
+				8468C96E1D0B016E00B30DCF /* RankingSwitchView.xib */,
+			);
+			path = RankingSwitchView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8468C9571D0ABF7D00B30DCF /* PageHeaderView.xib in Resources */,
+				8468C96F1D0B016E00B30DCF /* RankingSwitchView.xib in Resources */,
 				8468C8E61D0AA58B00B30DCF /* LaunchScreen.storyboard in Resources */,
 				8468C9301D0AA9A300B30DCF /* Assets.xcassets in Resources */,
 				8468C8DE1D0AA58B00B30DCF /* Main.storyboard in Resources */,
@@ -508,6 +527,7 @@
 				8468C9231D0AA82E00B30DCF /* AppDelegate.m in Sources */,
 				8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */,
 				8468C9261D0AA8B900B30DCF /* DashBoardViewController.m in Sources */,
+				8468C96D1D0B016000B30DCF /* RankingSwitchView.m in Sources */,
 				8468C9561D0ABF7D00B30DCF /* PageHeaderView.m in Sources */,
 				8468C9371D0AAA6F00B30DCF /* AnheuserBusch.xcdatamodeld in Sources */,
 				8468C9661D0AF5CB00B30DCF /* ContainerPageViewController.m in Sources */,
