@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "BaseViewController.h"
 
-@interface LeaderBoardViewController : BaseViewController
+@interface LeaderBoardViewController : UIViewController
 
 @end

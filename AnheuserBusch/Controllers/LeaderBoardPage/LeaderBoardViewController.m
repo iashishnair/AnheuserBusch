@@ -11,4 +11,15 @@
 
 @implementation LeaderBoardViewController
 
+
+#pragma mark - Viewcontroller Life Cycle
+
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor purpleColor];
+
+}
+
 @end

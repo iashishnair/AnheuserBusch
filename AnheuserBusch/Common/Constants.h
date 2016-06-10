@@ -7,3 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#import "NSObject+HelperUtil.h"
+
+// Class name
+
+static NSString * kClassNameLoginViewController = @"LoginViewController";
+static NSString * kClassNameLeaderBoardViewController = @"LeaderBoardViewController";
+static NSString * kClassNameDashBoardViewController = @"DashBoardViewController";
+
+//
+static NSString * kPageTitleLoginViewController = @"LoginView";
+static NSString * kPageTitleLeaderBoardViewController = @"LeaderBoard";
+static NSString * kPageTitleDashBoardViewController = @"DashBoard";

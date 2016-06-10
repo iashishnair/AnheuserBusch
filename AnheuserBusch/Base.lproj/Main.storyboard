@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3bc-0Z-olS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,7 @@
         <!--Dash Board View Controller-->
         <scene sceneID="66i-8V-RDI">
             <objects>
-                <viewController id="czL-tg-tk0" customClass="DashBoardViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashBoardViewController" id="czL-tg-tk0" customClass="DashBoardViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P7x-RK-loT"/>
                         <viewControllerLayoutGuide type="bottom" id="sJk-vl-8Fx"/>
@@ -24,17 +24,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJU-hN-v1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-318" y="-297"/>
+            <point key="canvasLocation" x="-574" y="-809"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -45,12 +45,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1168" y="-297"/>
+            <point key="canvasLocation" x="-1290" y="-907"/>
         </scene>
         <!--Leader Board View Controller-->
         <scene sceneID="TwI-Bw-Jxg">
             <objects>
-                <viewController id="UAJ-5W-hv2" customClass="LeaderBoardViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LeaderBoardViewController" id="UAJ-5W-hv2" customClass="LeaderBoardViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bRl-iq-wl4"/>
                         <viewControllerLayoutGuide type="bottom" id="NgS-gS-Sb4"/>
@@ -66,7 +66,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyq-mf-KwC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1174" y="432"/>
+            <point key="canvasLocation" x="-704" y="-14"/>
+        </scene>
+        <!--Base View Controller-->
+        <scene sceneID="bR2-jW-sZY">
+            <objects>
+                <viewController id="3bc-0Z-olS" customClass="BaseViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B5d-b8-PHI"/>
+                        <viewControllerLayoutGuide type="bottom" id="HLK-Qo-FP8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PmP-P7-Ohz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EU3-rv-b52" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1491" y="-220"/>
         </scene>
     </scenes>
 </document>

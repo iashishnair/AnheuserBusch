@@ -10,4 +10,15 @@
 
 @implementation DashBoardViewController
 
+
+#pragma mark - ViewController Life Cycle
+
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor yellowColor];
+
+}
+
 @end
