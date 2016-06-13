@@ -30,9 +30,9 @@ typedef enum {
  */
 typedef enum {
     
-    kPageLogin = 0,
-    kPageDashBoard = 1,
-    kPageLeaderBoard = 2,
+//    kPageLogin = 0,
+    kPageDashBoard = 0,
+    kPageLeaderBoard = 1,
 
     
 } PageIndex;
