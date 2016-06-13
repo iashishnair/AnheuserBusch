@@ -19,7 +19,7 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
-
++ (AppDelegate *)appdelegateShareInstance;
 
 @end
 

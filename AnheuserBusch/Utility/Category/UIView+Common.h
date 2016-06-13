@@ -16,5 +16,6 @@
 @interface UIColor (Common)
 
 + (UIColor *) defaultPageBGColor;
-
++ (UIColor *)defaultTextColor;
++ (UIColor *)defaultSeparatorColor;
 @end

@@ -151,6 +151,8 @@ static Class InstanceClass = nil;
     [SFPasscodeManager sharedManager].preferredPasscodeProvider = preferredPasscodeProvider;
 }
 
+
+
 - (BOOL)launch
 {
     if (_isLaunching) {

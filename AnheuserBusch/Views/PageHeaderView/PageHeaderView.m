@@ -7,7 +7,7 @@
 //
 
 #import "PageHeaderView.h"
-
+#import "Constants.h"
 @interface PageHeaderView ()
 
 @property (weak, nonatomic) IBOutlet UIButton *menuButton;
@@ -28,6 +28,7 @@
     if(_pageTitleLabel) {
         
         _pageTitleLabel.text = pageTitle;
+        _pageTitleLabel.textColor = [UIColor defaultTextColor];
     }
 }
 

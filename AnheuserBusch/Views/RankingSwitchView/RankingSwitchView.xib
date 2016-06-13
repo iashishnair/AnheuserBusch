@@ -12,7 +12,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKZ-Q4-bbj">
-                    <rect key="frame" x="0.0" y="2" width="134" height="30"/>
+                    <rect key="frame" x="0.0" y="2" width="141" height="30"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="2IT-li-y9U"/>
@@ -24,7 +24,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k53-GP-d6r">
-                    <rect key="frame" x="147" y="2" width="134" height="30"/>
+                    <rect key="frame" x="141" y="2" width="140" height="30"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="9MH-ij-1fl"/>
@@ -35,28 +35,28 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ric-qS-6Yc">
-                    <rect key="frame" x="139" y="2" width="3" height="30"/>
+                    <rect key="frame" x="141" y="2" width="0.0" height="30"/>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="3" id="oK5-SR-sh9"/>
+                        <constraint firstAttribute="width" id="oK5-SR-sh9"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YyQ-R1-sWU">
-                    <rect key="frame" x="0.0" y="37" width="134" height="5"/>
+                    <rect key="frame" x="0.0" y="37" width="141" height="2"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="5" id="K9C-rD-QWk"/>
+                        <constraint firstAttribute="height" constant="2" id="K9C-rD-QWk"/>
                     </constraints>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iYq-xr-thX">
-                    <rect key="frame" x="147" y="37" width="134" height="5"/>
+                    <rect key="frame" x="141" y="37" width="140" height="2"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="5" id="pNO-Jb-zNc"/>
+                        <constraint firstAttribute="height" constant="2" id="pNO-Jb-zNc"/>
                     </constraints>
                 </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="YyQ-R1-sWU" firstAttribute="centerX" secondItem="WKZ-Q4-bbj" secondAttribute="centerX" id="5qk-BN-bNS"/>
                 <constraint firstAttribute="trailing" secondItem="k53-GP-d6r" secondAttribute="trailing" constant="20" id="6BM-Pn-vmY"/>
@@ -64,7 +64,7 @@
                 <constraint firstItem="iYq-xr-thX" firstAttribute="top" secondItem="k53-GP-d6r" secondAttribute="bottom" constant="5" id="CVR-dq-tiN"/>
                 <constraint firstItem="Ric-qS-6Yc" firstAttribute="centerY" secondItem="k53-GP-d6r" secondAttribute="centerY" id="Et6-Sa-dt4"/>
                 <constraint firstItem="WKZ-Q4-bbj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="I3e-HH-wjb"/>
-                <constraint firstItem="k53-GP-d6r" firstAttribute="leading" secondItem="Ric-qS-6Yc" secondAttribute="trailing" constant="5" id="Nvf-Md-sI1"/>
+                <constraint firstItem="k53-GP-d6r" firstAttribute="leading" secondItem="Ric-qS-6Yc" secondAttribute="trailing" id="Nvf-Md-sI1"/>
                 <constraint firstItem="k53-GP-d6r" firstAttribute="leading" secondItem="Ric-qS-6Yc" secondAttribute="trailing" constant="14" id="OvP-rC-brU"/>
                 <constraint firstItem="YyQ-R1-sWU" firstAttribute="top" secondItem="WKZ-Q4-bbj" secondAttribute="bottom" constant="5" id="TFC-xe-qFf"/>
                 <constraint firstItem="YyQ-R1-sWU" firstAttribute="width" secondItem="WKZ-Q4-bbj" secondAttribute="width" id="Vvp-MU-FW1"/>
@@ -73,7 +73,7 @@
                 <constraint firstItem="WKZ-Q4-bbj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="ghF-39-4lz"/>
                 <constraint firstAttribute="trailing" secondItem="k53-GP-d6r" secondAttribute="trailing" id="imK-fO-gd9"/>
                 <constraint firstItem="WKZ-Q4-bbj" firstAttribute="height" secondItem="Ric-qS-6Yc" secondAttribute="height" id="l70-YE-hhh"/>
-                <constraint firstItem="Ric-qS-6Yc" firstAttribute="leading" secondItem="WKZ-Q4-bbj" secondAttribute="trailing" constant="5" id="o2m-7S-0LZ"/>
+                <constraint firstItem="Ric-qS-6Yc" firstAttribute="leading" secondItem="WKZ-Q4-bbj" secondAttribute="trailing" id="o2m-7S-0LZ"/>
                 <constraint firstItem="k53-GP-d6r" firstAttribute="width" secondItem="iYq-xr-thX" secondAttribute="width" id="pG0-Kl-mfP"/>
                 <constraint firstItem="WKZ-Q4-bbj" firstAttribute="centerY" secondItem="Ric-qS-6Yc" secondAttribute="centerY" id="qsW-4L-GaI"/>
                 <constraint firstItem="WKZ-Q4-bbj" firstAttribute="width" secondItem="k53-GP-d6r" secondAttribute="width" id="sqn-7v-v9I"/>

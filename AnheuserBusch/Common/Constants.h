@@ -9,6 +9,34 @@
 #import <Foundation/Foundation.h>
 #import "NSObject+HelperUtil.h"
 #import "UIView+Common.h"
+
+
+/*!
+ SOQLCompletion Status
+ */
+typedef enum {
+    
+    kSOQLStatusSucccess = 0,
+    kSOQLStatusFailed = 1,
+    kSOQLStatusCanceled = 2,
+    kSOQLStatusTimedOut = 3,
+    kSOQLStatusInvalidSOQL = 4,
+
+
+} SOQLStatus;
+
+/*!
+ Page If
+ */
+typedef enum {
+    
+    kPageLogin = 0,
+    kPageDashBoard = 1,
+    kPageLeaderBoard = 2,
+
+    
+} PageIndex;
+
 /*!
  Enum for RankingState
  */
@@ -18,6 +46,19 @@ typedef enum {
     RankingStateMarket = 1,
 
 } RankingState;
+
+/*!
+ *  
+ Sales Force
+ */
+
+
+typedef void(^SOQLCompletion) (id result, NSError *error, SOQLStatus status);
+
+static NSString * const RemoteAccessConsumerKey = @"3MVG9ZL0ppGP5UrC1kvAlfnakx7n7NCoT7ZLCt.i2JNvdqGf7Bx9xV7piUSPLQyu_STFlMzYvQNpVFogsKOz2";
+//@"3MVG9ZL0ppGP5UrBx59G805iIrQO.SNCi0UIe.UArEAE1Uf2WqNpXL9MADhanGQASNsczG8n_lgLs1oru52HG";
+//static NSString * const OAuthRedirectURI        = @"sfdc://success";
+static NSString * const OAuthRedirectURI        = @"sfdc://success";
 
 /*!
  *  Class name

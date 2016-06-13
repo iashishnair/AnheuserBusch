@@ -21,6 +21,7 @@ RankingSwitchViewDataSource>
 @property (weak, nonatomic) IBOutlet UIView *carouselContainerView;
 @property (weak, nonatomic) IBOutlet UIView *leaderBoardListTableview;
 @property (strong, nonatomic) id <LeaderBoardViewProtocol> presenter;
+@property (weak, nonatomic) IBOutlet UIButton *SalesTargetButton;
 
 @end
 
@@ -56,6 +57,8 @@ RankingSwitchViewDataSource>
 // UI
 - (void)configureUI {
     
+    self.weekelyLabel.textColor = [UIColor defaultTextColor];
+  
     [self initialishedRankingSwitchView];
     
     [self initialishedRankingCarousalView];
@@ -91,22 +94,22 @@ RankingSwitchViewDataSource>
 
 - (nonnull UIColor *)textColor {
     
-    return [UIColor blackColor];
+    return [UIColor defaultTextColor];
 }
 
 - (nonnull UIColor *)colorInHighlightState {
     
-    return [UIColor blackColor];
+    return [UIColor defaultTextColor];
 }
 
 - (nonnull UIColor *)textColorInNormalState {
     
-    return [UIColor blueColor];
+    return [UIColor defaultTextColor];
 }
 
 - (nonnull UIColor *)textColorInHighlightState {
     
-    return [UIColor blackColor];
+    return [UIColor defaultTextColor];
 }
 
 #pragma mark  RankingSwitchViewDataSource

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Constants.h"
+
 
 @interface AppDelegate ()
 
@@ -16,8 +18,21 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
     
+    
+    // Override point for customization after application launch.
+//    [self initializeAppViewState];
+    
+    //If you wish to customize the color, textcolor, font and fontsize of the navigation bar uncomment the
+    //code below.
+    //
+    //SFLoginViewController *loginViewController = [SFLoginViewController sharedInstance];
+    // Set primary color to different color to style the navigation header
+    //loginViewController.navBarColor = [UIColor colorWithRed:0.051 green:0.765 blue:0.733 alpha:1.0];
+    //loginViewController.navBarFont = [UIFont fontWithName:@"Helvetica" size:16.0];
+    //loginViewController.navBarTextColor = [UIColor blackColor];
+    //
+//    [[SalesforceSDKManager sharedManager] launch];
     return YES;
 }
 
@@ -125,4 +140,11 @@
     }
 }
 
+#pragma mark - Public Method 
+
++ (AppDelegate *)appdelegateShareInstance {
+    
+    return [UIApplication sharedApplication].delegate;
+    
+}
 @end

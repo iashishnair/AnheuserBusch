@@ -77,10 +77,10 @@
         colorInHighlightState =  [_datasource colorInHighlightState];
     }
     
-    self.localRankingHighlightImageView.backgroundColor = (self.selectedIndex == RankingStateLocal) ? colorInHighlightState : [UIColor clearColor];
+    self.localRankingHighlightImageView.backgroundColor = (self.selectedIndex == RankingStateLocal) ? colorInHighlightState : [UIColor whiteColor];
     
     
-    self.marketRankingHighlightImageView.backgroundColor = (self.selectedIndex == RankingStateMarket) ? colorInHighlightState : [UIColor clearColor];
+    self.marketRankingHighlightImageView.backgroundColor = (self.selectedIndex == RankingStateMarket) ? colorInHighlightState : [UIColor whiteColor];
 }
 
 
