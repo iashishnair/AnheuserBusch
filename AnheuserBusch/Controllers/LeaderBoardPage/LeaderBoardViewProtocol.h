@@ -10,6 +10,6 @@
 
 @protocol LeaderBoardViewProtocol <NSObject>
 
+- (void) getUserDataDetails:(void(^)(NSArray * results))completion;
 - (nullable NSArray *) getLeaderboardDataSource;
-
 @end

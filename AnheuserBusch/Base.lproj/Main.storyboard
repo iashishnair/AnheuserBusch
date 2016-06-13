@@ -88,8 +88,8 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekely" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSY-Y8-Xid">
-                                <rect key="frame" x="16" y="55" width="65" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSY-Y8-Xid">
+                                <rect key="frame" x="16" y="55" width="56" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -134,10 +134,6 @@
                                     <constraint firstItem="B3T-37-vrK" firstAttribute="leading" secondItem="AuM-79-arb" secondAttribute="leading" id="xAu-YB-EEc"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bge-M1-J1A">
-                                <rect key="frame" x="16" y="328" width="382" height="408"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eo8-3H-Qzs">
                                 <rect key="frame" x="16" y="87" width="388" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -152,6 +148,10 @@
                                     <constraint firstAttribute="height" constant="150" id="nqz-Pe-0RO"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bge-M1-J1A">
+                                <rect key="frame" x="16" y="328" width="382" height="378"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -160,7 +160,7 @@
                             <constraint firstItem="CZw-af-nZF" firstAttribute="trailing" secondItem="AuM-79-arb" secondAttribute="trailing" id="6f1-tu-g9P"/>
                             <constraint firstItem="nvl-Zk-yPh" firstAttribute="leading" secondItem="DP5-tR-ZyQ" secondAttribute="leadingMargin" id="7gc-xW-kdB"/>
                             <constraint firstItem="Eo8-3H-Qzs" firstAttribute="top" secondItem="CZw-af-nZF" secondAttribute="bottom" constant="2" id="CpG-Nr-Map"/>
-                            <constraint firstItem="NgS-gS-Sb4" firstAttribute="top" secondItem="Bge-M1-J1A" secondAttribute="bottom" id="DTB-or-gSy"/>
+                            <constraint firstItem="NgS-gS-Sb4" firstAttribute="top" secondItem="Bge-M1-J1A" secondAttribute="bottom" constant="30" id="DTB-or-gSy"/>
                             <constraint firstItem="Bge-M1-J1A" firstAttribute="top" secondItem="nvl-Zk-yPh" secondAttribute="bottom" constant="4" id="EVZ-rj-gF6"/>
                             <constraint firstItem="zwp-v1-2Qb" firstAttribute="top" secondItem="DP5-tR-ZyQ" secondAttribute="topMargin" id="J1b-WE-HoX"/>
                             <constraint firstItem="nvl-Zk-yPh" firstAttribute="top" secondItem="AuM-79-arb" secondAttribute="bottom" constant="10" id="R9U-1x-HdA"/>

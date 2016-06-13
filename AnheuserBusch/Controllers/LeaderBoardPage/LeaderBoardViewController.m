@@ -10,6 +10,7 @@
 #import "RankingSwitchView.h"
 #import "RankingCarouselView.h"
 #import "LeaderBoardViewControllerPresenter.h"
+#import "LeaderBoardListView.h"
 
 @interface LeaderBoardViewController () <RankingSwitchViewDelegate,
 RankingSwitchViewDataSource>
@@ -22,6 +23,8 @@ RankingSwitchViewDataSource>
 @property (weak, nonatomic) IBOutlet UIView *leaderBoardListTableview;
 @property (strong, nonatomic) id <LeaderBoardViewProtocol> presenter;
 @property (weak, nonatomic) IBOutlet UIButton *SalesTargetButton;
+@property (strong, nonatomic) NSMutableArray *firstThreeDataSource;
+@property (strong, nonatomic) NSMutableArray *restListDataSource ;
 
 @end
 
@@ -33,13 +36,50 @@ RankingSwitchViewDataSource>
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
+    [self createDataSource];
     self.view.backgroundColor = [UIColor defaultPageBGColor];
-
     [self configureUI];
+    
+    
 }
 
-#pragma mark - Private Method 
+#pragma mark - Private Method
+
+- (void)createDataSource {
+    
+    NSArray * fullDataSource = self.presenter.getLeaderboardDataSource;
+    
+    _firstThreeDataSource = [NSMutableArray array];
+    _restListDataSource = [NSMutableArray array];
+   __block NSMutableArray *firstThreeDataSourceLocal = [NSMutableArray array];
+
+    
+    [fullDataSource enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        if(obj) {
+            
+            if(idx<3) {
+                
+                [firstThreeDataSourceLocal addObject:obj];
+                
+            } else {
+                [_restListDataSource addObject:obj];
+                
+            }
+           
+            
+            if(firstThreeDataSourceLocal.count > 2) {
+                
+                [_firstThreeDataSource addObject:firstThreeDataSourceLocal[1]];
+                [_firstThreeDataSource addObject:firstThreeDataSourceLocal[0]];
+                [_firstThreeDataSource addObject:firstThreeDataSourceLocal[2]];
+
+
+            }
+            
+        }
+    }];
+}
 
 
 //MARK: Getter Method
@@ -58,19 +98,18 @@ RankingSwitchViewDataSource>
 - (void)configureUI {
     
     self.weekelyLabel.textColor = [UIColor defaultTextColor];
-  
+    
     [self initialishedRankingSwitchView];
-    
     [self initialishedRankingCarousalView];
-    
+    [self initialishedLeaderBoardListView];
 }
 
 - (void)initialishedRankingSwitchView {
     
     RankingSwitchView *rankingSwitchView = [[RankingSwitchView alloc]init];
-   
+    
     if(rankingSwitchView) {
-		
+        
         rankingSwitchView.delegate = self;
         rankingSwitchView.datasource = self;
         rankingSwitchView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -82,10 +121,21 @@ RankingSwitchViewDataSource>
 - (void)initialishedRankingCarousalView {
     
     RankingCarouselView * rankingCarouselView = [RankingCarouselView new];
-    [rankingCarouselView setRankingDataSources:self.presenter.getLeaderboardDataSource];
+    [rankingCarouselView setRankingDataSources:_firstThreeDataSource];
     rankingCarouselView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.carouselContainerView addSubview:rankingCarouselView];
     [rankingCarouselView fitToParentView:self.carouselContainerView];
+}
+
+- (void)initialishedLeaderBoardListView
+{
+    
+    LeaderBoardListView *leaderBoardListView = [LeaderBoardListView new];
+    leaderBoardListView.leaderBoardDataSource = self.restListDataSource;
+    leaderBoardListView.backgroundColor = [UIColor clearColor];
+    leaderBoardListView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.leaderBoardListTableview addSubview:leaderBoardListView];
+    [leaderBoardListView fitToParentView:self.leaderBoardListTableview];
 }
 
 #pragma mark - RankingSwitchView

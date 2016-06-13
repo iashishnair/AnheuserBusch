@@ -53,13 +53,13 @@ static SalesForceSOQL *salesForceSOQL = nil;
 
 - (void)getUserDetails:(SOQLCompletion)completion {
     
-    [self getDetailsWithSOQL:@"SELECT Name FROM account LIMIT 10" completion:completion];
+    [self getDetailsWithSOQL:@"SELECT firstName,lastName FROM User LIMIT 10" completion:completion];
 }
 
 
-- (void)getSmallPhotoUrlURL:(SOQLCompletion)completion {
+- (void)userDetails:(SOQLCompletion)completion {
     
-    [self getDetailsWithSOQL:@"SELECT SmallPhotoUrl FROM User" completion:completion];
+    [self getDetailsWithSOQL:@"SELECT firstName FROM User LIMIT 10" completion:completion];
 }
 
 #pragma mark - SFRestAPIDelegate
