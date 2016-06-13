@@ -69,7 +69,7 @@
 	
 	_userRank = userRank;
 	
-	if([NSString isNULLString:_userRank]) {
+	if(![NSString isNULLString:_userRank]) {
 		
 		self.userRankLabel.text = _userRank;
 	}
@@ -80,7 +80,7 @@
 	
 	_userName = userName;
 	
-	if([NSString isNULLString:_userName]) {
+	if(![NSString isNULLString:_userName]) {
 		
 		self.userNameLabel.text = _userName;
 	}
@@ -91,7 +91,7 @@
 	
 	_userSelesTagetAmount = userSelesTagetAmount;
 	
-	if([NSString isNULLString:_userSelesTagetAmount]) {
+	if(![NSString isNULLString:_userSelesTagetAmount]) {
 		
 		self.userSalesTargetLabel.text = _userSelesTagetAmount;
 	}

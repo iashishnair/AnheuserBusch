@@ -45,8 +45,11 @@
  */
 + (BOOL)isNULLString:(nullable NSString *)aString {
 	
-	
-	return (aString && aString.length);
+    if([aString isKindOfClass:[NSNull class]]) return NO;
+    
+    if(aString.length && [aString isEqualToString:@"<null>"]) return NO;
+    
+	return !(aString && aString.length);
 }
 
 @end

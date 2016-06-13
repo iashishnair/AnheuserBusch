@@ -51,7 +51,8 @@ RankingSwitchViewDataSource>
     
     _firstThreeDataSource = [NSMutableArray array];
     _restListDataSource = [NSMutableArray array];
-    
+   __block NSMutableArray *firstThreeDataSourceLocal = [NSMutableArray array];
+
     
     [fullDataSource enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
@@ -59,11 +60,21 @@ RankingSwitchViewDataSource>
             
             if(idx<3) {
                 
-                [_firstThreeDataSource addObject:obj];
+                [firstThreeDataSourceLocal addObject:obj];
                 
             } else {
                 [_restListDataSource addObject:obj];
                 
+            }
+           
+            
+            if(firstThreeDataSourceLocal.count > 2) {
+                
+                [_firstThreeDataSource addObject:firstThreeDataSourceLocal[1]];
+                [_firstThreeDataSource addObject:firstThreeDataSourceLocal[0]];
+                [_firstThreeDataSource addObject:firstThreeDataSourceLocal[2]];
+
+
             }
             
         }

@@ -58,7 +58,7 @@
                   moduleName = "AnheuserBusch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///-PROSENJIT%20GOSWAMI-/Project/AnheuserBusch/AnheuserBusch/Controllers/PageContainerViewController/PageContainerViewController.m"
-                  timestampString = "487524915.89282"
+                  timestampString = "487529309.762999"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "425"
@@ -73,7 +73,7 @@
                   moduleName = "AnheuserBusch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///-PROSENJIT%20GOSWAMI-/Project/AnheuserBusch/AnheuserBusch/Controllers/PageContainerViewController/PageContainerViewController.m"
-                  timestampString = "487524915.892937"
+                  timestampString = "487529309.763111"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "425"
@@ -138,7 +138,7 @@
                   moduleName = "AnheuserBusch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///-PROSENJIT%20GOSWAMI-/Project/AnheuserBusch/AnheuserBusch/Controllers/PageContainerViewController/PageContainerViewController.m"
-                  timestampString = "487524915.909185"
+                  timestampString = "487529309.76481"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "369"
@@ -153,7 +153,7 @@
                   moduleName = "AnheuserBusch"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///-PROSENJIT%20GOSWAMI-/Project/AnheuserBusch/AnheuserBusch/Controllers/PageContainerViewController/PageContainerViewController.m"
-                  timestampString = "487524915.909282"
+                  timestampString = "487529309.764919"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "369"
@@ -180,18 +180,76 @@
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AnheuserBusch/Views/LeaderBoardListView/LeaderBoardListView.m"
-            timestampString = "487524876.341476"
+            filePath = "AnheuserBusch/Controllers/LeaderBoardPage/LeaderBoardViewController.m"
+            timestampString = "487529165.94175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "-initialishedRankingCarousalView"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnheuserBusch/Views/RankingCarouselView/RankingCarouselView.m"
+            timestampString = "487528987.244557"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "-setRankingDataSources:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnheuserBusch/Views/RankingCarouselView/RankingCarouselView.m"
+            timestampString = "487529206.385223"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "-setRankingDataSources:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnheuserBusch/Views/RankingCarouselView/RankingCarouselView.m"
+            timestampString = "487529235.858178"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "-reloadUserRankView:userRankView:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

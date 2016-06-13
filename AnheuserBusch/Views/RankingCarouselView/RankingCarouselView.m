@@ -37,6 +37,8 @@
 	
 	_rankingDataSources = rankingDataSources;
     
+    if(_rankingDataSources && _rankingDataSources.count)
+    {
     NSMutableString *xContsrains = [NSMutableString stringWithString:@"H:|"];
 
     NSMutableDictionary *views =[NSMutableDictionary dictionary];
@@ -69,7 +71,7 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:xContsrains options:0 metrics:nil views:views]];
     
 
-    
+    }
 	}
 	
 	
