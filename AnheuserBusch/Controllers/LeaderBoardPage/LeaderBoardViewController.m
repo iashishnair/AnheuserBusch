@@ -8,6 +8,8 @@
 
 #import "LeaderBoardViewController.h"
 #import "RankingSwitchView.h"
+#import "RankingCarouselView.h"
+#import "LeaderBoardViewControllerPresenter.h"
 
 @interface LeaderBoardViewController () <RankingSwitchViewDelegate,
 RankingSwitchViewDataSource>
@@ -18,6 +20,7 @@ RankingSwitchViewDataSource>
 @property (weak, nonatomic) IBOutlet UIView *salesTargetDropDownContainerView;
 @property (weak, nonatomic) IBOutlet UIView *carouselContainerView;
 @property (weak, nonatomic) IBOutlet UIView *leaderBoardListTableview;
+@property (strong, nonatomic) id <LeaderBoardViewProtocol> presenter;
 
 @end
 
@@ -37,9 +40,25 @@ RankingSwitchViewDataSource>
 
 #pragma mark - Private Method 
 
+
+//MARK: Getter Method
+
+- (id <LeaderBoardViewProtocol>)presenter {
+    
+    if(!_presenter) {
+        
+        _presenter = [LeaderBoardViewControllerPresenter new];
+    }
+    
+    return _presenter;
+}
+
+// UI
 - (void)configureUI {
     
     [self initialishedRankingSwitchView];
+    
+    [self initialishedRankingCarousalView];
     
 }
 
@@ -55,6 +74,15 @@ RankingSwitchViewDataSource>
         [self.rakingSwitchContainerView addSubview:rankingSwitchView];
         [rankingSwitchView fitToParentView:self.rakingSwitchContainerView];
     }
+}
+
+- (void)initialishedRankingCarousalView {
+    
+    RankingCarouselView * rankingCarouselView = [RankingCarouselView new];
+    [rankingCarouselView setRankingDataSources:self.presenter.getLeaderboardDataSource];
+    rankingCarouselView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.carouselContainerView addSubview:rankingCarouselView];
+    [rankingCarouselView fitToParentView:self.carouselContainerView];
 }
 
 #pragma mark - RankingSwitchView

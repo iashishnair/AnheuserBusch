@@ -16,12 +16,14 @@
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kW0-v0-CMR">
                             <rect key="frame" x="10" y="10" width="241" height="111"/>
+                            <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="kW0-v0-CMR" secondAttribute="trailing" constant="10" id="2vU-gN-gOU"/>
                         <constraint firstItem="kW0-v0-CMR" firstAttribute="leading" secondItem="4Q4-e8-chK" secondAttribute="leading" constant="10" id="dkS-qn-KFi"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="hD8-Hz-pi7"/>
                         <constraint firstItem="kW0-v0-CMR" firstAttribute="top" secondItem="4Q4-e8-chK" secondAttribute="top" constant="10" id="rOk-RW-V1a"/>
                         <constraint firstAttribute="bottom" secondItem="kW0-v0-CMR" secondAttribute="bottom" constant="10" id="z4x-T5-6aP"/>
                     </constraints>

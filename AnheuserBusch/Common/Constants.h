@@ -31,3 +31,7 @@ static NSString * kClassNameDashBoardViewController = @"DashBoardViewController"
 static NSString * kPageTitleLoginViewController = @"LoginView";
 static NSString * kPageTitleLeaderBoardViewController = @"LeaderBoard";
 static NSString * kPageTitleDashBoardViewController = @"DashBoard";
+
+static NSString * kName = @"Name";
+static NSString * kRank = @"Rank";
+static NSString * kSalesTarget = @"SalesTarget";

@@ -13,6 +13,6 @@
 @property (nonatomic, strong) NSString *userImageURLString;
 @property (nonatomic, strong) NSString *userRank;
 @property (nonatomic, strong) NSString *userName;
-@property (nonatomic, strong) NSString *userSelesTagetAmount;
+@property (nonatomic, strong) NSNumber *userSelesTagetAmount;
 
 @end
