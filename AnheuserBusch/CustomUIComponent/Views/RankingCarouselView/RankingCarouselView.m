@@ -43,7 +43,7 @@
 
     NSMutableDictionary *views =[NSMutableDictionary dictionary];
 
-		for (int i = 0 ; i < _rankingDataSources.count; i++) {
+		for (int i = 0 ; i < 3; i++) {
 			
             if(i>2)
                 break;

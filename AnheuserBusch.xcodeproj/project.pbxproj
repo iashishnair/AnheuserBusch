@@ -22,27 +22,26 @@
 		8468C93E1D0AACF200B30DCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468C93D1D0AACF200B30DCF /* UIKit.framework */; };
 		8468C9401D0AACFC00B30DCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468C93F1D0AACFC00B30DCF /* CoreGraphics.framework */; };
 		8468C9421D0AAD0300B30DCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468C9411D0AAD0300B30DCF /* Foundation.framework */; };
-		8468C9561D0ABF7D00B30DCF /* PageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9541D0ABF7D00B30DCF /* PageHeaderView.m */; };
-		8468C9571D0ABF7D00B30DCF /* PageHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8468C9551D0ABF7D00B30DCF /* PageHeaderView.xib */; };
-		8468C95C1D0ADFCE00B30DCF /* VKSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C95B1D0ADFCE00B30DCF /* VKSideMenu.m */; };
 		8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9681D0AF78300B30DCF /* NSObject+HelperUtil.m */; };
-		8468C96D1D0B016000B30DCF /* RankingSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C96C1D0B016000B30DCF /* RankingSwitchView.m */; };
-		8468C96F1D0B016E00B30DCF /* RankingSwitchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8468C96E1D0B016E00B30DCF /* RankingSwitchView.xib */; };
 		84F6F6D91D0E92EC001800B3 /* LeaderBoard.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F6F6D81D0E92EC001800B3 /* LeaderBoard.plist */; };
 		84F6F6DC1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F6F6DB1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m */; };
-		84F6F6E01D0ECC87001800B3 /* SalesForceSOQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F6F6DF1D0ECC87001800B3 /* SalesForceSOQL.m */; };
-		84F6F6E91D0EFA95001800B3 /* LeaderBoardListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F6F6E31D0EFA95001800B3 /* LeaderBoardListView.m */; };
-		84F6F6EC1D0EFA95001800B3 /* MyCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F6F6E71D0EFA95001800B3 /* MyCustomCell.m */; };
-		84F6F6ED1D0EFA95001800B3 /* MyCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F6F6E81D0EFA95001800B3 /* MyCustomCell.xib */; };
 		EA8497881D0B708D0034B44F /* LeaderBoardDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8497871D0B708D0034B44F /* LeaderBoardDataModel.m */; };
 		EA895D621D0B477E00BF8902 /* NSLayoutConstraint+LayoutConstraintHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA895D611D0B477E00BF8902 /* NSLayoutConstraint+LayoutConstraintHelper.m */; };
 		EA895D651D0B4B7000BF8902 /* UIView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = EA895D641D0B4B7000BF8902 /* UIView+Common.m */; };
-		EA895D6C1D0B4FB300BF8902 /* RankingCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA895D6B1D0B4FB300BF8902 /* RankingCarouselView.m */; };
 		EA895D751D0B51F300BF8902 /* UIResponder+UIComponentUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = EA895D741D0B51F300BF8902 /* UIResponder+UIComponentUtility.m */; };
 		EA895D791D0B553500BF8902 /* PageContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA895D781D0B553500BF8902 /* PageContainerViewController.m */; };
 		EA895D7C1D0B55BD00BF8902 /* PageBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA895D7B1D0B55BD00BF8902 /* PageBaseViewController.m */; };
-		EA895D831D0B588400BF8902 /* UserRankView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA895D821D0B588400BF8902 /* UserRankView.m */; };
-		EA895D851D0B589200BF8902 /* UserRankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA895D841D0B589200BF8902 /* UserRankView.xib */; };
+		EA942F2A1D0F6BDC0018E7BB /* SalesForceSOQL.m in Sources */ = {isa = PBXBuildFile; fileRef = EA942F291D0F6BDC0018E7BB /* SalesForceSOQL.m */; };
+		EA942F4B1D0F770E0018E7BB /* MyCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA942F341D0F770E0018E7BB /* MyCustomCell.m */; };
+		EA942F4C1D0F770E0018E7BB /* MyCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA942F351D0F770E0018E7BB /* MyCustomCell.xib */; };
+		EA942F4D1D0F770E0018E7BB /* PageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA942F391D0F770E0018E7BB /* PageHeaderView.m */; };
+		EA942F4E1D0F770E0018E7BB /* PageHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA942F3A1D0F770E0018E7BB /* PageHeaderView.xib */; };
+		EA942F4F1D0F770E0018E7BB /* RankingCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA942F3E1D0F770E0018E7BB /* RankingCarouselView.m */; };
+		EA942F501D0F770E0018E7BB /* RankingSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA942F411D0F770E0018E7BB /* RankingSwitchView.m */; };
+		EA942F511D0F770E0018E7BB /* RankingSwitchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA942F421D0F770E0018E7BB /* RankingSwitchView.xib */; };
+		EA942F521D0F770E0018E7BB /* VKSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = EA942F461D0F770E0018E7BB /* VKSideMenu.m */; };
+		EA942F531D0F770E0018E7BB /* UserRankView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA942F491D0F770E0018E7BB /* UserRankView.m */; };
+		EA942F541D0F770E0018E7BB /* UserRankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA942F4A1D0F770E0018E7BB /* UserRankView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,29 +89,12 @@
 		8468C93F1D0AACFC00B30DCF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8468C9411D0AAD0300B30DCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8468C9441D0AB00800B30DCF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		8468C9531D0ABF7D00B30DCF /* PageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageHeaderView.h; sourceTree = "<group>"; };
-		8468C9541D0ABF7D00B30DCF /* PageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageHeaderView.m; sourceTree = "<group>"; };
-		8468C9551D0ABF7D00B30DCF /* PageHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageHeaderView.xib; sourceTree = "<group>"; };
-		8468C9581D0AD91B00B30DCF /* PageHeaderViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageHeaderViewDelegate.h; sourceTree = "<group>"; };
-		8468C95A1D0ADFCE00B30DCF /* VKSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKSideMenu.h; sourceTree = "<group>"; };
-		8468C95B1D0ADFCE00B30DCF /* VKSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKSideMenu.m; sourceTree = "<group>"; };
 		8468C9671D0AF78300B30DCF /* NSObject+HelperUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HelperUtil.h"; sourceTree = "<group>"; };
 		8468C9681D0AF78300B30DCF /* NSObject+HelperUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HelperUtil.m"; sourceTree = "<group>"; };
-		8468C96B1D0B016000B30DCF /* RankingSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingSwitchView.h; sourceTree = "<group>"; };
-		8468C96C1D0B016000B30DCF /* RankingSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingSwitchView.m; sourceTree = "<group>"; };
-		8468C96E1D0B016E00B30DCF /* RankingSwitchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankingSwitchView.xib; sourceTree = "<group>"; };
-		8468C9701D0B115200B30DCF /* RankingSwitchViewProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingSwitchViewProtocols.h; sourceTree = "<group>"; };
 		84F6F6D81D0E92EC001800B3 /* LeaderBoard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LeaderBoard.plist; sourceTree = "<group>"; };
 		84F6F6DA1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewControllerPresenter.h; sourceTree = "<group>"; };
 		84F6F6DB1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardViewControllerPresenter.m; sourceTree = "<group>"; };
 		84F6F6DD1D0E93B8001800B3 /* LeaderBoardViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewProtocol.h; sourceTree = "<group>"; };
-		84F6F6DE1D0ECC87001800B3 /* SalesForceSOQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalesForceSOQL.h; sourceTree = "<group>"; };
-		84F6F6DF1D0ECC87001800B3 /* SalesForceSOQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalesForceSOQL.m; sourceTree = "<group>"; };
-		84F6F6E21D0EFA95001800B3 /* LeaderBoardListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardListView.h; sourceTree = "<group>"; };
-		84F6F6E31D0EFA95001800B3 /* LeaderBoardListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardListView.m; sourceTree = "<group>"; };
-		84F6F6E61D0EFA95001800B3 /* MyCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomCell.h; sourceTree = "<group>"; };
-		84F6F6E71D0EFA95001800B3 /* MyCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomCell.m; sourceTree = "<group>"; };
-		84F6F6E81D0EFA95001800B3 /* MyCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomCell.xib; sourceTree = "<group>"; };
 		D81035F868542EEDBC8DF2DC /* Pods_AnheuserBusch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnheuserBusch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8497861D0B708D0034B44F /* LeaderBoardDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardDataModel.h; sourceTree = "<group>"; };
 		EA8497871D0B708D0034B44F /* LeaderBoardDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardDataModel.m; sourceTree = "<group>"; };
@@ -120,17 +102,32 @@
 		EA895D611D0B477E00BF8902 /* NSLayoutConstraint+LayoutConstraintHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+LayoutConstraintHelper.m"; sourceTree = "<group>"; };
 		EA895D631D0B4B7000BF8902 /* UIView+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Common.h"; sourceTree = "<group>"; };
 		EA895D641D0B4B7000BF8902 /* UIView+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Common.m"; sourceTree = "<group>"; };
-		EA895D6A1D0B4FB300BF8902 /* RankingCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingCarouselView.h; sourceTree = "<group>"; };
-		EA895D6B1D0B4FB300BF8902 /* RankingCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingCarouselView.m; sourceTree = "<group>"; };
 		EA895D731D0B51F300BF8902 /* UIResponder+UIComponentUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+UIComponentUtility.h"; sourceTree = "<group>"; };
 		EA895D741D0B51F300BF8902 /* UIResponder+UIComponentUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+UIComponentUtility.m"; sourceTree = "<group>"; };
 		EA895D771D0B553500BF8902 /* PageContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContainerViewController.h; sourceTree = "<group>"; };
 		EA895D781D0B553500BF8902 /* PageContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContainerViewController.m; sourceTree = "<group>"; };
 		EA895D7A1D0B55BD00BF8902 /* PageBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageBaseViewController.h; sourceTree = "<group>"; };
 		EA895D7B1D0B55BD00BF8902 /* PageBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageBaseViewController.m; sourceTree = "<group>"; };
-		EA895D811D0B588400BF8902 /* UserRankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRankView.h; sourceTree = "<group>"; };
-		EA895D821D0B588400BF8902 /* UserRankView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRankView.m; sourceTree = "<group>"; };
-		EA895D841D0B589200BF8902 /* UserRankView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserRankView.xib; sourceTree = "<group>"; };
+		EA942F281D0F6BDC0018E7BB /* SalesForceSOQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalesForceSOQL.h; sourceTree = "<group>"; };
+		EA942F291D0F6BDC0018E7BB /* SalesForceSOQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalesForceSOQL.m; sourceTree = "<group>"; };
+		EA942F331D0F770E0018E7BB /* MyCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomCell.h; sourceTree = "<group>"; };
+		EA942F341D0F770E0018E7BB /* MyCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomCell.m; sourceTree = "<group>"; };
+		EA942F351D0F770E0018E7BB /* MyCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCustomCell.xib; sourceTree = "<group>"; };
+		EA942F381D0F770E0018E7BB /* PageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageHeaderView.h; sourceTree = "<group>"; };
+		EA942F391D0F770E0018E7BB /* PageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageHeaderView.m; sourceTree = "<group>"; };
+		EA942F3A1D0F770E0018E7BB /* PageHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageHeaderView.xib; sourceTree = "<group>"; };
+		EA942F3B1D0F770E0018E7BB /* PageHeaderViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageHeaderViewDelegate.h; sourceTree = "<group>"; };
+		EA942F3D1D0F770E0018E7BB /* RankingCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingCarouselView.h; sourceTree = "<group>"; };
+		EA942F3E1D0F770E0018E7BB /* RankingCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingCarouselView.m; sourceTree = "<group>"; };
+		EA942F401D0F770E0018E7BB /* RankingSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingSwitchView.h; sourceTree = "<group>"; };
+		EA942F411D0F770E0018E7BB /* RankingSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingSwitchView.m; sourceTree = "<group>"; };
+		EA942F421D0F770E0018E7BB /* RankingSwitchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RankingSwitchView.xib; sourceTree = "<group>"; };
+		EA942F431D0F770E0018E7BB /* RankingSwitchViewProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingSwitchViewProtocols.h; sourceTree = "<group>"; };
+		EA942F451D0F770E0018E7BB /* VKSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKSideMenu.h; sourceTree = "<group>"; };
+		EA942F461D0F770E0018E7BB /* VKSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKSideMenu.m; sourceTree = "<group>"; };
+		EA942F481D0F770E0018E7BB /* UserRankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRankView.h; sourceTree = "<group>"; };
+		EA942F491D0F770E0018E7BB /* UserRankView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRankView.m; sourceTree = "<group>"; };
+		EA942F4A1D0F770E0018E7BB /* UserRankView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserRankView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,13 +193,13 @@
 		8468C8D21D0AA58B00B30DCF /* AnheuserBusch */ = {
 			isa = PBXGroup;
 			children = (
-				EA8497841D0B70630034B44F /* Models */,
 				8468C9151D0AA82E00B30DCF /* Application */,
 				8468C9181D0AA82E00B30DCF /* Controllers */,
 				8468C9431D0AAFE100B30DCF /* Common */,
+				EA942F311D0F770E0018E7BB /* CustomUIComponent */,
+				EA8497841D0B70630034B44F /* Models */,
 				8468C91E1D0AA82E00B30DCF /* Resources */,
 				8468C91F1D0AA82E00B30DCF /* Utility */,
-				8468C9221D0AA82E00B30DCF /* Views */,
 				8468C9391D0AAAEC00B30DCF /* Storyboard */,
 				8468C93B1D0AAB5A00B30DCF /* CoreDataModel */,
 				8468C8D31D0AA58B00B30DCF /* Supporting Files */,
@@ -302,6 +299,7 @@
 		8468C91F1D0AA82E00B30DCF /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				EA942F271D0F6BDC0018E7BB /* SalesForceSOQLHelper */,
 				8468C9201D0AA82E00B30DCF /* Category */,
 			);
 			path = Utility;
@@ -320,19 +318,6 @@
 				EA895D741D0B51F300BF8902 /* UIResponder+UIComponentUtility.m */,
 			);
 			path = Category;
-			sourceTree = "<group>";
-		};
-		8468C9221D0AA82E00B30DCF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				84F6F6E11D0EFA95001800B3 /* LeaderBoardListView */,
-				EA895D801D0B586F00BF8902 /* UserRankView */,
-				EA895D691D0B4FB300BF8902 /* RankingCarouselView */,
-				8468C96A1D0B013E00B30DCF /* RankingSwitchView */,
-				8468C9591D0ADFCE00B30DCF /* SlideMenuView */,
-				8468C9521D0ABF5500B30DCF /* PageHeaderView */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		8468C92E1D0AA98700B30DCF /* Assets */ = {
@@ -394,55 +379,12 @@
 			path = BaseViewController;
 			sourceTree = "<group>";
 		};
-		8468C9521D0ABF5500B30DCF /* PageHeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				8468C9581D0AD91B00B30DCF /* PageHeaderViewDelegate.h */,
-				8468C9531D0ABF7D00B30DCF /* PageHeaderView.h */,
-				8468C9541D0ABF7D00B30DCF /* PageHeaderView.m */,
-				8468C9551D0ABF7D00B30DCF /* PageHeaderView.xib */,
-			);
-			path = PageHeaderView;
-			sourceTree = "<group>";
-		};
-		8468C9591D0ADFCE00B30DCF /* SlideMenuView */ = {
-			isa = PBXGroup;
-			children = (
-				8468C95A1D0ADFCE00B30DCF /* VKSideMenu.h */,
-				8468C95B1D0ADFCE00B30DCF /* VKSideMenu.m */,
-			);
-			path = SlideMenuView;
-			sourceTree = "<group>";
-		};
-		8468C96A1D0B013E00B30DCF /* RankingSwitchView */ = {
-			isa = PBXGroup;
-			children = (
-				8468C9701D0B115200B30DCF /* RankingSwitchViewProtocols.h */,
-				8468C96B1D0B016000B30DCF /* RankingSwitchView.h */,
-				8468C96C1D0B016000B30DCF /* RankingSwitchView.m */,
-				8468C96E1D0B016E00B30DCF /* RankingSwitchView.xib */,
-			);
-			path = RankingSwitchView;
-			sourceTree = "<group>";
-		};
 		84F6F6D71D0E92DE001800B3 /* Plist */ = {
 			isa = PBXGroup;
 			children = (
 				84F6F6D81D0E92EC001800B3 /* LeaderBoard.plist */,
 			);
 			path = Plist;
-			sourceTree = "<group>";
-		};
-		84F6F6E11D0EFA95001800B3 /* LeaderBoardListView */ = {
-			isa = PBXGroup;
-			children = (
-				84F6F6E21D0EFA95001800B3 /* LeaderBoardListView.h */,
-				84F6F6E31D0EFA95001800B3 /* LeaderBoardListView.m */,
-				84F6F6E61D0EFA95001800B3 /* MyCustomCell.h */,
-				84F6F6E71D0EFA95001800B3 /* MyCustomCell.m */,
-				84F6F6E81D0EFA95001800B3 /* MyCustomCell.xib */,
-			);
-			path = LeaderBoardListView;
 			sourceTree = "<group>";
 		};
 		E2B52B9B1DAAC8E01B804260 /* Frameworks */ = {
@@ -457,8 +399,6 @@
 			isa = PBXGroup;
 			children = (
 				EA8497851D0B70830034B44F /* LeaderBoardDataModel */,
-				84F6F6DE1D0ECC87001800B3 /* SalesForceSOQL.h */,
-				84F6F6DF1D0ECC87001800B3 /* SalesForceSOQL.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -472,15 +412,6 @@
 			path = LeaderBoardDataModel;
 			sourceTree = "<group>";
 		};
-		EA895D691D0B4FB300BF8902 /* RankingCarouselView */ = {
-			isa = PBXGroup;
-			children = (
-				EA895D6A1D0B4FB300BF8902 /* RankingCarouselView.h */,
-				EA895D6B1D0B4FB300BF8902 /* RankingCarouselView.m */,
-			);
-			path = RankingCarouselView;
-			sourceTree = "<group>";
-		};
 		EA895D761D0B553500BF8902 /* PageContainerViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,12 +421,92 @@
 			path = PageContainerViewController;
 			sourceTree = "<group>";
 		};
-		EA895D801D0B586F00BF8902 /* UserRankView */ = {
+		EA942F271D0F6BDC0018E7BB /* SalesForceSOQLHelper */ = {
 			isa = PBXGroup;
 			children = (
-				EA895D811D0B588400BF8902 /* UserRankView.h */,
-				EA895D821D0B588400BF8902 /* UserRankView.m */,
-				EA895D841D0B589200BF8902 /* UserRankView.xib */,
+				EA942F281D0F6BDC0018E7BB /* SalesForceSOQL.h */,
+				EA942F291D0F6BDC0018E7BB /* SalesForceSOQL.m */,
+			);
+			path = SalesForceSOQLHelper;
+			sourceTree = "<group>";
+		};
+		EA942F311D0F770E0018E7BB /* CustomUIComponent */ = {
+			isa = PBXGroup;
+			children = (
+				EA942F321D0F770E0018E7BB /* TableViewCell */,
+				EA942F361D0F770E0018E7BB /* Views */,
+			);
+			path = CustomUIComponent;
+			sourceTree = "<group>";
+		};
+		EA942F321D0F770E0018E7BB /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA942F331D0F770E0018E7BB /* MyCustomCell.h */,
+				EA942F341D0F770E0018E7BB /* MyCustomCell.m */,
+				EA942F351D0F770E0018E7BB /* MyCustomCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		EA942F361D0F770E0018E7BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA942F371D0F770E0018E7BB /* PageHeaderView */,
+				EA942F3C1D0F770E0018E7BB /* RankingCarouselView */,
+				EA942F3F1D0F770E0018E7BB /* RankingSwitchView */,
+				EA942F441D0F770E0018E7BB /* SlideMenuView */,
+				EA942F471D0F770E0018E7BB /* UserRankView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EA942F371D0F770E0018E7BB /* PageHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				EA942F381D0F770E0018E7BB /* PageHeaderView.h */,
+				EA942F391D0F770E0018E7BB /* PageHeaderView.m */,
+				EA942F3A1D0F770E0018E7BB /* PageHeaderView.xib */,
+				EA942F3B1D0F770E0018E7BB /* PageHeaderViewDelegate.h */,
+			);
+			path = PageHeaderView;
+			sourceTree = "<group>";
+		};
+		EA942F3C1D0F770E0018E7BB /* RankingCarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				EA942F3D1D0F770E0018E7BB /* RankingCarouselView.h */,
+				EA942F3E1D0F770E0018E7BB /* RankingCarouselView.m */,
+			);
+			path = RankingCarouselView;
+			sourceTree = "<group>";
+		};
+		EA942F3F1D0F770E0018E7BB /* RankingSwitchView */ = {
+			isa = PBXGroup;
+			children = (
+				EA942F401D0F770E0018E7BB /* RankingSwitchView.h */,
+				EA942F411D0F770E0018E7BB /* RankingSwitchView.m */,
+				EA942F421D0F770E0018E7BB /* RankingSwitchView.xib */,
+				EA942F431D0F770E0018E7BB /* RankingSwitchViewProtocols.h */,
+			);
+			path = RankingSwitchView;
+			sourceTree = "<group>";
+		};
+		EA942F441D0F770E0018E7BB /* SlideMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				EA942F451D0F770E0018E7BB /* VKSideMenu.h */,
+				EA942F461D0F770E0018E7BB /* VKSideMenu.m */,
+			);
+			path = SlideMenuView;
+			sourceTree = "<group>";
+		};
+		EA942F471D0F770E0018E7BB /* UserRankView */ = {
+			isa = PBXGroup;
+			children = (
+				EA942F481D0F770E0018E7BB /* UserRankView.h */,
+				EA942F491D0F770E0018E7BB /* UserRankView.m */,
+				EA942F4A1D0F770E0018E7BB /* UserRankView.xib */,
 			);
 			path = UserRankView;
 			sourceTree = "<group>";
@@ -606,14 +617,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA942F511D0F770E0018E7BB /* RankingSwitchView.xib in Resources */,
 				84F6F6D91D0E92EC001800B3 /* LeaderBoard.plist in Resources */,
-				8468C9571D0ABF7D00B30DCF /* PageHeaderView.xib in Resources */,
-				EA895D851D0B589200BF8902 /* UserRankView.xib in Resources */,
-				8468C96F1D0B016E00B30DCF /* RankingSwitchView.xib in Resources */,
-				84F6F6ED1D0EFA95001800B3 /* MyCustomCell.xib in Resources */,
 				8468C8E61D0AA58B00B30DCF /* LaunchScreen.storyboard in Resources */,
+				EA942F4E1D0F770E0018E7BB /* PageHeaderView.xib in Resources */,
 				8468C9301D0AA9A300B30DCF /* Assets.xcassets in Resources */,
 				8468C8DE1D0AA58B00B30DCF /* Main.storyboard in Resources */,
+				EA942F4C1D0F770E0018E7BB /* MyCustomCell.xib in Resources */,
+				EA942F541D0F770E0018E7BB /* UserRankView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,24 +699,23 @@
 			files = (
 				8468C8D51D0AA58B00B30DCF /* main.m in Sources */,
 				EA895D651D0B4B7000BF8902 /* UIView+Common.m in Sources */,
-				EA895D6C1D0B4FB300BF8902 /* RankingCarouselView.m in Sources */,
-				8468C95C1D0ADFCE00B30DCF /* VKSideMenu.m in Sources */,
 				8468C92C1D0AA8D900B30DCF /* LoginViewController.m in Sources */,
 				8468C9231D0AA82E00B30DCF /* AppDelegate.m in Sources */,
+				EA942F501D0F770E0018E7BB /* RankingSwitchView.m in Sources */,
+				EA942F531D0F770E0018E7BB /* UserRankView.m in Sources */,
 				8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */,
+				EA942F521D0F770E0018E7BB /* VKSideMenu.m in Sources */,
+				EA942F4F1D0F770E0018E7BB /* RankingCarouselView.m in Sources */,
 				EA8497881D0B708D0034B44F /* LeaderBoardDataModel.m in Sources */,
-				EA895D831D0B588400BF8902 /* UserRankView.m in Sources */,
 				EA895D791D0B553500BF8902 /* PageContainerViewController.m in Sources */,
 				8468C9261D0AA8B900B30DCF /* DashBoardViewController.m in Sources */,
-				8468C96D1D0B016000B30DCF /* RankingSwitchView.m in Sources */,
 				EA895D7C1D0B55BD00BF8902 /* PageBaseViewController.m in Sources */,
 				84F6F6DC1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m in Sources */,
-				8468C9561D0ABF7D00B30DCF /* PageHeaderView.m in Sources */,
-				84F6F6E91D0EFA95001800B3 /* LeaderBoardListView.m in Sources */,
-				84F6F6EC1D0EFA95001800B3 /* MyCustomCell.m in Sources */,
+				EA942F4B1D0F770E0018E7BB /* MyCustomCell.m in Sources */,
 				EA895D751D0B51F300BF8902 /* UIResponder+UIComponentUtility.m in Sources */,
 				8468C9371D0AAA6F00B30DCF /* AnheuserBusch.xcdatamodeld in Sources */,
-				84F6F6E01D0ECC87001800B3 /* SalesForceSOQL.m in Sources */,
+				EA942F2A1D0F6BDC0018E7BB /* SalesForceSOQL.m in Sources */,
+				EA942F4D1D0F770E0018E7BB /* PageHeaderView.m in Sources */,
 				EA895D621D0B477E00BF8902 /* NSLayoutConstraint+LayoutConstraintHelper.m in Sources */,
 				8468C9291D0AA8CA00B30DCF /* LeaderBoardViewController.m in Sources */,
 			);

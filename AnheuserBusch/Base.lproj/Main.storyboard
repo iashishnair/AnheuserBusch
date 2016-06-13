@@ -86,18 +86,18 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_background" translatesAutoresizingMaskIntoConstraints="NO" id="zwp-v1-2Qb">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSY-Y8-Xid">
                                 <rect key="frame" x="16" y="55" width="56" height="21"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZw-af-nZF">
                                 <rect key="frame" x="358" y="45" width="40" height="40"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Pph-Sf-7DI"/>
                                     <constraint firstAttribute="height" constant="40" id="zzc-GC-B7p"/>
@@ -120,7 +120,7 @@
                                         </state>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="B3T-37-vrK" secondAttribute="bottom" id="3Z8-d6-fbU"/>
                                     <constraint firstAttribute="height" constant="27" id="H5c-7N-bJO"/>
@@ -136,51 +136,54 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eo8-3H-Qzs">
                                 <rect key="frame" x="16" y="87" width="388" height="40"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="PK4-lS-u6V"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pyx-CT-aAv">
+                                <rect key="frame" x="20" y="334" width="374" height="372"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="UAJ-5W-hv2" id="rtw-EB-a6y"/>
+                                    <outlet property="delegate" destination="UAJ-5W-hv2" id="vIS-Of-K0l"/>
+                                </connections>
+                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvl-Zk-yPh">
                                 <rect key="frame" x="16" y="174" width="382" height="150"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="nqz-Pe-0RO"/>
                                 </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bge-M1-J1A">
-                                <rect key="frame" x="16" y="328" width="382" height="378"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="NgS-gS-Sb4" firstAttribute="top" secondItem="zwp-v1-2Qb" secondAttribute="bottom" id="06X-N1-7YI"/>
+                            <constraint firstItem="NgS-gS-Sb4" firstAttribute="top" secondItem="Pyx-CT-aAv" secondAttribute="bottom" constant="30" id="6Hg-aR-P5E"/>
                             <constraint firstItem="nvl-Zk-yPh" firstAttribute="trailing" secondItem="AuM-79-arb" secondAttribute="trailing" id="6cK-wL-MiX"/>
                             <constraint firstItem="CZw-af-nZF" firstAttribute="trailing" secondItem="AuM-79-arb" secondAttribute="trailing" id="6f1-tu-g9P"/>
                             <constraint firstItem="nvl-Zk-yPh" firstAttribute="leading" secondItem="DP5-tR-ZyQ" secondAttribute="leadingMargin" id="7gc-xW-kdB"/>
+                            <constraint firstAttribute="trailing" secondItem="Pyx-CT-aAv" secondAttribute="trailing" constant="20" id="80l-Am-Dpn"/>
                             <constraint firstItem="Eo8-3H-Qzs" firstAttribute="top" secondItem="CZw-af-nZF" secondAttribute="bottom" constant="2" id="CpG-Nr-Map"/>
-                            <constraint firstItem="NgS-gS-Sb4" firstAttribute="top" secondItem="Bge-M1-J1A" secondAttribute="bottom" constant="30" id="DTB-or-gSy"/>
-                            <constraint firstItem="Bge-M1-J1A" firstAttribute="top" secondItem="nvl-Zk-yPh" secondAttribute="bottom" constant="4" id="EVZ-rj-gF6"/>
                             <constraint firstItem="zwp-v1-2Qb" firstAttribute="top" secondItem="DP5-tR-ZyQ" secondAttribute="topMargin" id="J1b-WE-HoX"/>
                             <constraint firstItem="nvl-Zk-yPh" firstAttribute="top" secondItem="AuM-79-arb" secondAttribute="bottom" constant="10" id="R9U-1x-HdA"/>
                             <constraint firstItem="zwp-v1-2Qb" firstAttribute="trailing" secondItem="DP5-tR-ZyQ" secondAttribute="trailingMargin" constant="20" id="SN4-8S-cHE"/>
                             <constraint firstAttribute="trailing" secondItem="CZw-af-nZF" secondAttribute="trailing" constant="16" id="VdR-rw-lnp"/>
-                            <constraint firstItem="nvl-Zk-yPh" firstAttribute="trailing" secondItem="Bge-M1-J1A" secondAttribute="trailing" id="Wgc-nU-xoC"/>
                             <constraint firstItem="CZw-af-nZF" firstAttribute="top" secondItem="bRl-iq-wl4" secondAttribute="bottom" constant="25" id="dxY-xZ-UCp"/>
                             <constraint firstItem="Eo8-3H-Qzs" firstAttribute="top" secondItem="ZSY-Y8-Xid" secondAttribute="bottom" constant="20" id="e5c-af-isG"/>
                             <constraint firstItem="ZSY-Y8-Xid" firstAttribute="top" secondItem="DP5-tR-ZyQ" secondAttribute="top" constant="17" id="f7b-1K-g4m"/>
                             <constraint firstItem="AuM-79-arb" firstAttribute="trailing" secondItem="nvl-Zk-yPh" secondAttribute="trailing" id="fDy-uJ-nkW"/>
                             <constraint firstItem="ZSY-Y8-Xid" firstAttribute="centerY" secondItem="CZw-af-nZF" secondAttribute="centerY" id="hOj-c2-drJ"/>
+                            <constraint firstItem="Pyx-CT-aAv" firstAttribute="top" secondItem="nvl-Zk-yPh" secondAttribute="bottom" constant="10" id="hkn-lX-eO3"/>
                             <constraint firstItem="Eo8-3H-Qzs" firstAttribute="leading" secondItem="DP5-tR-ZyQ" secondAttribute="leading" constant="16" id="iaP-58-Msv"/>
                             <constraint firstItem="AuM-79-arb" firstAttribute="top" secondItem="Eo8-3H-Qzs" secondAttribute="bottom" constant="10" id="kCS-8o-BTe"/>
-                            <constraint firstItem="nvl-Zk-yPh" firstAttribute="trailing" secondItem="Bge-M1-J1A" secondAttribute="trailing" id="kZ8-uj-8ui"/>
-                            <constraint firstItem="nvl-Zk-yPh" firstAttribute="leading" secondItem="Bge-M1-J1A" secondAttribute="leading" id="lEs-RH-REJ"/>
                             <constraint firstItem="ZSY-Y8-Xid" firstAttribute="leading" secondItem="DP5-tR-ZyQ" secondAttribute="leading" constant="16" id="npg-3V-yLD"/>
                             <constraint firstItem="CZw-af-nZF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZSY-Y8-Xid" secondAttribute="trailing" id="pTq-fn-Xmd"/>
                             <constraint firstAttribute="trailing" secondItem="AuM-79-arb" secondAttribute="trailing" constant="16" id="r43-cp-bL9"/>
                             <constraint firstItem="Eo8-3H-Qzs" firstAttribute="leading" secondItem="nvl-Zk-yPh" secondAttribute="leading" id="rbD-0o-pka"/>
                             <constraint firstItem="zwp-v1-2Qb" firstAttribute="leading" secondItem="DP5-tR-ZyQ" secondAttribute="leadingMargin" constant="-20" id="rr4-kJ-fqw"/>
+                            <constraint firstItem="Pyx-CT-aAv" firstAttribute="leading" secondItem="DP5-tR-ZyQ" secondAttribute="leading" constant="20" id="tHh-Eu-34S"/>
                             <constraint firstItem="CZw-af-nZF" firstAttribute="leading" secondItem="Eo8-3H-Qzs" secondAttribute="trailing" constant="-46" id="ymX-U2-TLx"/>
                         </constraints>
                         <variation key="default">
@@ -189,7 +192,6 @@
                                 <exclude reference="e5c-af-isG"/>
                                 <exclude reference="6cK-wL-MiX"/>
                                 <exclude reference="7gc-xW-kdB"/>
-                                <exclude reference="kZ8-uj-8ui"/>
                                 <exclude reference="r43-cp-bL9"/>
                             </mask>
                         </variation>
@@ -199,7 +201,7 @@
                         <outlet property="SalesTargetButton" destination="B3T-37-vrK" id="dBj-HF-unp"/>
                         <outlet property="calenderButton" destination="CZw-af-nZF" id="w4J-0a-cBM"/>
                         <outlet property="carouselContainerView" destination="nvl-Zk-yPh" id="oSg-lV-2e9"/>
-                        <outlet property="leaderBoardListTableview" destination="Bge-M1-J1A" id="1aW-4X-KHH"/>
+                        <outlet property="leaderBoardListTableview" destination="Pyx-CT-aAv" id="NsN-8A-Zas"/>
                         <outlet property="rakingSwitchContainerView" destination="Eo8-3H-Qzs" id="O4M-TX-Qyc"/>
                         <outlet property="salesTargetDropDownContainerView" destination="AuM-79-arb" id="r8s-Db-pXC"/>
                         <outlet property="view" destination="DP5-tR-ZyQ" id="JpF-eh-0BC"/>
