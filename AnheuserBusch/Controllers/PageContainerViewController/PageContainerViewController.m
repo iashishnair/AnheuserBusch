@@ -60,8 +60,8 @@
 	[super viewDidLoad];
 	[self configureUI];
 	
-	[self initialishedSalesForse];
-	[[SalesforceSDKManager sharedManager] launch];
+		//[self initialishedSalesForse];
+		//[[SalesforceSDKManager sharedManager] launch];
 	
 }
 
