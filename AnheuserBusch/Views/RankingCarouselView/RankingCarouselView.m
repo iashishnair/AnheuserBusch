@@ -19,24 +19,8 @@
 @implementation RankingCarouselView
 
 
-- (instancetype) init {
-	
-	
-	if(self = [super init]) {
-		
-		
-	}
-	
-	return self;
-	
-}
 
 
-- (void)layoutSubviews {
-    
-    [super layoutSubviews];
-    
-}
 #pragma mark - Private Method
 
 - (void)reloadUserRankView:(LeaderBoardDataModel *)leaderBoardDataModel userRankView:(UserRankView *)userRankView {
@@ -44,7 +28,7 @@
 	userRankView.userImageURLString =  [leaderBoardDataModel userImageURLString];
 	userRankView.userRank =  [leaderBoardDataModel userRank];
 	userRankView.userName =  [leaderBoardDataModel userName];
-	userRankView.userSelesTagetAmount =  [NSString stringWithFormat:@"%.2f",[[leaderBoardDataModel userSelesTagetAmount] doubleValue]] ;
+	userRankView.userSelesTagetAmount =  [NSString stringWithFormat:@"%.2f",[[leaderBoardDataModel userSalesTargetAmount] doubleValue]] ;
 }
 
 #pragma mark - Public Method
@@ -64,7 +48,6 @@
             
 			LeaderBoardDataModel *leaderBoardDataModel = _rankingDataSources[i];
 			UserRankView *userRankView = [UserRankView loadViewFromNIB];
-            userRankView.frame = CGRectMake(0, 0, 100, 200);
             userRankView.translatesAutoresizingMaskIntoConstraints = NO;
             [self addSubview:userRankView];
 
@@ -72,7 +55,7 @@
             
             [views setObject:userRankView forKey:userRankViewName];
             
-            [xContsrains appendString:[NSString stringWithFormat:@"-[%@]",userRankViewName]];
+            [xContsrains appendString:[NSString stringWithFormat:@"-10-[%@(100)]",userRankViewName]];
            
             NSString *yContsrains = [NSString stringWithFormat:@"V:|[%@]|",userRankViewName];
             
@@ -82,8 +65,6 @@
             [self reloadUserRankView:leaderBoardDataModel userRankView:userRankView];
 		}
     
-    
-    [xContsrains appendString:@"|"];
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:xContsrains options:0 metrics:nil views:views]];
     

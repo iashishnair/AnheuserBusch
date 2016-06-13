@@ -8,7 +8,7 @@
 
 #import "UserRankView.h"
 #import "Constants.h"
-
+#import <QuartzCore/QuartzCore.h>
 @interface UserRankView ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *userImageView;
@@ -27,7 +27,6 @@
 	if(self == [super init]) {
 		
 		self = [UserRankView loadViewFromNIB];
-		
 	}
 	
 	return self;
@@ -40,7 +39,8 @@
 	_userImageViewBGColor = userImageViewBGColor;
 	
 	self.userBGImageView.backgroundColor = _userImageViewBGColor;
-	
+    self.userBGImageView.backgroundColor = [UIColor whiteColor];
+    self.userBGImageView.layer.cornerRadius = 10.0f;
 }
 
 - (void)setUserImageViewBorderColor:(UIColor *)userImageViewBorderColor {

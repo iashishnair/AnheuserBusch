@@ -18,6 +18,7 @@
 {
     NSMutableArray *results = [NSMutableArray array];
     
+    
     for ( int i = 0 ; i < 20; i ++) {
        
         NSString *username = [NSString stringWithFormat:@"Emp:%d", i+1];
@@ -25,11 +26,20 @@
 
         LeaderBoardDataModel *leaderBoardDataModel = [LeaderBoardDataModel new];
         leaderBoardDataModel.userName = username;
-        leaderBoardDataModel.userSelesTagetAmount = @(target);
+        leaderBoardDataModel.userRank = [NSString stringWithFormat:@"#%d",20-i];
+
+        leaderBoardDataModel.userSalesTargetAmount = @(target);
         [results addObject:leaderBoardDataModel];
     }
     
-    return results;
+    NSSortDescriptor *dateDescriptor = [NSSortDescriptor
+                                       sortDescriptorWithKey:@"userSalesTargetAmount"
+                                       ascending:NO];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:dateDescriptor];
+    NSArray *sortedEventArray = [results
+                                 sortedArrayUsingDescriptors:sortDescriptors];
+    
+    return sortedEventArray;
 }
 
 

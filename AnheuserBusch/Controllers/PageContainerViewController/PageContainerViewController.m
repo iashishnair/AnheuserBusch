@@ -89,7 +89,7 @@
     [self addChildViewController:self.pageViewController];
     [self.view addSubview:self.pageViewController.view];
     [self.pageViewController didMoveToParentViewController:self];
-    self.pageViewController.view.backgroundColor = [UIColor purpleColor];
+    self.pageViewController.view.backgroundColor = [UIColor clearColor];
     [self moveToPageWithIndex:0];
     [self addConstrains];
     [self initialishedSlideView];
