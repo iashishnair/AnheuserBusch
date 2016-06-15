@@ -10,14 +10,4 @@
 
 @interface DashBoardViewController : UIViewController<UITableViewDelegate, UITableViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIView *topChartView;
-
-@property (weak, nonatomic) IBOutlet UILabel *midLabel;
-
-@property (weak, nonatomic) IBOutlet UITableView *bottomTableView;
-
-@property (weak, nonatomic) IBOutlet UIButton *calendarButton;
-
-@property (weak, nonatomic) IBOutlet UILabel *achievmentsLabel;
-
 @end

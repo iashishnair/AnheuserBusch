@@ -133,11 +133,7 @@
         if(_pageViewController) {
             
             _pageViewController.dataSource = self;
-            
-            //            if(_activeViewControllers && self.activeViewControllers.count) {
-            //
-            //                [_pageViewController setViewControllers:@[self.activeViewControllers[0]] direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:NULL];
-            //            }
+     
             
             InternalViewController *startingViewController = [self viewControllerAtIndex:0];
             NSArray *viewControllers = @[startingViewController];

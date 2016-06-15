@@ -9,13 +9,19 @@
 #import "DashBoardViewController.h"
 #import "DashboardCustomCell.h"
 #import "DashBoardDataModel.h"
+#import "DashBoardViewControllerPresenter.h"
 
 @interface DashBoardViewController ()
 
+@property (weak, nonatomic) IBOutlet UIView *topChartView;
+@property (weak, nonatomic) IBOutlet UILabel *midLabel;
+@property (weak, nonatomic) IBOutlet UITableView *bottomTableView;
+@property (weak, nonatomic) IBOutlet UIButton *calendarButton;
+@property (weak, nonatomic) IBOutlet UILabel *achievmentsLabel;
+
+
 @property (strong, nonatomic) NSMutableArray *dashBoardDetailsDataSource;
-@property (strong, nonatomic)NSMutableArray *descriptions;
-@property (strong, nonatomic)NSMutableArray *dates;
-@property (strong, nonatomic) NSMutableArray *titles;
+@property (strong, nonatomic) id <DashBoardViewControllerProtocol> presenter;
 
 @end
 
@@ -24,10 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.dashBoardDetailsDataSource = [self.presenter getDashBoardDataSource];
     [self configureUI];
-    
-    self.dashBoardDetailsDataSource = [self getDashBoardDatasource];
-    
 }
 
 
@@ -38,44 +42,22 @@
 
 #pragma mark - private methods
 
--(void)configureUI {
+- (void)configureUI {
     
     self.midLabel.text = @"My Tasks For This Week";
-    
     self.achievmentsLabel.text = @"  Achievments This week ?";
-    
-    
 }
 
--(NSMutableArray *)getDashBoardDatasource {
+- (id <DashBoardViewControllerProtocol>)presenter {
     
-    NSMutableArray *resultsArray = [[NSMutableArray alloc]init];
-    
-    self.titles = [[NSMutableArray alloc]initWithObjects:@"Title1",@"Title2",@"Title3",nil];
-    
-    
-    self.descriptions = [[NSMutableArray alloc]initWithObjects:@"Apple's sweeping new artificial intelligence play takes a page from features introduced by rival tech companies in recent years",@"Apple's sweeping new artificial intelligence play takes a page from features introduced by rival tech companies in recent years",@"Apple's sweeping new artificial intelligence play takes a page from features introduced by rival tech companies in recent years",nil];
-    
-    self.dates = [[NSMutableArray alloc]initWithObjects:@"8 JUN",@"10 JUN",@"11 JUN", nil];
-    
-    
-    for(int i = 0;i < 3 ;i++)
-    {
-        DashBoardDataModel *dashBoardDataModel = [[DashBoardDataModel alloc]init];
-        dashBoardDataModel.taskTitle = [self.titles objectAtIndex:i];
-        dashBoardDataModel.taskDescription = [self.descriptions objectAtIndex:i];
-        dashBoardDataModel.taskDate = [self.dates objectAtIndex:i];
-        [resultsArray addObject:dashBoardDataModel];
+    if(!_presenter) {
         
+        _presenter = [DashBoardViewControllerPresenter new];
     }
     
-    return resultsArray;
-    
-    
-    
-    
-    
+    return _presenter;
 }
+
 
 #pragma -mark table view delegate methods
 
@@ -87,8 +69,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"myCell";
-    
-    //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     DashboardCustomCell *cell = (DashboardCustomCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
@@ -108,7 +88,6 @@
             NSString *titleText = dashBoardDataModel.taskTitle;
             
             cell.titleLabel.text = titleText;
-            
         }
         
         cell.circleImage.image = [UIImage imageNamed:@"taskCircle"];
@@ -125,7 +104,6 @@
             NSString *dateText = dashBoardDataModel.taskDate;
             
             cell.dateLabel.text = dateText;
-            
         }
         
     }

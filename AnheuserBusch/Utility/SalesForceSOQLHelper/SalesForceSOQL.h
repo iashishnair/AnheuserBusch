@@ -15,6 +15,6 @@
 
 - (void)getDetailsWithSOQL:(nonnull NSString *)soqlString completion:(nullable SOQLCompletion)completion;
 - (void)getUserDetails:(nullable SOQLCompletion)completion;
-- (void)userDetails:(SOQLCompletion)completion ;
+- (void)userDetails:(nullable SOQLCompletion)completion ;
 
 @end
