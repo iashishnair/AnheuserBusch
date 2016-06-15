@@ -152,7 +152,7 @@
     if(selectedViewController) {
         
         NSArray *viewControllers = @[selectedViewController];
-        [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
+        [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
         
         self.currentPageIndex = pageIndex;
     }

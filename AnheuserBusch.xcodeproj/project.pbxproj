@@ -504,10 +504,10 @@
 		EA942F371D0F770E0018E7BB /* PageHeaderView */ = {
 			isa = PBXGroup;
 			children = (
+				EA942F3B1D0F770E0018E7BB /* PageHeaderViewDelegate.h */,
 				EA942F381D0F770E0018E7BB /* PageHeaderView.h */,
 				EA942F391D0F770E0018E7BB /* PageHeaderView.m */,
 				EA942F3A1D0F770E0018E7BB /* PageHeaderView.xib */,
-				EA942F3B1D0F770E0018E7BB /* PageHeaderViewDelegate.h */,
 			);
 			path = PageHeaderView;
 			sourceTree = "<group>";
