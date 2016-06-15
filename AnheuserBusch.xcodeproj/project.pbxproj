@@ -33,6 +33,8 @@
 		8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9681D0AF78300B30DCF /* NSObject+HelperUtil.m */; };
 		84F6F6D91D0E92EC001800B3 /* LeaderBoard.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F6F6D81D0E92EC001800B3 /* LeaderBoard.plist */; };
 		84F6F6DC1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F6F6DB1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m */; };
+		B5DDFF951D11988A000C686B /* DashBoardDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DDFF941D11988A000C686B /* DashBoardDataModel.m */; };
+		B5DDFF971D119C03000C686B /* taskCircle3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DDFF961D119C03000C686B /* taskCircle3x.png */; };
 		EA8497881D0B708D0034B44F /* LeaderBoardDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8497871D0B708D0034B44F /* LeaderBoardDataModel.m */; };
 		EA895D621D0B477E00BF8902 /* NSLayoutConstraint+LayoutConstraintHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA895D611D0B477E00BF8902 /* NSLayoutConstraint+LayoutConstraintHelper.m */; };
 		EA895D651D0B4B7000BF8902 /* UIView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = EA895D641D0B4B7000BF8902 /* UIView+Common.m */; };
@@ -114,6 +116,9 @@
 		84F6F6DA1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewControllerPresenter.h; sourceTree = "<group>"; };
 		84F6F6DB1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardViewControllerPresenter.m; sourceTree = "<group>"; };
 		84F6F6DD1D0E93B8001800B3 /* LeaderBoardViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewProtocol.h; sourceTree = "<group>"; };
+		B5DDFF931D11988A000C686B /* DashBoardDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardDataModel.h; sourceTree = "<group>"; };
+		B5DDFF941D11988A000C686B /* DashBoardDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardDataModel.m; sourceTree = "<group>"; };
+		B5DDFF961D119C03000C686B /* taskCircle3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taskCircle3x.png; sourceTree = "<group>"; };
 		D81035F868542EEDBC8DF2DC /* Pods_AnheuserBusch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnheuserBusch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8497861D0B708D0034B44F /* LeaderBoardDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardDataModel.h; sourceTree = "<group>"; };
 		EA8497871D0B708D0034B44F /* LeaderBoardDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardDataModel.m; sourceTree = "<group>"; };
@@ -190,6 +195,7 @@
 		843D3D211D1005990044A31B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B5DDFF961D119C03000C686B /* taskCircle3x.png */,
 				843D3D301D103F2A0044A31B /* yellowCircle.png */,
 				843D3D221D1005990044A31B /* page1.jpg */,
 				843D3D231D1005990044A31B /* page2.jpeg */,
@@ -425,6 +431,15 @@
 			path = Plist;
 			sourceTree = "<group>";
 		};
+		B5DDFF921D11988A000C686B /* DashBoardDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				B5DDFF931D11988A000C686B /* DashBoardDataModel.h */,
+				B5DDFF941D11988A000C686B /* DashBoardDataModel.m */,
+			);
+			path = DashBoardDataModel;
+			sourceTree = "<group>";
+		};
 		E2B52B9B1DAAC8E01B804260 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,6 +451,7 @@
 		EA8497841D0B70630034B44F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B5DDFF921D11988A000C686B /* DashBoardDataModel */,
 				EA8497851D0B70830034B44F /* LeaderBoardDataModel */,
 			);
 			path = Models;
@@ -666,6 +682,7 @@
 				843D3D271D1005990044A31B /* page2.jpeg in Resources */,
 				843D3D261D1005990044A31B /* page1.jpg in Resources */,
 				8468C8DE1D0AA58B00B30DCF /* Main.storyboard in Resources */,
+				B5DDFF971D119C03000C686B /* taskCircle3x.png in Resources */,
 				EA942F4C1D0F770E0018E7BB /* MyCustomCell.xib in Resources */,
 				EA942F541D0F770E0018E7BB /* UserRankView.xib in Resources */,
 			);
@@ -755,6 +772,7 @@
 				8468C9261D0AA8B900B30DCF /* OnBoardingViewController.m in Sources */,
 				EA895D7C1D0B55BD00BF8902 /* PageBaseViewController.m in Sources */,
 				84F6F6DC1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m in Sources */,
+				B5DDFF951D11988A000C686B /* DashBoardDataModel.m in Sources */,
 				EA942F4B1D0F770E0018E7BB /* MyCustomCell.m in Sources */,
 				EA895D751D0B51F300BF8902 /* UIResponder+UIComponentUtility.m in Sources */,
 				8468C9371D0AAA6F00B30DCF /* AnheuserBusch.xcdatamodeld in Sources */,

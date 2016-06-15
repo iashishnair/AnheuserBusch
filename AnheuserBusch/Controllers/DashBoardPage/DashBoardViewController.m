@@ -8,14 +8,14 @@
 
 #import "DashBoardViewController.h"
 #import "DashboardCustomCell.h"
+#import "DashBoardDataModel.h"
 
 @interface DashBoardViewController ()
 
-@property (strong,nonatomic) NSMutableArray *titlesArray;
-
-@property (strong, nonatomic)NSMutableArray *descriptionArray;
-
-@property (strong, nonatomic)NSMutableArray *dateArray;
+@property (strong, nonatomic) NSMutableArray *dashBoardDetailsDataSource;
+@property (strong, nonatomic)NSMutableArray *descriptions;
+@property (strong, nonatomic)NSMutableArray *dates;
+@property (strong, nonatomic) NSMutableArray *titles;
 
 @end
 
@@ -26,9 +26,9 @@
     
     [self configureUI];
     
-    [self createDatasource];
+    self.dashBoardDetailsDataSource = [self getDashBoardDatasource];
     
-        }
+}
 
 
 - (void)didReceiveMemoryWarning {
@@ -39,31 +39,49 @@
 #pragma mark - private methods
 
 -(void)configureUI {
-  
+    
     self.midLabel.text = @"My Tasks For This Week";
     
     self.achievmentsLabel.text = @"  Achievments This week ?";
     
-
+    
 }
 
--(void)createDatasource {
+-(NSMutableArray *)getDashBoardDatasource {
     
-    self.titlesArray = [[NSMutableArray alloc]initWithObjects:@"Title1",@"Title2",@"Title3",nil];
+    NSMutableArray *resultsArray = [[NSMutableArray alloc]init];
+    
+    self.titles = [[NSMutableArray alloc]initWithObjects:@"Title1",@"Title2",@"Title3",nil];
     
     
-    self.descriptionArray = [[NSMutableArray alloc]initWithObjects:@"Apple's sweeping new artificial intelligence play takes a page from features introduced by rival tech companies in recent years",@"Apple's sweeping new artificial intelligence play takes a page from features introduced by rival tech companies in recent years",@"Apple's sweeping new artificial intelligence play takes a page from features introduced by rival tech companies in recent years",nil];
+    self.descriptions = [[NSMutableArray alloc]initWithObjects:@"Apple's sweeping new artificial intelligence play takes a page from features introduced by rival tech companies in recent years",@"Apple's sweeping new artificial intelligence play takes a page from features introduced by rival tech companies in recent years",@"Apple's sweeping new artificial intelligence play takes a page from features introduced by rival tech companies in recent years",nil];
     
-    self.dateArray = [[NSMutableArray alloc]initWithObjects:@"8 JUN",@"10 JUN",@"11 JUN", nil];
+    self.dates = [[NSMutableArray alloc]initWithObjects:@"8 JUN",@"10 JUN",@"11 JUN", nil];
     
-
+    
+    for(int i = 0;i < 3 ;i++)
+    {
+        DashBoardDataModel *dashBoardDataModel = [[DashBoardDataModel alloc]init];
+        dashBoardDataModel.taskTitle = [self.titles objectAtIndex:i];
+        dashBoardDataModel.taskDescription = [self.descriptions objectAtIndex:i];
+        dashBoardDataModel.taskDate = [self.dates objectAtIndex:i];
+        [resultsArray addObject:dashBoardDataModel];
+        
+    }
+    
+    return resultsArray;
+    
+    
+    
+    
+    
 }
 
 #pragma -mark table view delegate methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.titlesArray count];
+    return [self.dashBoardDetailsDataSource count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -78,26 +96,35 @@
         cell = [[DashboardCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    if(self.titlesArray.count > indexPath.row)
+    if(self.dashBoardDetailsDataSource.count > indexPath.row)
         
     {
-        if(self.titlesArray) {
-    
-    cell.titleLabel.text = [self.titlesArray objectAtIndex:indexPath.row];
-            
-        }
-
-    cell.circleImage.image = [UIImage imageNamed:@"yellowCircle.png"];
+        DashBoardDataModel *dashBoardDataModel = [[DashBoardDataModel alloc]init];
         
-        if(self.descriptionArray) {
-    
-    cell.descriptionLabel.text = [self.descriptionArray objectAtIndex:indexPath.row];
+        dashBoardDataModel = [self.dashBoardDetailsDataSource objectAtIndex:indexPath.row];
+        
+        if(dashBoardDataModel.taskTitle) {
+            
+            NSString *titleText = dashBoardDataModel.taskTitle;
+            
+            cell.titleLabel.text = titleText;
             
         }
         
-        if(self.dateArray) {
-    
-    cell.dateLabel.text = [self.dateArray objectAtIndex:indexPath.row];
+        cell.circleImage.image = [UIImage imageNamed:@"taskCircle"];
+        
+        if(dashBoardDataModel.taskDescription) {
+            
+            NSString *descriptionText = dashBoardDataModel.taskDescription;
+            
+            cell.descriptionLabel.text = descriptionText;
+        }
+        
+        if(dashBoardDataModel.taskDate) {
+            
+            NSString *dateText = dashBoardDataModel.taskDate;
+            
+            cell.dateLabel.text = dateText;
             
         }
         
