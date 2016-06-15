@@ -1,34 +1,20 @@
-//
-//  VKSideMenu.m
-//
-//  Created by Vladislav Kovalyov on 2/7/16.
-//  Copyright © 2016 WOOPSS.com (http://woopss.com/)
-//
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
 
-#import "VKSideMenu.h"
+//
+//  CustomSlideMenu.h
+//  AnheuserBusch
+//
+//  Created by Prsenjit Goswami on 10/06/16.
+//  Copyright © 2016 Cognizant. All rights reserved.
+//
+
+#import "CustomSlideMenu.h"
+#import "Constants.h"
 
 #define SYSTEM_VERSION_LESS_THAN(v) ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define ROOTVC [[[[UIApplication sharedApplication] delegate] window] rootViewController]
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
-@implementation VKSideMenuItem
+@implementation CustomSlideMenuItem
 
 @synthesize icon;
 @synthesize title;
@@ -36,7 +22,7 @@
 
 @end
 
-@interface VKSideMenu() <UITableViewDelegate, UITableViewDataSource>
+@interface CustomSlideMenu() <UITableViewDelegate, UITableViewDataSource>
 {
     UITapGestureRecognizer *tapGesture;
 }
@@ -45,7 +31,7 @@
 
 @end
 
-@implementation VKSideMenu
+@implementation CustomSlideMenu
 
 #pragma mark - Initialization
 
@@ -59,7 +45,7 @@
     return self;
 }
 
--(instancetype)initWithWidth:(CGFloat)width andDirection:(VKSideMenuDirection)direction
+-(instancetype)initWithWidth:(CGFloat)width andDirection:(CustomSlideMenuDirection)direction
 {
     if ((self = [super init]))
     {
@@ -75,7 +61,7 @@
 -(void)baseInit
 {
     self.width                      = 220;
-    self.direction                  = VKSideMenuDirectionLeftToRight;
+    self.direction                  = CustomSlideMenuDirectionLeftToRight;
     self.enableOverlay              = YES;
     self.automaticallyDeselectRow   = YES;
     self.hideOnSelection            = YES;
@@ -108,20 +94,23 @@
     
     CGRect frame = [self frameHidden];
     
-    if(SYSTEM_VERSION_LESS_THAN(@"8.0"))
+   // if(!SYSTEM_VERSION_LESS_THAN(@"8.0"))
     {
         self.view = [[UIView alloc] initWithFrame:frame];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
         self.view.backgroundColor = self.backgroundColor;
 #pragma clang diagnostic pop
+        
+
     }
-    else
-    {
-        UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:self.blurEffectStyle];
-        self.view = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
-        self.view.frame = frame;
-    }
+//    else
+//    {
+//
+//        UIVisualEffect *blurEffect = [UIBlurEffect effectWithStyle:self.blurEffectStyle];
+//        self.view = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+//        self.view.frame = frame;
+//    }
     
     self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     self.tableView.delegate         = self;
@@ -215,7 +204,7 @@
         [cell setSelectedBackgroundView:bgColorView];
     }
     
-    VKSideMenuItem *item = [self.dataSource sideMenu:self itemForRowAtIndexPath:indexPath];
+    CustomSlideMenuItem *item = [self.dataSource sideMenu:self itemForRowAtIndexPath:indexPath];
     
     CGFloat contentHeight = cell.frame.size.height * .8;
     CGFloat contentTopBottomPadding = cell.frame.size.height * .1;
@@ -307,13 +296,13 @@
 
 -(CGRect)frameHidden
 {
-    CGFloat x = self.direction == VKSideMenuDirectionLeftToRight ? -self.width : [UIScreen mainScreen].bounds.size.width + self.width;
+    CGFloat x = self.direction == CustomSlideMenuDirectionLeftToRight ? -self.width : [UIScreen mainScreen].bounds.size.width + self.width;
     return CGRectMake(x, 20, self.width, [UIScreen mainScreen].bounds.size.height);
 }
 
 -(CGRect)frameShowed
 {
-    CGFloat x = self.direction == VKSideMenuDirectionLeftToRight ? 0 : [UIScreen mainScreen].bounds.size.width - self.width;
+    CGFloat x = self.direction == CustomSlideMenuDirectionLeftToRight ? 0 : [UIScreen mainScreen].bounds.size.width - self.width;
     return CGRectMake(x, 20, self.width, self.view.frame.size.height);
 }
 

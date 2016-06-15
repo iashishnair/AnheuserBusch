@@ -26,11 +26,10 @@ typedef enum {
 } SOQLStatus;
 
 /*!
- Page If
  */
 typedef enum {
     
-//    kPageLogin = 0,
+//  kPageLogin = 0,
     kPageDashBoard = 0,
     kPageLeaderBoard = 1,
 
