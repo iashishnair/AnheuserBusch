@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "008A2CAA65CB27181E6BDDF98672F1E00B4E7657",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "008A2CAA65CB27181E6BDDF98672F1E00B4E7657" : 0,
+    "8456D4479BCBF57F227C0DCD773E3570D533A1F3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C6EC3B34-98AE-431C-AE0C-4795C2A19FA5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "008A2CAA65CB27181E6BDDF98672F1E00B4E7657" : "AnheuserBusch\/",
+    "8456D4479BCBF57F227C0DCD773E3570D533A1F3" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AnheuserBusch",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AnheuserBusch.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/prosenjitgoswami-cts\/AnheuserBusch.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "008A2CAA65CB27181E6BDDF98672F1E00B4E7657"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/prosenjitgoswami-cts\/ZIP.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8456D4479BCBF57F227C0DCD773E3570D533A1F3"
+    }
+  ]
+}

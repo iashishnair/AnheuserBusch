@@ -8,13 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		4C85B15EF09B6835CD0E7B8E /* Pods_AnheuserBusch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81035F868542EEDBC8DF2DC /* Pods_AnheuserBusch.framework */; };
+		843D3D201D0FFBD30044A31B /* InternalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843D3D1E1D0FFBD30044A31B /* InternalViewController.m */; };
+		843D3D261D1005990044A31B /* page1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 843D3D221D1005990044A31B /* page1.jpg */; };
+		843D3D271D1005990044A31B /* page2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 843D3D231D1005990044A31B /* page2.jpeg */; };
+		843D3D281D1005990044A31B /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = 843D3D241D1005990044A31B /* page3.png */; };
+		843D3D291D1005990044A31B /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = 843D3D251D1005990044A31B /* page4.png */; };
+		843D3D2C1D1031B60044A31B /* DashBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843D3D2B1D1031B60044A31B /* DashBoardViewController.m */; };
+		843D3D2F1D1037AB0044A31B /* DashboardCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 843D3D2E1D1037AB0044A31B /* DashboardCustomCell.m */; };
+		843D3D311D103F2A0044A31B /* yellowCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 843D3D301D103F2A0044A31B /* yellowCircle.png */; };
 		8468C8D51D0AA58B00B30DCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C8D41D0AA58B00B30DCF /* main.m */; };
 		8468C8DE1D0AA58B00B30DCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468C8DC1D0AA58B00B30DCF /* Main.storyboard */; };
 		8468C8E61D0AA58B00B30DCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468C8E41D0AA58B00B30DCF /* LaunchScreen.storyboard */; };
 		8468C8F11D0AA58B00B30DCF /* AnheuserBuschTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C8F01D0AA58B00B30DCF /* AnheuserBuschTests.m */; };
 		8468C8FC1D0AA58B00B30DCF /* AnheuserBuschUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C8FB1D0AA58B00B30DCF /* AnheuserBuschUITests.m */; };
 		8468C9231D0AA82E00B30DCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9171D0AA82E00B30DCF /* AppDelegate.m */; };
-		8468C9261D0AA8B900B30DCF /* DashBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9251D0AA8B900B30DCF /* DashBoardViewController.m */; };
+		8468C9261D0AA8B900B30DCF /* OnBoardingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9251D0AA8B900B30DCF /* OnBoardingViewController.m */; };
 		8468C9291D0AA8CA00B30DCF /* LeaderBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9281D0AA8CA00B30DCF /* LeaderBoardViewController.m */; };
 		8468C92C1D0AA8D900B30DCF /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C92B1D0AA8D900B30DCF /* LoginViewController.m */; };
 		8468C9301D0AA9A300B30DCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8468C92F1D0AA9A300B30DCF /* Assets.xcassets */; };
@@ -25,6 +33,8 @@
 		8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9681D0AF78300B30DCF /* NSObject+HelperUtil.m */; };
 		84F6F6D91D0E92EC001800B3 /* LeaderBoard.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F6F6D81D0E92EC001800B3 /* LeaderBoard.plist */; };
 		84F6F6DC1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F6F6DB1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m */; };
+		B5DDFF951D11988A000C686B /* DashBoardDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DDFF941D11988A000C686B /* DashBoardDataModel.m */; };
+		B5DDFF971D119C03000C686B /* taskCircle3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DDFF961D119C03000C686B /* taskCircle3x.png */; };
 		EA8497881D0B708D0034B44F /* LeaderBoardDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8497871D0B708D0034B44F /* LeaderBoardDataModel.m */; };
 		EA895D621D0B477E00BF8902 /* NSLayoutConstraint+LayoutConstraintHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA895D611D0B477E00BF8902 /* NSLayoutConstraint+LayoutConstraintHelper.m */; };
 		EA895D651D0B4B7000BF8902 /* UIView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = EA895D641D0B4B7000BF8902 /* UIView+Common.m */; };
@@ -64,6 +74,17 @@
 /* Begin PBXFileReference section */
 		032583A2F00214ECCB084D5B /* Pods-AnheuserBusch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnheuserBusch.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnheuserBusch/Pods-AnheuserBusch.release.xcconfig"; sourceTree = "<group>"; };
 		03D768E5340D91F558808008 /* Pods-AnheuserBusch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnheuserBusch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnheuserBusch/Pods-AnheuserBusch.debug.xcconfig"; sourceTree = "<group>"; };
+		843D3D1E1D0FFBD30044A31B /* InternalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InternalViewController.m; sourceTree = "<group>"; };
+		843D3D1F1D0FFBD30044A31B /* InternalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternalViewController.h; sourceTree = "<group>"; };
+		843D3D221D1005990044A31B /* page1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page1.jpg; sourceTree = "<group>"; };
+		843D3D231D1005990044A31B /* page2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = page2.jpeg; sourceTree = "<group>"; };
+		843D3D241D1005990044A31B /* page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page3.png; sourceTree = "<group>"; };
+		843D3D251D1005990044A31B /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
+		843D3D2A1D1031B60044A31B /* DashBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardViewController.h; sourceTree = "<group>"; };
+		843D3D2B1D1031B60044A31B /* DashBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardViewController.m; sourceTree = "<group>"; };
+		843D3D2D1D1037AB0044A31B /* DashboardCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardCustomCell.h; sourceTree = "<group>"; };
+		843D3D2E1D1037AB0044A31B /* DashboardCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardCustomCell.m; sourceTree = "<group>"; };
+		843D3D301D103F2A0044A31B /* yellowCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowCircle.png; sourceTree = "<group>"; };
 		8468C8D01D0AA58B00B30DCF /* AnheuserBusch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnheuserBusch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8468C8D41D0AA58B00B30DCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8468C8DD1D0AA58B00B30DCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -77,8 +98,8 @@
 		8468C8FD1D0AA58B00B30DCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8468C9161D0AA82E00B30DCF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8468C9171D0AA82E00B30DCF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8468C9241D0AA8B900B30DCF /* DashBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardViewController.h; sourceTree = "<group>"; };
-		8468C9251D0AA8B900B30DCF /* DashBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardViewController.m; sourceTree = "<group>"; };
+		8468C9241D0AA8B900B30DCF /* OnBoardingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnBoardingViewController.h; sourceTree = "<group>"; };
+		8468C9251D0AA8B900B30DCF /* OnBoardingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnBoardingViewController.m; sourceTree = "<group>"; };
 		8468C9271D0AA8CA00B30DCF /* LeaderBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewController.h; sourceTree = "<group>"; };
 		8468C9281D0AA8CA00B30DCF /* LeaderBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardViewController.m; sourceTree = "<group>"; };
 		8468C92A1D0AA8D900B30DCF /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -95,6 +116,9 @@
 		84F6F6DA1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewControllerPresenter.h; sourceTree = "<group>"; };
 		84F6F6DB1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardViewControllerPresenter.m; sourceTree = "<group>"; };
 		84F6F6DD1D0E93B8001800B3 /* LeaderBoardViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewProtocol.h; sourceTree = "<group>"; };
+		B5DDFF931D11988A000C686B /* DashBoardDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardDataModel.h; sourceTree = "<group>"; };
+		B5DDFF941D11988A000C686B /* DashBoardDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardDataModel.m; sourceTree = "<group>"; };
+		B5DDFF961D119C03000C686B /* taskCircle3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taskCircle3x.png; sourceTree = "<group>"; };
 		D81035F868542EEDBC8DF2DC /* Pods_AnheuserBusch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnheuserBusch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8497861D0B708D0034B44F /* LeaderBoardDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardDataModel.h; sourceTree = "<group>"; };
 		EA8497871D0B708D0034B44F /* LeaderBoardDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardDataModel.m; sourceTree = "<group>"; };
@@ -166,6 +190,19 @@
 				032583A2F00214ECCB084D5B /* Pods-AnheuserBusch.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		843D3D211D1005990044A31B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B5DDFF961D119C03000C686B /* taskCircle3x.png */,
+				843D3D301D103F2A0044A31B /* yellowCircle.png */,
+				843D3D221D1005990044A31B /* page1.jpg */,
+				843D3D231D1005990044A31B /* page2.jpeg */,
+				843D3D241D1005990044A31B /* page3.png */,
+				843D3D251D1005990044A31B /* page4.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		8468C8C71D0AA58B00B30DCF = {
@@ -259,8 +296,14 @@
 		8468C9191D0AA82E00B30DCF /* DashBoardPage */ = {
 			isa = PBXGroup;
 			children = (
-				8468C9241D0AA8B900B30DCF /* DashBoardViewController.h */,
-				8468C9251D0AA8B900B30DCF /* DashBoardViewController.m */,
+				843D3D1E1D0FFBD30044A31B /* InternalViewController.m */,
+				843D3D1F1D0FFBD30044A31B /* InternalViewController.h */,
+				8468C9241D0AA8B900B30DCF /* OnBoardingViewController.h */,
+				8468C9251D0AA8B900B30DCF /* OnBoardingViewController.m */,
+				843D3D2A1D1031B60044A31B /* DashBoardViewController.h */,
+				843D3D2B1D1031B60044A31B /* DashBoardViewController.m */,
+				843D3D2D1D1037AB0044A31B /* DashboardCustomCell.h */,
+				843D3D2E1D1037AB0044A31B /* DashboardCustomCell.m */,
 			);
 			path = DashBoardPage;
 			sourceTree = "<group>";
@@ -289,6 +332,7 @@
 		8468C91E1D0AA82E00B30DCF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				843D3D211D1005990044A31B /* Images */,
 				84F6F6D71D0E92DE001800B3 /* Plist */,
 				8468C9311D0AA9BA00B30DCF /* Fonts */,
 				8468C92E1D0AA98700B30DCF /* Assets */,
@@ -387,6 +431,15 @@
 			path = Plist;
 			sourceTree = "<group>";
 		};
+		B5DDFF921D11988A000C686B /* DashBoardDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				B5DDFF931D11988A000C686B /* DashBoardDataModel.h */,
+				B5DDFF941D11988A000C686B /* DashBoardDataModel.m */,
+			);
+			path = DashBoardDataModel;
+			sourceTree = "<group>";
+		};
 		E2B52B9B1DAAC8E01B804260 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,6 +451,7 @@
 		EA8497841D0B70630034B44F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B5DDFF921D11988A000C686B /* DashBoardDataModel */,
 				EA8497851D0B70830034B44F /* LeaderBoardDataModel */,
 			);
 			path = Models;
@@ -618,11 +672,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA942F511D0F770E0018E7BB /* RankingSwitchView.xib in Resources */,
+				843D3D281D1005990044A31B /* page3.png in Resources */,
 				84F6F6D91D0E92EC001800B3 /* LeaderBoard.plist in Resources */,
 				8468C8E61D0AA58B00B30DCF /* LaunchScreen.storyboard in Resources */,
+				843D3D311D103F2A0044A31B /* yellowCircle.png in Resources */,
 				EA942F4E1D0F770E0018E7BB /* PageHeaderView.xib in Resources */,
+				843D3D291D1005990044A31B /* page4.png in Resources */,
 				8468C9301D0AA9A300B30DCF /* Assets.xcassets in Resources */,
+				843D3D271D1005990044A31B /* page2.jpeg in Resources */,
+				843D3D261D1005990044A31B /* page1.jpg in Resources */,
 				8468C8DE1D0AA58B00B30DCF /* Main.storyboard in Resources */,
+				B5DDFF971D119C03000C686B /* taskCircle3x.png in Resources */,
 				EA942F4C1D0F770E0018E7BB /* MyCustomCell.xib in Resources */,
 				EA942F541D0F770E0018E7BB /* UserRankView.xib in Resources */,
 			);
@@ -708,16 +768,20 @@
 				EA942F4F1D0F770E0018E7BB /* RankingCarouselView.m in Sources */,
 				EA8497881D0B708D0034B44F /* LeaderBoardDataModel.m in Sources */,
 				EA895D791D0B553500BF8902 /* PageContainerViewController.m in Sources */,
-				8468C9261D0AA8B900B30DCF /* DashBoardViewController.m in Sources */,
+				843D3D2F1D1037AB0044A31B /* DashboardCustomCell.m in Sources */,
+				8468C9261D0AA8B900B30DCF /* OnBoardingViewController.m in Sources */,
 				EA895D7C1D0B55BD00BF8902 /* PageBaseViewController.m in Sources */,
 				84F6F6DC1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m in Sources */,
+				B5DDFF951D11988A000C686B /* DashBoardDataModel.m in Sources */,
 				EA942F4B1D0F770E0018E7BB /* MyCustomCell.m in Sources */,
 				EA895D751D0B51F300BF8902 /* UIResponder+UIComponentUtility.m in Sources */,
 				8468C9371D0AAA6F00B30DCF /* AnheuserBusch.xcdatamodeld in Sources */,
 				EA942F2A1D0F6BDC0018E7BB /* SalesForceSOQL.m in Sources */,
 				EA942F4D1D0F770E0018E7BB /* PageHeaderView.m in Sources */,
+				843D3D2C1D1031B60044A31B /* DashBoardViewController.m in Sources */,
 				EA895D621D0B477E00BF8902 /* NSLayoutConstraint+LayoutConstraintHelper.m in Sources */,
 				8468C9291D0AA8CA00B30DCF /* LeaderBoardViewController.m in Sources */,
+				843D3D201D0FFBD30044A31B /* InternalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
