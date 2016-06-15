@@ -30,7 +30,6 @@
 		8468C9401D0AACFC00B30DCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468C93F1D0AACFC00B30DCF /* CoreGraphics.framework */; };
 		8468C9421D0AAD0300B30DCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468C9411D0AAD0300B30DCF /* Foundation.framework */; };
 		8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9681D0AF78300B30DCF /* NSObject+HelperUtil.m */; };
-		84F6F6D91D0E92EC001800B3 /* LeaderBoard.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F6F6D81D0E92EC001800B3 /* LeaderBoard.plist */; };
 		84F6F6DC1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F6F6DB1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m */; };
 		B5DDFF951D11988A000C686B /* DashBoardDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DDFF941D11988A000C686B /* DashBoardDataModel.m */; };
 		B5DDFF971D119C03000C686B /* taskCircle3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5DDFF961D119C03000C686B /* taskCircle3x.png */; };
@@ -110,7 +109,6 @@
 		8468C9441D0AB00800B30DCF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8468C9671D0AF78300B30DCF /* NSObject+HelperUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HelperUtil.h"; sourceTree = "<group>"; };
 		8468C9681D0AF78300B30DCF /* NSObject+HelperUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HelperUtil.m"; sourceTree = "<group>"; };
-		84F6F6D81D0E92EC001800B3 /* LeaderBoard.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LeaderBoard.plist; sourceTree = "<group>"; };
 		84F6F6DA1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewControllerPresenter.h; sourceTree = "<group>"; };
 		84F6F6DB1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardViewControllerPresenter.m; sourceTree = "<group>"; };
 		84F6F6DD1D0E93B8001800B3 /* LeaderBoardViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewProtocol.h; sourceTree = "<group>"; };
@@ -330,7 +328,6 @@
 			isa = PBXGroup;
 			children = (
 				843D3D211D1005990044A31B /* Images */,
-				84F6F6D71D0E92DE001800B3 /* Plist */,
 				8468C9311D0AA9BA00B30DCF /* Fonts */,
 				8468C92E1D0AA98700B30DCF /* Assets */,
 			);
@@ -418,14 +415,6 @@
 				EA895D7B1D0B55BD00BF8902 /* PageBaseViewController.m */,
 			);
 			path = BaseViewController;
-			sourceTree = "<group>";
-		};
-		84F6F6D71D0E92DE001800B3 /* Plist */ = {
-			isa = PBXGroup;
-			children = (
-				84F6F6D81D0E92EC001800B3 /* LeaderBoard.plist */,
-			);
-			path = Plist;
 			sourceTree = "<group>";
 		};
 		B5DDFF921D11988A000C686B /* DashBoardDataModel */ = {
@@ -670,7 +659,6 @@
 			files = (
 				EA942F511D0F770E0018E7BB /* RankingSwitchView.xib in Resources */,
 				843D3D281D1005990044A31B /* page3.png in Resources */,
-				84F6F6D91D0E92EC001800B3 /* LeaderBoard.plist in Resources */,
 				8468C8E61D0AA58B00B30DCF /* LaunchScreen.storyboard in Resources */,
 				843D3D311D103F2A0044A31B /* yellowCircle.png in Resources */,
 				EA942F4E1D0F770E0018E7BB /* PageHeaderView.xib in Resources */,
