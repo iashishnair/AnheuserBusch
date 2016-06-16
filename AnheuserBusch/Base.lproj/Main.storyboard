@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WPE-Bt-Zkc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WPE-Bt-Zkc">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -163,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJU-hN-v1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="-1246"/>
+            <point key="canvasLocation" x="431" y="-1272"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="8YW-au-TSl">
@@ -171,7 +171,7 @@
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="JMe-DW-as6" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L0z-5V-c3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1672.5" y="-1147"/>
+            <point key="canvasLocation" x="984" y="-1340"/>
         </scene>
         <!--Dash Board View Controller-->
         <scene sceneID="sve-iG-Zjh">
@@ -433,7 +433,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcA-C4-gLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2340" y="-1278"/>
+            <point key="canvasLocation" x="1628" y="-1340"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TAt-80-f06">
+            <objects>
+                <viewController id="tWe-Vf-Qf4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G3A-ts-p8t"/>
+                        <viewControllerLayoutGuide type="bottom" id="msv-Pu-wh4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pgg-Mq-Xnh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="common_background" translatesAutoresizingMaskIntoConstraints="NO" id="w2n-aX-SMV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hola hola" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSc-ZT-jC9">
+                                <rect key="frame" x="114" y="142" width="194" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hello hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdd-Pq-0gO">
+                                <rect key="frame" x="114" y="319" width="194" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vSc-ZT-jC9" firstAttribute="top" secondItem="G3A-ts-p8t" secondAttribute="bottom" constant="122" id="Btb-d0-JUO"/>
+                            <constraint firstItem="msv-Pu-wh4" firstAttribute="top" secondItem="Mdd-Pq-0gO" secondAttribute="bottom" constant="396" id="NIK-NX-KbT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mdd-Pq-0gO" secondAttribute="trailing" constant="86" id="NsE-d1-bhW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vSc-ZT-jC9" secondAttribute="trailing" constant="86" id="YHa-gi-lhe"/>
+                            <constraint firstItem="Mdd-Pq-0gO" firstAttribute="top" secondItem="vSc-ZT-jC9" secondAttribute="bottom" constant="156" id="qA0-PR-zuF"/>
+                            <constraint firstItem="vSc-ZT-jC9" firstAttribute="leading" secondItem="pgg-Mq-Xnh" secondAttribute="leadingMargin" constant="94" id="sZ2-Bd-Qua"/>
+                            <constraint firstItem="Mdd-Pq-0gO" firstAttribute="leading" secondItem="pgg-Mq-Xnh" secondAttribute="leadingMargin" constant="94" id="yFi-Iq-Sq9"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bbj-Fp-CvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1535" y="-606"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -466,7 +511,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="296" y="-1013"/>
+            <point key="canvasLocation" x="-38" y="-1272"/>
         </scene>
         <!--Leader Board View Controller-->
         <scene sceneID="TwI-Bw-Jxg">
@@ -631,7 +676,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yyq-mf-KwC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-357" y="-932"/>
+            <point key="canvasLocation" x="-513" y="-1272"/>
         </scene>
         <!--Page Container View Controller-->
         <scene sceneID="bR2-jW-sZY">
@@ -665,7 +710,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EU3-rv-b52" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-950" y="-1106"/>
+            <point key="canvasLocation" x="-988" y="-1272"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cGS-r6-TLt">
@@ -683,7 +728,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYV-d3-If5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1370" y="-922"/>
+            <point key="canvasLocation" x="-1541" y="-1330"/>
         </scene>
         <!--Internal View Controller-->
         <scene sceneID="QeV-Hc-F8e">
@@ -815,7 +860,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7oH-u1-aYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="295.5" y="-157"/>
+            <point key="canvasLocation" x="-895" y="-538"/>
         </scene>
         <!--On Boarding Screen View Controller-->
         <scene sceneID="KOf-3h-gss">
@@ -948,7 +993,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JAK-8W-zMv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-619.5" y="104"/>
+            <point key="canvasLocation" x="-1541" y="-666"/>
         </scene>
     </scenes>
     <resources>
