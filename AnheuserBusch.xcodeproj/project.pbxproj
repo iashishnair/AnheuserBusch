@@ -68,8 +68,8 @@
 		03D768E5340D91F558808008 /* Pods-AnheuserBusch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnheuserBusch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnheuserBusch/Pods-AnheuserBusch.debug.xcconfig"; sourceTree = "<group>"; };
 		843D3D2A1D1031B60044A31B /* DashBoardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardViewController.h; sourceTree = "<group>"; };
 		843D3D2B1D1031B60044A31B /* DashBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardViewController.m; sourceTree = "<group>"; };
-		843D3D2D1D1037AB0044A31B /* DashboardCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashboardCustomCell.h; sourceTree = "<group>"; };
-		843D3D2E1D1037AB0044A31B /* DashboardCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashboardCustomCell.m; sourceTree = "<group>"; };
+		843D3D2D1D1037AB0044A31B /* DashboardCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DashboardCustomCell.h; path = ../../Controllers/DashBoardPage/DashboardCustomCell.h; sourceTree = "<group>"; };
+		843D3D2E1D1037AB0044A31B /* DashboardCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DashboardCustomCell.m; path = ../../Controllers/DashBoardPage/DashboardCustomCell.m; sourceTree = "<group>"; };
 		84640F3E1D11B67D00A6A33B /* DashBoardViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardViewControllerProtocol.h; sourceTree = "<group>"; };
 		84640F3F1D11B69000A6A33B /* DashBoardViewControllerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardViewControllerPresenter.h; sourceTree = "<group>"; };
 		84640F401D11B69000A6A33B /* DashBoardViewControllerPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardViewControllerPresenter.m; sourceTree = "<group>"; };
@@ -272,8 +272,6 @@
 				84640F401D11B69000A6A33B /* DashBoardViewControllerPresenter.m */,
 				843D3D2A1D1031B60044A31B /* DashBoardViewController.h */,
 				843D3D2B1D1031B60044A31B /* DashBoardViewController.m */,
-				843D3D2D1D1037AB0044A31B /* DashboardCustomCell.h */,
-				843D3D2E1D1037AB0044A31B /* DashboardCustomCell.m */,
 			);
 			path = DashBoardPage;
 			sourceTree = "<group>";
@@ -456,6 +454,8 @@
 		EA942F321D0F770E0018E7BB /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				843D3D2D1D1037AB0044A31B /* DashboardCustomCell.h */,
+				843D3D2E1D1037AB0044A31B /* DashboardCustomCell.m */,
 				EA942F331D0F770E0018E7BB /* LeaderBoardCustomCell.h */,
 				EA942F341D0F770E0018E7BB /* LeaderBoardCustomCell.m */,
 				EA942F351D0F770E0018E7BB /* LeaderBoardCustomCell.xib */,
