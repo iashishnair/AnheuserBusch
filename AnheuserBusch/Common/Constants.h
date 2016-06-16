@@ -76,3 +76,8 @@ static NSString * kName = @"Name";
 static NSString * kRank = @"Rank";
 static NSString * kSalesTarget = @"SalesTarget";
 
+// Dashboard View Controller Label Text
+
+static NSString * achievmentsLabelText = @"  Achievments This week ?";
+static NSString * taskTableHeading = @"My Tasks For This Week";
+
