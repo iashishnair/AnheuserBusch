@@ -17,6 +17,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userSalesTargetLabel;
 
+@property (weak, nonatomic) UIImageView * salesPersonImage;
+@property (weak, nonatomic)  UILabel *rankLabel;
+@property (weak, nonatomic) UILabel *nameLabel;
+@property (weak, nonatomic) UILabel *amountLabel;
 @end
 
 
@@ -26,13 +30,40 @@
 	
 	if(self == [super init]) {
 		
-		self = [UserRankView loadViewFromNIB];
+		//self = [UserRankView loadViewFromNIB];
+        
+        self.backgroundColor = [UIColor redColor];
 	}
 	
 	return self;
 }
 
 #pragma mark - Public Method
+
+-(void)configureUI {
+    
+    _salesPersonImage = [[UIImageView alloc]init];
+    _salesPersonImage.backgroundColor = [UIColor blueColor];
+    
+  _rankLabel = [[UILabel alloc]init];
+    _rankLabel.text = @"#2";
+    
+    _nameLabel = [[UILabel alloc]init];
+    _nameLabel.text = @"JOhn Peters";
+    
+   _amountLabel = [[UILabel alloc]init];
+    _amountLabel.text = @"$123,450.00";
+    
+    [self addSubview:_salesPersonImage];
+    [self addSubview:_rankLabel];
+    [self addSubview:_nameLabel];
+    [self addSubview:_amountLabel];
+    
+    
+    
+    
+}
+
 
 - (void)setUserImageViewBGColor:(UIColor *)userImageViewBGColor {
 	

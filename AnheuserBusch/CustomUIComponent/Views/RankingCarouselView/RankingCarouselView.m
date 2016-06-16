@@ -49,7 +49,7 @@
                 break;
             
 			LeaderBoardDataModel *leaderBoardDataModel = _rankingDataSources[i];
-			UserRankView *userRankView = [UserRankView loadViewFromNIB];
+			UserRankView *userRankView = [[UserRankView alloc]init];
             userRankView.translatesAutoresizingMaskIntoConstraints = NO;
             [self addSubview:userRankView];
 

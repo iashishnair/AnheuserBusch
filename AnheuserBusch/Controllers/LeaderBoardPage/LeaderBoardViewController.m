@@ -136,7 +136,8 @@ RankingSwitchViewDataSource, UITableViewDataSource, UITableViewDelegate>
 	[rankingCarouselView setRankingDataSources:_firstThreeDataSource];
 	rankingCarouselView.translatesAutoresizingMaskIntoConstraints = NO;
 	[self.carouselContainerView addSubview:rankingCarouselView];
-	[rankingCarouselView fitToParentView:self.carouselContainerView];
+	
+    [rankingCarouselView fitToParentView:self.carouselContainerView];
 }
 
 
