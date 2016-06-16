@@ -15,5 +15,4 @@
 @property (strong, nonatomic) NSString *taskDate;
 @property (assign, nonatomic) BOOL *workStatus;
 
-
 @end

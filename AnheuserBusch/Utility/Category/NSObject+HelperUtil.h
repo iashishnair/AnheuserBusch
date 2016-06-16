@@ -28,7 +28,7 @@
 
 + (BOOL)isNULLString:(nullable NSString *)aString;
 
-
+- (nonnull NSString *)nullStringTextCorrection ;
 @end
 
 /*!

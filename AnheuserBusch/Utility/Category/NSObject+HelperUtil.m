@@ -52,6 +52,16 @@
 	return !(aString && aString.length);
 }
 
+
+- (NSString *)nullStringTextCorrection {
+    
+    
+    NSString *result = self;
+    
+    return ![NSString isNULLString:result] ? result : @"";
+
+}
+
 @end
 
 #pragma mark - UIView Helper
