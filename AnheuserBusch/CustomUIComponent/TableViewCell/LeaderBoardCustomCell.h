@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class LeaderBoardDataModel;
 
-@interface MyCustomCell : UITableViewCell
+@interface LeaderBoardCustomCell : UITableViewCell
 
 @property (strong, nonatomic, nonnull) IBOutlet UILabel *rankLabel;
 @property (strong, nonatomic, nonnull) IBOutlet UILabel *nameLabel;
