@@ -10,6 +10,7 @@
 #import "DashboardCustomCell.h"
 #import "DashBoardDataModel.h"
 #import "DashBoardViewControllerPresenter.h"
+#import "Constants.h"
 
 @interface DashBoardViewController ()
 
@@ -44,8 +45,8 @@
 
 - (void)configureUI {
     
-    self.midLabel.text = @"My Tasks For This Week";
-    self.achievmentsLabel.text = @"  Achievments This week ?";
+    self.midLabel.text = taskTableHeading;
+    self.achievmentsLabel.text = achievmentsLabelText;
 }
 
 - (id <DashBoardViewControllerProtocol>)presenter {

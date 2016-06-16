@@ -10,7 +10,7 @@
 #import "RankingSwitchView.h"
 #import "RankingCarouselView.h"
 #import "LeaderBoardViewControllerPresenter.h"
-#import "MyCustomCell.h"
+#import "LeaderBoardCustomCell.h"
 #import "LeaderBoardDataModel.h"
 
 @interface LeaderBoardViewController () <RankingSwitchViewDelegate,
@@ -190,10 +190,10 @@ RankingSwitchViewDataSource, UITableViewDataSource, UITableViewDelegate>
 	static NSString *cellIdentifier = @"myCell";
 	
 	
-	MyCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+	LeaderBoardCustomCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 	
 	if (cell == nil) {
-		[tableView registerNib:[UINib nibWithNibName:@"MyCustomCell" bundle:nil] forCellReuseIdentifier:cellIdentifier];
+		[tableView registerNib:[UINib nibWithNibName:@"LeaderBoardCustomCell" bundle:nil] forCellReuseIdentifier:cellIdentifier];
 		
 		cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 	}

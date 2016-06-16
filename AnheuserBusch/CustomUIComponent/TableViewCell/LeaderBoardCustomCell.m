@@ -6,11 +6,11 @@
 //  Copyright © 2016 Manu's Sena's. All rights reserved.
 //
 
-#import "MyCustomCell.h"
+#import "LeaderBoardCustomCell.h"
 #import "LeaderBoardDataModel.h"
 #import "Constants.h"
 
-@implementation MyCustomCell
+@implementation LeaderBoardCustomCell
 
 - (void)awakeFromNib {
     // Initialization code
