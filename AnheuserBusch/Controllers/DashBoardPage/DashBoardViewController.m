@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *bottomTableView;
 @property (weak, nonatomic) IBOutlet UIButton *calendarButton;
 @property (weak, nonatomic) IBOutlet UILabel *achievmentsLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
 
 
 @property (strong, nonatomic) NSMutableArray *dashBoardDetailsDataSource;
