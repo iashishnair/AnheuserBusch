@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DashBoardDataModel.h"
 
 @interface DashboardCustomCell : UITableViewCell
 
@@ -15,5 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *circleImage;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
+-(void) updateCell :(DashBoardDataModel *)dashBoardDataModel;
 
 @end

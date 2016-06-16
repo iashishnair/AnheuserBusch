@@ -81,35 +81,12 @@
     if(self.dashBoardDetailsDataSource.count > indexPath.row)
         
     {
-        DashBoardDataModel *dashBoardDataModel;
-        
-        dashBoardDataModel = [self.dashBoardDetailsDataSource objectAtIndex:indexPath.row];
+        DashBoardDataModel *dashBoardDataModel = [self.dashBoardDetailsDataSource objectAtIndex:indexPath.row];
         
         if(dashBoardDataModel) {
             
-            if(dashBoardDataModel.taskTitle) {
-                
-                NSString *titleText = dashBoardDataModel.taskTitle;
-                
-                cell.titleLabel.text = titleText;
-            }
-            
-            cell.circleImage.image = [UIImage imageNamed:@"taskCircle"];
-            
-            if(dashBoardDataModel.taskDescription) {
-                
-                NSString *descriptionText = dashBoardDataModel.taskDescription;
-                
-                cell.descriptionLabel.text = descriptionText;
-            }
-            
-            if(dashBoardDataModel.taskDate) {
-                
-                NSString *dateText = dashBoardDataModel.taskDate;
-                
-                cell.dateLabel.text = dateText;
-            }
-            
+            [cell updateCell:dashBoardDataModel];
+
         }
         
     }
