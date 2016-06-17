@@ -17,10 +17,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userSalesTargetLabel;
 
-@property (weak, nonatomic) UIImageView * salesPersonImage;
-@property (weak, nonatomic)  UILabel *rankLabel;
-@property (weak, nonatomic) UILabel *nameLabel;
-@property (weak, nonatomic) UILabel *amountLabel;
+@property (strong, nonatomic) UIImageView * salesPersonImage;
+@property (strong, nonatomic)  UILabel *rankLabel;
+@property (strong, nonatomic) UILabel *nameLabel;
+@property (strong, nonatomic) UILabel *amountLabel;
 @end
 
 
@@ -33,6 +33,7 @@
 		//self = [UserRankView loadViewFromNIB];
         
         self.backgroundColor = [UIColor redColor];
+        [self configureUI];
 	}
 	
 	return self;
@@ -43,25 +44,55 @@
 -(void)configureUI {
     
     _salesPersonImage = [[UIImageView alloc]init];
+    _salesPersonImage.translatesAutoresizingMaskIntoConstraints = NO;
+    [self setUserImageViewBorderColor:[UIColor whiteColor]];
     _salesPersonImage.backgroundColor = [UIColor blueColor];
     
-  _rankLabel = [[UILabel alloc]init];
-    _rankLabel.text = @"#2";
+    _rankLabel = [[UILabel alloc]init];
+    _rankLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    _rankLabel.textAlignment = NSTextAlignmentCenter;
+    _rankLabel.textColor = [UIColor defaultTextColor];
+    _rankLabel.font = [UIFont userRankTextFont];
+//    _rankLabel.text = @"#2";
     
     _nameLabel = [[UILabel alloc]init];
-    _nameLabel.text = @"JOhn Peters";
+    _nameLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    _nameLabel.textAlignment = NSTextAlignmentCenter;
+    _nameLabel.textColor = [UIColor defaultTextColor];
+    _nameLabel.font = [UIFont userRankTextFont];
+//    _nameLabel.text = @"JOhn Peters";
     
-   _amountLabel = [[UILabel alloc]init];
-    _amountLabel.text = @"$123,450.00";
+    _amountLabel = [[UILabel alloc]init];
+    _amountLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    _amountLabel.textAlignment = NSTextAlignmentCenter;
+    _amountLabel.textColor = [UIColor defaultTextColor];
+    _amountLabel.font = [UIFont userRankTextFont];
+//    _amountLabel.text = @"$123,450.00";
     
     [self addSubview:_salesPersonImage];
     [self addSubview:_rankLabel];
     [self addSubview:_nameLabel];
     [self addSubview:_amountLabel];
     
+    [self addConstraintsToView];
     
     
+}
+
+-(void)addConstraintsToView {
     
+       if(!_salesPersonImage || !_rankLabel || !_nameLabel || !_amountLabel) return;
+    
+    NSDictionary *views = @{@"salesPersonImage": _salesPersonImage,
+                            @"rankLabel": _rankLabel,
+                            @"nameLabel": _nameLabel,
+                            @"amountLabel": _amountLabel };
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-7-[salesPersonImage]-7-|" options:0 metrics:nil views:views]];
+     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[rankLabel]|" options:0 metrics:nil views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[nameLabel]|" options:0 metrics:nil views:views]];
+     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[amountLabel]|" options:0 metrics:nil views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-15-[salesPersonImage(60)]-2-[rankLabel]-2-[nameLabel]-2-[amountLabel]-10-|" options:0 metrics:nil views:views]];
 }
 
 
@@ -69,9 +100,9 @@
 	
 	_userImageViewBGColor = userImageViewBGColor;
 	
-	self.userBGImageView.backgroundColor = _userImageViewBGColor;
-    self.userBGImageView.backgroundColor = [UIColor whiteColor];
-    self.userBGImageView.layer.cornerRadius = 10.0f;
+	self.salesPersonImage.backgroundColor = _userImageViewBGColor;
+    self.salesPersonImage.backgroundColor = [UIColor whiteColor];
+    self.salesPersonImage.layer.cornerRadius = 10.0f;
 }
 
 - (void)setUserImageViewBorderColor:(UIColor *)userImageViewBorderColor {
@@ -80,8 +111,8 @@
 	
 	if(_userImageViewBorderColor) {
 		
-		self.userImageView.layer.borderColor = _userImageViewBGColor.CGColor;
-		self.userImageView.layer.borderWidth = 2.0;
+		self.salesPersonImage.layer.borderColor = _userImageViewBGColor.CGColor;
+		self.salesPersonImage.layer.borderWidth = 10.0;
 	}
 	
 }
@@ -102,9 +133,8 @@
 	
 	if(![NSString isNULLString:_userRank]) {
 		
-		self.userRankLabel.text = _userRank;
+		self.rankLabel.text = _userRank;
 	}
-	
 }
 
 - (void)setUserName:(NSString *)userName {
@@ -113,9 +143,8 @@
 	
 	if(![NSString isNULLString:_userName]) {
 		
-		self.userNameLabel.text = _userName;
+		self.nameLabel.text = _userName;
 	}
-	
 }
 
 - (void)setUserSelesTagetAmount:(NSString *)userSelesTagetAmount {
@@ -124,9 +153,8 @@
 	
 	if(![NSString isNULLString:_userSelesTagetAmount]) {
 		
-		self.userSalesTargetLabel.text = _userSelesTagetAmount;
+		self.amountLabel.text = _userSelesTagetAmount;
 	}
-	
 }
 
 @end

@@ -19,3 +19,11 @@
 + (UIColor *)defaultTextColor;
 + (UIColor *)defaultSeparatorColor;
 @end
+
+
+@interface UIFont (Common)
+
++ (UIFont *)defaultTextFont;
++ (UIFont *)userRankTextFont;
+
+@end

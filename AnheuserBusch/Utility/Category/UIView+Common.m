@@ -43,3 +43,15 @@
     // 34, 17, 0
 }
 @end
+
+@implementation UIFont (Common)
+
++ (UIFont *)defaultTextFont {
+    return [UIFont systemFontOfSize:14.0f];
+}
+
++ (UIFont *)userRankTextFont {
+    return [UIFont systemFontOfSize:14.0f];
+}
+
+@end
