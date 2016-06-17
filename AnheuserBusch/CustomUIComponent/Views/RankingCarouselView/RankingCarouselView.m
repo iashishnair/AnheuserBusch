@@ -42,7 +42,7 @@
     NSMutableString *xContsrains = [NSMutableString stringWithString:@"H:|-16-"];
 
     NSMutableDictionary *views =[NSMutableDictionary dictionary];
-        NSArray *widths = @[@(.28),@(.30),@(.23)];
+        NSArray *widths = @[@(.27),@(.30),@(.23)];
 
 		for (int i = 0 ; i < 3; i++) {
 			
