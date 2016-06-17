@@ -39,9 +39,10 @@
     
     if(_rankingDataSources && _rankingDataSources.count)
     {
-    NSMutableString *xContsrains = [NSMutableString stringWithString:@"H:|"];
+    NSMutableString *xContsrains = [NSMutableString stringWithString:@"H:|-16-"];
 
     NSMutableDictionary *views =[NSMutableDictionary dictionary];
+        NSArray *widths = @[@(.28),@(.30),@(.23)];
 
 		for (int i = 0 ; i < 3; i++) {
 			
@@ -57,8 +58,16 @@
             
             [views setObject:userRankView forKey:userRankViewName];
             
-            [xContsrains appendString:[NSString stringWithFormat:@"-10-[%@(100)]",userRankViewName]];
+            if(i==1) {
+
+                [userRankView centerXToItem:self];
+            } else {
+            [xContsrains appendString:[NSString stringWithFormat:@"[%@]",userRankViewName]];
+            }
+            NSNumber *widthInNumber = widths[i] ;
            
+            [userRankView widthMultiplierBy:[widthInNumber floatValue] toItem:self];
+            
             NSString *yContsrains = [NSString stringWithFormat:@"V:|[%@]|",userRankViewName];
             
             [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:yContsrains options:0 metrics:nil views:views]];
@@ -66,7 +75,8 @@
             
             [self reloadUserRankView:leaderBoardDataModel userRankView:userRankView];
 		}
-    
+        [xContsrains appendString:[NSString stringWithFormat:@"-16-|"]];
+
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:xContsrains options:0 metrics:nil views:views]];
     

@@ -32,7 +32,7 @@
 		
 		//self = [UserRankView loadViewFromNIB];
         
-        self.backgroundColor = [UIColor redColor];
+//        self.backgroundColor = [UIColor redColor];
         [self configureUI];
 	}
 	
@@ -83,6 +83,8 @@
     
        if(!_salesPersonImage || !_rankLabel || !_nameLabel || !_amountLabel) return;
     
+    [_salesPersonImage heightMultiplierBy:0.5 toItem:self];
+
     NSDictionary *views = @{@"salesPersonImage": _salesPersonImage,
                             @"rankLabel": _rankLabel,
                             @"nameLabel": _nameLabel,
@@ -92,7 +94,10 @@
      [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[rankLabel]|" options:0 metrics:nil views:views]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[nameLabel]|" options:0 metrics:nil views:views]];
      [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[amountLabel]|" options:0 metrics:nil views:views]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-15-[salesPersonImage(60)]-2-[rankLabel]-2-[nameLabel]-2-[amountLabel]-10-|" options:0 metrics:nil views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[rankLabel]-2-[nameLabel]-2-[amountLabel]-10-|" options:0 metrics:nil views:views]];
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[salesPersonImage]" options:0 metrics:nil views:views]];
+    
 }
 
 

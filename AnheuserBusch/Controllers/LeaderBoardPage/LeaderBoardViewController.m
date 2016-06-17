@@ -76,22 +76,21 @@ RankingSwitchViewDataSource, UITableViewDataSource, UITableViewDelegate>
 			
 			idx +=1;
 			
-			
 		}
-		
-		if(firstThreeDataSourceLocal.count > 2 && _firstThreeDataSource.count < 4) {
-			
-			[_firstThreeDataSource addObject:firstThreeDataSourceLocal[1]];
-			[_firstThreeDataSource addObject:firstThreeDataSourceLocal[0]];
-			[_firstThreeDataSource addObject:firstThreeDataSourceLocal[2]];
-			
-		} else  {
-			
-			_firstThreeDataSource = firstThreeDataSourceLocal;
-		}
-		
 	}
-	
+    
+    
+    if(firstThreeDataSourceLocal.count > 2) {
+        
+        [_firstThreeDataSource addObject:firstThreeDataSourceLocal[1]];
+        [_firstThreeDataSource addObject:firstThreeDataSourceLocal[0]];
+        [_firstThreeDataSource addObject:firstThreeDataSourceLocal[2]];
+        
+    } else  {
+        
+        _firstThreeDataSource = firstThreeDataSourceLocal;
+    }
+
 }
 	//MARK: Getter Method
 
