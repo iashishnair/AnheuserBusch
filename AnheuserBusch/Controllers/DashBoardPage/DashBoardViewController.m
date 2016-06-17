@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *bottomTableView;
 @property (weak, nonatomic) IBOutlet UIButton *calendarButton;
 @property (weak, nonatomic) IBOutlet UILabel *achievmentsLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundView;
 
 
 @property (strong, nonatomic) NSMutableArray *dashBoardDetailsDataSource;
@@ -80,31 +81,12 @@
     if(self.dashBoardDetailsDataSource.count > indexPath.row)
         
     {
-        DashBoardDataModel *dashBoardDataModel = [[DashBoardDataModel alloc]init];
+        DashBoardDataModel *dashBoardDataModel = [self.dashBoardDetailsDataSource objectAtIndex:indexPath.row];
         
-        dashBoardDataModel = [self.dashBoardDetailsDataSource objectAtIndex:indexPath.row];
-        
-        if(dashBoardDataModel.taskTitle) {
+        if(dashBoardDataModel) {
             
-            NSString *titleText = dashBoardDataModel.taskTitle;
-            
-            cell.titleLabel.text = titleText;
-        }
-        
-        cell.circleImage.image = [UIImage imageNamed:@"taskCircle"];
-        
-        if(dashBoardDataModel.taskDescription) {
-            
-            NSString *descriptionText = dashBoardDataModel.taskDescription;
-            
-            cell.descriptionLabel.text = descriptionText;
-        }
-        
-        if(dashBoardDataModel.taskDate) {
-            
-            NSString *dateText = dashBoardDataModel.taskDate;
-            
-            cell.dateLabel.text = dateText;
+            [cell updateCell:dashBoardDataModel];
+
         }
         
     }

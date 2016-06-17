@@ -39,7 +39,9 @@
 + (nullable instancetype)loadViewFromNIB ;
 
 - (void)fitToParentView:(nullable UIView * ) toItem;
-
+- (void)widthMultiplierBy:(CGFloat)multiplier toItem:(nonnull id)toItem;
+- (void)heightMultiplierBy:(CGFloat)multiplier toItem:(nonnull id)toItem;
+- (void)centerXToItem:(nonnull id)toItem;
 @end
 
 

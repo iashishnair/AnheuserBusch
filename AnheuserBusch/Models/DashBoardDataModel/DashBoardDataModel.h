@@ -13,6 +13,6 @@
 @property (strong, nonatomic) NSString *taskTitle;
 @property (strong, nonatomic) NSString *taskDescription;
 @property (strong, nonatomic) NSString *taskDate;
-@property (assign, nonatomic) BOOL *workStatus;
+@property (assign, nonatomic) BOOL workStatus;
 
 @end

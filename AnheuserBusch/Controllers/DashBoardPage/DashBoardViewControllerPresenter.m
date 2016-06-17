@@ -24,6 +24,14 @@
         dashBoardDataModel.taskTitle = [NSString stringWithFormat:@"Title:%d", i+1];
         dashBoardDataModel.taskDescription = [NSString stringWithFormat:@"Apple's sweeping new artificial intelligence play takes a page from features introduced by rival tech companies in recent years"];
         dashBoardDataModel.taskDate = [NSString stringWithFormat:@"%d JUN", i+1];
+        if(i<10)
+        {
+            dashBoardDataModel.workStatus = YES;
+        }
+        else
+        {
+            dashBoardDataModel.workStatus = NO;
+        }
         [resultsArray addObject:dashBoardDataModel];
         
     }

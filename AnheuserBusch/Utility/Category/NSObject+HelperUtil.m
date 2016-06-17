@@ -97,6 +97,27 @@
 
 }
 
+- (void)widthMultiplierBy:(CGFloat)multiplier toItem:(id)toItem   {
+    
+    if(!toItem) return;
+    
+    [toItem addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:toItem attribute:NSLayoutAttributeWidth multiplier:multiplier constant:0]];
+}
+
+- (void)heightMultiplierBy:(CGFloat)multiplier toItem:(id)toItem   {
+    
+    if(!toItem) return;
+    
+    [toItem addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:toItem attribute:NSLayoutAttributeHeight multiplier:multiplier constant:0]];
+}
+
+- (void)centerXToItem:(id)toItem   {
+    
+    if(!toItem) return;
+    
+    [toItem addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:toItem attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
+}
+
 @end
 
 #pragma mark - UIViewController Helper
