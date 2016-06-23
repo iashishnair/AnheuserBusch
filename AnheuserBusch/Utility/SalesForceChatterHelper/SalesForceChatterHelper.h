@@ -13,5 +13,6 @@
 
 + (SalesForceChatterHelper *)shareInstance;
 - (void)fetchChatterkFeedBack:(SOQLCompletion)completion;
-
+- (void)fetchFeedLike:(NSString *)commentID completion:(SOQLCompletion)completion
+;
 @end

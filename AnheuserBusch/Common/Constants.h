@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NSObject+HelperUtil.h"
 #import "UIView+Common.h"
-
+#import "UIResponder+UIComponentUtility.h"
 
 /*!
  SOQLCompletion Status

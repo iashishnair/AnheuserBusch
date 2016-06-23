@@ -8,12 +8,13 @@
 
 #import "FeedListTableViewCell.h"
 #import "FeedDataModel.h"
+#import "UIResponder+UIComponentUtility.h"
 
 @interface FeedListTableViewCell ()
 
 @property (nonatomic, strong) NSString *feedID;
 @property (nonatomic, strong) UILabel *feedMessageLabel;
-@property (nonatomic, strong) UIButton *feedLileButton;
+@property (nonatomic, strong) UIButton *feedLikeButton;
 @property (nonatomic, assign) NSUInteger numberOfLike;
 
 
@@ -41,7 +42,7 @@
     
     _numberOfLike = numberOfLike;
     
-    [_feedLileButton setTitle: (numberOfLike >0) ? @"Like" : [NSString stringWithFormat:@"Like (%ld)",numberOfLike] forState:UIControlStateNormal];
+    [_feedLikeButton setTitle: (numberOfLike >0) ? @"Like" : [NSString stringWithFormat:@"Like (%ld)",numberOfLike] forState:UIControlStateNormal];
 }
 
 - (void)setFeedDataModel:(FeedDataModel *)feedDataModel {
@@ -75,37 +76,45 @@
     return _feedMessageLabel;
 }
 
-- (UIButton *)feedLileButton {
+- (UIButton *)feedLikeButton {
     
-    if(!_feedLileButton) {
+    if(!_feedLikeButton) {
         
 
-        _feedLileButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _feedLileButton.translatesAutoresizingMaskIntoConstraints = NO;
+		_feedLikeButton = [UIButton customButtonWithImage:nil
+													  tag:1
+												addTarget:self
+												   action:@selector(clickedLike:)
+										 forControlEvents:UIControlEventTouchUpInside];
         [self setNumberOfLike:1];
-        _feedLileButton.backgroundColor = [UIColor lightGrayColor];
+        _feedLikeButton.backgroundColor = [UIColor lightGrayColor];
 
     }
     
-    return _feedLileButton;
+    return _feedLikeButton;
 }
 
 - (void)createUI {
 
     [self.contentView addSubview:self.feedMessageLabel];
-    [self.contentView addSubview:self.feedLileButton];
+    [self.contentView addSubview:self.feedLikeButton];
     [self addConstrains];
 }
 
 - (void)addConstrains {
     
     NSDictionary *views = @{@"feedMessage": self.feedMessageLabel,
-                            @"feedLileButton": self.feedLileButton};
+                            @"feedLileButton": self.feedLikeButton};
     
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[feedMessage]-|" options:0 metrics:nil views:views]];
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[feedLileButton]" options:0 metrics:nil views:views]];
 
       [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[feedMessage]-2-[feedLileButton]-|" options:0 metrics:nil views:views]];
     
+}
+
+- (void)clickedLike:(UIButton *)sender {
+	
+	
 }
 @end

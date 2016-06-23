@@ -11,6 +11,8 @@
 #import "SFRestAPI.h"
 
 #define kFeedBackPath @"/services/data/v37.0/chatter/feeds/news/me/feed-elements"
+#define kendURL @"/services/data"
+
 
 @interface SalesForceChatterHelper () <SFRestDelegate>
 
@@ -39,24 +41,42 @@ static SalesForceChatterHelper* shareInstance = nil;
 {
     _completionBlock = completion;
     
-    SFRestRequest* request = [[SFRestAPI sharedInstance] requestForResources];
-    request.path = kFeedBackPath;//
-    //[NSString stringWithFormat:@"%@%@%@%@", request.path, @"/chatter/feeds/record/", _detailItem, @"/feed-items/"];
-    [[SFRestAPI sharedInstance] send:request delegate:self];
+	[self fetchChatterWithPath:kFeedBackPath];
+
+}
+
+
+- (void)fetchFeedLike:(NSString *)commentID completion:(SOQLCompletion)completion
+
+{
+	_completionBlock = completion;
+	
+	NSString *path = [self likePath:commentID];
+	
+	[self fetchChatterWithPath:path];
+
 }
 
 
 #pragma mark - Private Method
 
-- (void)fetchChatterWith:(NSString *)path
+-(NSString *)likePath:(NSString *)commentID {
+	
+	
+	NSString *likePath = [NSString stringWithFormat:@"%@/%@/chatter/comments/%@/likes",kendURL,[SFRestAPI sharedInstance].apiVersion, commentID];
+	
+	return likePath;
+}
+
+
+- (void)fetchChatterWithPath:(NSString *)path
 
 {
-    SFRestRequest* request = [[SFRestAPI sharedInstance] requestForResources];
-    request.path = path;//
-    //[NSString stringWithFormat:@"%@%@%@%@", request.path, @"/chatter/feeds/record/", _detailItem, @"/feed-items/"];
-    
-    [[SFRestAPI sharedInstance] send:request delegate:self];
-    
+	SFRestRequest* request = [SFRestRequest requestWithMethod:SFRestMethodGET path:path queryParams:nil];
+	
+		//[NSString stringWithFormat:@"%@%@%@%@", request.path, @"/chatter/feeds/record/", _detailItem, @"/feed-items/"];
+	[[SFRestAPI sharedInstance] send:request delegate:self];
+	
 }
 
 
