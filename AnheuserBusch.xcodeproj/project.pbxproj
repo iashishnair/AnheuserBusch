@@ -26,6 +26,11 @@
 		8468C9421D0AAD0300B30DCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468C9411D0AAD0300B30DCF /* Foundation.framework */; };
 		8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9681D0AF78300B30DCF /* NSObject+HelperUtil.m */; };
 		84F6F6DC1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F6F6DB1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m */; };
+		84F8B2A31D1C06780007CD04 /* SalesForceChatterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F8B2A21D1C06780007CD04 /* SalesForceChatterHelper.m */; };
+		84F8B2AE1D1C17020007CD04 /* FeedDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F8B2AD1D1C17020007CD04 /* FeedDataModel.m */; };
+		84F8B2B41D1C184C0007CD04 /* ChatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F8B2B11D1C184C0007CD04 /* ChatterViewController.m */; };
+		84F8B2B51D1C184C0007CD04 /* FeedListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F8B2B31D1C184C0007CD04 /* FeedListTableViewCell.m */; };
+		84F8B2B81D1C187E0007CD04 /* ChatterViewControllerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F8B2B71D1C187E0007CD04 /* ChatterViewControllerPresenter.m */; };
 		B5DDFF951D11988A000C686B /* DashBoardDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DDFF941D11988A000C686B /* DashBoardDataModel.m */; };
 		EA8497881D0B708D0034B44F /* LeaderBoardDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8497871D0B708D0034B44F /* LeaderBoardDataModel.m */; };
 		EA895D621D0B477E00BF8902 /* NSLayoutConstraint+LayoutConstraintHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA895D611D0B477E00BF8902 /* NSLayoutConstraint+LayoutConstraintHelper.m */; };
@@ -101,6 +106,17 @@
 		84F6F6DA1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewControllerPresenter.h; sourceTree = "<group>"; };
 		84F6F6DB1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardViewControllerPresenter.m; sourceTree = "<group>"; };
 		84F6F6DD1D0E93B8001800B3 /* LeaderBoardViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewProtocol.h; sourceTree = "<group>"; };
+		84F8B2A11D1C06780007CD04 /* SalesForceChatterHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalesForceChatterHelper.h; sourceTree = "<group>"; };
+		84F8B2A21D1C06780007CD04 /* SalesForceChatterHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalesForceChatterHelper.m; sourceTree = "<group>"; };
+		84F8B2AC1D1C17020007CD04 /* FeedDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedDataModel.h; sourceTree = "<group>"; };
+		84F8B2AD1D1C17020007CD04 /* FeedDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedDataModel.m; sourceTree = "<group>"; };
+		84F8B2B01D1C184C0007CD04 /* ChatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatterViewController.h; sourceTree = "<group>"; };
+		84F8B2B11D1C184C0007CD04 /* ChatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatterViewController.m; sourceTree = "<group>"; };
+		84F8B2B21D1C184C0007CD04 /* FeedListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedListTableViewCell.h; sourceTree = "<group>"; };
+		84F8B2B31D1C184C0007CD04 /* FeedListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedListTableViewCell.m; sourceTree = "<group>"; };
+		84F8B2B61D1C187E0007CD04 /* ChatterViewControllerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatterViewControllerPresenter.h; sourceTree = "<group>"; };
+		84F8B2B71D1C187E0007CD04 /* ChatterViewControllerPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatterViewControllerPresenter.m; sourceTree = "<group>"; };
+		84F8B2B91D1C188C0007CD04 /* ChatterViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatterViewControllerProtocol.h; sourceTree = "<group>"; };
 		B5DDFF931D11988A000C686B /* DashBoardDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardDataModel.h; sourceTree = "<group>"; };
 		B5DDFF941D11988A000C686B /* DashBoardDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardDataModel.m; sourceTree = "<group>"; };
 		D81035F868542EEDBC8DF2DC /* Pods_AnheuserBusch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnheuserBusch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +271,7 @@
 		8468C9181D0AA82E00B30DCF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84F8B2AF1D1C184C0007CD04 /* ChatterViewController */,
 				EA895D761D0B553500BF8902 /* PageContainerViewController */,
 				8468C9451D0AB11E00B30DCF /* BaseViewController */,
 				8468C9191D0AA82E00B30DCF /* DashBoardPage */,
@@ -309,6 +326,7 @@
 		8468C91F1D0AA82E00B30DCF /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				84F8B2A01D1C058D0007CD04 /* SalesForceChatterHelper */,
 				EA942F271D0F6BDC0018E7BB /* SalesForceSOQLHelper */,
 				8468C9201D0AA82E00B30DCF /* Category */,
 			);
@@ -389,6 +407,38 @@
 			path = BaseViewController;
 			sourceTree = "<group>";
 		};
+		84F8B2A01D1C058D0007CD04 /* SalesForceChatterHelper */ = {
+			isa = PBXGroup;
+			children = (
+				84F8B2A11D1C06780007CD04 /* SalesForceChatterHelper.h */,
+				84F8B2A21D1C06780007CD04 /* SalesForceChatterHelper.m */,
+			);
+			path = SalesForceChatterHelper;
+			sourceTree = "<group>";
+		};
+		84F8B2AB1D1C16E00007CD04 /* FeedDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				84F8B2AC1D1C17020007CD04 /* FeedDataModel.h */,
+				84F8B2AD1D1C17020007CD04 /* FeedDataModel.m */,
+			);
+			path = FeedDataModel;
+			sourceTree = "<group>";
+		};
+		84F8B2AF1D1C184C0007CD04 /* ChatterViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84F8B2B01D1C184C0007CD04 /* ChatterViewController.h */,
+				84F8B2B11D1C184C0007CD04 /* ChatterViewController.m */,
+				84F8B2B21D1C184C0007CD04 /* FeedListTableViewCell.h */,
+				84F8B2B31D1C184C0007CD04 /* FeedListTableViewCell.m */,
+				84F8B2B61D1C187E0007CD04 /* ChatterViewControllerPresenter.h */,
+				84F8B2B71D1C187E0007CD04 /* ChatterViewControllerPresenter.m */,
+				84F8B2B91D1C188C0007CD04 /* ChatterViewControllerProtocol.h */,
+			);
+			path = ChatterViewController;
+			sourceTree = "<group>";
+		};
 		B5DDFF921D11988A000C686B /* DashBoardDataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +459,7 @@
 		EA8497841D0B70630034B44F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				84F8B2AB1D1C16E00007CD04 /* FeedDataModel */,
 				B5DDFF921D11988A000C686B /* DashBoardDataModel */,
 				EA8497851D0B70830034B44F /* LeaderBoardDataModel */,
 			);
@@ -710,15 +761,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F8B2A31D1C06780007CD04 /* SalesForceChatterHelper.m in Sources */,
 				8468C8D51D0AA58B00B30DCF /* main.m in Sources */,
 				EA895D651D0B4B7000BF8902 /* UIView+Common.m in Sources */,
 				8468C92C1D0AA8D900B30DCF /* LoginViewController.m in Sources */,
 				8468C9231D0AA82E00B30DCF /* AppDelegate.m in Sources */,
+				84F8B2B51D1C184C0007CD04 /* FeedListTableViewCell.m in Sources */,
 				EA942F501D0F770E0018E7BB /* RankingSwitchView.m in Sources */,
 				EA942F531D0F770E0018E7BB /* UserRankView.m in Sources */,
 				8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */,
+				84F8B2B41D1C184C0007CD04 /* ChatterViewController.m in Sources */,
 				EA942F521D0F770E0018E7BB /* CustomSlideMenu.m in Sources */,
 				EA942F4F1D0F770E0018E7BB /* RankingCarouselView.m in Sources */,
+				84F8B2B81D1C187E0007CD04 /* ChatterViewControllerPresenter.m in Sources */,
 				EA8497881D0B708D0034B44F /* LeaderBoardDataModel.m in Sources */,
 				EA895D791D0B553500BF8902 /* PageContainerViewController.m in Sources */,
 				843D3D2F1D1037AB0044A31B /* DashboardCustomCell.m in Sources */,
@@ -732,6 +787,7 @@
 				EA942F2A1D0F6BDC0018E7BB /* SalesForceSOQL.m in Sources */,
 				EA942F4D1D0F770E0018E7BB /* PageHeaderView.m in Sources */,
 				843D3D2C1D1031B60044A31B /* DashBoardViewController.m in Sources */,
+				84F8B2AE1D1C17020007CD04 /* FeedDataModel.m in Sources */,
 				EA895D621D0B477E00BF8902 /* NSLayoutConstraint+LayoutConstraintHelper.m in Sources */,
 				8468C9291D0AA8CA00B30DCF /* LeaderBoardViewController.m in Sources */,
 			);

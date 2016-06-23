@@ -33,6 +33,6 @@
 /**
  * The date of the last user event in the application.
  */
-@property (atomic, readonly) NSDate *lastEventDate;
+@property (atomic, readwrite, strong) NSDate *lastEventDate;
 
 @end

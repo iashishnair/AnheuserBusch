@@ -54,7 +54,7 @@ typedef enum {
 
 typedef void(^SOQLCompletion) (id result, NSError *error, SOQLStatus status);
 
-static NSString * const RemoteAccessConsumerKey = @"3MVG9ZL0ppGP5UrC1kvAlfnakx7n7NCoT7ZLCt.i2JNvdqGf7Bx9xV7piUSPLQyu_STFlMzYvQNpVFogsKOz2";
+static NSString * const RemoteAccessConsumerKey = @"3MVG9ZL0ppGP5UrC1kvAlfnakx.imtMJJEo82KqdKJ6CVVDk8sp3J1g6CnHb82W3Fgw0Xx_dZY_sHp0TBriE9";
 //@"3MVG9ZL0ppGP5UrBx59G805iIrQO.SNCi0UIe.UArEAE1Uf2WqNpXL9MADhanGQASNsczG8n_lgLs1oru52HG";
 //static NSString * const OAuthRedirectURI        = @"sfdc://success";
 static NSString * const OAuthRedirectURI        = @"sfdc://success";

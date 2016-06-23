@@ -26,7 +26,7 @@
 
 @interface SFApplication ()
 
-@property (atomic, readwrite, strong) NSDate *lastEventDate;
+//@property (atomic, readwrite, strong) NSDate *lastEventDate;
 
 - (void)keyPressed:(NSNotification *)notification;
 
