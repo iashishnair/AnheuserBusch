@@ -8,6 +8,7 @@
 
 #import "AchievmentsChartView.h"
 #import "Constants.h"
+#import "WorkProfileDataModel.h"
 
 @interface AchievmentsChartView ()
 
@@ -42,6 +43,8 @@
     
     return self;
 }
+
+#pragma mark- Private methods
 
 -(void)configureUI {
     

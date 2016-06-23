@@ -7,6 +7,7 @@
 //
 
 #import "UserProfileView.h"
+#import "WorkProfileDataModel.h"
 
 @interface UserProfileView()
 
@@ -45,6 +46,8 @@
     return self;
 }
 
+#pragma mark- Private methods
+
 -(void)configureUI {
     
     _profileImageView = [[UIImageView alloc]init];
@@ -69,6 +72,7 @@
     _rankValueLabel = [[UILabel alloc]init];
     _rankValueLabel.translatesAutoresizingMaskIntoConstraints = NO;
     _rankValueLabel.text = @"#2";
+    _rankValueLabel.textAlignment = NSTextAlignmentCenter;
 
     _nameValueLabel = [[UILabel alloc]init];
     _nameValueLabel.translatesAutoresizingMaskIntoConstraints = NO;
@@ -82,14 +86,18 @@
     _nameView.translatesAutoresizingMaskIntoConstraints = NO;
     _nameView.backgroundColor = [UIColor orangeColor];
     
-    [self addSubview:_rankView];
-    [self addSubview:_nameView];
+    [_profileView addSubview:_rankView];
+    [_profileView addSubview:_nameView];
     
     [_rankView addSubview:_rankLabel];
     [_nameView addSubview:_nameLabel];
     [_rankView addSubview:_rankValueLabel];
     [_nameView addSubview:_nameValueLabel];
     
+    
+    [self addConstraintsToProfileView];
+    [self addConstraintsToRankView];
+    [self addConstraintsToNameView];
     
     
 }
@@ -119,7 +127,21 @@
                             @"rankValueLabel": _rankValueLabel
                             };
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[profileImageView]-|" options:0 metrics:nil views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[rankLabel]-|" options:0 metrics:nil views:views]];
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[rankValueLabel]-|" options:0 metrics:nil views:views]];
+    
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[rankLabel(70)]-1-[rankValueLabel]" options:0 metrics:nil views:views]];
+    
+//    [self addConstraint:[NSLayoutConstraint constraintWithItem:_rankLabel
+//                                                     attribute:NSLayoutAttributeWidth
+//                                                     relatedBy:NSLayoutRelationEqual
+//                                                        toItem:_rankValueLabel
+//                                                     attribute:NSLayoutAttributeNotAnAttribute 
+//                                                    multiplier:1.0 
+//                                                      constant:0]];
+    
+
 }
 
 -(void)addConstraintsToNameView {
@@ -132,7 +154,11 @@
                             @"nameValueLabel": _nameValueLabel
                             };
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[profileImageView]-|" options:0 metrics:nil views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[nameLabel]-|" options:0 metrics:nil views:views]];
+    
+     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[nameValueLabel]-|" options:0 metrics:nil views:views]];
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[nameLabel(70)]-1-[nameValueLabel]-|" options:0 metrics:nil views:views]];
     
 }
 
@@ -142,13 +168,15 @@
         return;
     
     NSDictionary *views = @{
-                            @"nameLabel": _nameLabel,
-                            @"nameValueLabel": _nameValueLabel
+                            @"rankView": _rankView,
+                            @"nameView": _nameView
                             };
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[profileImageView]-|" options:0 metrics:nil views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[rankView]-1-[nameView]" options:0 metrics:nil views:views]];
    
-
+ [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[rankView]-|" options:0 metrics:nil views:views]];
+    
+     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[nameView]-|" options:0 metrics:nil views:views]];
 }
 
 @end

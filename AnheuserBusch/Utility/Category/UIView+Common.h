@@ -25,5 +25,6 @@
 
 + (UIFont *)defaultTextFont;
 + (UIFont *)userRankTextFont;
++(UIFont *)badgeNumberTextFont;
 
 @end
