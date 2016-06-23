@@ -26,6 +26,12 @@
 		8468C9421D0AAD0300B30DCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468C9411D0AAD0300B30DCF /* Foundation.framework */; };
 		8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9681D0AF78300B30DCF /* NSObject+HelperUtil.m */; };
 		84F6F6DC1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F6F6DB1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m */; };
+		B54C58851D1A771A0007C145 /* WorkProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54C58841D1A771A0007C145 /* WorkProfileViewController.m */; };
+		B54C58891D1A77A80007C145 /* AchievmentsChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B54C58881D1A77A80007C145 /* AchievmentsChartView.m */; };
+		B57E7AF01D1ABEF40075BCEE /* UserProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = B57E7AEF1D1ABEF40075BCEE /* UserProfileView.m */; };
+		B59A2C601D1BB345002DE224 /* BadgesView.m in Sources */ = {isa = PBXBuildFile; fileRef = B59A2C5F1D1BB345002DE224 /* BadgesView.m */; };
+		B59A2C641D1BC315002DE224 /* WorkProfileDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B59A2C631D1BC315002DE224 /* WorkProfileDataModel.m */; };
+		B59A2C671D1BEDE8002DE224 /* WorkProfileViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B59A2C661D1BEDE8002DE224 /* WorkProfileViewPresenter.m */; };
 		B5DDFF951D11988A000C686B /* DashBoardDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DDFF941D11988A000C686B /* DashBoardDataModel.m */; };
 		EA8497881D0B708D0034B44F /* LeaderBoardDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8497871D0B708D0034B44F /* LeaderBoardDataModel.m */; };
 		EA895D621D0B477E00BF8902 /* NSLayoutConstraint+LayoutConstraintHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA895D611D0B477E00BF8902 /* NSLayoutConstraint+LayoutConstraintHelper.m */; };
@@ -101,6 +107,19 @@
 		84F6F6DA1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewControllerPresenter.h; sourceTree = "<group>"; };
 		84F6F6DB1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardViewControllerPresenter.m; sourceTree = "<group>"; };
 		84F6F6DD1D0E93B8001800B3 /* LeaderBoardViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewProtocol.h; sourceTree = "<group>"; };
+		B54C58831D1A771A0007C145 /* WorkProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkProfileViewController.h; sourceTree = "<group>"; };
+		B54C58841D1A771A0007C145 /* WorkProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkProfileViewController.m; sourceTree = "<group>"; };
+		B54C58871D1A77A80007C145 /* AchievmentsChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AchievmentsChartView.h; sourceTree = "<group>"; };
+		B54C58881D1A77A80007C145 /* AchievmentsChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievmentsChartView.m; sourceTree = "<group>"; };
+		B57E7AEE1D1ABEF40075BCEE /* UserProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileView.h; sourceTree = "<group>"; };
+		B57E7AEF1D1ABEF40075BCEE /* UserProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileView.m; sourceTree = "<group>"; };
+		B59A2C5E1D1BB345002DE224 /* BadgesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgesView.h; sourceTree = "<group>"; };
+		B59A2C5F1D1BB345002DE224 /* BadgesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgesView.m; sourceTree = "<group>"; };
+		B59A2C621D1BC315002DE224 /* WorkProfileDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkProfileDataModel.h; sourceTree = "<group>"; };
+		B59A2C631D1BC315002DE224 /* WorkProfileDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkProfileDataModel.m; sourceTree = "<group>"; };
+		B59A2C651D1BEDE8002DE224 /* WorkProfileViewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkProfileViewPresenter.h; sourceTree = "<group>"; };
+		B59A2C661D1BEDE8002DE224 /* WorkProfileViewPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkProfileViewPresenter.m; sourceTree = "<group>"; };
+		B59A2C681D1BEE19002DE224 /* WorkProfileViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkProfileViewProtocol.h; sourceTree = "<group>"; };
 		B5DDFF931D11988A000C686B /* DashBoardDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardDataModel.h; sourceTree = "<group>"; };
 		B5DDFF941D11988A000C686B /* DashBoardDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardDataModel.m; sourceTree = "<group>"; };
 		D81035F868542EEDBC8DF2DC /* Pods_AnheuserBusch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnheuserBusch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +274,7 @@
 		8468C9181D0AA82E00B30DCF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B54C58821D1A76FC0007C145 /* WorkProfileViewController */,
 				EA895D761D0B553500BF8902 /* PageContainerViewController */,
 				8468C9451D0AB11E00B30DCF /* BaseViewController */,
 				8468C9191D0AA82E00B30DCF /* DashBoardPage */,
@@ -389,6 +409,54 @@
 			path = BaseViewController;
 			sourceTree = "<group>";
 		};
+		B54C58821D1A76FC0007C145 /* WorkProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B54C58831D1A771A0007C145 /* WorkProfileViewController.h */,
+				B54C58841D1A771A0007C145 /* WorkProfileViewController.m */,
+				B59A2C681D1BEE19002DE224 /* WorkProfileViewProtocol.h */,
+				B59A2C651D1BEDE8002DE224 /* WorkProfileViewPresenter.h */,
+				B59A2C661D1BEDE8002DE224 /* WorkProfileViewPresenter.m */,
+			);
+			path = WorkProfileViewController;
+			sourceTree = "<group>";
+		};
+		B54C58861D1A777E0007C145 /* AchievmentsChartView */ = {
+			isa = PBXGroup;
+			children = (
+				B54C58871D1A77A80007C145 /* AchievmentsChartView.h */,
+				B54C58881D1A77A80007C145 /* AchievmentsChartView.m */,
+			);
+			path = AchievmentsChartView;
+			sourceTree = "<group>";
+		};
+		B57E7AED1D1ABECE0075BCEE /* UserProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				B57E7AEE1D1ABEF40075BCEE /* UserProfileView.h */,
+				B57E7AEF1D1ABEF40075BCEE /* UserProfileView.m */,
+			);
+			path = UserProfileView;
+			sourceTree = "<group>";
+		};
+		B59A2C5D1D1BB32E002DE224 /* BadgesView */ = {
+			isa = PBXGroup;
+			children = (
+				B59A2C5E1D1BB345002DE224 /* BadgesView.h */,
+				B59A2C5F1D1BB345002DE224 /* BadgesView.m */,
+			);
+			path = BadgesView;
+			sourceTree = "<group>";
+		};
+		B59A2C611D1BC2F3002DE224 /* WorkProfileDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				B59A2C621D1BC315002DE224 /* WorkProfileDataModel.h */,
+				B59A2C631D1BC315002DE224 /* WorkProfileDataModel.m */,
+			);
+			path = WorkProfileDataModel;
+			sourceTree = "<group>";
+		};
 		B5DDFF921D11988A000C686B /* DashBoardDataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +477,7 @@
 		EA8497841D0B70630034B44F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B59A2C611D1BC2F3002DE224 /* WorkProfileDataModel */,
 				B5DDFF921D11988A000C686B /* DashBoardDataModel */,
 				EA8497851D0B70830034B44F /* LeaderBoardDataModel */,
 			);
@@ -466,6 +535,9 @@
 		EA942F361D0F770E0018E7BB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B59A2C5D1D1BB32E002DE224 /* BadgesView */,
+				B57E7AED1D1ABECE0075BCEE /* UserProfileView */,
+				B54C58861D1A777E0007C145 /* AchievmentsChartView */,
 				EA942F371D0F770E0018E7BB /* PageHeaderView */,
 				EA942F3C1D0F770E0018E7BB /* RankingCarouselView */,
 				EA942F3F1D0F770E0018E7BB /* RankingSwitchView */,
@@ -716,17 +788,23 @@
 				8468C9231D0AA82E00B30DCF /* AppDelegate.m in Sources */,
 				EA942F501D0F770E0018E7BB /* RankingSwitchView.m in Sources */,
 				EA942F531D0F770E0018E7BB /* UserRankView.m in Sources */,
+				B54C58851D1A771A0007C145 /* WorkProfileViewController.m in Sources */,
 				8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */,
 				EA942F521D0F770E0018E7BB /* CustomSlideMenu.m in Sources */,
 				EA942F4F1D0F770E0018E7BB /* RankingCarouselView.m in Sources */,
 				EA8497881D0B708D0034B44F /* LeaderBoardDataModel.m in Sources */,
+				B57E7AF01D1ABEF40075BCEE /* UserProfileView.m in Sources */,
 				EA895D791D0B553500BF8902 /* PageContainerViewController.m in Sources */,
 				843D3D2F1D1037AB0044A31B /* DashboardCustomCell.m in Sources */,
+				B59A2C671D1BEDE8002DE224 /* WorkProfileViewPresenter.m in Sources */,
 				84640F411D11B69000A6A33B /* DashBoardViewControllerPresenter.m in Sources */,
 				EA895D7C1D0B55BD00BF8902 /* PageBaseViewController.m in Sources */,
+				B54C58891D1A77A80007C145 /* AchievmentsChartView.m in Sources */,
+				B59A2C641D1BC315002DE224 /* WorkProfileDataModel.m in Sources */,
 				84F6F6DC1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m in Sources */,
 				B5DDFF951D11988A000C686B /* DashBoardDataModel.m in Sources */,
 				EA942F4B1D0F770E0018E7BB /* LeaderBoardCustomCell.m in Sources */,
+				B59A2C601D1BB345002DE224 /* BadgesView.m in Sources */,
 				EA895D751D0B51F300BF8902 /* UIResponder+UIComponentUtility.m in Sources */,
 				8468C9371D0AAA6F00B30DCF /* AnheuserBusch.xcdatamodeld in Sources */,
 				EA942F2A1D0F6BDC0018E7BB /* SalesForceSOQL.m in Sources */,
@@ -884,7 +962,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cognizantenterprisemobility.AnheuserBusch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1c863a73-e15b-4f73-996e-580e3c3e3751";
+				PROVISIONING_PROFILE = "5a5688cd-e4f2-40bf-8223-d344a812338e";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -901,7 +979,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cognizantenterprisemobility.AnheuserBusch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1c863a73-e15b-4f73-996e-580e3c3e3751";
+				PROVISIONING_PROFILE = "5a5688cd-e4f2-40bf-8223-d344a812338e";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

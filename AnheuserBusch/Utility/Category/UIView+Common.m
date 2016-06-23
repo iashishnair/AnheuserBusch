@@ -54,4 +54,8 @@
     return [UIFont systemFontOfSize:14.0f];
 }
 
++(UIFont *)badgeNumberTextFont {
+    return [UIFont systemFontOfSize:28.0f];
+}
+
 @end
