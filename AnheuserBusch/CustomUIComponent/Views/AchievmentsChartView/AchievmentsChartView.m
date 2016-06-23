@@ -53,29 +53,28 @@
     _innerView.backgroundColor = [UIColor redColor];
     
     _subGroupLabel = [[UILabel alloc]init];
-    _subGroupLabel.text = @"C store & Package Liquor";
+   
     _subGroupLabel.numberOfLines = 1;
     _subGroupLabel.translatesAutoresizingMaskIntoConstraints = NO;
     _subGroupLabel.textColor = [UIColor blackColor];
     
     _rankLabel = [[UILabel alloc]init];
-    _rankLabel.text = @"#1";
-    _rankLabel.numberOfLines = 1;
+      _rankLabel.numberOfLines = 1;
     _rankLabel.translatesAutoresizingMaskIntoConstraints = NO;
     _rankLabel.textColor = [UIColor blackColor];
     
     _pointsLabel = [[UILabel alloc]init];
-    _pointsLabel.text = @"55 Points";
+
     _pointsLabel.numberOfLines = 1;
     _pointsLabel.translatesAutoresizingMaskIntoConstraints = NO;
     
     _amountLabel = [[UILabel alloc]init];
-    _amountLabel.text = @"$209,000.00";
+    
     _amountLabel.numberOfLines = 1;
     _amountLabel.translatesAutoresizingMaskIntoConstraints = NO;
     
     _percentageLabel = [[UILabel alloc]init];
-    _percentageLabel.text = @"89%";
+    
     _percentageLabel.numberOfLines = 1;
     _percentageLabel.translatesAutoresizingMaskIntoConstraints = NO;
     
@@ -131,6 +130,18 @@
     [self addConstraint:[NSLayoutConstraint constraintWithItem:_innerView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
     
     [self addConstraint:[NSLayoutConstraint constraintWithItem:_innerView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
+}
+
+#pragma mark - setter methods
+
+-(void)setAchievmentsChartDataModel:(WorkProfileDataModel *)achievmentsChartDataModel
+{
+    _subGroupLabel.text = achievmentsChartDataModel.IncentiveSubgroupHeading;
+    _rankLabel.text = achievmentsChartDataModel.IncentiveSubgroupRank;
+    _pointsLabel.text = achievmentsChartDataModel.IncentiveSubgroupPoints;
+    _amountLabel.text = achievmentsChartDataModel.IncentiveSubgroupAmount;
+    _percentageLabel.text = achievmentsChartDataModel.IncentiveSubgroupPercentage;
+    
 }
 
 @end

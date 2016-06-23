@@ -11,12 +11,14 @@
 #import "UserProfileView.h"
 #import "BadgesView.h"
 #import "WorkProfileDataModel.h"
+#import "WorkProfileViewPresenter.h"
 
 @interface WorkProfileViewController ()
 
 @property (strong, nonatomic) AchievmentsChartView *chartView;
 @property (strong, nonatomic) UserProfileView *userProfileView;
 @property (strong, nonatomic) BadgesView *badgesView;
+@property (strong, nonatomic) id <WorkProfileViewProtocol> presenter;
 
 
 @end
@@ -27,10 +29,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self populateDataSource];
     [self configureUI];
     [self addConstraints];
-}
+
+    _badgesView.badgesDataModel = [self.presenter populateWorkProfileDataSource];
+    _chartView.achievmentsChartDataModel = [self.presenter populateWorkProfileDataSource];
+        _userProfileView.userProfileDataModel = [self.presenter populateWorkProfileDataSource];
+ }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -55,6 +60,7 @@
     [self.view addSubview:_badgesView];
 }
 
+
 -(void)addConstraints {
     
     if(!_chartView) return;
@@ -76,26 +82,16 @@
     
 }
 
--(void)populateDataSource {
-    
-    WorkProfileDataModel *dataModel = [WorkProfileDataModel new];
-    _badgesView = [BadgesView new];
+#pragma mark - getter methods
 
-    dataModel.Rank = @"#2";
-    dataModel.Name = @"John Peterson";
-    dataModel.hi5BadgeNumber = @"1";
-    dataModel.firstIncentiveBadgeNumber = @"4";
-    dataModel.secondIncentiveBadgeNumber =@"1";
-    dataModel.IncentiveSubgroupHeading = @"Large Format";
-    dataModel.IncentiveSubgroupRank = @"#6";
-    dataModel.IncentiveSubgroupPoints = @"55 points";
-    dataModel.IncentiveSubgroupAmount = @"$320,541.00";
-    dataModel.IncentiveSubgroupPercentage = @"92%";
+- (id <WorkProfileViewProtocol>)presenter {
     
-    _badgesView.badgesDataModel = [[WorkProfileDataModel alloc]init];
+    if(!_presenter) {
+        
+        _presenter = [WorkProfileViewPresenter new];
+    }
     
-    _badgesView.badgesDataModel = dataModel;
-    
+    return _presenter;
 }
 
 /*

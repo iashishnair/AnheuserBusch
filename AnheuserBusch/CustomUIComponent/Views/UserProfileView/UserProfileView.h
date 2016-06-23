@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WorkProfileDataModel;
 
 @interface UserProfileView : UIView
+
+@property (nonatomic, strong) WorkProfileDataModel *userProfileDataModel;
 
 @end

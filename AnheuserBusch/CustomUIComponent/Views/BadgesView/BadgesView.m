@@ -20,7 +20,6 @@
 @property (nonatomic, strong) UILabel *FirstIncentivePoints;
 @property (nonatomic, strong) UILabel *SecondIncentivePoints;
 
-
 @end
 
 @implementation BadgesView
@@ -49,7 +48,7 @@
     _hi5Points = [UILabel new];
     _hi5Points.translatesAutoresizingMaskIntoConstraints = NO;
    _hi5Points.backgroundColor = [UIColor whiteColor];
-    _hi5Points.text = _badgesDataModel.hi5BadgeNumber;
+   
     _hi5Points.font = [UIFont badgeNumberTextFont];
     _hi5Points.textAlignment = NSTextAlignmentCenter;
     
@@ -60,14 +59,14 @@
     _FirstIncentivePoints = [UILabel new];
     _FirstIncentivePoints.translatesAutoresizingMaskIntoConstraints = NO;
     _FirstIncentivePoints.backgroundColor = [UIColor whiteColor];
-    _FirstIncentivePoints.text = _badgesDataModel.firstIncentiveBadgeNumber;
+    
     _FirstIncentivePoints.font = [UIFont badgeNumberTextFont];
     _FirstIncentivePoints.textAlignment = NSTextAlignmentCenter;
     
     _SecondIncentivePoints = [UILabel new];
     _SecondIncentivePoints.translatesAutoresizingMaskIntoConstraints = NO;
     _SecondIncentivePoints.backgroundColor = [UIColor whiteColor];
-    _SecondIncentivePoints.text = _badgesDataModel.secondIncentiveBadgeNumber;
+   
     _SecondIncentivePoints.font = [UIFont badgeNumberTextFont];
     _SecondIncentivePoints.textAlignment = NSTextAlignmentCenter;
     
@@ -111,6 +110,14 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[FirstIncentivePoints]-|" options:0 metrics:nil views:views]];
     
      [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-25-[hi5Points(30)]-2-[hi5BadgeView(70)]-10-[FirstIncentivePoints(30)]-2-[FirstIncentiveView(70)]-10-[SecondIncentivePoints(30)]-2-[SecondIncentiveView(70)]-25-|" options:0 metrics:nil views:views]];
+    
+}
+
+-(void)setBadgesDataModel:(WorkProfileDataModel *)badgesDataModel {
+    
+     _hi5Points.text = badgesDataModel.hi5BadgeNumber;
+    _FirstIncentivePoints.text = badgesDataModel.firstIncentiveBadgeNumber;
+     _SecondIncentivePoints.text = badgesDataModel.secondIncentiveBadgeNumber;
     
 }
 

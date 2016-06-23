@@ -11,6 +11,6 @@
 
 @interface BadgesView : UIView
 
-@property WorkProfileDataModel *badgesDataModel;
+@property (nonatomic, strong) WorkProfileDataModel *badgesDataModel;
 
 @end

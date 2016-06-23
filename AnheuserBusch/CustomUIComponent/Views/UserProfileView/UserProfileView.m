@@ -71,12 +71,12 @@
     
     _rankValueLabel = [[UILabel alloc]init];
     _rankValueLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    _rankValueLabel.text = @"#2";
+    
     _rankValueLabel.textAlignment = NSTextAlignmentCenter;
 
     _nameValueLabel = [[UILabel alloc]init];
     _nameValueLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    _nameValueLabel.text = @"John Peterson";
+    
     
     _rankView = [[UIView alloc]init];
     _rankView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -177,6 +177,15 @@
  [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[rankView]-|" options:0 metrics:nil views:views]];
     
      [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[nameView]-|" options:0 metrics:nil views:views]];
+}
+
+#pragma mark - setter method
+
+-(void)setUserProfileDataModel:(WorkProfileDataModel *)userProfileDataModel {
+    
+    _rankValueLabel.text = userProfileDataModel.Rank;
+    _nameValueLabel.text = userProfileDataModel.Name;
+    
 }
 
 @end

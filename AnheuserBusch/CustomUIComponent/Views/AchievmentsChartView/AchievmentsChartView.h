@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class WorkProfileDataModel;
 
 @interface AchievmentsChartView : UIView
+
+@property (nonatomic, strong) WorkProfileDataModel *achievmentsChartDataModel;
 
 @end
