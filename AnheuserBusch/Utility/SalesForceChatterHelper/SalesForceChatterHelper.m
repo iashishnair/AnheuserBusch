@@ -119,9 +119,12 @@ static SalesForceChatterHelper* shareInstance = nil;
 	_postMethodCompletion = nil;
 	
 	self.postMethodCompletion = completion;
+		///chatter/feed-elements/feedElementId/capabilities/comments/items
+
+//	NSString *path  = [NSString stringWithFormat:@"%@/%@/chatter/feed-elements/%@/capabilities/comments/items",kendURL,[SFRestAPI sharedInstance].apiVersion,feedID];
 	
-	NSString *path  = [NSString stringWithFormat:@"%@/%@/chatter/feed-items/%@/comments?text=%@",kendURL,[SFRestAPI sharedInstance].apiVersion,feedID,@"ssssss"];
-	
+	NSString *path  = [NSString stringWithFormat:@"/services/data/v37.0/chatter/feed-elements/%@/capabilities/comments/items?text=%@",feedID,messageText];
+
 	
 	[self requestWithMethod:SFRestMethodPOST path:path queryParams:nil];
 	

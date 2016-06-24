@@ -243,9 +243,9 @@
 	
 	FeedListTableViewCell *header = nil;
 	
-	if(self.dataSource && self.dataSource.count > section-1 ) {
+	if(self.dataSource && self.dataSource.count > section) {
 		
-		FeedDataModel *feedDataModel = [self.dataSource objectAtIndex:section-1];
+		FeedDataModel *feedDataModel = [self.dataSource objectAtIndex:section];
 		
 	 header =  [[FeedListTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"d"];
 		
@@ -265,12 +265,7 @@
 	NSInteger comments  = 1;
 	
 	
-	if(section == 0) {
-		
-		
-		
-	}
-	if(section < self.dataSource.count) {
+	if(1) {
 		FeedDataModel *feedDataModel = [self.dataSource objectAtIndex:section];
 		
 		comments = [[[feedDataModel commentModel] feedCommentItems] count];
@@ -349,6 +344,7 @@
 - (void)clickedCommentButton:(nonnull UIButton *)sender feedDataModel:(nonnull FeedDataModel *)feedDataModel {
 	
 	NSString *date = [[NSDate date] description];
+	date = [NSString stringWithFormat:@"New comment at: %@",date];
 	
 	[self.presenter postCommentOnAfeed:feedDataModel.feedID messageText:date completion:^(NSError *error, SOQLStatus status) {
 		
