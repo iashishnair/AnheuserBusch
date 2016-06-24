@@ -11,7 +11,12 @@
 
 @protocol ChatterViewControllerProtocol <NSObject>
 
-- (void)fetchChatterkFeedBack:(void(^)(NSArray * results))completion
-;
+- (void)fetchChatterkFeedBack:(void(^)(NSArray * results))completion;
 
+- (void)likeAfeedElement:(NSString *)feedElementId
+              completion:(PostMethodCompletion)completion;
+
+- (void)postCommentOnAfeedElement:(NSString *)feedElementId
+                      messageText:(NSString *)messageText
+                       completion:(PostMethodCompletion)completion;
 @end

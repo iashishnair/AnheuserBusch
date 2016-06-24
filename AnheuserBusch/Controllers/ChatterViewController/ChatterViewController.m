@@ -20,8 +20,10 @@
 #import "FeedListTableViewCell.h"
 #import "ChatterViewControllerPresenter.h"
 
-@interface ChatterViewController ()
+@interface ChatterViewController () <FeedListTableViewCellDelegate>
 
+@property (weak, nonatomic) IBOutlet UIButton *postCommentButton;
+@property (weak, nonatomic) IBOutlet UITextField *postCommentTextField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray* dataSource;
 @property (nonatomic, strong) id <ChatterViewControllerProtocol> presenter;
@@ -56,12 +58,14 @@
 	
 		// [self initialishedSalesForce];
 		// [[SalesforceSDKManager sharedManager] launch];
+    
 	[self.presenter fetchChatterkFeedBack:^(NSArray *results) {
-		
-		self.dataSource = results;
-		[self.tableView reloadData];
-		
-	}];
+        
+        self.dataSource = results;
+        
+        [self.tableView reloadData];
+    }];
+
 }
 
 #pragma mark - Sales Force
@@ -215,18 +219,37 @@
 
 #pragma mark - TableView DataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-	return 1;
+  
+    return self.dataSource.count;
+}
+
+- (nullable NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
+    
+    if(section < self.dataSource.count) {
+        FeedDataModel *feedDataModel = [self.dataSource objectAtIndex:section];
+       return [feedDataModel feedMessage];
+    }
+    return nil;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-	
-	return self.dataSource.count;
-	
+    NSInteger comments  = 0;
+    
+    if(section < self.dataSource.count) {
+        FeedDataModel *feedDataModel = [self.dataSource objectAtIndex:section];
+        
+         comments = [[[feedDataModel commentModel] feedCommentItems] count];
+        comments +=1;
+        
+    }
+    
+    return comments;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-	return 80.0f;
+    return indexPath.row == 0? 80.0f : 40.0f;
 }
 
 
@@ -234,22 +257,71 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
 	
-	static NSString *cellIdentifire = @"FeedListTableViewCell";
+	 NSString *cellIdentifire = [NSString stringWithFormat:@"%d- %d",indexPath.section,indexPath.row];
 	
 	FeedListTableViewCell *cell = (FeedListTableViewCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifire];
 	
 	if(!cell) {
 		
 		cell = [[FeedListTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifire];
+        cell.delegate = self;
 		
 	}
 	
-	if(indexPath.row < self.dataSource.count) {
-		FeedDataModel *feedDataModel = [self.dataSource objectAtIndex:indexPath.row];
-		cell.feedDataModel = feedDataModel;
+	if(indexPath.section < self.dataSource.count) {
+		
+        FeedDataModel *feedDataModel = [self.dataSource objectAtIndex:indexPath.section];
+        
+        if(indexPath.row == 0 && feedDataModel) {
+            
+            [cell setFeedDataModel:feedDataModel];
+
+            
+        } else {
+            
+            CommentItemModel *commentItemModel = [[feedDataModel commentModel] feedCommentItems][indexPath.row-1];
+            [cell setCommentItemModel:commentItemModel];
+            
+        }
+        
+        
 	}
 	return cell;
 	
+}
+
+#pragma mark - FeedListTableViewCellDelegate
+
+- (void)clickedLikeButton:(nonnull UIButton *)sender feedDataModel:(nonnull FeedDataModel *)feedDataModel {
+    
+    [self.presenter likeAfeedElement:feedDataModel.feedID completion:^(NSError *error, SOQLStatus status) {
+        
+    }];
+    
+}
+- (IBAction)ClickedPostCommentButton:(id)sender {
+    
+    
+    if( ![NSString isNULLString:self.postCommentTextField.text]) {
+        
+        
+        if(self.dataSource) {
+            
+            FeedDataModel *feedDataModel = [self.dataSource objectAtIndex:0];
+            if(feedDataModel) {
+              
+                NSString *actorID = feedDataModel.actorDataModel.actorID;
+                
+                if(actorID.length) {
+                [self.presenter postCommentOnAfeedElement:actorID messageText:self.postCommentTextField.text completion:^(NSError *error, SOQLStatus status) {
+                    
+                }];
+                }
+            }
+            }
+          
+       
+    }
 }
 
 #pragma mark - Private Method
@@ -263,4 +335,6 @@
 	}
 	return _presenter;
 }
+
+
 @end

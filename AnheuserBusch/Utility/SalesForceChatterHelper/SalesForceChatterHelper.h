@@ -6,8 +6,17 @@
 //  Copyright © 2016 Cognizant. All rights reserved.
 //
 
+
+
 #import <Foundation/Foundation.h>
 #import "Constants.h"
+
+static NSString *kBody = @"body";
+static NSString *kActor = @"actor";
+static NSString * kText = @"text";
+static NSString *kComments = @"comments";
+static NSString *kPage = @"page";
+static NSString *kItems =  @"items";
 
 @interface SalesForceChatterHelper : NSObject
 
@@ -15,4 +24,13 @@
 - (void)fetchChatterkFeedBack:(SOQLCompletion)completion;
 - (void)fetchFeedLike:(NSString *)commentID completion:(SOQLCompletion)completion
 ;
-@end
+
+- (void)likeAfeedElement:(NSString *)feedElementId
+              completion:(PostMethodCompletion)completion;
+- (void)postCommentOnAfeedElement:(NSString *)feedElementId
+                      messageText:(NSString *)messageText
+                       completion:(PostMethodCompletion)completion;
++ (id)actorElement:(id)element;
++ (id)commentsItems:(id)element;
++ (id)commentsItemBodyText:(id)element;
+;@end

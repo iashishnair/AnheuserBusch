@@ -17,6 +17,11 @@
 
 + (void)performInMainThreadAfterDelay:(NSTimeInterval)delayInterval
                            completion:(void(^ _Nonnull)(void))completion;
+
++ (BOOL)isNullObject:(nullable id)object;
++ (nullable id)objectForKeySafe:(nullable id) object key:(nullable NSString *)key;
++ (nullable id)valueForKeySafe:(nullable id) object key:(nullable NSString *)key;
+
 @end
 
 

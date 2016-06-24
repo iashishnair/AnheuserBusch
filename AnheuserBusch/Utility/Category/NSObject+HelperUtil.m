@@ -29,6 +29,52 @@
     });
 }
 
++ (BOOL)isNullObject:(id)object {
+    
+    if([object isKindOfClass:[NSNull class]]) return YES;
+    
+    return (object == nil);
+
+}
+
++ (id)objectForKeySafe:(id) object key:(NSString *)key {
+    
+    
+    id returnValue = nil;
+    
+    if(![NSObject isNullObject:object] && ![NSString isNULLString:key]) {
+        
+        if([object isKindOfClass:[NSDictionary class]]) {
+            
+            NSDictionary *objectAsDict = (NSDictionary *)object;
+            
+            if([[objectAsDict allKeys] containsObject:key])
+                returnValue = [objectAsDict objectForKey:key];
+        }
+    }
+    
+    return returnValue;
+}
+
++(id)valueForKeySafe:(id) object key:(NSString *)key {
+    
+    
+    id returnValue = nil;
+    
+    if(![NSObject isNullObject:object] && ![NSString isNULLString:key]) {
+        
+        if([object isKindOfClass:[NSDictionary class]]) {
+            
+            NSDictionary *objectAsDict = (NSDictionary *)object;
+            
+            if([[objectAsDict allKeys] containsObject:key])
+                returnValue = [objectAsDict valueForKey:key];
+        } 
+    }
+    
+    return returnValue;
+}
+
 
 @end
 
@@ -45,9 +91,9 @@
  */
 + (BOOL)isNULLString:(nullable NSString *)aString {
 	
-    if([aString isKindOfClass:[NSNull class]]) return NO;
+    if([aString isKindOfClass:[NSNull class]]) return YES;
     
-    if(aString.length && [aString isEqualToString:@"<null>"]) return NO;
+    if(aString.length && [aString isEqualToString:@"<null>"]) return YES;
     
 	return !(aString && aString.length);
 }

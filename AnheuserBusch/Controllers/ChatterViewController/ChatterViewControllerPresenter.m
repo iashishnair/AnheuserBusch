@@ -35,7 +35,7 @@
                     
                     NSDictionary *elementsDict = (NSDictionary *)obj;
                     
-                    NSString *feedID = elementsDict[@"id"];
+                    NSString *feedID =  elementsDict[@"id"];
 
                     NSString *text = nil;
                     
@@ -47,11 +47,13 @@
                             NSDictionary *bodyDict = (NSDictionary *)body;
                             text = bodyDict[@"text"];
                             
-                            if(![text isKindOfClass:[NSNull class]] && text.length) {
+                            //if(![text isKindOfClass:[NSNull class]] && text.length)
+                            {
                               
                                 FeedDataModel *feedDataModel = [FeedDataModel new];
                                 feedDataModel.feedID = feedID;
                                 feedDataModel.feedMessage = text.length ? text : @"";
+                                feedDataModel.element = obj;
                                 [resultFeeds addObject:feedDataModel];
                             }
                             
@@ -73,7 +75,20 @@
 }
 
 
+- (void)likeAfeedElement:(NSString *)feedElementId
+              completion:(PostMethodCompletion)completion {
+    
+    [[SalesForceChatterHelper shareInstance] likeAfeedElement:feedElementId completion:completion];
+}
 
+- (void)postCommentOnAfeedElement:(nonnull NSString *)feedElementId
+                  messageText:(nonnull NSString *)messageText
+                   completion:(nullable PostMethodCompletion)completion {
+    
+    
+    [[SalesForceChatterHelper shareInstance] postCommentOnAfeedElement:feedElementId messageText:messageText completion:completion];
+
+}
 
 @end
 /*https://developer.salesforce.com/trailhead/mobile_sdk_native_ios/mobilesdk_ios_getting_started\

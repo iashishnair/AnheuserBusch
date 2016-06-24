@@ -716,12 +716,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbN-I2-pcH">
-                                <rect key="frame" x="232" y="27" width="136" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbN-I2-pcH">
+                                <rect key="frame" x="64" y="26" width="136" height="32"/>
                                 <color key="backgroundColor" red="1" green="0.82766989055473206" blue="0.2193303362850495" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="bvO-Zs-M7D"/>
-                                    <constraint firstAttribute="width" constant="136" id="xMB-1o-I6Z"/>
+                                    <constraint firstAttribute="width" constant="136" id="Kwi-AZ-49F"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <state key="normal" title="reload">
@@ -731,32 +730,53 @@
                                     <action selector="clickedSalesForce:" destination="rYK-wJ-U8h" eventType="touchUpInside" id="p2r-Jd-rND"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Llx-dK-1xa">
-                                <rect key="frame" x="16" y="74" width="568" height="510"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6QM-e0-uTN">
+                                <rect key="frame" x="293" y="34" width="228" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="228" id="Lz8-l7-Uo0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Llx-dK-1xa">
+                                <rect key="frame" x="16" y="145" width="568" height="435"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="rYK-wJ-U8h" id="DZB-LW-N0c"/>
                                     <outlet property="delegate" destination="rYK-wJ-U8h" id="0sV-IM-K2c"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pva-eM-blh">
+                                <rect key="frame" x="356" y="66" width="102" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="WSB-Kb-wDd"/>
+                                </constraints>
+                                <state key="normal" title="Post Comment"/>
+                                <connections>
+                                    <action selector="ClickedPostCommentButton:" destination="rYK-wJ-U8h" eventType="touchUpInside" id="o7l-93-Yqn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ZbN-I2-pcH" firstAttribute="top" secondItem="J5B-mU-diH" secondAttribute="bottom" constant="8" id="Hh2-k7-4Hx"/>
-                            <constraint firstAttribute="trailing" secondItem="Llx-dK-1xa" secondAttribute="trailing" constant="16" id="IUc-e8-KAO"/>
-                            <constraint firstItem="ZbN-I2-pcH" firstAttribute="centerX" secondItem="7Df-oN-NT3" secondAttribute="centerX" id="M4J-K5-zzu"/>
-                            <constraint firstItem="Llx-dK-1xa" firstAttribute="top" secondItem="ZbN-I2-pcH" secondAttribute="bottom" constant="16" id="T01-ez-yw5"/>
-                            <constraint firstItem="Llx-dK-1xa" firstAttribute="leading" secondItem="7Df-oN-NT3" secondAttribute="leading" constant="16" id="kQb-ab-I38"/>
-                            <constraint firstItem="GWP-v8-nFM" firstAttribute="top" secondItem="Llx-dK-1xa" secondAttribute="bottom" constant="16" id="rob-v8-Xa2"/>
+                            <constraint firstItem="pva-eM-blh" firstAttribute="top" secondItem="6QM-e0-uTN" secondAttribute="bottom" constant="10" id="MDU-Gs-aBD"/>
+                            <constraint firstItem="6QM-e0-uTN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ZbN-I2-pcH" secondAttribute="trailing" constant="10" id="Nyn-FT-rOW"/>
+                            <constraint firstItem="ZbN-I2-pcH" firstAttribute="top" secondItem="J5B-mU-diH" secondAttribute="bottom" constant="6" id="R3y-eG-sDP"/>
+                            <constraint firstItem="ZbN-I2-pcH" firstAttribute="leading" secondItem="7Df-oN-NT3" secondAttribute="leadingMargin" constant="44" id="aIu-rD-oh6"/>
+                            <constraint firstItem="pva-eM-blh" firstAttribute="centerX" secondItem="6QM-e0-uTN" secondAttribute="centerX" id="cMB-QU-KSO"/>
+                            <constraint firstItem="ZbN-I2-pcH" firstAttribute="centerY" secondItem="6QM-e0-uTN" secondAttribute="centerY" constant="-3" id="eUx-GG-0rx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6QM-e0-uTN" secondAttribute="trailing" constant="59" id="iar-kX-bc0"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="postCommentButton" destination="pva-eM-blh" id="rhD-7O-ht1"/>
+                        <outlet property="postCommentTextField" destination="6QM-e0-uTN" id="Czr-bj-LYu"/>
                         <outlet property="tableView" destination="Llx-dK-1xa" id="pk9-pu-L2o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1sX-QN-4Xf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="434" y="386"/>
+            <point key="canvasLocation" x="317" y="291"/>
         </scene>
     </scenes>
     <resources>
