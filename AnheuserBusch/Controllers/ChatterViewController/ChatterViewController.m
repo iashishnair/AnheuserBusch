@@ -31,10 +31,7 @@
 @end
 @implementation ChatterViewController
 
--(void)login {
-    
-    [[SFAuthenticationManager sharedManager] loginWithCompletion:nil failure:nil];
-}
+//http://stackoverflow.com/questions/8134102/self-login-in-salesforce-api-in-iphone
 
 - (void)viewDidLoad {
     
@@ -67,7 +64,7 @@
     }];
     
 }
-
+//
 #pragma mark - Sales Force
 
 - (void)initialishedSalesForce {
