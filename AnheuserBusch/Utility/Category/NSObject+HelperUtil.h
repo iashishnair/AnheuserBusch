@@ -47,6 +47,7 @@
 - (void)widthMultiplierBy:(CGFloat)multiplier toItem:(nonnull id)toItem;
 - (void)heightMultiplierBy:(CGFloat)multiplier toItem:(nonnull id)toItem;
 - (void)centerXToItem:(nonnull id)toItem;
+- (void)centerYToItem:(id)toItem ;
 @end
 
 

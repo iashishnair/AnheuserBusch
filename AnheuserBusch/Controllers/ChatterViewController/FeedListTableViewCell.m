@@ -10,12 +10,14 @@
 #import "FeedDataModel.h"
 #import "UIResponder+UIComponentUtility.h"
 #import "commentItemModel.h"
+#import "Constants.h"
 
 @interface FeedListTableViewCell ()
 
 @property (nonatomic, strong) NSString *feedID;
 @property (nonatomic, strong) UILabel *feedMessageLabel;
 @property (nonatomic, strong) UIButton *feedLikeButton;
+@property (nonatomic, strong) UIButton *commentButton;
 
 @property (nonatomic, assign) NSUInteger numberOfLike;
 
@@ -65,11 +67,12 @@
         
         if(_feedDataModel.feedMessage.length)
             [_feedMessageLabel setText:_feedDataModel.feedMessage];
+		_feedMessageLabel.font = [UIFont boldSystemFontOfSize:20.0];
+		_feedMessageLabel.textColor = [UIColor redColor];
+
     }
-    self.feedMessageLabel.hidden  = YES;
-    self.feedMessageLabel.text = nil;
-    self.feedLikeButton.hidden = NO;
-    
+  
+
 }
 
 - (void)setCommentItemModel:(CommentItemModel *)commentItemModel {
@@ -83,8 +86,9 @@
             [_feedMessageLabel setText:_commentItemModel.message];
     }
     self.feedMessageLabel.hidden  = NO;
-    self.feedLikeButton.hidden = YES;
-    
+	self.commentButton.hidden = YES;
+	self.feedLikeButton.hidden = YES;
+
 }
 - (void)updateFeedComments {
   
@@ -95,12 +99,29 @@
 
 #pragma mark - Private Method
 
+
+- (UIButton *)commentButton {
+	
+	if(!_commentButton) {
+		
+		_commentButton = [UIButton customButtonWithImage:nil
+													  tag:1
+												addTarget:self
+												   action:@selector(clickedCommmentButton:)
+										 forControlEvents:UIControlEventTouchUpInside];
+		[_commentButton setTitle:@"Commment" forState:UIControlStateNormal];
+		_commentButton.backgroundColor = [UIColor lightGrayColor];
+
+		
+	}
+	
+	return _commentButton;
+}
 - (UILabel *)feedMessageLabel {
     
     if(!_feedMessageLabel) {
         
         _feedMessageLabel = [UILabel new];
-        _feedMessageLabel.backgroundColor = [UIColor redColor];
         _feedMessageLabel.translatesAutoresizingMaskIntoConstraints = NO;
     }
     
@@ -129,19 +150,24 @@
 
     [self.contentView addSubview:self.feedMessageLabel];
     [self.contentView addSubview:self.feedLikeButton];
+	[self.contentView addSubview:self.commentButton];
+
     [self addConstrains];
 }
 
 - (void)addConstrains {
     
     NSDictionary *views = @{@"feedMessage": self.feedMessageLabel,
-                            @"feedLileButton": self.feedLikeButton};
+                            @"feedLileButton": self.feedLikeButton,
+							@"commentButton": self.commentButton};
     
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[feedMessage]-|" options:0 metrics:nil views:views]];
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[feedLileButton]" options:0 metrics:nil views:views]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[feedLileButton]-[commentButton]" options:0 metrics:nil views:views]];
 
       [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[feedMessage]-2-[feedLileButton]-|" options:0 metrics:nil views:views]];
-    
+	
+	[self.contentView addConstraint:[NSLayoutConstraint constraintWithItem:self.commentButton  attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.feedLikeButton attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
+	
 }
 
 #pragma mark - IBAction
@@ -155,4 +181,13 @@
     }
 	
 }
+- (void)clickedCommmentButton:(UIButton *)sender {
+	
+	if (self.delegate && [self.delegate respondsToSelector:@selector(clickedCommentButton:feedDataModel:)]) {
+		
+		[self.delegate clickedCommentButton:sender feedDataModel:self.feedDataModel];
+	}
+	
+}
+
 @end

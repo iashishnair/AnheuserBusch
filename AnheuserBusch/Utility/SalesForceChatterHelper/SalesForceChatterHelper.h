@@ -26,11 +26,17 @@ static NSString *kItems =  @"items";
 - (void)fetchFeedLike:(NSString *)commentID completion:(SOQLCompletion)completion
 ;
 
-- (void)likeAfeedElement:(NSString *)feedElementId
+- (void)likeAFeed:(NSString *)feedElementId
               completion:(PostMethodCompletion)completion;
-- (void)postCommentOnAfeedElement:(NSString *)actorID
+- (void)postAFeed:(NSString *)actorID
                       messageText:(NSString *)messageText
                        completion:(PostMethodCompletion)completion;
+
+- (void)postCommentOnAfeed:(NSString *)feedID
+			   messageText:(NSString *)messageText
+				completion:(PostMethodCompletion)completion;
+
+
 + (id)actorElement:(id)element;
 + (id)commentsItems:(id)element;
 + (id)commentsItemBodyText:(id)element;

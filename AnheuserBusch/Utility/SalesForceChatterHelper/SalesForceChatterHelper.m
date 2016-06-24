@@ -15,9 +15,13 @@
 #define kFeedBackPath @"/services/data/v37.0/chatter/feeds/news/me/feed-elements"
 #define kendURL @"/services/data"
 
-#define LikefeedElementPath(feedElementId) [NSString stringWithFormat:@"/chatter/feed-elements/%@/capabilities/chatter-likes/items",feedElementId]
+#define RestAPIPath_LikeFeed(feedElementId) [NSString stringWithFormat:@"/chatter/feed-elements/%@/capabilities/chatter-likes/items",feedElementId]
 
-#define CommentAnFeedElementPath(feedElementId) [NSString stringWithFormat:@"/chatter/feed-elements/%@/capabilities/capabilities/comments/items?text=",feedElementId]
+#define RestAPIPath_CommentAnFeed(FeedElementId) [NSString stringWithFormat:@"/chatter/feed-elements/%@/capabilities/capabilities/comments/items?text=",FeedElementId]
+
+#define RestAPIPath_PostNewFeed(actorID,messageText) [NSString stringWithFormat:@"/chatter/feed-elements?feedElementType=FeedItem&subjectId=%@&text=%@",actorID,messageText]
+
+
 
 @interface SalesForceChatterHelper () <SFRestDelegate>
 
@@ -56,7 +60,6 @@ static SalesForceChatterHelper* shareInstance = nil;
 
 {
 
-
     _completionBlock = completion;
     [self requestWithMethod:SFRestMethodGET path:kFeedBackPath queryParams:nil];
     
@@ -77,7 +80,7 @@ static SalesForceChatterHelper* shareInstance = nil;
     
 }
 
-- (void)likeAfeedElement:(NSString *)feedElementId
+- (void)likeAFeed:(NSString *)feedElementId
               completion:(PostMethodCompletion)completion {
     
     _completionBlock = nil;
@@ -91,28 +94,42 @@ static SalesForceChatterHelper* shareInstance = nil;
     
 }
 
-- (void)postCommentOnAfeedElement:(NSString *)actorID
+- (void)postAFeed:(NSString *)actorID
                   messageText:(NSString *)messageText
               completion:(PostMethodCompletion)completion {
 
-    
-    
-    ///services/data/v37.0/chatter/feed-elements?feedElementType=FeedItem&subjectId=0F9B000000000W2&text=New+post
-   
+
     _completionBlock = nil;
     _postMethodCompletion = nil;
     
     self.postMethodCompletion = completion;
-    //0D52800000YVigsCAD
-    NSString *path  = [NSString stringWithFormat:@"services/data/v37.0/chatter/feed-elements?feedElementType=FeedItem&subjectId=%@&text=%@",actorID,messageText];
+	
+    NSString *path  = [NSString stringWithFormat:@"%@/%@%@",kendURL,[SFRestAPI sharedInstance].apiVersion,RestAPIPath_PostNewFeed(actorID, messageText)];
+	
     [self requestWithMethod:SFRestMethodPOST path:path queryParams:nil];
     
 }
 
+- (void)postCommentOnAfeed:(NSString *)feedID
+					  messageText:(NSString *)messageText
+					   completion:(PostMethodCompletion)completion {
+		///chatter/feed-items/0D5D0000000JvckKAC/comments?text=
+	
+	_completionBlock = nil;
+	_postMethodCompletion = nil;
+	
+	self.postMethodCompletion = completion;
+	
+	NSString *path  = [NSString stringWithFormat:@"%@/%@/chatter/feed-items/%@/comments?text=%@",kendURL,[SFRestAPI sharedInstance].apiVersion,feedID,@"ssssss"];
+	
+	
+	[self requestWithMethod:SFRestMethodPOST path:path queryParams:nil];
+	
+}
 
 
 + (id)actorElement:(id)element {
-    
+	
     
     NSDictionary * actorDict = [NSObject objectForKeySafe:element key:kActor];
     
@@ -166,13 +183,13 @@ static SalesForceChatterHelper* shareInstance = nil;
 
 -(NSString *)restAPIPathForLikefeedElement:(NSString *)feedElementId {
     
-    NSString *likePath = [NSString stringWithFormat:@"%@/%@%@",kendURL,[SFRestAPI sharedInstance].apiVersion,LikefeedElementPath(feedElementId)];
+    NSString *likePath = [NSString stringWithFormat:@"%@/%@%@",kendURL,[SFRestAPI sharedInstance].apiVersion,RestAPIPath_LikeFeed(feedElementId)];
     return likePath;
 }
 
--(NSString *)restAPIPathForommentAFeedElement:(NSString *)feedElementId {
+-(NSString *)restAPIPathForCommentAFeed:(NSString *)feedElementId {
     
-    NSString *likePath = [NSString stringWithFormat:@"%@/%@%@",kendURL,[SFRestAPI sharedInstance].apiVersion,CommentAnFeedElementPath(feedElementId)];
+    NSString *likePath = [NSString stringWithFormat:@"%@/%@%@",kendURL,[SFRestAPI sharedInstance].apiVersion,RestAPIPath_CommentAnFeed(feedElementId)];
     return likePath;
 }
 
@@ -181,7 +198,6 @@ static SalesForceChatterHelper* shareInstance = nil;
     
     
     NSString *likePath = [NSString stringWithFormat:@"%@/%@/chatter/comments/%@/likes",kendURL,[SFRestAPI sharedInstance].apiVersion, commentID];
-    ///services/data/v37.0/chatter/feed-elements/feedElementId/capabilities/chatter-likes/items
     return likePath;
 }
 
@@ -190,9 +206,7 @@ static SalesForceChatterHelper* shareInstance = nil;
 {
     SFRestRequest* request = [SFRestRequest requestWithMethod:method path:path queryParams:queryParams];
     
-    //[NSString stringWithFormat:@"%@%@%@%@", request.path, @"/chatter/feeds/record/", _detailItem, @"/feed-items/"];
     [[SFRestAPI sharedInstance] send:request delegate:self];
-    
 }
 
 

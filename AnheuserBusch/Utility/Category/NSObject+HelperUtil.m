@@ -164,6 +164,15 @@
     [toItem addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:toItem attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
 }
 
+
+- (void)centerYToItem:(id)toItem   {
+	
+	if(!toItem) return;
+	
+	[toItem addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:toItem attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
+}
+
+
 @end
 
 #pragma mark - UIViewController Helper

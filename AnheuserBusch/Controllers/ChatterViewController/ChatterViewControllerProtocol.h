@@ -13,10 +13,16 @@
 
 - (void)fetchChatterkFeedBack:(void(^)(NSArray * results))completion;
 
-- (void)likeAfeedElement:(NSString *)feedElementId
-              completion:(PostMethodCompletion)completion;
 
-- (void)postCommentOnAfeedElement:(NSString *)feedElementId
+
+- (void)postAFeed:(NSString *)feedElementId
                       messageText:(NSString *)messageText
                        completion:(PostMethodCompletion)completion;
+
+- (void)likeAFeed:(NSString *)feedElementId
+	   completion:(PostMethodCompletion)completion;
+
+- (void)postCommentOnAfeed:(NSString *)feedID
+			   messageText:(NSString *)messageText
+				completion:(PostMethodCompletion)completion;
 @end

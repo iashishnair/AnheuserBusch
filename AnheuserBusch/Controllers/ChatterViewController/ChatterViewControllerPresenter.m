@@ -75,19 +75,27 @@
 }
 
 
-- (void)likeAfeedElement:(NSString *)feedElementId
+- (void)likeAFeed:(NSString *)feedElementId
               completion:(PostMethodCompletion)completion {
     
-    [[SalesForceChatterHelper shareInstance] likeAfeedElement:feedElementId completion:completion];
+    [[SalesForceChatterHelper shareInstance] likeAFeed:feedElementId completion:completion];
 }
 
-- (void)postCommentOnAfeedElement:(nonnull NSString *)feedElementId
+- (void)postAFeed:(nonnull NSString *)feedElementId
                   messageText:(nonnull NSString *)messageText
                    completion:(nullable PostMethodCompletion)completion {
     
     
-    [[SalesForceChatterHelper shareInstance] postCommentOnAfeedElement:feedElementId messageText:messageText completion:completion];
+    [[SalesForceChatterHelper shareInstance] postAFeed:feedElementId messageText:messageText completion:completion];
 
+}
+
+- (void)postCommentOnAfeed:(NSString *)feedID
+			   messageText:(NSString *)messageText
+				completion:(PostMethodCompletion)completion {
+	
+	
+	 [[SalesForceChatterHelper shareInstance] postCommentOnAfeed:feedID messageText:messageText completion:completion];
 }
 
 @end
