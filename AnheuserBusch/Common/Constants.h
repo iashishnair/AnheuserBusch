@@ -32,6 +32,7 @@ typedef enum {
 //  kPageLogin = 0,
     kPageDashBoard = 0,
     kPageLeaderBoard = 1,
+    kPageWorkProfile = 2,
 
     
 } PageIndex;

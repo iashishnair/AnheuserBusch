@@ -12,12 +12,14 @@
 #import "BadgesView.h"
 #import "WorkProfileDataModel.h"
 #import "WorkProfileViewPresenter.h"
+#import "WorkProfileContainerView.h"
 
 @interface WorkProfileViewController ()
 
 @property (strong, nonatomic) AchievmentsChartView *chartView;
 @property (strong, nonatomic) UserProfileView *userProfileView;
 @property (strong, nonatomic) BadgesView *badgesView;
+@property (strong, nonatomic) WorkProfileContainerView *workProfileContainerView;
 @property (strong, nonatomic) id <WorkProfileViewProtocol> presenter;
 
 
@@ -55,9 +57,13 @@
     _badgesView = [BadgesView new];
     _badgesView.translatesAutoresizingMaskIntoConstraints = NO;
     
+    _workProfileContainerView = [WorkProfileContainerView new];
+    _workProfileContainerView.translatesAutoresizingMaskIntoConstraints = NO;
+    
     [self.view addSubview:_chartView];
     [self.view addSubview:_userProfileView];
     [self.view addSubview:_badgesView];
+    [self.view addSubview:_workProfileContainerView];
 }
 
 
@@ -65,18 +71,18 @@
     
     if(!_chartView) return;
     
-    NSDictionary *views = @{@"chartView": _chartView,
-                            @"userProfileView": _userProfileView,
-                            @"badgesView": _badgesView
+    NSDictionary *views = @{@"userProfileView": _userProfileView,
+                            @"badgesView": _badgesView,
+                            @"workProfileContainerView": _workProfileContainerView
                         };
     
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[chartView]-180-|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[workProfileContainerView]|" options:0 metrics:nil views:views]];
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[userProfileView]|" options:0 metrics:nil views:views]];
     
       [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[badgesView]|" options:0 metrics:nil views:views]];
     
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[userProfileView(120)][badgesView(100)][chartView(250)]" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[userProfileView(120)][badgesView(100)][workProfileContainerView]-|" options:0 metrics:nil views:views]];
 
     
     

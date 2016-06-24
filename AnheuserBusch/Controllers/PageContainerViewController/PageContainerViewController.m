@@ -15,6 +15,7 @@
 #import "LoginViewController.h"
 #import "LeaderBoardViewController.h"
 #import "DashBoardViewController.h"
+#import "WorkProfileViewController.h"
 
 #import <SalesforceSDKCore/SFPushNotificationManager.h>
 #import <SalesforceSDKCore/SFDefaultUserManagementViewController.h>
@@ -193,6 +194,11 @@
         leaderBoardViewController.pageIndex = kPageLeaderBoard;
         
         [_activeViewControllers addObject:leaderBoardViewController];
+        
+        WorkProfileViewController *workProfileViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"WorkProfileViewController"];
+        workProfileViewController.pageIndex = kPageWorkProfile;
+        
+        [_activeViewControllers addObject:workProfileViewController];
     }
     
     return _activeViewControllers;
@@ -214,7 +220,7 @@
     
     if(!_menuDataSource) {
         
-        _menuDataSource =  @[@"Dash Board",@"Leader Board"] ;
+        _menuDataSource =  @[@"Dash Board",@"Leader Board",@"Work Profile"] ;
     }
     
     return _menuDataSource;
