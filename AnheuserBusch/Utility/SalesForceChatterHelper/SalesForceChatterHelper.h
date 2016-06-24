@@ -11,6 +11,7 @@
 #import <Foundation/Foundation.h>
 #import "Constants.h"
 
+static NSString *kid = @"id";
 static NSString *kBody = @"body";
 static NSString *kActor = @"actor";
 static NSString * kText = @"text";
@@ -27,7 +28,7 @@ static NSString *kItems =  @"items";
 
 - (void)likeAfeedElement:(NSString *)feedElementId
               completion:(PostMethodCompletion)completion;
-- (void)postCommentOnAfeedElement:(NSString *)feedElementId
+- (void)postCommentOnAfeedElement:(NSString *)actorID
                       messageText:(NSString *)messageText
                        completion:(PostMethodCompletion)completion;
 + (id)actorElement:(id)element;

@@ -115,6 +115,7 @@
 		846F06561D1D259F00D62F96 /* CommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentModel.m; sourceTree = "<group>"; };
 		846F06591D1D681800D62F96 /* ActorDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActorDataModel.h; sourceTree = "<group>"; };
 		846F065A1D1D681800D62F96 /* ActorDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActorDataModel.m; sourceTree = "<group>"; };
+		846F065D1D1D807E00D62F96 /* Help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Help.h; sourceTree = "<group>"; };
 		84F6F6DA1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewControllerPresenter.h; sourceTree = "<group>"; };
 		84F6F6DB1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardViewControllerPresenter.m; sourceTree = "<group>"; };
 		84F6F6DD1D0E93B8001800B3 /* LeaderBoardViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardViewProtocol.h; sourceTree = "<group>"; };
@@ -327,6 +328,7 @@
 		8468C91E1D0AA82E00B30DCF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				846F065C1D1D807200D62F96 /* Help */,
 				8468C9311D0AA9BA00B30DCF /* Fonts */,
 				8468C92E1D0AA98700B30DCF /* Assets */,
 			);
@@ -454,6 +456,14 @@
 				846F065A1D1D681800D62F96 /* ActorDataModel.m */,
 			);
 			path = ActorDataModel;
+			sourceTree = "<group>";
+		};
+		846F065C1D1D807200D62F96 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				846F065D1D1D807E00D62F96 /* Help.h */,
+			);
+			path = Help;
 			sourceTree = "<group>";
 		};
 		84F8B2A01D1C058D0007CD04 /* SalesForceChatterHelper */ = {

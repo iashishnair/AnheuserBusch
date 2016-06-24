@@ -7,6 +7,8 @@
 //
 
 #import "ActorDataModel.h"
+#import "Constants.h"
+#import "SalesForceChatterHelper.h"
 
 @implementation ActorDataModel
 
@@ -16,7 +18,9 @@
         
         if(element) {
            
-            self.actorID = element[@"id"];
+            NSDictionary *actorDict = [SalesForceChatterHelper actorElement:element];
+            
+            self.actorID = [NSObject objectForKeySafe:actorDict key:@"id"];
         }
     }
     

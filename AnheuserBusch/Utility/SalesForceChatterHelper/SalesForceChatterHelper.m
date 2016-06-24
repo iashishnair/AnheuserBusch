@@ -91,7 +91,7 @@ static SalesForceChatterHelper* shareInstance = nil;
     
 }
 
-- (void)postCommentOnAfeedElement:(NSString *)feedElementId
+- (void)postCommentOnAfeedElement:(NSString *)actorID
                   messageText:(NSString *)messageText
               completion:(PostMethodCompletion)completion {
 
@@ -104,7 +104,7 @@ static SalesForceChatterHelper* shareInstance = nil;
     
     self.postMethodCompletion = completion;
     //0D52800000YVigsCAD
-    NSString *path  = [NSString stringWithFormat:@"services/data/v37.0/chatter/feed-elements?feedElementType=FeedItem&subjectId=%@&text=%@",@"",messageText];
+    NSString *path  = [NSString stringWithFormat:@"services/data/v37.0/chatter/feed-elements?feedElementType=FeedItem&subjectId=%@&text=%@",actorID,messageText];
     [self requestWithMethod:SFRestMethodPOST path:path queryParams:nil];
     
 }
