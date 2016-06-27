@@ -30,10 +30,12 @@
 		B54C58851D1A771A0007C145 /* WorkProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B54C58841D1A771A0007C145 /* WorkProfileViewController.m */; };
 		B54C58891D1A77A80007C145 /* AchievmentsChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B54C58881D1A77A80007C145 /* AchievmentsChartView.m */; };
 		B57E7AF01D1ABEF40075BCEE /* UserProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = B57E7AEF1D1ABEF40075BCEE /* UserProfileView.m */; };
+		B599471F1D2158E8002DC238 /* ProfilePageCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B599471E1D2158E8002DC238 /* ProfilePageCustomCell.m */; };
 		B59A2C601D1BB345002DE224 /* BadgesView.m in Sources */ = {isa = PBXBuildFile; fileRef = B59A2C5F1D1BB345002DE224 /* BadgesView.m */; };
 		B59A2C641D1BC315002DE224 /* WorkProfileDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B59A2C631D1BC315002DE224 /* WorkProfileDataModel.m */; };
 		B59A2C671D1BEDE8002DE224 /* WorkProfileViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B59A2C661D1BEDE8002DE224 /* WorkProfileViewPresenter.m */; };
 		B5DDFF951D11988A000C686B /* DashBoardDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B5DDFF941D11988A000C686B /* DashBoardDataModel.m */; };
+		B5F19B701D212E1C003A4246 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F19B6F1D212E1C003A4246 /* ProfileViewController.m */; };
 		EA8497881D0B708D0034B44F /* LeaderBoardDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8497871D0B708D0034B44F /* LeaderBoardDataModel.m */; };
 		EA895D621D0B477E00BF8902 /* NSLayoutConstraint+LayoutConstraintHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA895D611D0B477E00BF8902 /* NSLayoutConstraint+LayoutConstraintHelper.m */; };
 		EA895D651D0B4B7000BF8902 /* UIView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = EA895D641D0B4B7000BF8902 /* UIView+Common.m */; };
@@ -116,6 +118,8 @@
 		B54C58881D1A77A80007C145 /* AchievmentsChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AchievmentsChartView.m; sourceTree = "<group>"; };
 		B57E7AEE1D1ABEF40075BCEE /* UserProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileView.h; sourceTree = "<group>"; };
 		B57E7AEF1D1ABEF40075BCEE /* UserProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileView.m; sourceTree = "<group>"; };
+		B599471D1D2158E8002DC238 /* ProfilePageCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePageCustomCell.h; sourceTree = "<group>"; };
+		B599471E1D2158E8002DC238 /* ProfilePageCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePageCustomCell.m; sourceTree = "<group>"; };
 		B59A2C5E1D1BB345002DE224 /* BadgesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadgesView.h; sourceTree = "<group>"; };
 		B59A2C5F1D1BB345002DE224 /* BadgesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadgesView.m; sourceTree = "<group>"; };
 		B59A2C621D1BC315002DE224 /* WorkProfileDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkProfileDataModel.h; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 		B59A2C681D1BEE19002DE224 /* WorkProfileViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkProfileViewProtocol.h; sourceTree = "<group>"; };
 		B5DDFF931D11988A000C686B /* DashBoardDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashBoardDataModel.h; sourceTree = "<group>"; };
 		B5DDFF941D11988A000C686B /* DashBoardDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashBoardDataModel.m; sourceTree = "<group>"; };
+		B5F19B6E1D212E1C003A4246 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		B5F19B6F1D212E1C003A4246 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		D81035F868542EEDBC8DF2DC /* Pods_AnheuserBusch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnheuserBusch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8497861D0B708D0034B44F /* LeaderBoardDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardDataModel.h; sourceTree = "<group>"; };
 		EA8497871D0B708D0034B44F /* LeaderBoardDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardDataModel.m; sourceTree = "<group>"; };
@@ -277,6 +283,7 @@
 		8468C9181D0AA82E00B30DCF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B5F19B6D1D212DF0003A4246 /* ProfileViewController */,
 				B54C58821D1A76FC0007C145 /* WorkProfileViewController */,
 				EA895D761D0B553500BF8902 /* PageContainerViewController */,
 				8468C9451D0AB11E00B30DCF /* BaseViewController */,
@@ -478,6 +485,15 @@
 			path = DashBoardDataModel;
 			sourceTree = "<group>";
 		};
+		B5F19B6D1D212DF0003A4246 /* ProfileViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B5F19B6E1D212E1C003A4246 /* ProfileViewController.h */,
+				B5F19B6F1D212E1C003A4246 /* ProfileViewController.m */,
+			);
+			path = ProfileViewController;
+			sourceTree = "<group>";
+		};
 		E2B52B9B1DAAC8E01B804260 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +556,8 @@
 				EA942F331D0F770E0018E7BB /* LeaderBoardCustomCell.h */,
 				EA942F341D0F770E0018E7BB /* LeaderBoardCustomCell.m */,
 				EA942F351D0F770E0018E7BB /* LeaderBoardCustomCell.xib */,
+				B599471D1D2158E8002DC238 /* ProfilePageCustomCell.h */,
+				B599471E1D2158E8002DC238 /* ProfilePageCustomCell.m */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -797,6 +815,7 @@
 			files = (
 				8468C8D51D0AA58B00B30DCF /* main.m in Sources */,
 				EA895D651D0B4B7000BF8902 /* UIView+Common.m in Sources */,
+				B5F19B701D212E1C003A4246 /* ProfileViewController.m in Sources */,
 				8468C92C1D0AA8D900B30DCF /* LoginViewController.m in Sources */,
 				8468C9231D0AA82E00B30DCF /* AppDelegate.m in Sources */,
 				EA942F501D0F770E0018E7BB /* RankingSwitchView.m in Sources */,
@@ -816,6 +835,7 @@
 				B59A2C641D1BC315002DE224 /* WorkProfileDataModel.m in Sources */,
 				84F6F6DC1D0E93A5001800B3 /* LeaderBoardViewControllerPresenter.m in Sources */,
 				B5DDFF951D11988A000C686B /* DashBoardDataModel.m in Sources */,
+				B599471F1D2158E8002DC238 /* ProfilePageCustomCell.m in Sources */,
 				EA942F4B1D0F770E0018E7BB /* LeaderBoardCustomCell.m in Sources */,
 				B59A2C601D1BB345002DE224 /* BadgesView.m in Sources */,
 				EA895D751D0B51F300BF8902 /* UIResponder+UIComponentUtility.m in Sources */,
