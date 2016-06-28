@@ -19,6 +19,14 @@
                            completion:(void(^ _Nonnull)(void))completion;
 @end
 
+@interface NSUserDefaults (HelperUtil)
+
++ (void)saveObject:(nullable id)object forKey:(nonnull NSString *)key;
++ (nullable id)readUserDefault:(nonnull NSString *)key;
+
+@end
+
+
 
 /*!
  *   NSString Helper
@@ -48,5 +56,6 @@
 @interface UIViewController (CurrentPageIndex)
 
 @property (nonatomic, assign) NSUInteger pageIndex;
++ (nullable instancetype)instantiateViewControllerWithIdentifier:(nonnull NSString *)identifier;
 
 @end

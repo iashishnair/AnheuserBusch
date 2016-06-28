@@ -13,6 +13,9 @@
 #import "CustomSideMenuController.h"
 #import "ProfileViewController.h"
 #import "CustomContentViewController.h"
+#import "OnBoardingViewController.h"
+#import "LoginViewController.h"
+#import "ProfileViewController.h"
 
 @interface AppDelegate ()
 
@@ -46,28 +49,51 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    return YES;
-
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     
-    MenuListViewController *menuListViewController = [[MenuListViewController alloc] initWithNibName:@"MenuListViewController" bundle:nil];
+    BOOL isLogedIn = NO
+    ;
     
-    CustomContentViewController *contentVC = [[CustomContentViewController alloc] initWithNibName:@"CustomContentViewController" bundle:nil];
+    id OnboardingIsShown  = [NSUserDefaults readUserDefault:kOnboardingIsShown];
     
+    if(![OnboardingIsShown boolValue]) {
+        
+        
+        OnBoardingViewController * onBoardingViewController = (OnBoardingViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"OnBoardingViewController"];
+        
+        UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:onBoardingViewController];
+        
+        self.window.rootViewController = rootViewController;
+        
+    } else if(!isLogedIn) {
+        
+        
+        LoginViewController * loginViewController = (LoginViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"LoginViewController"];
+        
+        UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+        
+        self.window.rootViewController = rootViewController;
+        
+    } else {
+        
+        
+        MenuListViewController *menuListViewController = [[MenuListViewController alloc] initWithNibName:@"MenuListViewController" bundle:nil];
+        
+        ProfileViewController * profileViewController = (ProfileViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"ProfileViewController"];
+        
+        UINavigationController *contentNavigationController = [[UINavigationController alloc] initWithRootViewController:profileViewController];
+        CustomSideMenuOptions *options = [[CustomSideMenuOptions alloc] init];
+        options.contentViewScale = 1.0;
+        options.contentViewOpacity = 0.05;
+        options.shadowOpacity = 0.0;
+        
+        CustomSideMenuController *customSideMenuController = [[CustomSideMenuController alloc] initWithMenuViewController:menuListViewController contentViewController:contentNavigationController options:options];
+        customSideMenuController.menuFrame = CGRectMake(0, 20.0, self.window.bounds.size.width - 50.0f, self.window.bounds.size.height - 20.0);
+        self.window.rootViewController = customSideMenuController;
+    }
     
-    UINavigationController *contentNavigationController = [[UINavigationController alloc] initWithRootViewController:contentVC];
-    
-    CustomSideMenuOptions *options = [[CustomSideMenuOptions alloc] init];
-    options.contentViewScale = 1.0;
-    options.contentViewOpacity = 0.05;
-    options.shadowOpacity = 0.0;
-    
-    CustomSideMenuController *customSideMenuController = [[CustomSideMenuController alloc] initWithMenuViewController:menuListViewController contentViewController:contentNavigationController options:options];
-    customSideMenuController.menuFrame = CGRectMake(0, 20.0, 220.0, self.window.bounds.size.height - 20.0);
-    
-    self.window.rootViewController = customSideMenuController;
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "PageBaseViewController.h"
 
-@interface OnBoardingViewController : PageBaseViewController
+@interface OnBoardingViewController : UIViewController
 
-@property (strong,nonatomic) UIPageViewController *pageViewController;
+@property (nonatomic, strong) UIPageViewController *pageViewController;
 
 @end

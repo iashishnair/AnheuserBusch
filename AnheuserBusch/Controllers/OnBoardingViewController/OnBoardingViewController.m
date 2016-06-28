@@ -8,15 +8,17 @@
 
 #import "OnBoardingViewController.h"
 #import "InternalViewController.h"
+#import "Constants.h"
 
-@interface OnBoardingViewController ()
+@interface OnBoardingViewController () <UIPageViewControllerDataSource>
 
-@property (weak, nonatomic) IBOutlet UIView *pageControllerContainerView;
-@property (weak, nonatomic) IBOutlet UIView *buttonContainerView;
-@property (strong,nonatomic) NSMutableArray *activeViewControllers;
-@property (strong, nonatomic) NSMutableArray *pageTitles;
-@property (strong, nonatomic) NSMutableArray *pageImages;
-@property (strong, nonatomic) NSMutableArray *pageHeadings;
+@property (nonatomic, weak) IBOutlet UIView *pageControllerContainerView;
+@property (nonatomic, weak) IBOutlet UIView *buttonContainerView;
+
+@property (nonatomic, strong) NSMutableArray *activeViewControllers;
+@property (nonatomic, strong) NSMutableArray *pageTitles;
+@property (nonatomic, strong) NSMutableArray *pageImages;
+@property (nonatomic, strong) NSMutableArray *pageHeadings;
 
 
 @end
@@ -26,7 +28,11 @@
 #pragma mark - View Controller Life Cycle
 
 - (void)viewDidLoad {
+    
+    
     [super viewDidLoad];
+    
+    [self setOnboardingIsShown];
     
     self.pageTitles = [[NSMutableArray alloc]initWithObjects:@"First Page  First Page  First Page  First Page  First Page  First Page  First Page  First Page  First Page  First Page",@"Second Page",@"Third Page",@"Fourth Page", nil];
     self.pageImages = [[NSMutableArray alloc]initWithObjects:@"Page1.jpg",@"Page2.jpeg",@"Page3.png",@"Page4.png", nil];
@@ -36,8 +42,6 @@
     
     [self configureUI];
     
-    
-    
     self.view.backgroundColor = [UIColor yellowColor];
 }
 
@@ -46,22 +50,27 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - IBAction
+- (IBAction)clickedSignIn:(id)sender {
+}
 
+
+
+#pragma mark - Private Method
+
+- (void)setOnboardingIsShown {
+    
+    [NSUserDefaults saveObject:@(YES) forKey:kOnboardingIsShown];
+    
+}
 
 - (void)configureUI {
-    
-    
-    //    [self addChildViewController:self.pageViewController];
+        //[self addChildViewController:self.pageViewController];
     [self.pageControllerContainerView addSubview:self.pageViewController.view];
     //    [self.pageViewController didMoveToParentViewController:self];
-    
     // [self addBottomView];
-    
     // Add LayoutConstraint
     [self addConstrains];
-    
-    
-    
 }
 
 - (void)addConstrains {
@@ -70,6 +79,7 @@
     
     NSDictionary *views = @{@"pageViewController": self.pageViewController.view
                             };
+    
     
     [self.pageControllerContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[pageViewController]|" options:0 metrics:nil views:views]];
     
@@ -80,14 +90,10 @@
     
     InternalViewController *internalViewController = [[InternalViewController alloc]init];
     
-    
-    
-    
     if(internalViewController) {
         
         [self.activeViewControllers addObject:internalViewController];
     }
-    
 }
 
 - (InternalViewController *)viewControllerAtIndex:(NSUInteger)index {

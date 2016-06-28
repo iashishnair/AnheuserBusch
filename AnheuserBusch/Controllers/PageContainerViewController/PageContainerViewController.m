@@ -13,9 +13,6 @@
 #import "AppDelegate.h"
 
 #import "LoginViewController.h"
-#import "LeaderBoardViewController.h"
-#import "DashBoardViewController.h"
-#import "WorkProfileViewController.h"
 
 #import <SalesforceSDKCore/SFPushNotificationManager.h>
 #import <SalesforceSDKCore/SFDefaultUserManagementViewController.h>

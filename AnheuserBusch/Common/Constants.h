@@ -63,6 +63,8 @@ static NSString * const OAuthRedirectURI        = @"sfdc://success";
 /*!
  *  Class name
  */
+#define kOnboardingIsShown  @"OnboardingIsShown"
+
 
 static NSString * kClassNameLoginViewController = @"LoginViewController";
 static NSString * kClassNameLeaderBoardViewController = @"LeaderBoardViewController";

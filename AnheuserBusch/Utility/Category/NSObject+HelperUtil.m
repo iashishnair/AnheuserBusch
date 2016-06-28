@@ -10,6 +10,8 @@
 
 #pragma mark - NSObject Helper
 
+
+
 @implementation NSObject (HelperUtil)
 
 /*!
@@ -31,6 +33,33 @@
 
 
 @end
+
+
+@implementation NSUserDefaults (HelperUtil)
+
++ (void)saveObject:(id)object forKey:(NSString *)key {
+    
+    
+    if([NSString isNULLString:key]) return;
+    
+    [[NSUserDefaults standardUserDefaults]setObject:object forKey:key];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+
+}
+
+
++ (id)readUserDefault:(NSString *)key {
+    
+    
+    if([NSString isNULLString:key]) return nil;
+    
+   return [[NSUserDefaults standardUserDefaults]objectForKey:key];
+}
+
+
+@end
+
+
 
 
 #pragma mark - NSString Helper
@@ -149,6 +178,22 @@
 - (void)setPageTitle:(NSString*)pageTitle {
 	
 	objc_setAssociatedObject(self, @selector(pageTitle), pageTitle,  OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
++ (instancetype)instantiateViewControllerWithIdentifier:(NSString *)identifier {
+    
+    UIViewController * profileViewController = nil;
+    
+    if(identifier.length) {
+    
+    UIStoryboard *mystoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+   
+        if(mystoryboard)
+        profileViewController = [mystoryboard instantiateViewControllerWithIdentifier:identifier];
+    }
+    
+    return profileViewController;
+    
 }
 
 @end
