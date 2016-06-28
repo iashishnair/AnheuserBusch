@@ -11,7 +11,7 @@
 #import "IncentiveDataModel.h"
 #import "ProfileViewPresenter.h"
 
-@interface ProfileViewController()
+@interface ProfileViewController ()
 
 @property (strong, nonatomic) NSMutableArray *incentiveDetailsDataSource;
 @property (strong, nonatomic) id <ProfileViewProtocol> presenter;
@@ -22,7 +22,14 @@
 
 -(void)viewDidLoad {
     
+    [super  viewDidLoad];
     self.incentiveDetailsDataSource = [self.presenter incentiveDataSourcePopulate];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
     
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "PageBaseViewController.h"
+#import "CustomSideMenuController.h"
 
 @implementation PageBaseViewController
 
@@ -21,4 +22,10 @@
 	
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    [self addLeftMenuButtonWithImage:[UIImage imageNamed:@"menu_icon"]];
+
+}
 @end

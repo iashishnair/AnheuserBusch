@@ -8,7 +8,11 @@
 
 #import "AppDelegate.h"
 #import "Constants.h"
-
+#import "MenuListViewController.h"
+#import "CustomSideMenuOptions.h"
+#import "CustomSideMenuController.h"
+#import "ProfileViewController.h"
+#import "CustomContentViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,11 +21,11 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application _didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     
     // Override point for customization after application launch.
-//    [self initializeAppViewState];
+    //    [self initializeAppViewState];
     
     //If you wish to customize the color, textcolor, font and fontsize of the navigation bar uncomment the
     //code below.
@@ -32,9 +36,43 @@
     //loginViewController.navBarFont = [UIFont fontWithName:@"Helvetica" size:16.0];
     //loginViewController.navBarTextColor = [UIColor blackColor];
     //
-//    [[SalesforceSDKManager sharedManager] launch];
+    //    [[SalesforceSDKManager sharedManager] launch];
     return YES;
 }
+
+
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    
+    return YES;
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    
+    MenuListViewController *menuListViewController = [[MenuListViewController alloc] initWithNibName:@"MenuListViewController" bundle:nil];
+    
+    CustomContentViewController *contentVC = [[CustomContentViewController alloc] initWithNibName:@"CustomContentViewController" bundle:nil];
+    
+    
+    UINavigationController *contentNavigationController = [[UINavigationController alloc] initWithRootViewController:contentVC];
+    
+    CustomSideMenuOptions *options = [[CustomSideMenuOptions alloc] init];
+    options.contentViewScale = 1.0;
+    options.contentViewOpacity = 0.05;
+    options.shadowOpacity = 0.0;
+    
+    CustomSideMenuController *customSideMenuController = [[CustomSideMenuController alloc] initWithMenuViewController:menuListViewController contentViewController:contentNavigationController options:options];
+    customSideMenuController.menuFrame = CGRectMake(0, 20.0, 220.0, self.window.bounds.size.height - 20.0);
+    
+    self.window.rootViewController = customSideMenuController;
+    [self.window makeKeyAndVisible];
+    return YES;
+}
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -140,7 +178,7 @@
     }
 }
 
-#pragma mark - Public Method 
+#pragma mark - Public Method
 
 + (AppDelegate *)appdelegateShareInstance {
     
