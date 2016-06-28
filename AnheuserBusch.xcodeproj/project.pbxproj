@@ -22,8 +22,6 @@
 		8468C9401D0AACFC00B30DCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468C93F1D0AACFC00B30DCF /* CoreGraphics.framework */; };
 		8468C9421D0AAD0300B30DCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468C9411D0AAD0300B30DCF /* Foundation.framework */; };
 		8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C9681D0AF78300B30DCF /* NSObject+HelperUtil.m */; };
-		847E5DF81D22A6F7006B9854 /* CustomContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847E5DE61D22A6F7006B9854 /* CustomContentViewController.m */; };
-		847E5DF91D22A6F7006B9854 /* CustomContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847E5DE71D22A6F7006B9854 /* CustomContentViewController.xib */; };
 		847E5DFA1D22A6F7006B9854 /* CustomSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 847E5DEA1D22A6F7006B9854 /* CustomSideMenuController.m */; };
 		847E5DFB1D22A6F7006B9854 /* CustomSideMenuOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 847E5DEC1D22A6F7006B9854 /* CustomSideMenuOptions.m */; };
 		847E5DFC1D22A6F7006B9854 /* MenuListTableViewListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 847E5DF11D22A6F7006B9854 /* MenuListTableViewListCell.m */; };
@@ -104,9 +102,6 @@
 		8468C9441D0AB00800B30DCF /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8468C9671D0AF78300B30DCF /* NSObject+HelperUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HelperUtil.h"; sourceTree = "<group>"; };
 		8468C9681D0AF78300B30DCF /* NSObject+HelperUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HelperUtil.m"; sourceTree = "<group>"; };
-		847E5DE51D22A6F7006B9854 /* CustomContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomContentViewController.h; sourceTree = "<group>"; };
-		847E5DE61D22A6F7006B9854 /* CustomContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomContentViewController.m; sourceTree = "<group>"; };
-		847E5DE71D22A6F7006B9854 /* CustomContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomContentViewController.xib; sourceTree = "<group>"; };
 		847E5DE91D22A6F7006B9854 /* CustomSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSideMenuController.h; sourceTree = "<group>"; };
 		847E5DEA1D22A6F7006B9854 /* CustomSideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSideMenuController.m; sourceTree = "<group>"; };
 		847E5DEB1D22A6F7006B9854 /* CustomSideMenuOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSideMenuOptions.h; sourceTree = "<group>"; };
@@ -403,11 +398,7 @@
 		847E5DE41D22A6F7006B9854 /* CustomSlideMenu */ = {
 			isa = PBXGroup;
 			children = (
-				847E5DE51D22A6F7006B9854 /* CustomContentViewController.h */,
-				847E5DE61D22A6F7006B9854 /* CustomContentViewController.m */,
-				847E5DE71D22A6F7006B9854 /* CustomContentViewController.xib */,
 				847E5DE81D22A6F7006B9854 /* CustomSideMenuController */,
-				847E5DED1D22A6F7006B9854 /* MenuListTableViewListCell */,
 				847E5DEE1D22A6F7006B9854 /* MenuListViewController */,
 			);
 			path = CustomSlideMenu;
@@ -422,13 +413,6 @@
 				847E5DEC1D22A6F7006B9854 /* CustomSideMenuOptions.m */,
 			);
 			path = CustomSideMenuController;
-			sourceTree = "<group>";
-		};
-		847E5DED1D22A6F7006B9854 /* MenuListTableViewListCell */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MenuListTableViewListCell;
 			sourceTree = "<group>";
 		};
 		847E5DEE1D22A6F7006B9854 /* MenuListViewController */ = {
@@ -790,7 +774,6 @@
 				8468C9301D0AA9A300B30DCF /* Assets.xcassets in Resources */,
 				8468C8DE1D0AA58B00B30DCF /* Main.storyboard in Resources */,
 				847E5DFF1D22A6F7006B9854 /* MenuListViewController.xib in Resources */,
-				847E5DF91D22A6F7006B9854 /* CustomContentViewController.xib in Resources */,
 				EA942F4C1D0F770E0018E7BB /* LeaderBoardCustomCell.xib in Resources */,
 				847E5DFD1D22A6F7006B9854 /* MenuListTableViewListCell.xib in Resources */,
 				EA942F541D0F770E0018E7BB /* UserRankView.xib in Resources */,
@@ -876,7 +859,6 @@
 				8468C9231D0AA82E00B30DCF /* AppDelegate.m in Sources */,
 				EA942F501D0F770E0018E7BB /* RankingSwitchView.m in Sources */,
 				EA942F531D0F770E0018E7BB /* UserRankView.m in Sources */,
-				847E5DF81D22A6F7006B9854 /* CustomContentViewController.m in Sources */,
 				8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */,
 				EA942F4F1D0F770E0018E7BB /* RankingCarouselView.m in Sources */,
 				EA8497881D0B708D0034B44F /* LeaderBoardDataModel.m in Sources */,

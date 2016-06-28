@@ -12,7 +12,6 @@
 #import "CustomSideMenuOptions.h"
 #import "CustomSideMenuController.h"
 #import "ProfileViewController.h"
-#import "CustomContentViewController.h"
 #import "OnBoardingViewController.h"
 #import "LoginViewController.h"
 #import "ProfileViewController.h"
@@ -24,25 +23,25 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application _didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    
-    // Override point for customization after application launch.
-    //    [self initializeAppViewState];
-    
-    //If you wish to customize the color, textcolor, font and fontsize of the navigation bar uncomment the
-    //code below.
-    //
-    //SFLoginViewController *loginViewController = [SFLoginViewController sharedInstance];
-    // Set primary color to different color to style the navigation header
-    //loginViewController.navBarColor = [UIColor colorWithRed:0.051 green:0.765 blue:0.733 alpha:1.0];
-    //loginViewController.navBarFont = [UIFont fontWithName:@"Helvetica" size:16.0];
-    //loginViewController.navBarTextColor = [UIColor blackColor];
-    //
-    //    [[SalesforceSDKManager sharedManager] launch];
-    return YES;
-}
-
+//- (BOOL)application:(UIApplication *)application _didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//    
+//    
+//    // Override point for customization after application launch.
+//    //    [self initializeAppViewState];
+//    
+//    //If you wish to customize the color, textcolor, font and fontsize of the navigation bar uncomment the
+//    //code below.
+//    //
+//    //SFLoginViewController *loginViewController = [SFLoginViewController sharedInstance];
+//    // Set primary color to different color to style the navigation header
+//    //loginViewController.navBarColor = [UIColor colorWithRed:0.051 green:0.765 blue:0.733 alpha:1.0];
+//    //loginViewController.navBarFont = [UIFont fontWithName:@"Helvetica" size:16.0];
+//    //loginViewController.navBarTextColor = [UIColor blackColor];
+//    //
+//    //    [[SalesforceSDKManager sharedManager] launch];
+//    return YES;
+//}
+//
 
 
 
@@ -51,45 +50,21 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    BOOL isLogedIn = NO
-    ;
+    BOOL isLogedIn = [SFUserAccountManager sharedInstance].isCurrentUserAnonymous && [SFUserAccountManager sharedInstance].currentUser.credentials.accessToken ;
     
     id OnboardingIsShown  = [NSUserDefaults readUserDefault:kOnboardingIsShown];
     
     if(![OnboardingIsShown boolValue]) {
-        
-        
-        OnBoardingViewController * onBoardingViewController = (OnBoardingViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"OnBoardingViewController"];
-        
-        UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:onBoardingViewController];
-        
-        self.window.rootViewController = rootViewController;
+    
+        [self setOnBoardingViewControllerAsRootViewController];
         
     } else if(!isLogedIn) {
         
-        
-        LoginViewController * loginViewController = (LoginViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"LoginViewController"];
-        
-        UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
-        
-        self.window.rootViewController = rootViewController;
+        [self setLoginViewControllerAsRootViewController];
         
     } else {
         
-        
-        MenuListViewController *menuListViewController = [[MenuListViewController alloc] initWithNibName:@"MenuListViewController" bundle:nil];
-        
-        ProfileViewController * profileViewController = (ProfileViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"ProfileViewController"];
-        
-        UINavigationController *contentNavigationController = [[UINavigationController alloc] initWithRootViewController:profileViewController];
-        CustomSideMenuOptions *options = [[CustomSideMenuOptions alloc] init];
-        options.contentViewScale = 1.0;
-        options.contentViewOpacity = 0.05;
-        options.shadowOpacity = 0.0;
-        
-        CustomSideMenuController *customSideMenuController = [[CustomSideMenuController alloc] initWithMenuViewController:menuListViewController contentViewController:contentNavigationController options:options];
-        customSideMenuController.menuFrame = CGRectMake(0, 20.0, self.window.bounds.size.width - 50.0f, self.window.bounds.size.height - 20.0);
-        self.window.rootViewController = customSideMenuController;
+        [self setupSlideMenuViewController];
     }
     
     [self.window makeKeyAndVisible];
@@ -204,6 +179,27 @@
     }
 }
 
+
+#pragma mark - Private method 
+
+- (void)setOnBoardingViewControllerAsRootViewController {
+    
+    
+    OnBoardingViewController * onBoardingViewController = (OnBoardingViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"OnBoardingViewController"];
+    
+    UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:onBoardingViewController];
+    
+    self.window.rootViewController = rootViewController;
+}
+- (void)setLoginViewControllerAsRootViewController {
+    
+    LoginViewController * loginViewController = (LoginViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    
+    UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    
+    self.window.rootViewController = rootViewController;
+}
+
 #pragma mark - Public Method
 
 + (AppDelegate *)appdelegateShareInstance {
@@ -211,4 +207,169 @@
     return [UIApplication sharedApplication].delegate;
     
 }
+
+- (void)setupSlideMenuViewController
+{
+    
+    MenuListViewController *menuListViewController = [[MenuListViewController alloc] initWithNibName:@"MenuListViewController" bundle:nil];
+    
+    ProfileViewController * profileViewController = (ProfileViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"ProfileViewController"];
+    
+    UINavigationController *contentNavigationController = [[UINavigationController alloc] initWithRootViewController:profileViewController];
+    CustomSideMenuOptions *options = [[CustomSideMenuOptions alloc] init];
+    options.contentViewScale = 1.0;
+    options.contentViewOpacity = 0.05;
+    options.shadowOpacity = 0.0;
+    
+    CustomSideMenuController *customSideMenuController = [[CustomSideMenuController alloc] initWithMenuViewController:menuListViewController contentViewController:contentNavigationController options:options];
+    customSideMenuController.menuFrame = CGRectMake(0, 20.0, [AppDelegate appdelegateShareInstance].window.bounds.size.width - 50.0f, [AppDelegate appdelegateShareInstance].window.bounds.size.height - 20.0);
+    [AppDelegate appdelegateShareInstance].window.rootViewController = customSideMenuController;
+}
+
+
+#pragma mark - Sales Force
+
+- (void)initialishedSalesForce {
+    
+    [SFLogger setLogLevel:SFLogLevelDebug];
+    
+    // Need to use SalesforceSDKManagerWithSmartStore when using smartstore
+    [SalesforceSDKManager setInstanceClass:[SalesforceSDKManagerWithSmartStore class]];
+    
+    [SalesforceSDKManager sharedManager].connectedAppId = RemoteAccessConsumerKey;
+    [SalesforceSDKManager sharedManager].connectedAppCallbackUri = OAuthRedirectURI;
+    [SalesforceSDKManager sharedManager].authScopes = @[ @"web", @"api" ];
+    
+    __weak typeof(self) weakSelf = self;
+    
+    [SalesforceSDKManager sharedManager].postLaunchAction = ^(SFSDKLaunchAction launchActionList) {
+        
+        //
+        // If you wish to register for push notifications, uncomment the line below.  Note that,
+        // if you want to receive push notifications from Salesforce, you will also need to
+        // implement the application:didRegisterForRemoteNotificationsWithDeviceToken: method (below).
+        //
+        // [[SFPushNotificationManager sharedInstance] registerForRemoteNotifications];
+        //
+        
+        [weakSelf log:SFLogLevelInfo format:@"Post-launch: launch actions taken: %@", [SalesforceSDKManager launchActionsStringRepresentation:launchActionList]];
+        
+        [weakSelf setupRootViewController];
+        
+        
+        //        weakSelf.menuDataSource = nil;
+        //        weakSelf.isLogedIn = YES;
+        //        [weakSelf.customSlideMenu.tableView reloadData];
+        
+        
+    };
+    
+    
+    [SalesforceSDKManager sharedManager].launchErrorAction = ^(NSError *error, SFSDKLaunchAction launchActionList) {
+        
+        
+        [weakSelf log:SFLogLevelError format:@"Error during SDK launch: %@", [error localizedDescription]];
+        [weakSelf initializeAppViewState];
+        [[SalesforceSDKManager sharedManager] launch];
+        
+    };
+    
+    [SalesforceSDKManager sharedManager].postLogoutAction = ^{
+        
+        [weakSelf handleSdkManagerLogout];
+        
+    };
+    
+    [SalesforceSDKManager sharedManager].switchUserAction = ^(SFUserAccount *fromUser, SFUserAccount *toUser) {
+        [weakSelf handleUserSwitch:fromUser toUser:toUser];
+    };
+}
+
+#pragma mark - Private methods
+
+- (void)initializeAppViewState
+{
+    if (![NSThread isMainThread]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self initializeAppViewState];
+        });
+        return;
+    }
+    
+    //    self.window.rootViewController = [[InitialViewController alloc] initWithNibName:nil bundle:nil];
+    //    [self.window makeKeyAndVisible];
+}
+
+- (void)setupRootViewController
+{
+    
+    [[AppDelegate appdelegateShareInstance]setupSlideMenuViewController];
+}
+
+- (void)resetViewState:(void (^)(void))postResetBlock
+{
+    if ([[AppDelegate appdelegateShareInstance].window.rootViewController presentedViewController]) {
+        [[AppDelegate appdelegateShareInstance].window.rootViewController dismissViewControllerAnimated:NO completion:^{
+            postResetBlock();
+        }];
+    } else {
+        postResetBlock();
+    }
+}
+
+- (void)handleSdkManagerLogout
+{
+    [self log:SFLogLevelDebug msg:@"SFAuthenticationManager logged out.  Resetting app."];
+    [self resetViewState:^{
+        //[self initializeAppViewState];
+        
+        // Multi-user pattern:
+        // - If there are two or more existing accounts after logout, let the user choose the account
+        //   to switch to.
+        // - If there is one existing account, automatically switch to that account.
+        // - If there are no further authenticated accounts, present the login screen.
+        //
+        // Alternatively, you could just go straight to re-initializing your app state, if you know
+        // your app does not support multiple accounts.  The logic below will work either way.
+        
+        
+        NSArray *allAccounts = [SFUserAccountManager sharedInstance].allUserAccounts;
+        
+        if ([allAccounts count] > 1) {
+            
+            SFDefaultUserManagementViewController *userSwitchVc = [[SFDefaultUserManagementViewController alloc] initWithCompletionBlock:^(SFUserManagementAction action) {
+                
+                [[AppDelegate appdelegateShareInstance].window.rootViewController dismissViewControllerAnimated:YES completion:NULL];
+                
+            }];
+            
+            [[AppDelegate appdelegateShareInstance].window.rootViewController presentViewController:userSwitchVc animated:YES completion:NULL];
+            
+        } else {
+            
+            if ([allAccounts count] == 1) {
+                
+                [SFUserAccountManager sharedInstance].currentUser = ([SFUserAccountManager sharedInstance].allUserAccounts)[0];
+            }
+            
+            [[SalesforceSDKManager sharedManager] launch];
+        }
+    }];
+}
+
+- (void)handleUserSwitch:(SFUserAccount *)fromUser
+                  toUser:(SFUserAccount *)toUser
+{
+    
+    [self log:SFLogLevelDebug format:@"SFUserAccountManager changed from user %@ to %@.  Resetting app.",
+     fromUser.userName, toUser.userName];
+    
+    
+    [self resetViewState:^{
+        [self initializeAppViewState];
+        [[SalesforceSDKManager sharedManager] launch];
+    }];
+}
+
+
 @end

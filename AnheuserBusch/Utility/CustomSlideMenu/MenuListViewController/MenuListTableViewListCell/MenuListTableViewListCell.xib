@@ -24,7 +24,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="        " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlH-bg-KkW">
-                        <rect key="frame" x="50" y="13" width="31" height="17"/>
+                        <rect key="frame" x="65" y="13" width="31" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -35,7 +35,7 @@
                     <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="tlH-bg-KkW" secondAttribute="trailing" constant="5" id="9uL-LO-DGM"/>
                     <constraint firstItem="ykp-IK-F6a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ogs-Fh-Wpb"/>
                     <constraint firstItem="ykp-IK-F6a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="hoV-Mg-9q3"/>
-                    <constraint firstItem="tlH-bg-KkW" firstAttribute="leading" secondItem="ykp-IK-F6a" secondAttribute="trailing" constant="5" id="jkp-Ng-2Kj"/>
+                    <constraint firstItem="tlH-bg-KkW" firstAttribute="leading" secondItem="ykp-IK-F6a" secondAttribute="trailing" constant="20" id="jkp-Ng-2Kj"/>
                     <constraint firstItem="ykp-IK-F6a" firstAttribute="centerY" secondItem="tlH-bg-KkW" secondAttribute="centerY" id="xWV-J6-LKl"/>
                     <constraint firstAttribute="bottom" secondItem="ykp-IK-F6a" secondAttribute="bottom" id="xyM-u0-5fI"/>
                 </constraints>

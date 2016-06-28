@@ -8,10 +8,8 @@
 
 #import "MenuListViewController.h"
 #import "CustomSideMenuController.h"
-#import "CustomContentViewController.h"
 #import "ProfileViewcontroller.h"
 #import "MenuListTableViewListCell.h"
-
 #import "ProfileViewController.h"
 
 @interface MenuListViewController ()
@@ -38,13 +36,12 @@
     // Do any additional setup after loading the view from its nib.
     [self.tableView registerNib:[UINib nibWithNibName:@"MenuListTableViewListCell" bundle:nil] forCellReuseIdentifier:@"MenuCell"];
      
-	self.menuItems = @[@"ProfileViewcontroller", @"Announcement", @"Message", @"Logout"];
+	self.menuItems = @[@"Profile", @"OverallRanking", @"Chatter", @"Help and Support", @"Logout"];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
     
 }
 
@@ -61,14 +58,8 @@
 	
 	MenuListTableViewListCell *cell = (MenuListTableViewListCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
    	NSString *item = [self.menuItems objectAtIndex:indexPath.row];
-
     cell.menuTitleLabel.text = item;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-//    if(!cell) {
-//        
-//        cell = ;
-//    }
-	
 	
 	return cell;
 }
@@ -81,34 +72,14 @@
     switch (indexPath.row) {
         case 0:
         {
-//            ProfileViewController *contentVC = [[ProfileViewcontroller alloc] initWithNibName:@"ProfileViewcontroller" bundle:nil];
-            
-//           ProfileViewController *contentVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfileViewController"];
-            
             ProfileViewController *contentVC;
             
             UIStoryboard *mystoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             contentVC = [mystoryboard instantiateViewControllerWithIdentifier:@"ProfileViewController"];
             [self loadController:contentVC];
       }
-//            
             break;
-//            
-//        case 1:
-//        {
-//            AnnouncementViewController *contentVC = [[AnnouncementViewController alloc] initWithNibName:@"ProfileViewcontroller" bundle:nil];
-//            [self loadController:contentVC];
-//        }
-//            
-//            break;
-//            
-//        case 2:
-//        {
-//            MessageViewController *contentVC = [[MessageViewController alloc] initWithNibName:@"MessageViewController" bundle:nil];
-//            [self loadController:contentVC];
-//        }
-//            
-            break;
+ 
             
         default:
             break;

@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import <SalesforceSDKCore/SFPushNotificationManager.h>
+#import <SalesforceSDKCore/SFDefaultUserManagementViewController.h>
+#import <SalesforceSDKCore/SalesforceSDKManager.h>
+#import <SalesforceSDKCore/SFUserAccountManager.h>
+#import <SalesforceSDKCore/SFLogger.h>
+#import <SmartStore/SalesforceSDKManagerWithSmartStore.h>
+#import "SalesForceSOQL.h"
+#import "AppDelegate.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -20,6 +28,6 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 + (AppDelegate *)appdelegateShareInstance;
-
+- (void)setupSlideMenuViewController;
 @end
 
