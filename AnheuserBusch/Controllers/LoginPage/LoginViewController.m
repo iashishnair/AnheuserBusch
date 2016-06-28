@@ -16,7 +16,13 @@
     
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor purpleColor];
+}
+
+#pragma mark - Private Method
+- (void)createRootViewController {
+    
+    
 }
 
 @end

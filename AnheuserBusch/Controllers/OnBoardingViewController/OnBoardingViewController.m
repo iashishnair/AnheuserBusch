@@ -9,6 +9,7 @@
 #import "OnBoardingViewController.h"
 #import "InternalViewController.h"
 #import "Constants.h"
+#import "LoginViewController.h"
 
 @interface OnBoardingViewController () <UIPageViewControllerDataSource>
 
@@ -52,8 +53,10 @@
 
 #pragma mark - IBAction
 - (IBAction)clickedSignIn:(id)sender {
+    
+    LoginViewController * loginViewController = (LoginViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"LoginViewController"];
+    [self.navigationController pushViewController:loginViewController animated:YES];
 }
-
 
 
 #pragma mark - Private Method
@@ -97,22 +100,6 @@
 }
 
 - (InternalViewController *)viewControllerAtIndex:(NSUInteger)index {
-    
-    //    if (([self.activeViewControllers count] == 0) || (index >= [self.activeViewControllers count])) {
-    //        return nil;
-    //    }
-    //
-    //    UIViewController *activeViewController = nil;
-    //
-    //    if(self.activeViewControllers && index < self.activeViewControllers.count) {
-    //
-    //        activeViewController = [self.activeViewControllers objectAtIndex:index];
-    //
-    //        if(!activeViewController)
-    //            return nil;
-    //    }
-    //
-    //    return activeViewController;
     
     
     if (([self.pageTitles count] == 0) || (index >= [self.pageTitles count])) {
