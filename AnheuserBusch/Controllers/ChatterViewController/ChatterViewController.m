@@ -45,10 +45,7 @@
 	}
 	else {
 		
-		
-		
 			// [[SalesforceSDKManager sharedManager] launch];
-		
 	}
 }
 - (IBAction)clickedSalesForce:(id)sender {
@@ -315,10 +312,8 @@
 		if(commentItemModel) {
 			[cell setCommentItemModel:commentItemModel];
 			
-		} else {
-			
-			cell.textLabel.text = @"No comments";
 		}
+      
 		
 		
 		}

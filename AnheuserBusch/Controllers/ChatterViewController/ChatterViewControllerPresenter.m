@@ -47,7 +47,7 @@
                             NSDictionary *bodyDict = (NSDictionary *)body;
                             text = bodyDict[@"text"];
                             
-                            //if(![text isKindOfClass:[NSNull class]] && text.length)
+                            if(![text isKindOfClass:[NSNull class]] && text.length)
                             {
                               
                                 FeedDataModel *feedDataModel = [FeedDataModel new];
