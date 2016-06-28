@@ -8,18 +8,39 @@
 
 #import "ProfileViewController.h"
 #import "ProfilePageCustomCell.h"
+#import "IncentiveDataModel.h"
+#import "ProfileViewPresenter.h"
+
+@interface ProfileViewController()
+
+@property (strong, nonatomic) NSMutableArray *incentiveDetailsDataSource;
+@property (strong, nonatomic) id <ProfileViewProtocol> presenter;
+
+@end
 
 @implementation ProfileViewController
 
 -(void)viewDidLoad {
     
+    self.incentiveDetailsDataSource = [self.presenter incentiveDataSourcePopulate];
+    
+}
+
+- (id <ProfileViewProtocol>)presenter {
+    
+    if(!_presenter) {
+        
+        _presenter = [ProfileViewPresenter new];
+    }
+    
+    return _presenter;
 }
 
 #pragma mark - table view delegate methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 3;
+    return 10;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -29,11 +50,20 @@
     if (cell == nil) {
         cell = [[ProfilePageCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
+//    
+//    cell.IncentiveName.text = @"Summer Incentive";
+//    cell.RankLabel.text = @"Rank";
+//    cell.statusTitleLabel.text = @"Way To Go!!!!";
+//    cell.statusDescriptionLabel.text = @"Out of 15 KPI's you have achieved 12 KPI's";
     
-    cell.IncentiveName.text = @"Summer Incentive";
-    cell.RankLabel.text = @"Rank";
-    cell.statusTitleLabel.text = @"Way To Go!!!!";
-    cell.statusDescriptionLabel.text = @"Out of 15 KPI's you have achieved 12 KPI's";
+    if(_incentiveDetailsDataSource.count > indexPath.row)
+    {
+        IncentiveDataModel *incentiveDataModel = [self.incentiveDetailsDataSource objectAtIndex:indexPath.row];
+        
+        if(incentiveDataModel) {
+            [cell updateCell:incentiveDataModel];
+        }
+    }
     
     return cell;
     

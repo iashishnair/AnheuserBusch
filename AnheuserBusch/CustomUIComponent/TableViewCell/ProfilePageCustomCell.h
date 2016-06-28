@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class IncentiveDataModel;
 
 @interface ProfilePageCustomCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *IncentiveLogo;
@@ -24,5 +25,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *PeerRankingButton;
 @property (weak, nonatomic) IBOutlet UIButton *KPIDetailsButton;
+@property (weak, nonatomic) IBOutlet UILabel *rankNumber;
+
+-(void) updateCell :(IncentiveDataModel *)incentiveDataModel;
 
 @end

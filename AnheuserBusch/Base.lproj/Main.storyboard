@@ -732,18 +732,12 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cf5-fM-imy">
-                                                    <rect key="frame" x="287" y="8" width="42" height="19"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FOb-65-Nhg">
                                                     <rect key="frame" x="8" y="8" width="43" height="28"/>
                                                     <color key="backgroundColor" red="1" green="0.96395686889999999" blue="0.88956382960000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W28-EW-JgP">
-                                                    <rect key="frame" x="332" y="8" width="19" height="28"/>
+                                                    <rect key="frame" x="332" y="8" width="16" height="28"/>
                                                     <color key="backgroundColor" red="0.68627450980000004" green="0.7725490196" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNd-fJ-aCy">
@@ -786,6 +780,18 @@
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3Q-5J-nyK">
+                                                    <rect key="frame" x="333" y="15" width="15" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cf5-fM-imy">
+                                                    <rect key="frame" x="301" y="8" width="31" height="19"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
@@ -796,6 +802,7 @@
                                             <outlet property="RankImage" destination="W28-EW-JgP" id="ErP-5j-7qI"/>
                                             <outlet property="RankLabel" destination="cf5-fM-imy" id="RNu-86-BaD"/>
                                             <outlet property="chartView" destination="mIK-jq-y4Z" id="fuQ-xU-SwG"/>
+                                            <outlet property="rankNumber" destination="Z3Q-5J-nyK" id="cMZ-qy-KUe"/>
                                             <outlet property="statusDescriptionLabel" destination="BNd-fJ-aCy" id="ycF-R1-hZN"/>
                                             <outlet property="statusTitleLabel" destination="1Kr-z8-Lmx" id="828-f1-jCK"/>
                                         </connections>
@@ -829,7 +836,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Q3-kC-b1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2217" y="-426.5"/>
+            <point key="canvasLocation" x="-2217" y="-427"/>
         </scene>
     </scenes>
     <resources>
