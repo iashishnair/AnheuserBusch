@@ -22,17 +22,65 @@
  */
 
 + (void)performInMainThreadAfterDelay:(NSTimeInterval)delayInterval
-                          completion:(void(^)(void))completion {
+                           completion:(void(^)(void))completion {
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-       
-    if(completion)
-        completion ();
+        
+        if(completion)
+            completion ();
     });
+}
+
++ (BOOL)isNullObject:(id)object {
+    
+    if([object isKindOfClass:[NSNull class]]) return YES;
+    
+    return (object == nil);
+    
+}
+
++ (id)objectForKeySafe:(id) object key:(NSString *)key {
+    
+    
+    id returnValue = nil;
+    
+    if(![NSObject isNullObject:object] && ![NSString isNULLString:key]) {
+        
+        if([object isKindOfClass:[NSDictionary class]]) {
+            
+            NSDictionary *objectAsDict = (NSDictionary *)object;
+            
+            if([[objectAsDict allKeys] containsObject:key])
+                returnValue = [objectAsDict objectForKey:key];
+        }
+    }
+    
+    return returnValue;
+}
+
++(id)valueForKeySafe:(id) object key:(NSString *)key {
+    
+    
+    id returnValue = nil;
+    
+    if(![NSObject isNullObject:object] && ![NSString isNULLString:key]) {
+        
+        if([object isKindOfClass:[NSDictionary class]]) {
+            
+            NSDictionary *objectAsDict = (NSDictionary *)object;
+            
+            if([[objectAsDict allKeys] containsObject:key])
+                returnValue = [objectAsDict valueForKey:key];
+        }
+    }
+    
+    return returnValue;
 }
 
 
 @end
+
+
 
 
 @implementation NSUserDefaults (HelperUtil)

@@ -1,13 +1,14 @@
 //
 //  MVYSideMenuController.m
-//  MVYSideMenuExample
+//  AnheuserBusch
 //
-//  Created by Álvaro Murillo del Puerto on 10/07/13.
-//  Copyright (c) 2013 Mobivery. All rights reserved.
+//  Created by Prsenjit Goswami on 10/06/16.
+//  Copyright © 2016 Cognizant. All rights reserved.
 //
 
 #import "CustomSideMenuController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "SalesForceChatterHelper.h"
 
 
 typedef NS_ENUM(NSInteger, MVYSideMenuAction){
@@ -40,6 +41,7 @@ typedef struct {
 	self = [super initWithCoder:aDecoder];
 	if (self) {
 		_options = [[CustomSideMenuOptions alloc] init];
+      
 	}
 	
 	return self;
@@ -75,6 +77,12 @@ typedef struct {
 	[self setUpContentViewController:_contentViewController];
 	
 	[self addGestures];
+    
+    [[SalesForceChatterHelper shareInstance]fetchUserAllDetails:^(NSArray *results) {
+        
+        
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -539,13 +547,40 @@ typedef struct {
 
 - (void)addLeftMenuButtonWithImage:(UIImage *)buttonImage {
 	
-	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:buttonImage style:UIBarButtonItemStyleBordered target:self action:@selector(toggleMenu)];
+	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:buttonImage style:UIBarButtonItemStylePlain target:self action:@selector(toggleMenu)];
 	self.navigationItem.leftBarButtonItem = menuButton;
 }
 
+- (void)addRightMenuButtonWithImage:(UIImage *)buttonImage {
+    
+    UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:buttonImage style:UIBarButtonItemStylePlain target:self action:@selector(clickedRightMenuButton)];
+    self.navigationItem.rightBarButtonItem = menuButton;
+}
+
+- (void)commonHeaderWithLeftMenuButtonImage:(UIImage *)leftMenuButtonImage
+rightMenuButtonImage:(UIImage *)rightMenuButtonImage {
+    
+    if(leftMenuButtonImage) {
+        
+        [self addLeftMenuButtonWithImage:leftMenuButtonImage];
+    }
+    
+    if(rightMenuButtonImage) {
+        
+        [self addRightMenuButtonWithImage:rightMenuButtonImage];
+    }
+
+    
+    
+}
 - (void)toggleMenu {
 	
 	[[self sideMenuController] toggleMenu];
 }
+
+- (void)clickedRightMenuButton {
+    
+}
+
 
 @end

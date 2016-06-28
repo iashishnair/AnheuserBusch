@@ -1,9 +1,9 @@
 //
 //  MVYSideMenuController.h
-//  MVYSideMenuExample
+//  AnheuserBusch
 //
-//  Created by Álvaro Murillo del Puerto on 10/07/13.
-//  Copyright (c) 2013 Mobivery. All rights reserved.
+//  Created by Prsenjit Goswami on 10/06/16.
+//  Copyright © 2016 Cognizant. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -57,7 +57,7 @@
 /** Enable gestures. */
 - (void)enable;
 
-/** Change content view. 
+/** Change content view.
  
  @param contentViewController The view controller showed as content view.
  @param closeMenu If YES close menu animated.
@@ -75,7 +75,9 @@
 
 @interface UIViewController (MVYSideMenuController)
 - (CustomSideMenuController *)sideMenuController;
-- (void)addLeftMenuButtonWithImage:(UIImage *)buttonImage;
+- (void)commonHeaderWithLeftMenuButtonImage:(UIImage *)leftMenuButtonImage
+                       rightMenuButtonImage:(UIImage *)rightMenuButtonImage ;
+
 @end
 
 

@@ -25,7 +25,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    [self addLeftMenuButtonWithImage:[UIImage imageNamed:@"menu_icon"]];
+    [self commonHeaderWithLeftMenuButtonImage:[UIImage imageNamed:@"menu_icon"] rightMenuButtonImage:[UIImage imageNamed:@"notification"]];
 
 }
 @end

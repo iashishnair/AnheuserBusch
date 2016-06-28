@@ -10,7 +10,6 @@
 #import "NSObject+HelperUtil.h"
 #import "UIView+Common.h"
 
-
 /*!
  SOQLCompletion Status
  */
@@ -24,6 +23,11 @@ typedef enum {
 
 
 } SOQLStatus;
+
+
+typedef void(^SOQLCompletion) (id result, NSError *error, SOQLStatus status);
+typedef void(^PostMethodCompletion) (NSError *error, SOQLStatus status);
+
 
 /*!
  */

@@ -29,5 +29,7 @@
 - (NSURL *)applicationDocumentsDirectory;
 + (AppDelegate *)appdelegateShareInstance;
 - (void)setupSlideMenuViewController;
+- (void)resetViewState:(void (^)(void))postResetBlock;
+- (void)handleSdkManagerLogout;
 @end
 
