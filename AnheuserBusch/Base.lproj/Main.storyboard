@@ -115,7 +115,6 @@
         <!--Profile View Controller-->
         <scene sceneID="dAW-tf-Mq9">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Q3-kC-b1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="ProfileViewController" id="Vxa-fL-cXu" customClass="ProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8yN-yA-W7s"/>
@@ -337,6 +336,7 @@
                         <outlet property="incentiveTableView" destination="Fi5-jD-eJg" id="1ma-Pk-B1f"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Q3-kC-b1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1777" y="-443"/>
         </scene>

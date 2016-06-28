@@ -37,7 +37,7 @@
     // Do any additional setup after loading the view from its nib.
     [self.tableView registerNib:[UINib nibWithNibName:@"MenuListTableViewListCell" bundle:nil] forCellReuseIdentifier:@"MenuCell"];
      
-	self.menuItems = @[@"Profile", @"OverallRanking", @"Chatter", @"Help and Support", @"Logout"];
+	self.menuItems = @[@"Profile", @"Overall Ranking", @"Chatter", @"Help and Support", @"Logout"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,10 +61,13 @@
    	NSString *item = [self.menuItems objectAtIndex:indexPath.row];
     cell.menuTitleLabel.text = item;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-	
+    cell.backgroundColor = [UIColor clearColor];
 	return cell;
 }
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    return 60.0f;
+}
 #pragma mark – UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
