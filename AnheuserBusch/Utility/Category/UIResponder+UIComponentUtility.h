@@ -106,3 +106,9 @@
                    backgroundColor:(nullable UIColor *)backgroundColor;
 @end
 
+
+@interface UIImageView (UIComponentUtility)
+
+- (void)imageWithURLString:(NSString *)imageURLString;
+
+@end

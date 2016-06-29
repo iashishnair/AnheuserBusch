@@ -12,11 +12,15 @@
 #import "MenuListTableViewListCell.h"
 #import "ProfileViewController.h"
 #import "AppDelegate.h"
+#import "SalesForceChatterHelper.h"
+#import "FeedDataModel.h"
+#import "UIResponder+UIComponentUtility.h"
 
 @interface MenuListViewController ()
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *menuItems;
+@property (weak, nonatomic) IBOutlet UIView *roundConerView;
 
 @end
 
@@ -40,8 +44,57 @@
     self.userImageView.layer.cornerRadius = 50.0f;
     self.userImageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
     self.userImageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
-
+self.userImageView.clipsToBounds = YES;
     self.userImageView.layer.borderWidth = 3.0f;
+    
+    id username = [NSUserDefaults readUserDefault:@"username"];
+    
+   
+    if(![NSString isNULLString:username]) {
+        
+        _userNameLabel.text = username;
+
+    }
+    __weak typeof(self) weakself = self;
+    
+    [[SalesForceChatterHelper shareInstance]fetchUserAllDetails:^(NSArray *results) {
+        
+        if(results && results.count) {
+            
+            FeedDataModel *feedDataModel = results[0];
+            
+            if(feedDataModel) {
+                
+                ActorDataModel *actorDataModel = feedDataModel.actorDataModel;
+                
+                
+                if(![NSString isNULLString:actorDataModel.fullName])
+                {
+                    NSString *username = actorDataModel.fullName;
+                    weakself.userNameLabel.text = username;
+                    [NSUserDefaults saveObject:username forKey:@"username"];
+                }
+                
+                if(actorDataModel) {
+                    
+                    ActorPhotoDataModel *actorPhotoDataModel = actorDataModel.actorPhotoDataModel;
+                    
+                    if(![NSString isNULLString:actorPhotoDataModel.standardEmailPhotoUrl])
+                    {
+                        NSString *standardEmailPhotoUrl = actorPhotoDataModel.standardEmailPhotoUrl;
+                        
+                        [_userImageView imageWithURLString:standardEmailPhotoUrl];
+                        
+                        [NSUserDefaults saveObject:standardEmailPhotoUrl forKey:@"standardEmailPhotoUrl"];
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,7 +135,7 @@
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    return 60.0f;
+    return 44.0f;
 }
 #pragma mark – UITableViewDelegate
 
@@ -115,7 +168,7 @@
 
 
 -(void)loadController:(UIViewController *)controller {
-//    CustomContentViewController *contentVC = [[CustomContentViewController alloc] initWithNibName:@"MVYContentViewController" bundle:nil];
+  
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
     [[self sideMenuController] changeContentViewController:navigationController closeMenu:YES];
 }

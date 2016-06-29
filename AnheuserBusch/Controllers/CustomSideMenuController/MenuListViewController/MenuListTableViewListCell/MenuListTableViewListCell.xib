@@ -16,12 +16,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ykp-IK-F6a">
-                        <rect key="frame" x="5" y="1" width="40" height="41"/>
+                        <rect key="frame" x="5" y="5" width="40" height="33"/>
                         <color key="backgroundColor" red="1" green="0.25594272369999999" blue="0.17045785629999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="Cnm-Yj-11a"/>
+                            <constraint firstAttribute="width" constant="40" id="FP3-9e-SyP"/>
                             <constraint firstAttribute="height" constant="41" id="ZZI-ht-6Jc"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Cnm-Yj-11a"/>
+                                <exclude reference="ZZI-ht-6Jc"/>
+                            </mask>
+                        </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="        " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlH-bg-KkW">
                         <rect key="frame" x="65" y="13" width="31" height="17"/>
@@ -34,7 +41,9 @@
                 <constraints>
                     <constraint firstItem="ykp-IK-F6a" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8HO-Gn-Aqz"/>
                     <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="tlH-bg-KkW" secondAttribute="trailing" constant="5" id="9uL-LO-DGM"/>
+                    <constraint firstItem="ykp-IK-F6a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="NaY-VC-lBM"/>
                     <constraint firstItem="ykp-IK-F6a" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ogs-Fh-Wpb"/>
+                    <constraint firstAttribute="bottom" secondItem="ykp-IK-F6a" secondAttribute="bottom" constant="5" id="Vad-Yq-8kl"/>
                     <constraint firstItem="ykp-IK-F6a" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="hoV-Mg-9q3"/>
                     <constraint firstItem="tlH-bg-KkW" firstAttribute="leading" secondItem="ykp-IK-F6a" secondAttribute="trailing" constant="20" id="jkp-Ng-2Kj"/>
                     <constraint firstItem="ykp-IK-F6a" firstAttribute="centerY" secondItem="tlH-bg-KkW" secondAttribute="centerY" id="xWV-J6-LKl"/>

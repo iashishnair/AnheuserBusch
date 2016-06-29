@@ -373,3 +373,38 @@
 }
 
 @end
+
+@implementation UIImageView (UIComponentUtility)
+
+- (void)imageWithURLString:(NSString *)imageURLString {
+    
+    if(imageURLString.length) {
+        
+        __weak typeof(self) weakSelf = self;
+
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            
+            UIImage *image = [weakSelf getImageFromURL:imageURLString];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.image =   image;
+                
+            });
+            
+           
+        });
+    }
+    
+}
+
+-(UIImage *) getImageFromURL:(NSString *)fileURL {
+    UIImage * result;
+    
+    NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:fileURL]];
+    result = [UIImage imageWithData:data];
+    
+    return result;
+}
+
+
+@end

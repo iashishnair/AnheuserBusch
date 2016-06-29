@@ -225,7 +225,7 @@
     options.shadowOpacity = 0.0;
     
     CustomSideMenuController *customSideMenuController = [[CustomSideMenuController alloc] initWithMenuViewController:menuListViewController contentViewController:contentNavigationController options:options];
-    customSideMenuController.menuFrame = CGRectMake(0, 20.0, [AppDelegate appdelegateShareInstance].window.bounds.size.width - 50.0f, [AppDelegate appdelegateShareInstance].window.bounds.size.height - 20.0);
+    customSideMenuController.menuFrame = CGRectMake(0, 20.0, [AppDelegate appdelegateShareInstance].window.bounds.size.width - 100.0f, [AppDelegate appdelegateShareInstance].window.bounds.size.height - 20.0);
     [AppDelegate appdelegateShareInstance].window.rootViewController = customSideMenuController;
 }
 
