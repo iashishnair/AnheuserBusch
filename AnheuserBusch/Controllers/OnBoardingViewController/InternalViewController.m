@@ -10,24 +10,41 @@
 
 @interface InternalViewController ()
 
+
 @end
 
 @implementation InternalViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
+   // self.view.backgroundColor = [UIColor redColor];
     //self.view.backgroundColor = [UIColor redColor];
-    self.myLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    self.myLabel.numberOfLines = 0;
-    self.myLabel.text = self.titleText;
-    self.myImage.image = [UIImage imageNamed:self.imageFile];
-    self.myHeading.text = self.headingText;
+    
+//    self.myLabel.lineBreakMode = NSLineBreakByWordWrapping;
+//    self.myLabel.numberOfLines = 0;
+//    self.myLabel.text = self.titleText;
+//    self.myImage.image = [UIImage imageNamed:self.imageFile];
+//    self.myHeading.text = self.headingText;
+    [self configureUI];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)configureUI {
+    
+    self.view.backgroundColor = [UIColor brownColor];
+    self.screenName.text = self.headingText;
+    
+  
+    self.screenDetails.lineBreakMode = NSLineBreakByWordWrapping;
+    self.screenDetails.numberOfLines = 0;
+      self.screenDetails.text =self.titleText ;
+   // self.screenImage.image = []
+    
 }
 
 /*

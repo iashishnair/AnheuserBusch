@@ -14,7 +14,7 @@
 @interface OnBoardingViewController () <UIPageViewControllerDataSource>
 
 @property (nonatomic, weak) IBOutlet UIView *pageControllerContainerView;
-@property (nonatomic, weak) IBOutlet UIView *buttonContainerView;
+
 
 @property (nonatomic, strong) NSMutableArray *activeViewControllers;
 @property (nonatomic, strong) NSMutableArray *pageTitles;
@@ -43,7 +43,7 @@
     
     [self configureUI];
     
-    self.view.backgroundColor = [UIColor yellowColor];
+    //self.view.backgroundColor = [UIColor yellowColor];
 }
 
 - (void)didReceiveMemoryWarning {
