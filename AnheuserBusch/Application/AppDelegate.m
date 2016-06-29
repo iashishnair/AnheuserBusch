@@ -50,23 +50,26 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    BOOL isLogedIn = [SFUserAccountManager sharedInstance].isCurrentUserAnonymous && [SFUserAccountManager sharedInstance].currentUser.credentials.accessToken ;
+     [self setupSlideMenuViewController];
+
     
-    id OnboardingIsShown  = [NSUserDefaults readUserDefault:kOnboardingIsShown];
+//    BOOL isLogedIn = [SFUserAccountManager sharedInstance].isCurrentUserAnonymous && [SFUserAccountManager sharedInstance].currentUser.credentials.accessToken ;
+//    
+//    id OnboardingIsShown  = [NSUserDefaults readUserDefault:kOnboardingIsShown];
+//    
+//    if(![OnboardingIsShown boolValue]) {
+//    
+//        [self setOnBoardingViewControllerAsRootViewController];
+//        
+//    } else if(!isLogedIn) {
+//        
+//        [self setLoginViewControllerAsRootViewController];
+//        
+//    } else {
+//        
+//        [self setupSlideMenuViewController];
+//    }
     
-    if(![OnboardingIsShown boolValue]) {
-    
-        [self setOnBoardingViewControllerAsRootViewController];
-        
-    } else if(!isLogedIn) {
-        
-        [self setLoginViewControllerAsRootViewController];
-        
-    } else {
-        
-        [self setupSlideMenuViewController];
-    }
-        
     [self.window makeKeyAndVisible];
     
     return YES;
@@ -222,7 +225,7 @@
     options.shadowOpacity = 0.0;
     
     CustomSideMenuController *customSideMenuController = [[CustomSideMenuController alloc] initWithMenuViewController:menuListViewController contentViewController:contentNavigationController options:options];
-    customSideMenuController.menuFrame = CGRectMake(0, 20.0, [AppDelegate appdelegateShareInstance].window.bounds.size.width - 50.0f, [AppDelegate appdelegateShareInstance].window.bounds.size.height - 20.0);
+    customSideMenuController.menuFrame = CGRectMake(0, 20.0, [AppDelegate appdelegateShareInstance].window.bounds.size.width - 100.0f, [AppDelegate appdelegateShareInstance].window.bounds.size.height - 20.0);
     [AppDelegate appdelegateShareInstance].window.rootViewController = customSideMenuController;
 }
 

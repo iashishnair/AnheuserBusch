@@ -8,7 +8,7 @@
 
 #import "CustomSideMenuController.h"
 #import <QuartzCore/QuartzCore.h>
-#import "SalesForceChatterHelper.h"
+
 
 
 typedef NS_ENUM(NSInteger, MVYSideMenuAction){
@@ -78,11 +78,7 @@ typedef struct {
 	
 	[self addGestures];
     
-    [[SalesForceChatterHelper shareInstance]fetchUserAllDetails:^(NSArray *results) {
-        
-        
-        
-    }];
+ 
 }
 
 - (void)viewWillAppear:(BOOL)animated {

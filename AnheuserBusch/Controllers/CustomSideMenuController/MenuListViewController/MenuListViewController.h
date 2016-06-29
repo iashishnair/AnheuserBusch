@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MenuListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-
+@property (weak, nonatomic) IBOutlet UIImageView *userImageView;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
+@property (nonatomic, strong)  NSDictionary *userInfoDict;;
 
 @end

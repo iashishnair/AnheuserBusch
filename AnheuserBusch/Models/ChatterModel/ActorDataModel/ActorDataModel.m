@@ -21,6 +21,15 @@
             NSDictionary *actorDict = [SalesForceChatterHelper actorElement:element];
             
             self.actorID = [NSObject objectForKeySafe:actorDict key:@"id"];
+            self.fullName = [NSObject objectForKeySafe:actorDict key:@"name"];
+            self.imageURLString = [NSObject objectForKeySafe:actorDict key:@"id"];
+
+            
+            if(actorDict && [actorDict valueForKey:@"photo"]) {
+               
+                self.actorPhotoDataModel  = [ActorPhotoDataModel new];
+                [ self.actorPhotoDataModel setActorPhotoDict:[actorDict valueForKey:@"photo"]];
+            }
         }
     }
     
@@ -28,5 +37,22 @@
 }
 
 
+
+@end
+
+
+
+@implementation ActorPhotoDataModel
+
+- (void)setActorPhotoDict:(NSDictionary *)actorPhotoDict {
+    
+    _actorPhotoDict = actorPhotoDict;
+    
+    if(_actorPhotoDict) {
+        
+        self.standardEmailPhotoUrl = _actorPhotoDict[@"fullEmailPhotoUrl"];
+    }
+    
+}
 
 @end
