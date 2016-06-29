@@ -20,6 +20,7 @@
 @property (nonatomic, strong) NSMutableArray *pageTitles;
 @property (nonatomic, strong) NSMutableArray *pageImages;
 @property (nonatomic, strong) NSMutableArray *pageHeadings;
+@property (weak, nonatomic) IBOutlet UIButton *signInButton;
 
 
 @end
@@ -77,15 +78,17 @@
 }
 
 - (void)configureUI {
-        //[self addChildViewController:self.pageViewController];
+    
     [self.pageControllerContainerView addSubview:self.pageViewController.view];
-    //    [self.pageViewController didMoveToParentViewController:self];
-    // [self addBottomView];
+    
+    self.signInButton.layer.cornerRadius = 8;
+    
     // Add LayoutConstraint
-    [self addConstrains];
+    
+    [self addConstraints];
 }
 
-- (void)addConstrains {
+- (void)addConstraints {
     
     if(!self.pageViewController.view) return;
     
