@@ -42,7 +42,7 @@
 
 -(void)configureUI {
     
-    self.view.backgroundColor = [UIColor brownColor];
+    self.view.backgroundColor = [UIColor clearColor];
     self.screenName.text = self.headingText;
 }
 

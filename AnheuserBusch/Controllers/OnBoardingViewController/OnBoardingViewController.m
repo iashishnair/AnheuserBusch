@@ -49,13 +49,7 @@
     //self.view.backgroundColor = [UIColor yellowColor];
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    
-    [super viewDidDisappear:animated];
-    
-    self.navigationController.navigationBarHidden = NO;
 
-}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -86,6 +80,9 @@
     // Add LayoutConstraint
     
     [self addConstraints];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.pageControllerContainerView.backgroundColor = [UIColor lightGrayColor];
 }
 
 - (void)addConstraints {
@@ -98,7 +95,7 @@
     
     [self.pageControllerContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[pageViewController]|" options:0 metrics:nil views:views]];
     
-    [self.pageControllerContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[pageViewController]|" options:0 metrics:nil views:views]];
+    [self.pageControllerContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[pageViewController]-10-|" options:0 metrics:nil views:views]];
 }
 
 - (void)pagesDataSource {
@@ -155,6 +152,8 @@
     return _pageViewController;
 }
 
+
+
 -(NSMutableArray *)activeViewControllers {
     
     if(!_activeViewControllers) {
@@ -196,5 +195,14 @@
 }
 
 
+- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
+    
+    return 4;
+    
+}
+- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
+    
+    return 0;
+}
 
 @end
