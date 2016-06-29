@@ -50,23 +50,26 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    BOOL isLogedIn = [SFUserAccountManager sharedInstance].isCurrentUserAnonymous && [SFUserAccountManager sharedInstance].currentUser.credentials.accessToken ;
+     [self setupSlideMenuViewController];
+
     
-    id OnboardingIsShown  = [NSUserDefaults readUserDefault:kOnboardingIsShown];
+//    BOOL isLogedIn = [SFUserAccountManager sharedInstance].isCurrentUserAnonymous && [SFUserAccountManager sharedInstance].currentUser.credentials.accessToken ;
+//    
+//    id OnboardingIsShown  = [NSUserDefaults readUserDefault:kOnboardingIsShown];
+//    
+//    if(![OnboardingIsShown boolValue]) {
+//    
+//        [self setOnBoardingViewControllerAsRootViewController];
+//        
+//    } else if(!isLogedIn) {
+//        
+//        [self setLoginViewControllerAsRootViewController];
+//        
+//    } else {
+//        
+//        [self setupSlideMenuViewController];
+//    }
     
-    if(![OnboardingIsShown boolValue]) {
-    
-        [self setOnBoardingViewControllerAsRootViewController];
-        
-    } else if(!isLogedIn) {
-        
-        [self setLoginViewControllerAsRootViewController];
-        
-    } else {
-        
-        [self setupSlideMenuViewController];
-    }
-        
     [self.window makeKeyAndVisible];
     
     return YES;

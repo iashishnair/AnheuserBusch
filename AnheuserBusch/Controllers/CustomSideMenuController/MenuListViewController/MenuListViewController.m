@@ -36,14 +36,30 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     [self.tableView registerNib:[UINib nibWithNibName:@"MenuListTableViewListCell" bundle:nil] forCellReuseIdentifier:@"MenuCell"];
-     
-	self.menuItems = @[@"Profile", @"Overall Ranking", @"Chatter", @"Help and Support", @"Logout"];
+    
+    self.userImageView.layer.cornerRadius = 50.0f;
+    self.userImageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    self.userImageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+
+    self.userImageView.layer.borderWidth = 3.0f;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     
+}
+
+#pragma mark - Private Method
+
+- (NSArray *)menuItems {
+    
+    if(!_menuItems) {
+        
+        _menuItems = @[@"Profile", @"Overall Ranking", @"Chatter", @"Help and Support", @"Logout"];
+    }
+    
+    return _menuItems;
 }
 
 #pragma mark – UITableViewDataSource
