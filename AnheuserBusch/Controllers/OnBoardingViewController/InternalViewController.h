@@ -10,10 +10,6 @@
 
 @interface InternalViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIImageView *myImage;
-@property (weak, nonatomic) IBOutlet UILabel *myLabel;
-@property (weak, nonatomic) IBOutlet UILabel *myHeading;
-
 @property (assign,nonatomic) NSUInteger pageIndex;
 @property (strong,nonatomic) NSString *titleText;
 @property (strong,nonatomic) NSString *headingText;

@@ -35,6 +35,8 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self initialishedSalesForce];
     [[SalesforceSDKManager sharedManager] launch];
+    self.navigationController.navigationBarHidden = YES;
+
     
 //    // Open It for Sales force Login
 //    if(![SFUserAccountManager sharedInstance].isCurrentUserAnonymous || ![SFUserAccountManager sharedInstance].currentUser.credentials.accessToken ) {
@@ -48,6 +50,13 @@
 //    }
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear:animated];
+    
+    self.navigationController.navigationBarHidden = NO;
+    
+}
 #pragma mark - Sales Force
 
 - (void)initialishedSalesForce {

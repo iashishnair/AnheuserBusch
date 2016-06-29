@@ -14,12 +14,13 @@
 @interface OnBoardingViewController () <UIPageViewControllerDataSource>
 
 @property (nonatomic, weak) IBOutlet UIView *pageControllerContainerView;
-@property (nonatomic, weak) IBOutlet UIView *buttonContainerView;
+
 
 @property (nonatomic, strong) NSMutableArray *activeViewControllers;
 @property (nonatomic, strong) NSMutableArray *pageTitles;
 @property (nonatomic, strong) NSMutableArray *pageImages;
 @property (nonatomic, strong) NSMutableArray *pageHeadings;
+@property (weak, nonatomic) IBOutlet UIButton *signInButton;
 
 
 @end
@@ -31,8 +32,10 @@
 - (void)viewDidLoad {
     
     
+    
     [super viewDidLoad];
     
+    self.navigationController.navigationBarHidden = YES;
     [self setOnboardingIsShown];
     
     self.pageTitles = [[NSMutableArray alloc]initWithObjects:@"First Page  First Page  First Page  First Page  First Page  First Page  First Page  First Page  First Page  First Page",@"Second Page",@"Third Page",@"Fourth Page", nil];
@@ -43,8 +46,9 @@
     
     [self configureUI];
     
-    self.view.backgroundColor = [UIColor yellowColor];
+    //self.view.backgroundColor = [UIColor yellowColor];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -68,15 +72,20 @@
 }
 
 - (void)configureUI {
-        //[self addChildViewController:self.pageViewController];
+    
     [self.pageControllerContainerView addSubview:self.pageViewController.view];
-    //    [self.pageViewController didMoveToParentViewController:self];
-    // [self addBottomView];
+    
+    self.signInButton.layer.cornerRadius = 8;
+    
     // Add LayoutConstraint
-    [self addConstrains];
+    
+    [self addConstraints];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.pageControllerContainerView.backgroundColor = [UIColor lightGrayColor];
 }
 
-- (void)addConstrains {
+- (void)addConstraints {
     
     if(!self.pageViewController.view) return;
     
@@ -86,7 +95,7 @@
     
     [self.pageControllerContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[pageViewController]|" options:0 metrics:nil views:views]];
     
-    [self.pageControllerContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[pageViewController]|" options:0 metrics:nil views:views]];
+    [self.pageControllerContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[pageViewController]-10-|" options:0 metrics:nil views:views]];
 }
 
 - (void)pagesDataSource {
@@ -143,6 +152,8 @@
     return _pageViewController;
 }
 
+
+
 -(NSMutableArray *)activeViewControllers {
     
     if(!_activeViewControllers) {
@@ -184,5 +195,14 @@
 }
 
 
+- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController {
+    
+    return 4;
+    
+}
+- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController {
+    
+    return 0;
+}
 
 @end

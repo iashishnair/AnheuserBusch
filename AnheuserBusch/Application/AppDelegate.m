@@ -66,7 +66,7 @@
         
         [self setupSlideMenuViewController];
     }
-    
+        
     [self.window makeKeyAndVisible];
     
     return YES;
