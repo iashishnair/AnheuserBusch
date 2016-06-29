@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) NSMutableArray *incentiveDetailsDataSource;
 @property (strong, nonatomic) id <ProfileViewProtocol> presenter;
+@property (weak, nonatomic) IBOutlet UILabel *headingLabel;
+
 
 @end
 
@@ -24,6 +26,8 @@
     
     [super  viewDidLoad];
     self.incentiveDetailsDataSource = [self.presenter incentiveDataSourcePopulate];
+    self.headingLabel.text = @"My Incentives";
+   
     
 }
 
