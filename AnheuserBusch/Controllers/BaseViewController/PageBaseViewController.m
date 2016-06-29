@@ -20,12 +20,72 @@
 	
 	self.view.backgroundColor = [UIColor defaultPageBGColor];
 	
+	[self commonHeaderWithLeftMenuButtonImage:[UIImage imageNamed:@"menu_icon"] rightMenuButtonImage:[UIImage imageNamed:@"notification"]];
+
+	
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    [self commonHeaderWithLeftMenuButtonImage:[UIImage imageNamed:@"menu_icon"] rightMenuButtonImage:[UIImage imageNamed:@"notification"]];
 
 }
+
+- (void)viewWillDisappear:(BOOL)animated {
+	
+	[super viewWillDisappear:animated];
+
+}
+
+- (void)addLeftMenuButtonWithImage:(UIImage *)buttonImage {
+	
+	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:buttonImage style:UIBarButtonItemStylePlain target:self action:@selector(toggleMenu)];
+	self.navigationItem.leftBarButtonItem = menuButton;
+}
+
+- (void)addRightMenuButtonWithImage:(UIImage *)buttonImage {
+	
+	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:buttonImage style:UIBarButtonItemStylePlain target:self action:@selector(clickedRightMenuButton)];
+	self.navigationItem.rightBarButtonItem = menuButton;
+}
+
+- (void)commonHeaderWithLeftMenuButtonImage:(UIImage *)leftMenuButtonImage
+					   rightMenuButtonImage:(UIImage *)rightMenuButtonImage {
+	
+	if(leftMenuButtonImage) {
+		
+		[self addLeftMenuButtonWithImage:leftMenuButtonImage];
+	}
+	
+	if(rightMenuButtonImage) {
+		
+		[self addRightMenuButtonWithImage:rightMenuButtonImage];
+	}
+	
+}
+
+- (void)toggleMenu {
+	
+	[[self sideMenuController] toggleMenu];
+}
+
+- (void)clickedRightMenuButton {
+	
+}
+
+-(void)setShowMenuButton:(BOOL)showMenuButton {
+	
+	_showMenuButton = showMenuButton;
+
+	[self commonHeaderWithLeftMenuButtonImage:[UIImage imageNamed:@"menu_icon"] rightMenuButtonImage:nil];
+	
+}
+- (void)setShowBackButton:(BOOL)showBackButton {
+	
+	_showBackButton = showBackButton;
+	
+	self.navigationItem.leftBarButtonItem = nil;
+
+}
+
 @end

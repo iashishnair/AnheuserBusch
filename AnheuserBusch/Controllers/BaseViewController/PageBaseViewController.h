@@ -11,4 +11,9 @@
 
 @interface PageBaseViewController : UIViewController
 
+@property (nonatomic, assign) BOOL isLeftBarButtonHidden;
+@property (nonatomic, assign) BOOL showMenuButton;
+@property (nonatomic, assign) BOOL showBackButton;
+
+
 @end

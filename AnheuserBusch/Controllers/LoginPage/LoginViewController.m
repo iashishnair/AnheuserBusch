@@ -33,8 +33,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor whiteColor];
-    [self initialishedSalesForce];
-    [[SalesforceSDKManager sharedManager] launch];
+	
     self.navigationController.navigationBarHidden = YES;
 
     
@@ -48,6 +47,15 @@
 //        
 //        // [[SalesforceSDKManager sharedManager] launch];
 //    }
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+	
+	[super viewWillAppear:animated];
+	
+	[self initialishedSalesForce];
+	[[SalesforceSDKManager sharedManager] launch];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {

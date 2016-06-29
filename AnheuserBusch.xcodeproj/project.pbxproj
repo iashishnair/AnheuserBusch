@@ -69,6 +69,8 @@
 		EA942F511D0F770E0018E7BB /* RankingSwitchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA942F421D0F770E0018E7BB /* RankingSwitchView.xib */; };
 		EA942F531D0F770E0018E7BB /* UserRankView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA942F491D0F770E0018E7BB /* UserRankView.m */; };
 		EA942F541D0F770E0018E7BB /* UserRankView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA942F4A1D0F770E0018E7BB /* UserRankView.xib */; };
+		EADDBBD71D244D90000908A9 /* BaseChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EADDBBD61D244D90000908A9 /* BaseChildViewController.m */; };
+		EADDBBDB1D244EB9000908A9 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EADDBBDA1D244EB8000908A9 /* CustomNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,6 +212,10 @@
 		EA942F481D0F770E0018E7BB /* UserRankView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRankView.h; sourceTree = "<group>"; };
 		EA942F491D0F770E0018E7BB /* UserRankView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRankView.m; sourceTree = "<group>"; };
 		EA942F4A1D0F770E0018E7BB /* UserRankView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserRankView.xib; sourceTree = "<group>"; };
+		EADDBBD51D244D90000908A9 /* BaseChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseChildViewController.h; sourceTree = "<group>"; };
+		EADDBBD61D244D90000908A9 /* BaseChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseChildViewController.m; sourceTree = "<group>"; };
+		EADDBBD91D244EB8000908A9 /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
+		EADDBBDA1D244EB8000908A9 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +335,7 @@
 		8468C9181D0AA82E00B30DCF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EADDBBD81D244E9F000908A9 /* CustomNavigationController */,
 				B5B04ED91D23F5B9002BAC9F /* PeerRankingDetailViewController */,
 				847E5E251D22E6D8006B9854 /* ChatterViewController */,
 				847E5E111D22E6B7006B9854 /* CustomSideMenuController */,
@@ -438,6 +445,8 @@
 			children = (
 				EA895D7A1D0B55BD00BF8902 /* PageBaseViewController.h */,
 				EA895D7B1D0B55BD00BF8902 /* PageBaseViewController.m */,
+				EADDBBD51D244D90000908A9 /* BaseChildViewController.h */,
+				EADDBBD61D244D90000908A9 /* BaseChildViewController.m */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -792,6 +801,15 @@
 			path = UserRankView;
 			sourceTree = "<group>";
 		};
+		EADDBBD81D244E9F000908A9 /* CustomNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				EADDBBD91D244EB8000908A9 /* CustomNavigationController.h */,
+				EADDBBDA1D244EB8000908A9 /* CustomNavigationController.m */,
+			);
+			path = CustomNavigationController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -997,10 +1015,12 @@
 				EA942F501D0F770E0018E7BB /* RankingSwitchView.m in Sources */,
 				EA942F531D0F770E0018E7BB /* UserRankView.m in Sources */,
 				847E5E351D22E6D8006B9854 /* FeedListTableViewCell.m in Sources */,
+				EADDBBD71D244D90000908A9 /* BaseChildViewController.m in Sources */,
 				8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */,
 				EA942F4F1D0F770E0018E7BB /* RankingCarouselView.m in Sources */,
 				EA8497881D0B708D0034B44F /* LeaderBoardDataModel.m in Sources */,
 				B5B04EE01D23F5B9002BAC9F /* PeerRankingDetailViewController.m in Sources */,
+				EADDBBDB1D244EB9000908A9 /* CustomNavigationController.m in Sources */,
 				B57E7AF01D1ABEF40075BCEE /* UserProfileView.m in Sources */,
 				847E5E331D22E6D8006B9854 /* CommentVIew.m in Sources */,
 				847E5E061D22AF95006B9854 /* InternalViewController.m in Sources */,

@@ -13,9 +13,10 @@
 
 @interface ProfileViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *headingLabel;
+
 @property (strong, nonatomic) NSMutableArray *incentiveDetailsDataSource;
 @property (strong, nonatomic) id <ProfileViewProtocol> presenter;
-@property (weak, nonatomic) IBOutlet UILabel *headingLabel;
 
 
 @end
@@ -25,19 +26,16 @@
 -(void)viewDidLoad {
     
     [super  viewDidLoad];
-    self.incentiveDetailsDataSource = [self.presenter incentiveDataSourcePopulate];
+	
+	self.incentiveDetailsDataSource = [self.presenter incentiveDataSourcePopulate];
+	
+	self.title = MenuItems[0];
+	
     self.headingLabel.text = @"My Incentives";
-   
-    
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    
-    [super viewWillAppear:animated];
-    
-}
 
-- (id <ProfileViewProtocol>)presenter {
+- (id <ProfileViewProtocol> )presenter {
     
     if(!_presenter) {
         
@@ -45,6 +43,11 @@
     }
     
     return _presenter;
+}
+
+-(void)dealloc {
+	
+	
 }
 
 #pragma mark - table view delegate methods

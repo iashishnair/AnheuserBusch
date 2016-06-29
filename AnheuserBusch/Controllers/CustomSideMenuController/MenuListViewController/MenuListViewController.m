@@ -1,10 +1,10 @@
-//
-//  MVYMenuViewController.m
-//  AnheuserBusch
-//
-//  Created by Prsenjit Goswami on 10/06/16.
-//  Copyright © 2016 Cognizant. All rights reserved.
-//
+	//
+	//  MVYMenuViewController.m
+	//  AnheuserBusch
+	//
+	//  Created by Prsenjit Goswami on 10/06/16.
+	//  Copyright © 2016 Cognizant. All rights reserved.
+	//
 
 #import "MenuListViewController.h"
 #import "CustomSideMenuController.h"
@@ -28,91 +28,90 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+	if (self) {
+			// Custom initialization
+	}
+	return self;
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    [self.tableView registerNib:[UINib nibWithNibName:@"MenuListTableViewListCell" bundle:nil] forCellReuseIdentifier:@"MenuCell"];
-    
-    self.userImageView.layer.cornerRadius = 50.0f;
-    self.userImageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    self.userImageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
-self.userImageView.clipsToBounds = YES;
-    self.userImageView.layer.borderWidth = 3.0f;
-    
-    id username = [NSUserDefaults readUserDefault:@"username"];
-    
-   
-    if(![NSString isNULLString:username]) {
-        
-        _userNameLabel.text = username;
-
-    }
-    __weak typeof(self) weakself = self;
-    
-    [[SalesForceChatterHelper shareInstance]fetchUserAllDetails:^(NSArray *results) {
-        
-        if(results && results.count) {
-            
-            FeedDataModel *feedDataModel = results[0];
-            
-            if(feedDataModel) {
-                
-                ActorDataModel *actorDataModel = feedDataModel.actorDataModel;
-                
-                
-                if(![NSString isNULLString:actorDataModel.fullName])
-                {
-                    NSString *username = actorDataModel.fullName;
-                    weakself.userNameLabel.text = username;
-                    [NSUserDefaults saveObject:username forKey:@"username"];
-                }
-                
-                if(actorDataModel) {
-                    
-                    ActorPhotoDataModel *actorPhotoDataModel = actorDataModel.actorPhotoDataModel;
-                    
-                    if(![NSString isNULLString:actorPhotoDataModel.standardEmailPhotoUrl])
-                    {
-                        NSString *standardEmailPhotoUrl = actorPhotoDataModel.standardEmailPhotoUrl;
-                        
-                        [_userImageView imageWithURLString:standardEmailPhotoUrl];
-                        
-                        [NSUserDefaults saveObject:standardEmailPhotoUrl forKey:@"standardEmailPhotoUrl"];
-                    }
-                    
-                }
-                
-            }
-            
-        }
-        
-    }];
+	[super viewDidLoad];
+		// Do any additional setup after loading the view from its nib.
+	[self.tableView registerNib:[UINib nibWithNibName:@"MenuListTableViewListCell" bundle:nil] forCellReuseIdentifier:@"MenuCell"];
+	
+	self.userImageView.layer.cornerRadius = 50.0f;
+	self.userImageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+	self.userImageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+	self.userImageView.clipsToBounds = YES;
+	self.userImageView.layer.borderWidth = 3.0f;
+	
+	id username = [NSUserDefaults readUserDefault:@"username"];
+	
+	
+	if(![NSString isNULLString:username]) {
+		
+		_userNameLabel.text = username;
+		
+	}
+	__weak typeof(self) weakself = self;
+	
+	[[SalesForceChatterHelper shareInstance]fetchUserAllDetails:^(NSArray *results) {
+		
+		if(results && results.count) {
+			
+			FeedDataModel *feedDataModel = results[0];
+			
+			if(feedDataModel) {
+				
+				ActorDataModel *actorDataModel = feedDataModel.actorDataModel;
+				
+				
+				if(![NSString isNULLString:actorDataModel.fullName])
+					{
+					NSString *username = actorDataModel.fullName;
+					weakself.userNameLabel.text = username;
+					[NSUserDefaults saveObject:username forKey:@"username"];
+					}
+				
+				if(actorDataModel) {
+					
+					ActorPhotoDataModel *actorPhotoDataModel = actorDataModel.actorPhotoDataModel;
+					
+					if(![NSString isNULLString:actorPhotoDataModel.standardEmailPhotoUrl])
+						{
+						NSString *standardEmailPhotoUrl = actorPhotoDataModel.standardEmailPhotoUrl;
+						
+						[_userImageView imageWithURLString:standardEmailPhotoUrl];
+						
+						[NSUserDefaults saveObject:standardEmailPhotoUrl forKey:@"standardEmailPhotoUrl"];
+						}
+					
+				}
+			}
+			
+		}
+		
+	}];
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    
+	[super didReceiveMemoryWarning];
+	
 }
 
 #pragma mark - Private Method
 
 - (NSArray *)menuItems {
-    
-    if(!_menuItems) {
-        
-        _menuItems = @[@"Profile", @"Overall Ranking", @"Chatter", @"Help and Support", @"Logout"];
-    }
-    
-    return _menuItems;
+	
+	if(!_menuItems) {
+		
+		_menuItems = MenuItems;
+	}
+	
+	return _menuItems;
 }
 
 #pragma mark – UITableViewDataSource
@@ -127,53 +126,28 @@ self.userImageView.clipsToBounds = YES;
 	static NSString *cellIdentifier = @"MenuCell";
 	
 	MenuListTableViewListCell *cell = (MenuListTableViewListCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-   	NSString *item = [self.menuItems objectAtIndex:indexPath.row];
-    cell.menuTitleLabel.text = item;
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.backgroundColor = [UIColor clearColor];
+	NSString *item = [self.menuItems objectAtIndex:indexPath.row];
+	cell.menuTitleLabel.text = item;
+	cell.selectionStyle = UITableViewCellSelectionStyleNone;
+	cell.backgroundColor = [UIColor clearColor];
 	return cell;
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
-{
-    return 44.0f;
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+	return 44.0f;
 }
+
 #pragma mark – UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-    
-    switch (indexPath.row) {
-        case 0:
-        {
-            ProfileViewController *contentVC;
-            
-            UIStoryboard *mystoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-            contentVC = [mystoryboard instantiateViewControllerWithIdentifier:@"ProfileViewController"];
-            [self loadController:contentVC];
-      }
-            break;
-        
-            
-        case 4:
-        {
-            [[AppDelegate appdelegateShareInstance] handleSdkManagerLogout];
-        }
-            break;
- 
-        default:
-            break;
-    }
 	
+	if(self.delegate && [self.delegate respondsToSelector:@selector(didSelectRowAtIndexPath:)]) {
+		
+		[self.delegate didSelectRowAtIndexPath:indexPath];
+		
+	}
 }
-
-
-
--(void)loadController:(UIViewController *)controller {
-  
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
-    [[self sideMenuController] changeContentViewController:navigationController closeMenu:YES];
-}
-
-
 
 @end

@@ -15,9 +15,13 @@
 #import "OnBoardingViewController.h"
 #import "LoginViewController.h"
 #import "ProfileViewController.h"
+#import "CustomNavigationController.h"
 
-@interface AppDelegate ()
-
+@interface AppDelegate () <MenuListViewControllerDelegate>
+{
+	MenuListViewController *menuListViewController;
+	CustomSideMenuController *customSideMenuController;
+}
 @end
 
 @implementation AppDelegate
@@ -50,26 +54,24 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-     [self setupSlideMenuViewController];
-
     
-//    BOOL isLogedIn = [SFUserAccountManager sharedInstance].isCurrentUserAnonymous && [SFUserAccountManager sharedInstance].currentUser.credentials.accessToken ;
-//    
-//    id OnboardingIsShown  = [NSUserDefaults readUserDefault:kOnboardingIsShown];
-//    
-//    if(![OnboardingIsShown boolValue]) {
-//    
-//        [self setOnBoardingViewControllerAsRootViewController];
-//        
-//    } else if(!isLogedIn) {
-//        
-//        [self setLoginViewControllerAsRootViewController];
-//        
-//    } else {
-//        
-//        [self setupSlideMenuViewController];
-//    }
+    BOOL isLogedIn = [SFUserAccountManager sharedInstance].isCurrentUserAnonymous && [SFUserAccountManager sharedInstance].currentUser.credentials.accessToken ;
     
+    id OnboardingIsShown  = [NSUserDefaults readUserDefault:kOnboardingIsShown];
+    
+    if(![OnboardingIsShown boolValue]) {
+    
+        [self setOnBoardingViewControllerAsRootViewController];
+        
+    } else if(!isLogedIn) {
+        
+        [self setLoginViewControllerAsRootViewController];
+        
+    } else {
+        
+        [self setupSlideMenuViewController];
+    }
+	
     [self.window makeKeyAndVisible];
     
     return YES;
@@ -190,7 +192,7 @@
     
     OnBoardingViewController * onBoardingViewController = (OnBoardingViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"OnBoardingViewController"];
     
-    UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:onBoardingViewController];
+    CustomNavigationController *rootViewController = [[CustomNavigationController alloc] initWithRootViewController:onBoardingViewController];
     
     self.window.rootViewController = rootViewController;
 }
@@ -198,7 +200,7 @@
     
     LoginViewController * loginViewController = (LoginViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"LoginViewController"];
     
-    UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
+    CustomNavigationController *rootViewController = [[CustomNavigationController alloc] initWithRootViewController:loginViewController];
     
     self.window.rootViewController = rootViewController;
 }
@@ -214,19 +216,24 @@
 - (void)setupSlideMenuViewController
 {
     
-    MenuListViewController *menuListViewController = [[MenuListViewController alloc] initWithNibName:@"MenuListViewController" bundle:nil];
-    
+     menuListViewController = [[MenuListViewController alloc] initWithNibName:@"MenuListViewController" bundle:nil];
+	menuListViewController.delegate = self;
     ProfileViewController * profileViewController = (ProfileViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"ProfileViewController"];
     
     UINavigationController *contentNavigationController = [[UINavigationController alloc] initWithRootViewController:profileViewController];
+	
+	
     CustomSideMenuOptions *options = [[CustomSideMenuOptions alloc] init];
     options.contentViewScale = 1.0;
     options.contentViewOpacity = 0.05;
     options.shadowOpacity = 0.0;
     
-    CustomSideMenuController *customSideMenuController = [[CustomSideMenuController alloc] initWithMenuViewController:menuListViewController contentViewController:contentNavigationController options:options];
+    customSideMenuController = [[CustomSideMenuController alloc] initWithMenuViewController:menuListViewController contentViewController:contentNavigationController options:options];
+	
+	
     customSideMenuController.menuFrame = CGRectMake(0, 20.0, [AppDelegate appdelegateShareInstance].window.bounds.size.width - 100.0f, [AppDelegate appdelegateShareInstance].window.bounds.size.height - 20.0);
-    [AppDelegate appdelegateShareInstance].window.rootViewController = customSideMenuController;
+	
+   self.window.rootViewController = customSideMenuController;
 }
 
 
@@ -373,6 +380,42 @@
         [[SalesforceSDKManager sharedManager] launch];
     }];
 }
+
+#pragma mark -  MenuListViewControllerDelegate
+
+- (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+	switch (indexPath.row) {
+		case kPageProfile:
+		{
+		ProfileViewController *contentVC;
+		
+		UIStoryboard *mystoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+		contentVC = [mystoryboard instantiateViewControllerWithIdentifier:@"ProfileViewController"];
+		[self loadController:contentVC];
+		}
+			break;
+			
+			
+		case kLogout:
+		{
+		[[AppDelegate appdelegateShareInstance] handleSdkManagerLogout];
+		}
+			break;
+			
+		default:
+			break;
+	}
+}
+
+
+-(void)loadController:(UIViewController *)controller {
+	
+	CustomNavigationController *navigationController = [[CustomNavigationController alloc] initWithRootViewController:controller];
+
+	[[customSideMenuController sideMenuController] changeContentViewController:navigationController closeMenu:YES];
+}
+
 
 
 @end

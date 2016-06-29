@@ -30,16 +30,20 @@ typedef void(^PostMethodCompletion) (NSError *error, SOQLStatus status);
 
 
 /*!
+ Page details
  */
 typedef enum {
     
 //  kPageLogin = 0,
-    kPageDashBoard = 0,
-    kPageLeaderBoard = 1,
-    kPageWorkProfile = 2,
-
-    
+    kPageProfile = 0,
+    kPageOverAllRanking = 1,
+    kPageChatter = 2,
+	kPageHelp_Support = 3,
+	kLogout = 4,
 } PageIndex;
+
+
+#define MenuItems @[@"Profile", @"Overall Ranking", @"Chatter", @"Help and Support", @"Logout"]
 
 /*!
  Enum for RankingState

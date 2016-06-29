@@ -20,9 +20,20 @@
 
 @implementation PeerRankingDetailViewController
 
--(void)viewDidLoad {
-    
+- (void)viewDidLoad {
+	
+	[super viewDidLoad];
+	
     self.peerRankingDetailsDataSource = [self.presenter peerRankingDetailDataSourcePopulate];
+	self.showBackButton = YES;
+
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+	
+	[super viewWillAppear:animated];
+	
+
 }
 
 #pragma mark- private methods

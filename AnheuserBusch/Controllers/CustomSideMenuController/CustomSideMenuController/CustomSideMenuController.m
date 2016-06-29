@@ -547,42 +547,5 @@ typedef struct {
     return nil;
 }
 
-- (void)addLeftMenuButtonWithImage:(UIImage *)buttonImage {
-	
-	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:buttonImage style:UIBarButtonItemStylePlain target:self action:@selector(toggleMenu)];
-	self.navigationItem.leftBarButtonItem = menuButton;
-}
-
-- (void)addRightMenuButtonWithImage:(UIImage *)buttonImage {
-    
-    UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:buttonImage style:UIBarButtonItemStylePlain target:self action:@selector(clickedRightMenuButton)];
-    self.navigationItem.rightBarButtonItem = menuButton;
-}
-
-- (void)commonHeaderWithLeftMenuButtonImage:(UIImage *)leftMenuButtonImage
-rightMenuButtonImage:(UIImage *)rightMenuButtonImage {
-    
-    if(leftMenuButtonImage) {
-        
-        [self addLeftMenuButtonWithImage:leftMenuButtonImage];
-    }
-    
-    if(rightMenuButtonImage) {
-        
-        [self addRightMenuButtonWithImage:rightMenuButtonImage];
-    }
-
-    
-    
-}
-- (void)toggleMenu {
-	
-	[[self sideMenuController] toggleMenu];
-}
-
-- (void)clickedRightMenuButton {
-    
-}
-
 
 @end
