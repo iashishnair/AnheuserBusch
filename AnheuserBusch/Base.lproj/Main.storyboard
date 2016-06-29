@@ -327,14 +327,14 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atl-UE-aqq">
                                                     <rect key="frame" x="189" y="98" width="178" height="28"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <state key="normal" title="Button">
+                                                    <state key="normal" title="KPI Details">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXK-Z4-xGp">
                                                     <rect key="frame" x="8" y="98" width="178" height="28"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <state key="normal" title="Button">
+                                                    <state key="normal" title="Peer Ranking">
                                                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     </state>
                                                     <connections>
@@ -378,8 +378,8 @@
                                         <connections>
                                             <outlet property="IncentiveLogo" destination="FOb-65-Nhg" id="b71-Z6-hcp"/>
                                             <outlet property="IncentiveName" destination="LXL-DO-VJO" id="Yo9-nu-XbH"/>
-                                            <outlet property="KPIDetailsButton" destination="atl-UE-aqq" id="Bsw-A1-I6l"/>
-                                            <outlet property="PeerRankingButton" destination="SXK-Z4-xGp" id="set-y6-bcm"/>
+                                            <outlet property="KPIDetailsButton" destination="atl-UE-aqq" id="NWq-R9-yQn"/>
+                                            <outlet property="PeerRankingButton" destination="SXK-Z4-xGp" id="SwI-8l-ihl"/>
                                             <outlet property="RankImage" destination="W28-EW-JgP" id="ErP-5j-7qI"/>
                                             <outlet property="RankLabel" destination="cf5-fM-imy" id="RNu-86-BaD"/>
                                             <outlet property="chartView" destination="mIK-jq-y4Z" id="fuQ-xU-SwG"/>
@@ -399,19 +399,39 @@
                         <constraints>
                             <constraint firstItem="Fi5-jD-eJg" firstAttribute="leading" secondItem="eKf-0e-28S" secondAttribute="leadingMargin" id="3pl-Sz-B7i"/>
                             <constraint firstItem="fdJ-31-ShK" firstAttribute="top" secondItem="8yN-yA-W7s" secondAttribute="bottom" constant="8" id="8aJ-jV-YoG"/>
+                            <constraint firstAttribute="trailing" secondItem="fdJ-31-ShK" secondAttribute="trailing" id="9B0-4C-VMx"/>
                             <constraint firstItem="KXt-hE-WHe" firstAttribute="leading" secondItem="eKf-0e-28S" secondAttribute="leadingMargin" id="Dna-MQ-z3w"/>
                             <constraint firstItem="KXt-hE-WHe" firstAttribute="top" secondItem="fdJ-31-ShK" secondAttribute="bottom" id="PQJ-91-pru"/>
+                            <constraint firstAttribute="trailing" secondItem="fdJ-31-ShK" secondAttribute="trailing" constant="20" id="RdR-yA-K0C"/>
+                            <constraint firstItem="fdJ-31-ShK" firstAttribute="leading" secondItem="eKf-0e-28S" secondAttribute="leading" id="THP-Bs-mGf"/>
+                            <constraint firstItem="fdJ-31-ShK" firstAttribute="leading" secondItem="eKf-0e-28S" secondAttribute="leading" id="Wc5-xE-wQy"/>
                             <constraint firstItem="P5X-3P-46c" firstAttribute="top" secondItem="Fi5-jD-eJg" secondAttribute="bottom" id="Y9K-D3-tg0"/>
                             <constraint firstItem="fdJ-31-ShK" firstAttribute="leading" secondItem="eKf-0e-28S" secondAttribute="leadingMargin" id="cMl-e0-ame"/>
+                            <constraint firstItem="KXt-hE-WHe" firstAttribute="top" secondItem="fdJ-31-ShK" secondAttribute="bottom" id="eBI-IY-HKG"/>
+                            <constraint firstAttribute="trailing" secondItem="fdJ-31-ShK" secondAttribute="trailing" id="fFc-A4-UaD"/>
                             <constraint firstItem="KXt-hE-WHe" firstAttribute="trailing" secondItem="eKf-0e-28S" secondAttribute="trailingMargin" id="fNF-bc-yxb"/>
+                            <constraint firstItem="KXt-hE-WHe" firstAttribute="top" secondItem="fdJ-31-ShK" secondAttribute="bottom" id="niB-Uh-WO2"/>
                             <constraint firstItem="Fi5-jD-eJg" firstAttribute="trailing" secondItem="eKf-0e-28S" secondAttribute="trailingMargin" id="qQZ-JZ-8Fq"/>
+                            <constraint firstItem="KXt-hE-WHe" firstAttribute="top" secondItem="fdJ-31-ShK" secondAttribute="bottom" id="sUn-nG-HQe"/>
+                            <constraint firstItem="fdJ-31-ShK" firstAttribute="leading" secondItem="eKf-0e-28S" secondAttribute="leading" constant="20" id="w55-4f-i7R"/>
                             <constraint firstItem="Fi5-jD-eJg" firstAttribute="top" secondItem="KXt-hE-WHe" secondAttribute="bottom" id="x51-6Y-csw"/>
                             <constraint firstItem="fdJ-31-ShK" firstAttribute="trailing" secondItem="eKf-0e-28S" secondAttribute="trailingMargin" id="x9p-wC-Knh"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9B0-4C-VMx"/>
+                                <exclude reference="THP-Bs-mGf"/>
+                                <exclude reference="Wc5-xE-wQy"/>
+                                <exclude reference="cMl-e0-ame"/>
+                                <exclude reference="fFc-A4-UaD"/>
+                                <exclude reference="x9p-wC-Knh"/>
+                            </mask>
+                        </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="414" height="736"/>
                     <connections>
+                        <outlet property="headingLabel" destination="KXt-hE-WHe" id="pR3-zn-CnA"/>
                         <outlet property="incentiveTableView" destination="Fi5-jD-eJg" id="1ma-Pk-B1f"/>
                     </connections>
                 </viewController>
@@ -486,9 +506,9 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="mhI-Hy-AKO"/>
-                                                    <exclude reference="D1a-KM-ubd"/>
                                                     <exclude reference="6Mf-fO-x54"/>
+                                                    <exclude reference="D1a-KM-ubd"/>
+                                                    <exclude reference="mhI-Hy-AKO"/>
                                                     <exclude reference="b8T-v9-UeU"/>
                                                     <exclude reference="2Fp-Lc-58U"/>
                                                     <exclude reference="A0l-VS-d9R"/>
