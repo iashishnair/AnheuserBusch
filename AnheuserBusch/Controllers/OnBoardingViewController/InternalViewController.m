@@ -10,6 +10,9 @@
 
 @interface InternalViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *screenName;
+@property (weak, nonatomic) IBOutlet UIImageView *screenImage;
+@property (weak, nonatomic) IBOutlet UILabel *screenDetails;
 
 @end
 
@@ -29,6 +32,14 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    self.screenDetails.text = self.titleText ;
+    self.screenDetails.lineBreakMode = NSLineBreakByWordWrapping;
+    self.screenDetails.numberOfLines = 0;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -38,13 +49,6 @@
     
     self.view.backgroundColor = [UIColor brownColor];
     self.screenName.text = self.headingText;
-    
-  
-    self.screenDetails.lineBreakMode = NSLineBreakByWordWrapping;
-    self.screenDetails.numberOfLines = 0;
-      self.screenDetails.text =self.titleText ;
-   // self.screenImage.image = []
-    
 }
 
 /*

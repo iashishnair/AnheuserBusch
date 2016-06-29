@@ -31,8 +31,10 @@
 - (void)viewDidLoad {
     
     
+    
     [super viewDidLoad];
     
+    self.navigationController.navigationBarHidden = YES;
     [self setOnboardingIsShown];
     
     self.pageTitles = [[NSMutableArray alloc]initWithObjects:@"First Page  First Page  First Page  First Page  First Page  First Page  First Page  First Page  First Page  First Page",@"Second Page",@"Third Page",@"Fourth Page", nil];
@@ -46,6 +48,13 @@
     //self.view.backgroundColor = [UIColor yellowColor];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+    
+    [super viewDidDisappear:animated];
+    
+    self.navigationController.navigationBarHidden = NO;
+
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
