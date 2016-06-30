@@ -78,6 +78,8 @@ static NSString * kClassNameLoginViewController = @"LoginViewController";
 static NSString * kClassNameLeaderBoardViewController = @"LeaderBoardViewController";
 static NSString * kClassNameDashBoardViewController = @"DashBoardViewController";
 
+//StoryBoard ID
+static NSString * kStoryBoardIDPeerRankingDetailViewController = @"PeerRankingDetailViewController";
 //
 static NSString * kPageTitleLoginViewController = @"LoginView";
 static NSString * kPageTitleLeaderBoardViewController = @"LeaderBoard";
