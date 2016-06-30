@@ -7,8 +7,8 @@
 //
 
 #import "KPIRankingViewController.h"
-#import "PageItemViewController.h"
 #import "GUITabPagerViewController.h"
+#import "CStorePLViewConroller.h"
 
 @interface KPIRankingViewController () <GUITabPagerDataSource, GUITabPagerDelegate> {
     
@@ -18,22 +18,19 @@
 @property (weak, nonatomic) IBOutlet UILabel *hintTextLabel;
 @property (weak, nonatomic) IBOutlet UIView *pageViewControllerContainerView;
 @property (strong, nonatomic) GUITabPagerViewController *customPageManagerViewController;
+@property (nonatomic,strong) CStorePLViewConroller *customViewConroller;
 @end
 
 @implementation KPIRankingViewController
 
 
-- (void)awakeFromNib {
-    
-    
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    segmentTitles = @[@"Cstore/PL 1", @"Large Format", @"On Premises"];
+
     [self customPageManagerViewController];
-    
     [self configureaUI];
 }
 
@@ -42,6 +39,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    
+    _customPageManagerViewController = nil;
+    _customViewConroller = nil;
+}
 
 #pragma mark - Private Method
 
@@ -50,15 +52,12 @@
     [self.pageViewControllerContainerView addSubview:self.customPageManagerViewController.view];
     
     CGRect rect = _pageViewControllerContainerView.bounds;
-    rect.origin.x = 1;
     self.customPageManagerViewController.view.frame = rect;
     
-    [self addConstrains];
+//    [self addConstrains];
     
     [self.customPageManagerViewController reloadData];
 }
-
-
 
 - (void)addConstrains {
     
@@ -72,16 +71,7 @@
 - (GUITabPagerViewController *)customPageManagerViewController{
     
     if(!_customPageManagerViewController) {
-        PageItemViewController *viewController1 = [[PageItemViewController alloc] initWithTitle:@"Cstore/PL 1"];
-        PageItemViewController *viewController2 = [[PageItemViewController alloc] initWithTitle:@"Large Format"];
-        PageItemViewController *viewController3 = [[PageItemViewController alloc] initWithTitle:@"On Premises"];
         
-        viewControllers = @[viewController1, viewController2, viewController3];
-        
-        //Segment titles
-        segmentTitles = @[@"Cstore/PL 1", @"Large Format", @"On Premises"];
-
-       
         _customPageManagerViewController = [[GUITabPagerViewController alloc] init];
         
 //       _customPageManagerViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
@@ -97,14 +87,24 @@
 #pragma mark - Tab Pager Data Source
 
 - (NSInteger)numberOfViewControllers {
-    return viewControllers.count;
+    return 3;
 }
 
 - (UIViewController *)viewControllerForIndex:(NSInteger)index {
     
-    return viewControllers[index];
+    return [[CStorePLViewConroller alloc] init];
 }
 
+-(CStorePLViewConroller *)customViewConroller {
+    
+    if(!_customViewConroller) {
+        
+        _customViewConroller = [[CStorePLViewConroller alloc]init];
+    }
+    
+    return  _customViewConroller;
+    
+}
 // Implement either viewForTabAtIndex: or titleForTabAtIndex:
 //- (UIView *)viewForTabAtIndex:(NSInteger)index {
 //  return <#UIView#>;

@@ -9,32 +9,36 @@
 #import "CStorePLViewConroller.h"
 #import "CStorePLTableViewCell.h"
 
-@interface CStorePLViewConroller () <UITableViewDataSource>
+@interface CStorePLViewConroller () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 @end
 
 @implementation CStorePLViewConroller
 
+#pragma mark - ViewController Life Cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self createUI];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
+
+- (void)dealloc {
+    
+    _tableView = nil;
+}
+
+#pragma mark - Private Method
 
 - (void)createUI {
     
-    
     [self.view addSubview:self.tableView];
-    
     [self addConstraints];
-    
-    
-    
 }
 
 - (void)addConstraints {
@@ -43,7 +47,6 @@
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tableView]|" options:0 metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tableView]|" options:0 metrics:nil views:views]];
-
 }
 
 - (UITableView *)tableView {
@@ -52,12 +55,20 @@
         
         _tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tableView.dataSource = self;
+        _tableView.delegate = self;
         _tableView.translatesAutoresizingMaskIntoConstraints = NO;
     }
     
     return _tableView;
 }
 
+
+#pragma mark - TableView Datasource
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 100.0f;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
@@ -74,8 +85,8 @@
     if(!cell) {
         
         cell = [[CStorePLTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        
     }
+    
     
     return cell;
 }
