@@ -10,11 +10,14 @@
 #import "PeerRankingDetailPresenter.h"
 #import "PeerRankingDataModel.h"
 #import "PeerRankingDetailPageCell.h"
+#import "Constants.h"
 
 @interface PeerRankingDetailViewController ()
 
 @property (strong, nonatomic) NSMutableArray *peerRankingDetailsDataSource;
 @property (strong, nonatomic) id <PeerRankingDetailProtocol> presenter;
+@property (weak, nonatomic) IBOutlet UILabel *noOfDaysLabel;
+@property (weak, nonatomic) IBOutlet UILabel *viewHeading;
 
 @end
 
@@ -25,10 +28,19 @@
 	[super viewDidLoad];
 	
     self.peerRankingDetailsDataSource = [self.presenter peerRankingDetailDataSourcePopulate];
-}
+    [self configureUI];
+  }
+
 
 
 #pragma mark- private methods
+
+-(void) configureUI {
+    
+    self.noOfDaysLabel.text = @"10 days to win.";
+    self.viewHeading.text = viewHeading;
+ 
+}
 
 - (id <PeerRankingDetailProtocol>)presenter {
     
