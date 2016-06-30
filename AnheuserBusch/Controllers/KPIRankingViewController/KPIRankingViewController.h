@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PageBaseViewController.h"
+#import "BaseChildViewController.h"
 
-@interface KPIRankingViewController : PageBaseViewController
+@interface KPIRankingViewController : BaseChildViewController
 
 @end

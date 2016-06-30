@@ -333,6 +333,9 @@
                                                     <state key="normal" title="KPI Details">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="clickedKPIRanking:" destination="RaQ-WA-ktJ" eventType="touchUpInside" id="FsE-FL-gh5"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXK-Z4-xGp">
                                                     <rect key="frame" x="8" y="98" width="178" height="28"/>
@@ -340,6 +343,9 @@
                                                     <state key="normal" title="Peer Ranking">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="clickedPeerRanking:" destination="RaQ-WA-ktJ" eventType="touchUpInside" id="sI3-a8-B2v"/>
+                                                    </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mIK-jq-y4Z">
                                                     <rect key="frame" x="8" y="51" width="358" height="27"/>
@@ -450,18 +456,44 @@
                     <view key="view" contentMode="scaleToFill" id="iIs-su-fwD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjS-Q2-765">
+                                <rect key="frame" x="16" y="25" width="288" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bpe-rR-e3D">
+                                <rect key="frame" x="0.0" y="66" width="320" height="413"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jf0-d9-pSY" firstAttribute="top" secondItem="Bpe-rR-e3D" secondAttribute="bottom" constant="1" id="1Eg-6m-6lG"/>
+                            <constraint firstAttribute="trailing" secondItem="sjS-Q2-765" secondAttribute="trailing" constant="16" id="7t6-vY-zzD"/>
+                            <constraint firstItem="Bpe-rR-e3D" firstAttribute="leading" secondItem="iIs-su-fwD" secondAttribute="leading" id="INt-EM-q65"/>
+                            <constraint firstItem="Bpe-rR-e3D" firstAttribute="top" secondItem="sjS-Q2-765" secondAttribute="bottom" constant="20" id="XKb-i4-mbD"/>
+                            <constraint firstItem="sjS-Q2-765" firstAttribute="leading" secondItem="iIs-su-fwD" secondAttribute="leading" constant="16" id="jDT-8C-iil"/>
+                            <constraint firstAttribute="trailing" secondItem="Bpe-rR-e3D" secondAttribute="trailing" id="jPW-wk-eBT"/>
+                            <constraint firstItem="sjS-Q2-765" firstAttribute="top" secondItem="QvZ-D2-ciw" secondAttribute="bottom" constant="5" id="oks-UA-qC2"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="hintTextLabel" destination="sjS-Q2-765" id="9GS-b6-HvC"/>
+                        <outlet property="pageViewControllerContainerView" destination="Bpe-rR-e3D" id="owz-fz-Mqv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smM-Dt-22o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2009" y="-2223"/>
+            <point key="canvasLocation" x="-2001" y="-2250"/>
         </scene>
         <!--Peer Ranking Detail View Controller-->
         <scene sceneID="EUS-cm-GaX">
             <objects>
-                <viewController id="CuA-7D-V9n" customClass="PeerRankingDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PeerRankingDetailViewController" id="CuA-7D-V9n" customClass="PeerRankingDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IRo-FM-Lpo"/>
                         <viewControllerLayoutGuide type="bottom" id="ovp-gg-UtK"/>

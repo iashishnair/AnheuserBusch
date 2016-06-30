@@ -11,6 +11,7 @@
 #import "IncentiveDataModel.h"
 #import "ProfileViewPresenter.h"
 #import "PeerRankingDetailViewController.h"
+#import "KPIRankingViewController.h"
 
 @interface ProfileViewController () <ProfilePageCustomCellDelegate>
 
@@ -97,6 +98,9 @@
 
 - (void)clickedKPIRanking:(UIButton *)sender {
     
+    KPIRankingViewController *kPIRankingViewController = (KPIRankingViewController *)[UIViewController instantiateViewControllerWithIdentifier:kStoryBoardIDKPIRankingViewController];
+    
+    [self.navigationController pushViewController:kPIRankingViewController animated:YES];
     
 }
 @end

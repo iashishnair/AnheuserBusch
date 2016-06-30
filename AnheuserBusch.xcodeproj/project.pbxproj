@@ -9,12 +9,10 @@
 /* Begin PBXBuildFile section */
 		4C85B15EF09B6835CD0E7B8E /* Pods_AnheuserBusch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81035F868542EEDBC8DF2DC /* Pods_AnheuserBusch.framework */; };
 		842729C71D252B61000EEB1C /* KPIRankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842729C61D252B61000EEB1C /* KPIRankingViewController.m */; };
-		84272A011D253615000EEB1C /* CustomPageManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842729F51D253615000EEB1C /* CustomPageManagerViewController.m */; };
-		84272A021D253615000EEB1C /* CustomSegmentedCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 842729F91D253615000EEB1C /* CustomSegmentedCollectionViewCell.m */; };
-		84272A031D253615000EEB1C /* CustomSegmentedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842729FA1D253615000EEB1C /* CustomSegmentedCollectionViewCell.xib */; };
-		84272A041D253615000EEB1C /* CustomSegmentedCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 842729FD1D253615000EEB1C /* CustomSegmentedCollectionViewLayout.m */; };
-		84272A051D253615000EEB1C /* CustomSegmentedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 842729FF1D253615000EEB1C /* CustomSegmentedView.m */; };
-		84272A061D253615000EEB1C /* CustomSegmentedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84272A001D253615000EEB1C /* CustomSegmentedView.xib */; };
+		84272A0A1D2539D7000EEB1C /* PageItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84272A081D2539D7000EEB1C /* PageItemViewController.m */; };
+		84272A0B1D2539D7000EEB1C /* PageItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84272A091D2539D7000EEB1C /* PageItemViewController.xib */; };
+		84272A101D253FAB000EEB1C /* GUITabPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84272A0D1D253FAB000EEB1C /* GUITabPagerViewController.m */; };
+		84272A111D253FAB000EEB1C /* GUITabScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84272A0F1D253FAB000EEB1C /* GUITabScrollView.m */; };
 		8468C8D51D0AA58B00B30DCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C8D41D0AA58B00B30DCF /* main.m */; };
 		8468C8DE1D0AA58B00B30DCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468C8DC1D0AA58B00B30DCF /* Main.storyboard */; };
 		8468C8E61D0AA58B00B30DCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468C8E41D0AA58B00B30DCF /* LaunchScreen.storyboard */; };
@@ -102,16 +100,13 @@
 		03D768E5340D91F558808008 /* Pods-AnheuserBusch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnheuserBusch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnheuserBusch/Pods-AnheuserBusch.debug.xcconfig"; sourceTree = "<group>"; };
 		842729C51D252B61000EEB1C /* KPIRankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPIRankingViewController.h; sourceTree = "<group>"; };
 		842729C61D252B61000EEB1C /* KPIRankingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPIRankingViewController.m; sourceTree = "<group>"; };
-		842729F41D253615000EEB1C /* CustomPageManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPageManagerViewController.h; sourceTree = "<group>"; };
-		842729F51D253615000EEB1C /* CustomPageManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPageManagerViewController.m; sourceTree = "<group>"; };
-		842729F81D253615000EEB1C /* CustomSegmentedCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegmentedCollectionViewCell.h; sourceTree = "<group>"; };
-		842729F91D253615000EEB1C /* CustomSegmentedCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegmentedCollectionViewCell.m; sourceTree = "<group>"; };
-		842729FA1D253615000EEB1C /* CustomSegmentedCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomSegmentedCollectionViewCell.xib; sourceTree = "<group>"; };
-		842729FC1D253615000EEB1C /* CustomSegmentedCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegmentedCollectionViewLayout.h; sourceTree = "<group>"; };
-		842729FD1D253615000EEB1C /* CustomSegmentedCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegmentedCollectionViewLayout.m; sourceTree = "<group>"; };
-		842729FE1D253615000EEB1C /* CustomSegmentedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomSegmentedView.h; sourceTree = "<group>"; };
-		842729FF1D253615000EEB1C /* CustomSegmentedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegmentedView.m; sourceTree = "<group>"; };
-		84272A001D253615000EEB1C /* CustomSegmentedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomSegmentedView.xib; sourceTree = "<group>"; };
+		84272A071D2537F4000EEB1C /* PageItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageItemViewController.h; sourceTree = "<group>"; };
+		84272A081D2539D7000EEB1C /* PageItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageItemViewController.m; sourceTree = "<group>"; };
+		84272A091D2539D7000EEB1C /* PageItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageItemViewController.xib; sourceTree = "<group>"; };
+		84272A0C1D253FAB000EEB1C /* GUITabPagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUITabPagerViewController.h; sourceTree = "<group>"; };
+		84272A0D1D253FAB000EEB1C /* GUITabPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUITabPagerViewController.m; sourceTree = "<group>"; };
+		84272A0E1D253FAB000EEB1C /* GUITabScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUITabScrollView.h; sourceTree = "<group>"; };
+		84272A0F1D253FAB000EEB1C /* GUITabScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUITabScrollView.m; sourceTree = "<group>"; };
 		8468C8D01D0AA58B00B30DCF /* AnheuserBusch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnheuserBusch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8468C8D41D0AA58B00B30DCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8468C8DD1D0AA58B00B30DCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -278,6 +273,9 @@
 		842729C41D252B3D000EEB1C /* KPIRankingViewController */ = {
 			isa = PBXGroup;
 			children = (
+				84272A081D2539D7000EEB1C /* PageItemViewController.m */,
+				84272A091D2539D7000EEB1C /* PageItemViewController.xib */,
+				84272A071D2537F4000EEB1C /* PageItemViewController.h */,
 				842729C51D252B61000EEB1C /* KPIRankingViewController.h */,
 				842729C61D252B61000EEB1C /* KPIRankingViewController.m */,
 			);
@@ -287,42 +285,12 @@
 		842729C81D253567000EEB1C /* CustomPageViewController */ = {
 			isa = PBXGroup;
 			children = (
-				842729F41D253615000EEB1C /* CustomPageManagerViewController.h */,
-				842729F51D253615000EEB1C /* CustomPageManagerViewController.m */,
-				842729F61D253615000EEB1C /* CustomSegmentedView */,
+				84272A0C1D253FAB000EEB1C /* GUITabPagerViewController.h */,
+				84272A0D1D253FAB000EEB1C /* GUITabPagerViewController.m */,
+				84272A0E1D253FAB000EEB1C /* GUITabScrollView.h */,
+				84272A0F1D253FAB000EEB1C /* GUITabScrollView.m */,
 			);
 			path = CustomPageViewController;
-			sourceTree = "<group>";
-		};
-		842729F61D253615000EEB1C /* CustomSegmentedView */ = {
-			isa = PBXGroup;
-			children = (
-				842729F71D253615000EEB1C /* CustomSegmentedCollectionViewCell */,
-				842729FB1D253615000EEB1C /* CustomSegmentedCollectionViewLayout */,
-				842729FE1D253615000EEB1C /* CustomSegmentedView.h */,
-				842729FF1D253615000EEB1C /* CustomSegmentedView.m */,
-				84272A001D253615000EEB1C /* CustomSegmentedView.xib */,
-			);
-			path = CustomSegmentedView;
-			sourceTree = "<group>";
-		};
-		842729F71D253615000EEB1C /* CustomSegmentedCollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				842729F81D253615000EEB1C /* CustomSegmentedCollectionViewCell.h */,
-				842729F91D253615000EEB1C /* CustomSegmentedCollectionViewCell.m */,
-				842729FA1D253615000EEB1C /* CustomSegmentedCollectionViewCell.xib */,
-			);
-			path = CustomSegmentedCollectionViewCell;
-			sourceTree = "<group>";
-		};
-		842729FB1D253615000EEB1C /* CustomSegmentedCollectionViewLayout */ = {
-			isa = PBXGroup;
-			children = (
-				842729FC1D253615000EEB1C /* CustomSegmentedCollectionViewLayout.h */,
-				842729FD1D253615000EEB1C /* CustomSegmentedCollectionViewLayout.m */,
-			);
-			path = CustomSegmentedCollectionViewLayout;
 			sourceTree = "<group>";
 		};
 		8468C8C71D0AA58B00B30DCF = {
@@ -992,10 +960,9 @@
 				8468C8E61D0AA58B00B30DCF /* LaunchScreen.storyboard in Resources */,
 				EA942F4E1D0F770E0018E7BB /* PageHeaderView.xib in Resources */,
 				8468C9301D0AA9A300B30DCF /* Assets.xcassets in Resources */,
-				84272A031D253615000EEB1C /* CustomSegmentedCollectionViewCell.xib in Resources */,
-				84272A061D253615000EEB1C /* CustomSegmentedView.xib in Resources */,
 				8468C8DE1D0AA58B00B30DCF /* Main.storyboard in Resources */,
 				847E5E241D22E6B7006B9854 /* MenuListViewController.xib in Resources */,
+				84272A0B1D2539D7000EEB1C /* PageItemViewController.xib in Resources */,
 				EA942F4C1D0F770E0018E7BB /* LeaderBoardCustomCell.xib in Resources */,
 				847E5E221D22E6B7006B9854 /* MenuListTableViewListCell.xib in Resources */,
 				EA942F541D0F770E0018E7BB /* UserRankView.xib in Resources */,
@@ -1081,14 +1048,13 @@
 				847E5E231D22E6B7006B9854 /* MenuListViewController.m in Sources */,
 				847E5E311D22E6D8006B9854 /* ChatterViewController.m in Sources */,
 				847E5E031D22AF6D006B9854 /* OnBoardingViewController.m in Sources */,
-				84272A051D253615000EEB1C /* CustomSegmentedView.m in Sources */,
 				847E5E441D22E6FB006B9854 /* CommentModel.m in Sources */,
 				8468C92C1D0AA8D900B30DCF /* LoginViewController.m in Sources */,
 				8468C9231D0AA82E00B30DCF /* AppDelegate.m in Sources */,
+				84272A0A1D2539D7000EEB1C /* PageItemViewController.m in Sources */,
 				847E5E321D22E6D8006B9854 /* ChatterViewControllerPresenter.m in Sources */,
 				847E5E421D22E6FB006B9854 /* ActorDataModel.m in Sources */,
 				EA942F501D0F770E0018E7BB /* RankingSwitchView.m in Sources */,
-				84272A041D253615000EEB1C /* CustomSegmentedCollectionViewLayout.m in Sources */,
 				EA942F531D0F770E0018E7BB /* UserRankView.m in Sources */,
 				847E5E351D22E6D8006B9854 /* FeedListTableViewCell.m in Sources */,
 				EADDBBD71D244D90000908A9 /* BaseChildViewController.m in Sources */,
@@ -1101,11 +1067,11 @@
 				847E5E331D22E6D8006B9854 /* CommentVIew.m in Sources */,
 				847E5E061D22AF95006B9854 /* InternalViewController.m in Sources */,
 				B50FEC881D22553B00EA34D4 /* IncentiveDataModel.m in Sources */,
-				84272A011D253615000EEB1C /* CustomPageManagerViewController.m in Sources */,
 				EA895D7C1D0B55BD00BF8902 /* PageBaseViewController.m in Sources */,
 				847E5E451D22E6FB006B9854 /* FeedDataModel.m in Sources */,
 				847E5E431D22E6FB006B9854 /* CommentItemModel.m in Sources */,
 				B54C58891D1A77A80007C145 /* AchievmentsChartView.m in Sources */,
+				84272A101D253FAB000EEB1C /* GUITabPagerViewController.m in Sources */,
 				847E5E201D22E6B7006B9854 /* CustomSideMenuOptions.m in Sources */,
 				B59A2C641D1BC315002DE224 /* WorkProfileDataModel.m in Sources */,
 				B5DDFF951D11988A000C686B /* DashBoardDataModel.m in Sources */,
@@ -1113,13 +1079,13 @@
 				B599471F1D2158E8002DC238 /* ProfilePageCustomCell.m in Sources */,
 				847E5E101D22E685006B9854 /* SalesForceChatterHelper.m in Sources */,
 				84852EC21D240EAC00C4DE42 /* IncentivesProgressBarView.m in Sources */,
-				84272A021D253615000EEB1C /* CustomSegmentedCollectionViewCell.m in Sources */,
 				EA942F4B1D0F770E0018E7BB /* LeaderBoardCustomCell.m in Sources */,
 				B59A2C601D1BB345002DE224 /* BadgesView.m in Sources */,
 				EA895D751D0B51F300BF8902 /* UIResponder+UIComponentUtility.m in Sources */,
 				8468C9371D0AAA6F00B30DCF /* AnheuserBusch.xcdatamodeld in Sources */,
 				EA942F2A1D0F6BDC0018E7BB /* SalesForceSOQL.m in Sources */,
 				B51F86D21D1D153200237DF8 /* WorkProfileContainerView.m in Sources */,
+				84272A111D253FAB000EEB1C /* GUITabScrollView.m in Sources */,
 				B5B04EDF1D23F5B9002BAC9F /* PeerRankingDetailPresenter.m in Sources */,
 				EA942F4D1D0F770E0018E7BB /* PageHeaderView.m in Sources */,
 				847E5E211D22E6B7006B9854 /* MenuListTableViewListCell.m in Sources */,

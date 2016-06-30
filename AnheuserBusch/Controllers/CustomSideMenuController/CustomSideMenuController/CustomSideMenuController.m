@@ -264,17 +264,22 @@ typedef struct {
 }
 
 - (void)addGestures {
-	
+    UIWindow *currentWindow = [UIApplication sharedApplication].keyWindow;
+
     if (!_panGesture) {
         _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
 		[_panGesture setDelegate:self];
-        [self.view addGestureRecognizer:_panGesture];
+        
+        [currentWindow addGestureRecognizer:_panGesture];
+//        [self.view addGestureRecognizer:_panGesture];
     }
 	
 	if (!_tapGesture) {
         _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleMenu)];
         [_tapGesture setDelegate:self];
-		[self.view addGestureRecognizer:_tapGesture];
+        [currentWindow addGestureRecognizer:_tapGesture];
+
+		//[self.view addGestureRecognizer:_tapGesture];
     }
 }
 
