@@ -29,6 +29,12 @@
     
     self.peerRankingDetailsDataSource = [self.presenter peerRankingDetailDataSourcePopulate];
     [self configureUI];
+  }
+
+- (void)dealloc {
+    
+    _peerRankingDetailsDataSource = nil;
+    _presenter = nil;
 }
 
 #pragma mark- private methods
@@ -37,7 +43,6 @@
     
     self.noOfDaysLabel.text = @"10 days to win.";
     self.viewHeading.text = viewHeading;
-    
 }
 
 - (id <PeerRankingDetailProtocol>)presenter {
@@ -53,20 +58,19 @@
 #pragma mark- table view delegate methods
 
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return self.peerRankingDetailsDataSource.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"myCell";
     
     
     PeerRankingDetailPageCell *cell = (PeerRankingDetailPageCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
+        
         cell = [[PeerRankingDetailPageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
