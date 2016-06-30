@@ -330,6 +330,9 @@
                                                     <state key="normal" title="KPI Details">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="clickedKPIRanking:" destination="RaQ-WA-ktJ" eventType="touchUpInside" id="1rM-5G-YWN"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXK-Z4-xGp">
                                                     <rect key="frame" x="8" y="98" width="178" height="28"/>
@@ -338,7 +341,7 @@
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="CuA-7D-V9n" kind="push" id="JHP-IA-1Wt"/>
+                                                        <action selector="clickedPeerRanking:" destination="RaQ-WA-ktJ" eventType="touchUpInside" id="IKm-Xg-VqI"/>
                                                     </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mIK-jq-y4Z">
@@ -378,11 +381,11 @@
                                         <connections>
                                             <outlet property="IncentiveLogo" destination="FOb-65-Nhg" id="b71-Z6-hcp"/>
                                             <outlet property="IncentiveName" destination="LXL-DO-VJO" id="Yo9-nu-XbH"/>
-                                            <outlet property="KPIDetailsButton" destination="atl-UE-aqq" id="NWq-R9-yQn"/>
-                                            <outlet property="PeerRankingButton" destination="SXK-Z4-xGp" id="SwI-8l-ihl"/>
                                             <outlet property="RankImage" destination="W28-EW-JgP" id="ErP-5j-7qI"/>
                                             <outlet property="RankLabel" destination="cf5-fM-imy" id="RNu-86-BaD"/>
                                             <outlet property="chartView" destination="mIK-jq-y4Z" id="fuQ-xU-SwG"/>
+                                            <outlet property="kPIDetailsButton" destination="atl-UE-aqq" id="8mx-A7-c2r"/>
+                                            <outlet property="peerRankingButton" destination="SXK-Z4-xGp" id="TLc-A7-GDu"/>
                                             <outlet property="rankNumber" destination="Z3Q-5J-nyK" id="cMZ-qy-KUe"/>
                                             <outlet property="statusDescriptionLabel" destination="BNd-fJ-aCy" id="ycF-R1-hZN"/>
                                             <outlet property="statusTitleLabel" destination="1Kr-z8-Lmx" id="828-f1-jCK"/>
@@ -442,7 +445,7 @@
         <!--Peer Ranking Detail View Controller-->
         <scene sceneID="EUS-cm-GaX">
             <objects>
-                <viewController id="CuA-7D-V9n" customClass="PeerRankingDetailViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PeerRankingDetailViewController" id="CuA-7D-V9n" customClass="PeerRankingDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IRo-FM-Lpo"/>
                         <viewControllerLayoutGuide type="bottom" id="ovp-gg-UtK"/>
