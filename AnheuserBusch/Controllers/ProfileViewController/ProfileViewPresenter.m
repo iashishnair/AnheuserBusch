@@ -20,7 +20,7 @@
     IncentiveDataModel *dataModel = [IncentiveDataModel new];
     dataModel.rank = [NSString stringWithFormat:@"%d",i+1];;
     dataModel.incentiveName = [NSString stringWithFormat:@"Incentive %d",i+1];
-        dataModel.statusTitle = @"Way to Go";
+        dataModel.statusTitle = @"Way to Go !!!";
         dataModel.statusDescription = @"Out of 15 KPIs you have achieved 12";
        [resultsArray addObject:dataModel];
     }

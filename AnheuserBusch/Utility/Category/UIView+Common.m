@@ -19,7 +19,8 @@
 
 + (UIColor *) defaultPageBGColor {
 	
-	return [UIColor colorWithRed:123.0f/255.0f green:123.0f/255.0f blue:123.0f/255.0f alpha:1.0];
+	//return [UIColor colorWithRed:123.0f/255.0f green:123.0f/255.0f blue:123.0f/255.0f alpha:1.0];
+    return [UIColor clearColor];
 }
 
 
