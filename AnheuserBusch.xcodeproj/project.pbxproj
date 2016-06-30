@@ -13,6 +13,8 @@
 		84272A0B1D2539D7000EEB1C /* PageItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84272A091D2539D7000EEB1C /* PageItemViewController.xib */; };
 		84272A101D253FAB000EEB1C /* GUITabPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84272A0D1D253FAB000EEB1C /* GUITabPagerViewController.m */; };
 		84272A111D253FAB000EEB1C /* GUITabScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84272A0F1D253FAB000EEB1C /* GUITabScrollView.m */; };
+		84272A151D25595E000EEB1C /* CStorePLViewConroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 84272A141D25595E000EEB1C /* CStorePLViewConroller.m */; };
+		84272A191D255F8B000EEB1C /* CStorePLTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84272A181D255F8B000EEB1C /* CStorePLTableViewCell.m */; };
 		8468C8D51D0AA58B00B30DCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C8D41D0AA58B00B30DCF /* main.m */; };
 		8468C8DE1D0AA58B00B30DCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468C8DC1D0AA58B00B30DCF /* Main.storyboard */; };
 		8468C8E61D0AA58B00B30DCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468C8E41D0AA58B00B30DCF /* LaunchScreen.storyboard */; };
@@ -65,8 +67,6 @@
 		EA895D751D0B51F300BF8902 /* UIResponder+UIComponentUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = EA895D741D0B51F300BF8902 /* UIResponder+UIComponentUtility.m */; };
 		EA895D7C1D0B55BD00BF8902 /* PageBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA895D7B1D0B55BD00BF8902 /* PageBaseViewController.m */; };
 		EA942F2A1D0F6BDC0018E7BB /* SalesForceSOQL.m in Sources */ = {isa = PBXBuildFile; fileRef = EA942F291D0F6BDC0018E7BB /* SalesForceSOQL.m */; };
-		EA942F4B1D0F770E0018E7BB /* LeaderBoardCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA942F341D0F770E0018E7BB /* LeaderBoardCustomCell.m */; };
-		EA942F4C1D0F770E0018E7BB /* LeaderBoardCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA942F351D0F770E0018E7BB /* LeaderBoardCustomCell.xib */; };
 		EA942F4D1D0F770E0018E7BB /* PageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA942F391D0F770E0018E7BB /* PageHeaderView.m */; };
 		EA942F4E1D0F770E0018E7BB /* PageHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA942F3A1D0F770E0018E7BB /* PageHeaderView.xib */; };
 		EA942F4F1D0F770E0018E7BB /* RankingCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA942F3E1D0F770E0018E7BB /* RankingCarouselView.m */; };
@@ -107,6 +107,10 @@
 		84272A0D1D253FAB000EEB1C /* GUITabPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUITabPagerViewController.m; sourceTree = "<group>"; };
 		84272A0E1D253FAB000EEB1C /* GUITabScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUITabScrollView.h; sourceTree = "<group>"; };
 		84272A0F1D253FAB000EEB1C /* GUITabScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUITabScrollView.m; sourceTree = "<group>"; };
+		84272A131D25595E000EEB1C /* CStorePLViewConroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CStorePLViewConroller.h; sourceTree = "<group>"; };
+		84272A141D25595E000EEB1C /* CStorePLViewConroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CStorePLViewConroller.m; sourceTree = "<group>"; };
+		84272A171D255F8B000EEB1C /* CStorePLTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CStorePLTableViewCell.h; sourceTree = "<group>"; };
+		84272A181D255F8B000EEB1C /* CStorePLTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CStorePLTableViewCell.m; sourceTree = "<group>"; };
 		8468C8D01D0AA58B00B30DCF /* AnheuserBusch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnheuserBusch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8468C8D41D0AA58B00B30DCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8468C8DD1D0AA58B00B30DCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -210,9 +214,6 @@
 		EA895D7B1D0B55BD00BF8902 /* PageBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageBaseViewController.m; sourceTree = "<group>"; };
 		EA942F281D0F6BDC0018E7BB /* SalesForceSOQL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SalesForceSOQL.h; sourceTree = "<group>"; };
 		EA942F291D0F6BDC0018E7BB /* SalesForceSOQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalesForceSOQL.m; sourceTree = "<group>"; };
-		EA942F331D0F770E0018E7BB /* LeaderBoardCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderBoardCustomCell.h; sourceTree = "<group>"; };
-		EA942F341D0F770E0018E7BB /* LeaderBoardCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderBoardCustomCell.m; sourceTree = "<group>"; };
-		EA942F351D0F770E0018E7BB /* LeaderBoardCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeaderBoardCustomCell.xib; sourceTree = "<group>"; };
 		EA942F381D0F770E0018E7BB /* PageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageHeaderView.h; sourceTree = "<group>"; };
 		EA942F391D0F770E0018E7BB /* PageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageHeaderView.m; sourceTree = "<group>"; };
 		EA942F3A1D0F770E0018E7BB /* PageHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageHeaderView.xib; sourceTree = "<group>"; };
@@ -291,6 +292,24 @@
 				84272A0F1D253FAB000EEB1C /* GUITabScrollView.m */,
 			);
 			path = CustomPageViewController;
+			sourceTree = "<group>";
+		};
+		84272A121D25593C000EEB1C /* CStorePLViewConroller */ = {
+			isa = PBXGroup;
+			children = (
+				84272A131D25595E000EEB1C /* CStorePLViewConroller.h */,
+				84272A141D25595E000EEB1C /* CStorePLViewConroller.m */,
+			);
+			path = CStorePLViewConroller;
+			sourceTree = "<group>";
+		};
+		84272A161D255F63000EEB1C /* CStorePLTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				84272A171D255F8B000EEB1C /* CStorePLTableViewCell.h */,
+				84272A181D255F8B000EEB1C /* CStorePLTableViewCell.m */,
+			);
+			path = CStorePLTableViewCell;
 			sourceTree = "<group>";
 		};
 		8468C8C71D0AA58B00B30DCF = {
@@ -372,6 +391,7 @@
 		8468C9181D0AA82E00B30DCF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				84272A121D25593C000EEB1C /* CStorePLViewConroller */,
 				842729C41D252B3D000EEB1C /* KPIRankingViewController */,
 				EADDBBD81D244E9F000908A9 /* CustomNavigationController */,
 				B5B04ED91D23F5B9002BAC9F /* PeerRankingDetailViewController */,
@@ -772,11 +792,9 @@
 		EA942F321D0F770E0018E7BB /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				84272A161D255F63000EEB1C /* CStorePLTableViewCell */,
 				B5B04ED21D23F50C002BAC9F /* PeerRankingDetailPageCell.m */,
 				B5B04ED31D23F50C002BAC9F /* PeerRankingDetailPageCell.h */,
-				EA942F331D0F770E0018E7BB /* LeaderBoardCustomCell.h */,
-				EA942F341D0F770E0018E7BB /* LeaderBoardCustomCell.m */,
-				EA942F351D0F770E0018E7BB /* LeaderBoardCustomCell.xib */,
 				B599471D1D2158E8002DC238 /* ProfilePageCustomCell.h */,
 				B599471E1D2158E8002DC238 /* ProfilePageCustomCell.m */,
 			);
@@ -963,7 +981,6 @@
 				8468C8DE1D0AA58B00B30DCF /* Main.storyboard in Resources */,
 				847E5E241D22E6B7006B9854 /* MenuListViewController.xib in Resources */,
 				84272A0B1D2539D7000EEB1C /* PageItemViewController.xib in Resources */,
-				EA942F4C1D0F770E0018E7BB /* LeaderBoardCustomCell.xib in Resources */,
 				847E5E221D22E6B7006B9854 /* MenuListTableViewListCell.xib in Resources */,
 				EA942F541D0F770E0018E7BB /* UserRankView.xib in Resources */,
 			);
@@ -1063,6 +1080,7 @@
 				EA8497881D0B708D0034B44F /* LeaderBoardDataModel.m in Sources */,
 				B5B04EE01D23F5B9002BAC9F /* PeerRankingDetailViewController.m in Sources */,
 				EADDBBDB1D244EB9000908A9 /* CustomNavigationController.m in Sources */,
+				84272A191D255F8B000EEB1C /* CStorePLTableViewCell.m in Sources */,
 				B57E7AF01D1ABEF40075BCEE /* UserProfileView.m in Sources */,
 				847E5E331D22E6D8006B9854 /* CommentVIew.m in Sources */,
 				847E5E061D22AF95006B9854 /* InternalViewController.m in Sources */,
@@ -1079,10 +1097,10 @@
 				B599471F1D2158E8002DC238 /* ProfilePageCustomCell.m in Sources */,
 				847E5E101D22E685006B9854 /* SalesForceChatterHelper.m in Sources */,
 				84852EC21D240EAC00C4DE42 /* IncentivesProgressBarView.m in Sources */,
-				EA942F4B1D0F770E0018E7BB /* LeaderBoardCustomCell.m in Sources */,
 				B59A2C601D1BB345002DE224 /* BadgesView.m in Sources */,
 				EA895D751D0B51F300BF8902 /* UIResponder+UIComponentUtility.m in Sources */,
 				8468C9371D0AAA6F00B30DCF /* AnheuserBusch.xcdatamodeld in Sources */,
+				84272A151D25595E000EEB1C /* CStorePLViewConroller.m in Sources */,
 				EA942F2A1D0F6BDC0018E7BB /* SalesForceSOQL.m in Sources */,
 				B51F86D21D1D153200237DF8 /* WorkProfileContainerView.m in Sources */,
 				84272A111D253FAB000EEB1C /* GUITabScrollView.m in Sources */,

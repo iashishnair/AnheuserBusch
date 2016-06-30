@@ -7,14 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class PeerRankingDataModel;
 
 @interface PeerRankingDetailPageCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *rankLabel;
-
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-
 @property (weak, nonatomic) IBOutlet UILabel *pointsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *pointsText;
 
