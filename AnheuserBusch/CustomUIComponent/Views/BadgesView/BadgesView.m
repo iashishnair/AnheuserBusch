@@ -8,7 +8,6 @@
 
 #import "BadgesView.h"
 #import "UIView+Common.h"
-#import "WorkProfileDataModel.h"
 
 
 @interface BadgesView()

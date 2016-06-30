@@ -7,7 +7,6 @@
 //
 
 #import "UserProfileView.h"
-#import "WorkProfileDataModel.h"
 
 @interface UserProfileView()
 

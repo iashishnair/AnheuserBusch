@@ -13,7 +13,6 @@
 @property (nonatomic, strong) NSString *incentiveImageName;
 @property (nonatomic, strong) NSString *incentiveName;
 @property (nonatomic, strong) NSString *rank;
-
 @property (nonatomic, strong) NSString *statusTitle;
 @property (nonatomic, strong) NSString *statusDescription;
 

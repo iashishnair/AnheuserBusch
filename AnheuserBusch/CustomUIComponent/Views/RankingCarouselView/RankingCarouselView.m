@@ -9,7 +9,6 @@
 #import "RankingCarouselView.h"
 #import "NSObject+HelperUtil.h"
 #import "UserRankView.h"
-#import "LeaderBoardDataModel.h"
 
 @interface RankingCarouselView ()
 

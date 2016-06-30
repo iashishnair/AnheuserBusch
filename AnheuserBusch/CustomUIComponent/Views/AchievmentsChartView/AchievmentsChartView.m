@@ -8,7 +8,6 @@
 
 #import "AchievmentsChartView.h"
 #import "Constants.h"
-#import "WorkProfileDataModel.h"
 
 @interface AchievmentsChartView ()
 
