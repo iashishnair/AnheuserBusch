@@ -24,9 +24,9 @@
 @implementation PeerRankingDetailViewController
 
 - (void)viewDidLoad {
-	
-	[super viewDidLoad];
-	
+    
+    [super viewDidLoad];
+    
     self.peerRankingDetailsDataSource = [self.presenter peerRankingDetailDataSourcePopulate];
     [self configureUI];
     // test code
@@ -40,7 +40,7 @@
     
     self.noOfDaysLabel.text = @"10 days to win.";
     self.viewHeading.text = viewHeading;
- 
+    
 }
 
 - (id <PeerRankingDetailProtocol>)presenter {
@@ -70,7 +70,7 @@
     PeerRankingDetailPageCell *cell = (PeerRankingDetailPageCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
-                cell = [[PeerRankingDetailPageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[PeerRankingDetailPageCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     if (self.peerRankingDetailsDataSource.count > indexPath.row) {
