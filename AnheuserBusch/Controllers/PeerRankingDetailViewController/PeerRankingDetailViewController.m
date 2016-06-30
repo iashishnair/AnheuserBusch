@@ -11,7 +11,7 @@
 #import "PeerRankingDataModel.h"
 #import "PeerRankingDetailPageCell.h"
 
-@interface PeerRankingDetailViewController()
+@interface PeerRankingDetailViewController ()
 
 @property (strong, nonatomic) NSMutableArray *peerRankingDetailsDataSource;
 @property (strong, nonatomic) id <PeerRankingDetailProtocol> presenter;
@@ -25,16 +25,8 @@
 	[super viewDidLoad];
 	
     self.peerRankingDetailsDataSource = [self.presenter peerRankingDetailDataSourcePopulate];
-	self.showBackButton = YES;
-
 }
 
--(void)viewWillAppear:(BOOL)animated {
-	
-	[super viewWillAppear:animated];
-	
-
-}
 
 #pragma mark- private methods
 
@@ -79,10 +71,5 @@
     
     return cell;
 }
-
-
-
-
-
 
 @end

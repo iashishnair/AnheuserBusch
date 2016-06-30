@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PageBaseViewController.h"
+#import "BaseChildViewController.h"
 
-@interface PeerRankingDetailViewController : PageBaseViewController
+@interface PeerRankingDetailViewController : BaseChildViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *userRankingTable;
 

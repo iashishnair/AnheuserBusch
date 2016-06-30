@@ -42,4 +42,23 @@
     }
 }
 
+
+- (IBAction)clickedPeerRanking:(UIButton *)sender {
+    
+    if(self.delegate && [self.delegate respondsToSelector:@selector(clickedPeerRanking:)]) {
+        
+        [self.delegate  clickedPeerRanking:sender];
+    }
+}
+
+
+- (IBAction)clickedKPIRanking:(UIButton *)sender {
+    
+    if(self.delegate && [self.delegate respondsToSelector:@selector(clickedKPIRanking:)]) {
+        
+        [self.delegate  clickedKPIRanking:sender];
+    }
+}
+
+
 @end

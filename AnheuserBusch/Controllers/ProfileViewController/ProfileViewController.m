@@ -10,8 +10,9 @@
 #import "ProfilePageCustomCell.h"
 #import "IncentiveDataModel.h"
 #import "ProfileViewPresenter.h"
+#import "PeerRankingDetailViewController.h"
 
-@interface ProfileViewController ()
+@interface ProfileViewController () <ProfilePageCustomCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *headingLabel;
 
@@ -26,9 +27,7 @@
 -(void)viewDidLoad {
     
     [super  viewDidLoad];
-	
 	self.incentiveDetailsDataSource = [self.presenter incentiveDataSourcePopulate];
-	
 	self.title = MenuItems[0];
 	
     self.headingLabel.text = @"My Incentives";
@@ -64,12 +63,8 @@
     if (cell == nil) {
         cell = [[ProfilePageCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-//    
-//    cell.IncentiveName.text = @"Summer Incentive";
-//    cell.RankLabel.text = @"Rank";
-//    cell.statusTitleLabel.text = @"Way To Go!!!!";
-//    cell.statusDescriptionLabel.text = @"Out of 15 KPI's you have achieved 12 KPI's";
-    
+
+    cell.delegate = self;
     if(_incentiveDetailsDataSource.count > indexPath.row)
     {
         IncentiveDataModel *incentiveDataModel = [self.incentiveDetailsDataSource objectAtIndex:indexPath.row];
@@ -90,5 +85,18 @@
     
 }
 
+#pragma mark ProfilePageCustomCellDelegate
+- (void)clickedPeerRanking:(UIButton *)sender {
+    
+    
+    PeerRankingDetailViewController *peerRankingDetailViewController = (PeerRankingDetailViewController *)[UIViewController instantiateViewControllerWithIdentifier:kStoryBoardIDPeerRankingDetailViewController];
+    
+    [self.navigationController pushViewController:peerRankingDetailViewController animated:YES];
+    
+}
 
+- (void)clickedKPIRanking:(UIButton *)sender {
+    
+    
+}
 @end
