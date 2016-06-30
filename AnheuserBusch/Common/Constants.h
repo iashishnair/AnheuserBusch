@@ -92,3 +92,8 @@ static NSString * kSalesTarget = @"SalesTarget";
 static NSString * achievmentsLabelText = @"  Achievments This week ?";
 static NSString * taskTableHeading = @"My Tasks For This Week";
 
+//Peer Ranking Details View Controller
+
+static NSString * viewHeading = @"Overall KPI ranking";
+
+
