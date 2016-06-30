@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C85B15EF09B6835CD0E7B8E /* Pods_AnheuserBusch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81035F868542EEDBC8DF2DC /* Pods_AnheuserBusch.framework */; };
+		842729C71D252B61000EEB1C /* KPIRankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842729C61D252B61000EEB1C /* KPIRankingViewController.m */; };
 		8468C8D51D0AA58B00B30DCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C8D41D0AA58B00B30DCF /* main.m */; };
 		8468C8DE1D0AA58B00B30DCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468C8DC1D0AA58B00B30DCF /* Main.storyboard */; };
 		8468C8E61D0AA58B00B30DCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468C8E41D0AA58B00B30DCF /* LaunchScreen.storyboard */; };
@@ -93,6 +94,8 @@
 /* Begin PBXFileReference section */
 		032583A2F00214ECCB084D5B /* Pods-AnheuserBusch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnheuserBusch.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnheuserBusch/Pods-AnheuserBusch.release.xcconfig"; sourceTree = "<group>"; };
 		03D768E5340D91F558808008 /* Pods-AnheuserBusch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnheuserBusch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnheuserBusch/Pods-AnheuserBusch.debug.xcconfig"; sourceTree = "<group>"; };
+		842729C51D252B61000EEB1C /* KPIRankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPIRankingViewController.h; sourceTree = "<group>"; };
+		842729C61D252B61000EEB1C /* KPIRankingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPIRankingViewController.m; sourceTree = "<group>"; };
 		8468C8D01D0AA58B00B30DCF /* AnheuserBusch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnheuserBusch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8468C8D41D0AA58B00B30DCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8468C8DD1D0AA58B00B30DCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -256,6 +259,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		842729C41D252B3D000EEB1C /* KPIRankingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				842729C51D252B61000EEB1C /* KPIRankingViewController.h */,
+				842729C61D252B61000EEB1C /* KPIRankingViewController.m */,
+			);
+			path = KPIRankingViewController;
+			sourceTree = "<group>";
+		};
 		8468C8C71D0AA58B00B30DCF = {
 			isa = PBXGroup;
 			children = (
@@ -335,6 +347,7 @@
 		8468C9181D0AA82E00B30DCF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				842729C41D252B3D000EEB1C /* KPIRankingViewController */,
 				EADDBBD81D244E9F000908A9 /* CustomNavigationController */,
 				B5B04ED91D23F5B9002BAC9F /* PeerRankingDetailViewController */,
 				847E5E251D22E6D8006B9854 /* ChatterViewController */,
@@ -1003,6 +1016,7 @@
 				B5B04ED81D23F55E002BAC9F /* PeerRankingDataModel.m in Sources */,
 				EA895D651D0B4B7000BF8902 /* UIView+Common.m in Sources */,
 				B50FEC8B1D225DFD00EA34D4 /* ProfileViewPresenter.m in Sources */,
+				842729C71D252B61000EEB1C /* KPIRankingViewController.m in Sources */,
 				B5F19B701D212E1C003A4246 /* ProfileViewController.m in Sources */,
 				847E5E231D22E6B7006B9854 /* MenuListViewController.m in Sources */,
 				847E5E311D22E6D8006B9854 /* ChatterViewController.m in Sources */,

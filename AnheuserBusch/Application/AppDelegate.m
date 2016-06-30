@@ -218,6 +218,7 @@
     
      menuListViewController = [[MenuListViewController alloc] initWithNibName:@"MenuListViewController" bundle:nil];
 	menuListViewController.delegate = self;
+   
     ProfileViewController * profileViewController = (ProfileViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"ProfileViewController"];
     
     UINavigationController *contentNavigationController = [[UINavigationController alloc] initWithRootViewController:profileViewController];

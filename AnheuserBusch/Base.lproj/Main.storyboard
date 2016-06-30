@@ -98,14 +98,15 @@
                         <viewControllerLayoutGuide type="bottom" id="Wb2-IG-Hgi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WUo-AK-hh2">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dJ-oh-sg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2807" y="-1444"/>
+            <point key="canvasLocation" x="-2813" y="-2190"/>
         </scene>
         <!--Internal View Controller-->
         <scene sceneID="9a6-fk-Z99">
@@ -116,18 +117,18 @@
                         <viewControllerLayoutGuide type="bottom" id="3ZA-eB-9vS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6jn-LO-0zx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o0T-VK-WmM">
-                                <rect key="frame" x="186" y="70" width="42" height="21"/>
+                                <rect key="frame" x="139" y="70" width="42" height="21"/>
                                 <color key="backgroundColor" red="0.71384812850000001" green="0.7253393078" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3g4-GF-FOu">
-                                <rect key="frame" x="102" y="381" width="210" height="21"/>
+                                <rect key="frame" x="55" y="381" width="210" height="21"/>
                                 <color key="backgroundColor" red="0.71384812850000001" green="0.7253393078" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="9T4-Xl-b0i"/>
@@ -143,7 +144,7 @@
                                 </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xKz-AK-82M">
-                                <rect key="frame" x="102" y="111" width="210" height="250"/>
+                                <rect key="frame" x="55" y="111" width="210" height="250"/>
                                 <color key="backgroundColor" red="1" green="0.73673585180000001" blue="0.93039380449999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="al2-Vn-gmP"/>
@@ -169,7 +170,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="screenDetails" destination="3g4-GF-FOu" id="GoE-RI-XDl"/>
                         <outlet property="screenImage" destination="xKz-AK-82M" id="xQj-9x-bsw"/>
@@ -178,15 +179,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tR3-b8-821" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2302" y="-1434"/>
+            <point key="canvasLocation" x="-2813" y="-910"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="Fpk-Ib-qnF">
             <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="qcc-QU-QhU" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="qcc-QU-QhU" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zSK-rS-1t2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1929" y="-1388"/>
+            <point key="canvasLocation" x="-2813" y="-1535"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="dAW-tf-Mq9">
@@ -330,9 +333,6 @@
                                                     <state key="normal" title="KPI Details">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="clickedKPIRanking:" destination="RaQ-WA-ktJ" eventType="touchUpInside" id="1rM-5G-YWN"/>
-                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXK-Z4-xGp">
                                                     <rect key="frame" x="8" y="98" width="178" height="28"/>
@@ -340,9 +340,6 @@
                                                     <state key="normal" title="Peer Ranking">
                                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
-                                                    <connections>
-                                                        <action selector="clickedPeerRanking:" destination="RaQ-WA-ktJ" eventType="touchUpInside" id="IKm-Xg-VqI"/>
-                                                    </connections>
                                                 </button>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mIK-jq-y4Z">
                                                     <rect key="frame" x="8" y="51" width="358" height="27"/>
@@ -381,11 +378,11 @@
                                         <connections>
                                             <outlet property="IncentiveLogo" destination="FOb-65-Nhg" id="b71-Z6-hcp"/>
                                             <outlet property="IncentiveName" destination="LXL-DO-VJO" id="Yo9-nu-XbH"/>
+                                            <outlet property="KPIDetailsButton" destination="atl-UE-aqq" id="NWq-R9-yQn"/>
+                                            <outlet property="PeerRankingButton" destination="SXK-Z4-xGp" id="SwI-8l-ihl"/>
                                             <outlet property="RankImage" destination="W28-EW-JgP" id="ErP-5j-7qI"/>
                                             <outlet property="RankLabel" destination="cf5-fM-imy" id="RNu-86-BaD"/>
                                             <outlet property="chartView" destination="mIK-jq-y4Z" id="fuQ-xU-SwG"/>
-                                            <outlet property="kPIDetailsButton" destination="atl-UE-aqq" id="8mx-A7-c2r"/>
-                                            <outlet property="peerRankingButton" destination="SXK-Z4-xGp" id="TLc-A7-GDu"/>
                                             <outlet property="rankNumber" destination="Z3Q-5J-nyK" id="cMZ-qy-KUe"/>
                                             <outlet property="statusDescriptionLabel" destination="BNd-fJ-aCy" id="ycF-R1-hZN"/>
                                             <outlet property="statusTitleLabel" destination="1Kr-z8-Lmx" id="828-f1-jCK"/>
@@ -440,12 +437,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Q3-kC-b1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2420" y="-520"/>
+            <point key="canvasLocation" x="-2412" y="-2100"/>
+        </scene>
+        <!--Ranking View Controller-->
+        <scene sceneID="mhC-sv-0wc">
+            <objects>
+                <viewController storyboardIdentifier="KPIRankingViewController" id="h5F-wc-ajV" customClass="KPIRankingViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QvZ-D2-ciw"/>
+                        <viewControllerLayoutGuide type="bottom" id="jf0-d9-pSY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iIs-su-fwD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smM-Dt-22o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2009" y="-2223"/>
         </scene>
         <!--Peer Ranking Detail View Controller-->
         <scene sceneID="EUS-cm-GaX">
             <objects>
-                <viewController storyboardIdentifier="PeerRankingDetailViewController" id="CuA-7D-V9n" customClass="PeerRankingDetailViewController" sceneMemberID="viewController">
+                <viewController id="CuA-7D-V9n" customClass="PeerRankingDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IRo-FM-Lpo"/>
                         <viewControllerLayoutGuide type="bottom" id="ovp-gg-UtK"/>
@@ -562,7 +578,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZ2-wP-rqV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1907" y="-543"/>
+            <point key="canvasLocation" x="-2412" y="-1243"/>
         </scene>
     </scenes>
 </document>
