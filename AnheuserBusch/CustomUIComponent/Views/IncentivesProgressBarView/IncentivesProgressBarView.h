@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class  IncentivesProgressBarViewModel;
+
 @interface IncentivesProgressBarView : UIView
 
+@property (nonatomic, strong) IncentivesProgressBarViewModel *incentivesProgressBarViewModel;
+
 @property (nonatomic, strong) NSNumber *progressAmount;
-@property (nonatomic, strong) UIColor *progressBarBackGroundColor;
+@property (nonatomic, strong) UIColor *barBackGroundColor;
 @property (nonatomic, strong) UIColor *progressColor;
 
 @end

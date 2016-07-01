@@ -30,7 +30,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *peerRankingButton;
 @property (weak, nonatomic) IBOutlet UIButton *kPIDetailsButton;
 @property (weak, nonatomic) IBOutlet UILabel *rankNumber;
-@property (nonatomic, strong) id <ProfilePageCustomCellDelegate> delegate;
+@property (nonatomic, weak) id <ProfilePageCustomCellDelegate> delegate;
 
 -(void) updateCell :(IncentiveDataModel *)incentiveDataModel;
 

@@ -11,9 +11,12 @@
 @interface NSLayoutConstraint (LayoutConstraintHelper)
 
 + (void)fitToWithItem:(nullable id )anItem toItem:(nullable id) toItem;
-+ (void)sameWidth:(nullable id )anItem toItem:(nullable id) toItem;
-+ (void)sameHeight:(nullable id )anItem toItem:(nullable id) toItem;
-+ (void)verticallyCenter:(nullable id )anItem toItem:(nullable id) toItem;
-+ (void)horizontallyCenter:(nullable id )anItem toItem:(nullable id) toItem;
++ (nullable NSLayoutConstraint *)sameWidth:(nullable id )anItem toItem:(nullable id) toItem;
++ (nullable NSLayoutConstraint *)sameHeight:(nullable id )anItem toItem:(nullable id) toItem;
 
++ (nullable NSLayoutConstraint *)verticallyCenter:(nullable id )anItem toItem:(nullable id) toItem;
++ (nullable NSLayoutConstraint *)horizontallyCenter:(nullable id )anItem toItem:(nullable id) toItem;
+
++ (nullable NSLayoutConstraint *)height:(nullable id )anItem toItem:(nullable id) toItem multiplier:(CGFloat)multiplier constant:(CGFloat)c ;
++ (nullable NSLayoutConstraint *)width:(nullable id )anItem toItem:(nullable id) toItem multiplier:(CGFloat)multiplier constant:(CGFloat)c;
 @end

@@ -7,31 +7,33 @@
 //
 
 #import "IncentivesProgressBarView.h"
+#import "NSLayoutConstraint+LayoutConstraintHelper.h"
 
 @interface IncentivesProgressBarView  ()
 
 @property (nonatomic, strong) UIView *barBackgroundView;
-@property (nonatomic, strong) UIView *barProgressiveView;
+@property (nonatomic, strong) UIView *progressBarView;
 @property (nonatomic, strong) UILabel *progressAmountLabel;
-
+@property (nonatomic, strong) NSLayoutConstraint *progressWidthConstraint;
 
 @end
 
 @implementation IncentivesProgressBarView
 
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)init {
     
-    if(self == [super initWithCoder:aDecoder]) {
+    if(self == [super init]) {
         
-        
+        [self createUI];
     }
-    
     return self;
-    
 }
 
-
+-(void)dealloc {
+    
+    
+}
 #pragma mark - Private Method
 
 - (UIView *)barBackgroundView {
@@ -44,18 +46,15 @@
     return _barBackgroundView;
 }
 
-
-
-- (UIView *)barProgressiveView {
+- (UIView *)progressBarView {
     
-    if(_barProgressiveView) {
-        _barProgressiveView = [UIView new];
-        _barProgressiveView.translatesAutoresizingMaskIntoConstraints = NO;
+    if(_progressBarView) {
+        _progressBarView = [UIView new];
+        _progressBarView.translatesAutoresizingMaskIntoConstraints = NO;
     }
     
-    return _barProgressiveView;
+    return _progressBarView;
 }
-
 
 - (UILabel *)progressAmountLabel {
     
@@ -67,34 +66,60 @@
     return _progressAmountLabel;
 }
 
-
-
 - (void)createUI {
     
     [self addSubview:self.barBackgroundView];
-    [self addSubview:self.barProgressiveView];
-    [self bringSubviewToFront:self.barProgressiveView];
+    [self addSubview:self.progressBarView];
     [self addSubview:self.progressAmountLabel];
     [self addConstrains];
-
-
 }
 
 - (void)addConstrains {
-    
+    return;
     NSDictionary *dict = @{@"barBackgroundView": self.barBackgroundView,
-                           @"barBackgroundView": self.barBackgroundView,
+                           @"progressBarView": self.progressBarView,
                            @"progressAmountLabel": self.progressAmountLabel};
     
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[barBackgroundView]-|" options:0 metrics:nil views:dict]];
     
+    
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[barBackgroundView]-|" options:0 metrics:nil views:dict]];
+    
+      [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[progressBarView]-|" options:0 metrics:nil views:dict]];
+    
+    
+    _progressWidthConstraint = [NSLayoutConstraint width:self.progressBarView toItem:self.barBackgroundView multiplier:.5 constant:1];
     
 }
+
+#pragma mark - Public Method
 
 - (void)setProgressAmount:(NSNumber *)progressAmount {
     
-
+    _progressAmount = progressAmount;
 }
 
+
+- (void)setBarBackGroundColor:(UIColor *)barBackGroundColor {
+    
+    _barBackGroundColor = barBackGroundColor;
+    self.barBackgroundView.backgroundColor = _barBackGroundColor;
+}
+
+- (void)setProgressColor:(UIColor *)progressColor {
+    
+    _progressColor = progressColor;
+    self.progressBarView.backgroundColor = progressColor;
+}
+
+- (void)setIncentivesProgressBarViewModel:(IncentivesProgressBarViewModel *)incentivesProgressBarViewModel {
+    
+    _incentivesProgressBarViewModel = incentivesProgressBarViewModel;
+    
+    if(_incentivesProgressBarViewModel) {
+        
+        
+    }
+}
 
 @end

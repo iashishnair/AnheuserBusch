@@ -22,6 +22,34 @@
     [super viewDidLoad];
     
     [self createUI];
+    
+    UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRecognizer:)];
+    recognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    recognizer.delegate = self;
+    [self.view addGestureRecognizer:recognizer];
+}
+
+
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRecognizer:)];
+    recognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    recognizer.delegate = self;
+    [self.view addGestureRecognizer:recognizer];
+}
+
+- (void)swipeRecognizer:(UISwipeGestureRecognizer *)sender {
+    if (sender.direction == UISwipeGestureRecognizerDirectionRight){
+        
+    }
+}
+
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    
+    return NO;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,7 +115,11 @@
         cell = [[CStorePLTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    
+    cell.incentiveBarChartView.barBackGroundColor = [UIColor blueColor];
+    cell.incentiveBarChartView.progressColor = [UIColor yellowColor];
+    cell.incentiveBarChartView.progressAmount = @(50);
+
+
     return cell;
 }
 

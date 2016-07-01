@@ -46,12 +46,19 @@ static SalesForceChatterHelper* shareInstance = nil;
 
 - (instancetype) init {
     
-    if(self == [super init]) {
-        
-      
+    
+    if(!shareInstance)
+    {
+        shareInstance = [super init];
     }
     
-    return self;
+    return shareInstance;
+}
+
+
++ (instancetype)new {
+    
+   return [SalesForceChatterHelper shareInstance];
 }
 
 #pragma mark - Public Method

@@ -10,6 +10,14 @@
 #import "NSObject+HelperUtil.h"
 #import "UIView+Common.h"
 
+typedef struct {
+    
+    CGFloat red;
+    CGFloat green;
+    CGFloat blue;
+    
+}ColorRGBModelStruct;
+
 /*!
  SOQLCompletion Status
  */

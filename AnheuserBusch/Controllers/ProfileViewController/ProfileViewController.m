@@ -28,9 +28,9 @@
 -(void)viewDidLoad {
     
     [super  viewDidLoad];
-	self.incentiveDetailsDataSource = [self.presenter incentiveDataSourcePopulate];
-	self.title = MenuItems[0];
-	
+    self.incentiveDetailsDataSource = [self.presenter incentiveDataSourcePopulate];
+    self.title = MenuItems[0];
+    
     self.headingLabel.text = @"My Incentives";
 }
 
@@ -46,8 +46,8 @@
 }
 
 -(void)dealloc {
-	
-	
+    
+    
 }
 
 #pragma mark - table view delegate methods
@@ -59,13 +59,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-     static NSString *cellIdentifier = @"myCell";
+    static NSString *cellIdentifier = @"myCell";
+    
     ProfilePageCustomCell *cell = (ProfilePageCustomCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[ProfilePageCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-
+    
     cell.delegate = self;
+    
     if(_incentiveDetailsDataSource.count > indexPath.row)
     {
         IncentiveDataModel *incentiveDataModel = [self.incentiveDetailsDataSource objectAtIndex:indexPath.row];
@@ -87,6 +89,7 @@
 }
 
 #pragma mark ProfilePageCustomCellDelegate
+
 - (void)clickedPeerRanking:(UIButton *)sender {
     
     

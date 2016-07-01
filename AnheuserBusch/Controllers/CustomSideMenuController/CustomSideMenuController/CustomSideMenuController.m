@@ -273,6 +273,8 @@ typedef struct {
         [currentWindow addGestureRecognizer:_panGesture];
 //        [self.view addGestureRecognizer:_panGesture];
     }
+    
+    self.view.backgroundColor = [UIColor redColor];
 	
 	if (!_tapGesture) {
         _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleMenu)];

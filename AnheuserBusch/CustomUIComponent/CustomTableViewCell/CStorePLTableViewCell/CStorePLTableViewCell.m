@@ -6,14 +6,12 @@
 //  Copyright © 2016 Cognizant. All rights reserved.
 //
 #import "NSLayoutConstraint+LayoutConstraintHelper.h"
-
 #import "CStorePLTableViewCell.h"
 
 @interface CStorePLTableViewCell ()
 
 @property (nonatomic, strong) UILabel *incentiveTitleLabel;
 @property (nonatomic, strong) UIView *customBackgroundView;
-@property (nonatomic, strong) UIView *incentiveBarChartView;
 
 @end
 
@@ -98,7 +96,7 @@
     
     if(!_incentiveBarChartView) {
         
-        _incentiveBarChartView = [UIView new];
+        _incentiveBarChartView = [IncentivesProgressBarView new];
         _incentiveBarChartView.backgroundColor = [UIColor redColor];
         _incentiveBarChartView.translatesAutoresizingMaskIntoConstraints =  NO;
     }
