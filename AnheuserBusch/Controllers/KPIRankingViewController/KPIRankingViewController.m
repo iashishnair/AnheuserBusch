@@ -31,7 +31,7 @@
     segmentTitles = @[@"Cstore/PL 1", @"Large Format", @"On Premises"];
 
     [self customPageManagerViewController];
-    [self configureaUI];
+    [self configureUI];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,7 +47,7 @@
 
 #pragma mark - Private Method
 
-- (void) configureaUI {
+- (void) configureUI {
     
     [self.pageViewControllerContainerView addSubview:self.customPageManagerViewController.view];
     

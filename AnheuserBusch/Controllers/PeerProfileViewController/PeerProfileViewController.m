@@ -25,8 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     KPIRankingViewController *kPIRankingViewController=(KPIRankingViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"KPIRankingViewController"];
-//     KPIRankingViewController *kPIRankingViewController.h = [[ViewControllerToAdd alloc] initWithNibName:@"KPIRankingViewController" bundle:nil];
-    
+
     kPIRankingViewController.view.frame = self.kPIDetailsView.bounds;
     [self.kPIDetailsView addSubview:kPIRankingViewController.view];
     [self addChildViewController:kPIRankingViewController];
