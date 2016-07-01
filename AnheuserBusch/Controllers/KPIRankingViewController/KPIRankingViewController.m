@@ -131,7 +131,7 @@
 
 - (UIFont *)titleFont {
     // Default: [UIFont fontWithName:@"HelveticaNeue-Thin" size:20.0f];
-    return [UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0f];
+    return [UIFont fontWithName:@"HelveticaNeue-Bold" size:15.0f];
 }
 
 - (UIColor *)titleColor {
