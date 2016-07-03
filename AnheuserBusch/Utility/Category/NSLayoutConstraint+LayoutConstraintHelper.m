@@ -52,8 +52,8 @@
     
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:anItem attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:toItem attribute:NSLayoutAttributeHeight multiplier:multiplier constant:c];
     
-    [toItem addConstraint:constraint];
-    
+//    [toItem addConstraint:constraint];
+	
     return constraint;
 }
 
@@ -65,8 +65,8 @@
     
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:anItem attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:toItem attribute:NSLayoutAttributeWidth multiplier:multiplier constant:c];
     
-    [toItem addConstraint:constraint];
-    
+//    [toItem addConstraint:constraint];
+	
     return constraint;
 }
 

@@ -117,6 +117,8 @@
     
     cell.incentiveBarChartView.barBackGroundColor = [UIColor blueColor];
     cell.incentiveBarChartView.progressColor = [UIColor yellowColor];
+	cell.incentiveBarChartView.minRange = @(0);
+	cell.incentiveBarChartView.maxRange = @(100);
     cell.incentiveBarChartView.progressAmount = @(50);
 
 

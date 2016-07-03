@@ -12,10 +12,14 @@
 
 @interface IncentivesProgressBarView : UIView
 
-@property (nonatomic, strong) IncentivesProgressBarViewModel *incentivesProgressBarViewModel;
+@property (strong, nonatomic) IncentivesProgressBarViewModel *incentivesProgressBarViewModel;
 
-@property (nonatomic, strong) NSNumber *progressAmount;
-@property (nonatomic, strong) UIColor *barBackGroundColor;
-@property (nonatomic, strong) UIColor *progressColor;
+@property (strong, nonatomic) NSNumber *minRange;
+@property (strong, nonatomic) NSNumber *maxRange;
+@property (strong, nonatomic) NSNumber *progressAmount;
+@property (strong, nonatomic) NSNumber *progressAmountInPercent;
+
+@property (strong, nonatomic) UIColor *barBackGroundColor;
+@property (strong, nonatomic) UIColor *progressColor;
 
 @end

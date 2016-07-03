@@ -75,8 +75,8 @@
         _customBackgroundView = [UIView new];
         _customBackgroundView.backgroundColor = [UIColor redColor];
         _customBackgroundView.translatesAutoresizingMaskIntoConstraints =  NO;
-        self.customBackgroundView.layer.cornerRadius = 2.0f;
-        self.customBackgroundView.backgroundColor = [UIColor colorWithWhite:.7 alpha:.8];
+       _customBackgroundView.layer.cornerRadius = 2.0f;
+        _customBackgroundView.backgroundColor = [UIColor colorWithWhite:.7 alpha:.8];
     }
     
     return _customBackgroundView;
@@ -97,7 +97,6 @@
     if(!_incentiveBarChartView) {
         
         _incentiveBarChartView = [IncentivesProgressBarView new];
-        _incentiveBarChartView.backgroundColor = [UIColor redColor];
         _incentiveBarChartView.translatesAutoresizingMaskIntoConstraints =  NO;
     }
     
