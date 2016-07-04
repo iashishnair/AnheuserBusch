@@ -26,7 +26,6 @@
 	
 	if(self == [super init]) {
 		
-		self.backgroundColor = [UIColor purpleColor];
 		[self createUI];
 	}
 	return self;
@@ -97,12 +96,14 @@
 	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[progressAmountLabel]|" options:0 metrics:nil views:dict]];
 
 	
-	[self addConstraint:[NSLayoutConstraint height:self.progressBarView toItem:self.barBackgroundView multiplier:0.5 constant:1]];
+//	[self addConstraint:[NSLayoutConstraint height:self.progressBarView toItem:self.barBackgroundView multiplier:0.5 constant:1]];
 	
 	[NSLayoutConstraint verticallyCenter:self.progressBarView  toItem:self];
 	
-	
+    [NSLayoutConstraint verticallyCenter:self.barBackgroundView  toItem:self];
+
 	_progressBarViewWidthConstraint = [NSLayoutConstraint width:self.progressBarView toItem:self.barBackgroundView multiplier:0 constant:1];
+    
 	_progressAmountLabelWidthConstraint = [NSLayoutConstraint width:self.progressBarView toItem:self.barBackgroundView multiplier:0 constant:1];
 
 	

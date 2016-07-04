@@ -50,6 +50,7 @@
 		847E5E441D22E6FB006B9854 /* CommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 847E5E3E1D22E6FB006B9854 /* CommentModel.m */; };
 		847E5E451D22E6FB006B9854 /* FeedDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 847E5E411D22E6FB006B9854 /* FeedDataModel.m */; };
 		84852EC21D240EAC00C4DE42 /* IncentivesProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84852EC11D240EAC00C4DE42 /* IncentivesProgressBarView.m */; };
+		84BAE0681D2A552600F0B38A /* ProfileDemo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84BAE0671D2A552600F0B38A /* ProfileDemo.plist */; };
 		B50FEC881D22553B00EA34D4 /* IncentiveDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B50FEC871D22553B00EA34D4 /* IncentiveDataModel.m */; };
 		B50FEC8B1D225DFD00EA34D4 /* ProfileViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B50FEC8A1D225DFD00EA34D4 /* ProfileViewPresenter.m */; };
 		B51EED501D255FBC00F9A97E /* PeerProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51EED4F1D255FBC00F9A97E /* PeerProfileViewController.m */; };
@@ -168,6 +169,7 @@
 		847E5E411D22E6FB006B9854 /* FeedDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedDataModel.m; sourceTree = "<group>"; };
 		84852EC01D240EAC00C4DE42 /* IncentivesProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncentivesProgressBarView.h; sourceTree = "<group>"; };
 		84852EC11D240EAC00C4DE42 /* IncentivesProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncentivesProgressBarView.m; sourceTree = "<group>"; };
+		84BAE0671D2A552600F0B38A /* ProfileDemo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProfileDemo.plist; sourceTree = "<group>"; };
 		B50FEC861D22553B00EA34D4 /* IncentiveDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncentiveDataModel.h; sourceTree = "<group>"; };
 		B50FEC871D22553B00EA34D4 /* IncentiveDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncentiveDataModel.m; sourceTree = "<group>"; };
 		B50FEC891D225DFD00EA34D4 /* ProfileViewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewPresenter.h; sourceTree = "<group>"; };
@@ -464,6 +466,7 @@
 		8468C91E1D0AA82E00B30DCF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				84BAE0661D2A54EC00F0B38A /* Plist */,
 				8468C9311D0AA9BA00B30DCF /* Fonts */,
 				8468C92E1D0AA98700B30DCF /* Assets */,
 			);
@@ -673,6 +676,14 @@
 				84852EC11D240EAC00C4DE42 /* IncentivesProgressBarView.m */,
 			);
 			path = IncentivesProgressBarView;
+			sourceTree = "<group>";
+		};
+		84BAE0661D2A54EC00F0B38A /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				84BAE0671D2A552600F0B38A /* ProfileDemo.plist */,
+			);
+			path = Plist;
 			sourceTree = "<group>";
 		};
 		B50FEC841D22543300EA34D4 /* IncentiveDataModel */ = {
@@ -892,6 +903,7 @@
 				847E5E341D22E6D8006B9854 /* CommentVIew.xib in Resources */,
 				8468C8E61D0AA58B00B30DCF /* LaunchScreen.storyboard in Resources */,
 				8468C9301D0AA9A300B30DCF /* Assets.xcassets in Resources */,
+				84BAE0681D2A552600F0B38A /* ProfileDemo.plist in Resources */,
 				8468C8DE1D0AA58B00B30DCF /* Main.storyboard in Resources */,
 				847E5E241D22E6B7006B9854 /* MenuListViewController.xib in Resources */,
 				847E5E221D22E6B7006B9854 /* MenuListTableViewListCell.xib in Resources */,
