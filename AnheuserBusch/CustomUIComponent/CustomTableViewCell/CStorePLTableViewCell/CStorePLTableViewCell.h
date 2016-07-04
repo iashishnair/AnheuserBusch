@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IncentivesProgressBarView.h"
 
 @interface CStorePLTableViewCell : UITableViewCell
+
+@property (nonatomic, strong) IncentivesProgressBarView *incentiveBarChartView;
 
 @end
