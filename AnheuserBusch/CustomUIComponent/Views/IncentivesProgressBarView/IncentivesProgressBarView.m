@@ -1,10 +1,10 @@
-	//
-	//  IncentivesProgressBarView.m
-	//  AnheuserBusch
-	//
-	//  Created by Prsenjit Goswami on 29/06/16.
-	//  Copyright © 2016 Cognizant. All rights reserved.
-	//
+//
+//  IncentivesProgressBarView.m
+//  AnheuserBusch
+//
+//  Created by Prsenjit Goswami on 29/06/16.
+//  Copyright © 2016 Cognizant. All rights reserved.
+//
 
 #import "IncentivesProgressBarView.h"
 #import "NSLayoutConstraint+LayoutConstraintHelper.h"
@@ -24,18 +24,17 @@
 
 
 - (instancetype)init {
-	
-	if(self == [super init]) {
-		
-		[self createUI];
-        self.layer.cornerRadius = 3;
-self.clipsToBounds = YES;
-	}
-	return self;
+    
+    if(self == [super init]) {
+        
+        [self createUI];
+     
+    }
+    return self;
 }
 
 -(void)dealloc {
-	
+    
     _barBackgroundView = nil;
     _progressBarView = nil;
     _unitTextLabel = nil;
@@ -44,106 +43,106 @@ self.clipsToBounds = YES;
 #pragma mark - Private Method
 
 - (UIView *)barBackgroundView {
-	
-	if(!_barBackgroundView) {
-		_barBackgroundView = [UIView new];
-		_barBackgroundView.translatesAutoresizingMaskIntoConstraints = NO;
-	}
-	
-	return _barBackgroundView;
+    
+    if(!_barBackgroundView) {
+        _barBackgroundView = [UIView new];
+        _barBackgroundView.translatesAutoresizingMaskIntoConstraints = NO;
+    }
+    
+    return _barBackgroundView;
 }
 
 - (UIView *)progressBarView {
-	
-	if(!_progressBarView) {
-		_progressBarView = [UIView new];
-		_progressBarView.translatesAutoresizingMaskIntoConstraints = NO;
-	}
-	
-	return _progressBarView;
+    
+    if(!_progressBarView) {
+        _progressBarView = [UIView new];
+        _progressBarView.translatesAutoresizingMaskIntoConstraints = NO;
+    }
+    
+    return _progressBarView;
 }
 
 - (UILabel *)unitTextLabel {
-	
-	if(!_unitTextLabel) {
-		_unitTextLabel = [UILabel new];
-		_unitTextLabel.font = [UIFont systemFontOfSize:10.0f];
-		_unitTextLabel.textAlignment = NSTextAlignmentRight;
-		_unitTextLabel.translatesAutoresizingMaskIntoConstraints = NO;
-	}
-	
-	return _unitTextLabel;
+    
+    if(!_unitTextLabel) {
+        _unitTextLabel = [UILabel new];
+        _unitTextLabel.font = [UIFont systemFontOfSize:10.0f];
+        _unitTextLabel.textAlignment = NSTextAlignmentRight;
+        _unitTextLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    }
+    
+    return _unitTextLabel;
 }
 
 - (void)createUI {
-	
-	[self addSubview:self.barBackgroundView];
-	[self addSubview:self.progressBarView];
-	[self addSubview:self.unitTextLabel];
-	[self addConstrains];
+    
+    [self addSubview:self.barBackgroundView];
+    [self addSubview:self.progressBarView];
+    [self addSubview:self.unitTextLabel];
+    [self addConstrains];
 }
 
 - (void)addConstrains {
-	
- NSDictionary *dict = @{@"barBackgroundView": self.barBackgroundView,
-						@"progressBarView": self.progressBarView,
-						@"unitTextLabel": self.unitTextLabel
-						};
-	
-	
-	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[barBackgroundView]|" options:0 metrics:nil views:dict]];
-	
-		  [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[progressBarView]|" options:0 metrics:nil views:dict]];
-	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[unitTextLabel]" options:0 metrics:nil views:dict]];
-
-	
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[barBackgroundView]|" options:0 metrics:nil views:dict]];
-
-	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[progressBarView]|" options:0 metrics:nil views:dict]];
-	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[unitTextLabel]|" options:0 metrics:nil views:dict]];
-
-	
-//	[self addConstraint:[NSLayoutConstraint height:self.progressBarView toItem:self.barBackgroundView multiplier:0.5 constant:1]];
-	
-//	[NSLayoutConstraint verticallyCenter:self.progressBarView  toItem:self];
-	
-    [NSLayoutConstraint verticallyCenter:self.barBackgroundView  toItem:self];
-
-	_progressBarViewWidthConstraint = [NSLayoutConstraint width:self.progressBarView toItem:self.barBackgroundView multiplier:0 constant:1];
     
-	_unitTextLabelWidthConstraint = [NSLayoutConstraint width:self.progressBarView toItem:self.barBackgroundView multiplier:0 constant:-10.0];
-
-	
-	[self addConstraint:_progressBarViewWidthConstraint];
-	[self addConstraint:_unitTextLabelWidthConstraint];
-
+    NSDictionary *dict = @{@"barBackgroundView": self.barBackgroundView,
+                           @"progressBarView": self.progressBarView,
+                           @"unitTextLabel": self.unitTextLabel
+                           };
+    
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[barBackgroundView]|" options:0 metrics:nil views:dict]];
+    
+		  [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[progressBarView]|" options:0 metrics:nil views:dict]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[unitTextLabel]" options:0 metrics:nil views:dict]];
+    
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[barBackgroundView]|" options:0 metrics:nil views:dict]];
+    
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[progressBarView]|" options:0 metrics:nil views:dict]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[unitTextLabel]|" options:0 metrics:nil views:dict]];
+    
+    
+    //	[self addConstraint:[NSLayoutConstraint height:self.progressBarView toItem:self.barBackgroundView multiplier:0.5 constant:1]];
+    
+    //	[NSLayoutConstraint verticallyCenter:self.progressBarView  toItem:self];
+    
+    [NSLayoutConstraint verticallyCenter:self.barBackgroundView  toItem:self];
+    
+    _progressBarViewWidthConstraint = [NSLayoutConstraint width:self.progressBarView toItem:self.barBackgroundView multiplier:0 constant:1];
+    
+    _unitTextLabelWidthConstraint = [NSLayoutConstraint width:self.progressBarView toItem:self.barBackgroundView multiplier:0 constant:-10.0];
+    
+    
+    [self addConstraint:_progressBarViewWidthConstraint];
+    [self addConstraint:_unitTextLabelWidthConstraint];
+    
 }
 
 
 - (void)updateProgressBarViewWidthConstraint:(float)multiplier {
-
-	
-	if(_progressBarViewWidthConstraint)
-	 [self removeConstraint:_progressBarViewWidthConstraint];
-
-	
-	if(_unitTextLabelWidthConstraint) {
-		[self removeConstraint:_unitTextLabelWidthConstraint];
-	}
-	
-	
-	_progressBarViewWidthConstraint = [NSLayoutConstraint width:self.progressBarView toItem:self.barBackgroundView multiplier:multiplier constant:1];
-	[self addConstraint:_progressBarViewWidthConstraint];
-	
-	
-	_unitTextLabelWidthConstraint = [NSLayoutConstraint width:self.unitTextLabel toItem:self.barBackgroundView multiplier:multiplier constant:-10];
-	[self addConstraint:_unitTextLabelWidthConstraint];
-	
- 
-	
-	[self setNeedsUpdateConstraints];
-		//[self setNeedsLayout];
-		//[self layoutIfNeeded];
+    
+    
+    if(_progressBarViewWidthConstraint)
+        [self removeConstraint:_progressBarViewWidthConstraint];
+    
+    
+    if(_unitTextLabelWidthConstraint) {
+        [self removeConstraint:_unitTextLabelWidthConstraint];
+    }
+    
+    
+    _progressBarViewWidthConstraint = [NSLayoutConstraint width:self.progressBarView toItem:self.barBackgroundView multiplier:multiplier constant:1];
+    [self addConstraint:_progressBarViewWidthConstraint];
+    
+    
+    _unitTextLabelWidthConstraint = [NSLayoutConstraint width:self.unitTextLabel toItem:self.barBackgroundView multiplier:multiplier constant:-10];
+    [self addConstraint:_unitTextLabelWidthConstraint];
+    
+    
+    
+    [self setNeedsUpdateConstraints];
+    //[self setNeedsLayout];
+    //[self layoutIfNeeded];
 }
 
 - (void)setUnitName:(NSString *)unitName {
@@ -170,49 +169,49 @@ self.clipsToBounds = YES;
 #pragma mark - Public Method
 
 - (void)setProgressAmount:(NSNumber *)progressAmount {
-	
-	_progressAmount = progressAmount;
-	
-	
-	if(!_progressBarViewWidthConstraint || !self.maxRange || !self.minRange) return;
-	
-	 self.multiplier = _progressAmount.floatValue / (self.maxRange.floatValue - self.minRange.floatValue);
-	
-	
-	 self.multiplier = MAX(0,  self.multiplier);
-	 self.multiplier = MIN(100,  self.multiplier);
-	
-	
-	[self updateProgressBarViewWidthConstraint: self.multiplier];
+    
+    _progressAmount = progressAmount;
+    
+    
+    if(!_progressBarViewWidthConstraint || !self.maxRange || !self.minRange) return;
+    
+    self.multiplier = _progressAmount.floatValue / (self.maxRange.floatValue - self.minRange.floatValue);
+    
+    
+    self.multiplier = MAX(0,  self.multiplier);
+    self.multiplier = MIN(100,  self.multiplier);
+    
+    
+    [self updateProgressBarViewWidthConstraint: self.multiplier];
 }
 
 -(void)setProgressAmountInPercent:(NSNumber *)progressAmountInPercent {
-	
-	_progressAmountInPercent = progressAmountInPercent;
-	
-	[self updateProgressBarViewWidthConstraint:_progressAmountInPercent.floatValue];
-
+    
+    _progressAmountInPercent = progressAmountInPercent;
+    
+    [self updateProgressBarViewWidthConstraint:_progressAmountInPercent.floatValue];
+    
 }
 
 - (void)setBarBackGroundColor:(UIColor *)barBackGroundColor {
-	
-	_barBackGroundColor = barBackGroundColor;
-	self.barBackgroundView.backgroundColor = _barBackGroundColor;
+    
+    _barBackGroundColor = barBackGroundColor;
+    self.barBackgroundView.backgroundColor = _barBackGroundColor;
 }
 
 - (void)setProgressColor:(UIColor *)progressColor {
-	
-	_progressColor = progressColor;
-	self.progressBarView.backgroundColor = progressColor;
+    
+    _progressColor = progressColor;
+    self.progressBarView.backgroundColor = progressColor;
 }
 
 - (void)setIncentivesProgressBarViewModel:(IncentivesProgressBarViewModel *)incentivesProgressBarViewModel {
-	
-	_incentivesProgressBarViewModel = incentivesProgressBarViewModel;
-	
-	if(_incentivesProgressBarViewModel) {
-		
-	}
+    
+    _incentivesProgressBarViewModel = incentivesProgressBarViewModel;
+    
+    if(_incentivesProgressBarViewModel) {
+        
+    }
 }
 
 - (void)setUnitTextFont:(UIFont *)unitTextFont {

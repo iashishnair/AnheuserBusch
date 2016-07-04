@@ -15,6 +15,7 @@
     NSArray *viewControllers;
     NSArray *segmentTitles;
 }
+
 @property (weak, nonatomic) IBOutlet UILabel *hintTextLabel;
 @property (weak, nonatomic) IBOutlet UIView *pageViewControllerContainerView;
 @property (strong, nonatomic) GUITabPagerViewController *customPageManagerViewController;
@@ -29,7 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     segmentTitles = @[@"Cstore/PL 1", @"Large Format", @"On Premises"];
-
+    
     [self customPageManagerViewController];
     [self configureUI];
 }
@@ -54,7 +55,7 @@
     CGRect rect = _pageViewControllerContainerView.bounds;
     self.customPageManagerViewController.view.frame = rect;
     
-//    [self addConstrains];
+    //    [self addConstrains];
     
     [self.customPageManagerViewController reloadData];
 }
@@ -65,7 +66,7 @@
     
     [self.pageViewControllerContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[customPageManagerViewController]-10-|" options:0 metrics:nil views:views]];
     
-        [self.pageViewControllerContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[customPageManagerViewController]|" options:0 metrics:nil views:views]];
+    [self.pageViewControllerContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[customPageManagerViewController]|" options:0 metrics:nil views:views]];
 }
 
 - (GUITabPagerViewController *)customPageManagerViewController{
@@ -74,7 +75,7 @@
         
         _customPageManagerViewController = [[GUITabPagerViewController alloc] init];
         
-//       _customPageManagerViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
+        //       _customPageManagerViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
         [_customPageManagerViewController setDataSource:self];
         [_customPageManagerViewController setDelegate:self];
     }
@@ -142,11 +143,11 @@
 #pragma mark - Tab Pager Delegate
 
 - (void)tabPager:(GUITabPagerViewController *)tabPager willTransitionToTabAtIndex:(NSInteger)index {
-//    NSLog(@"Will transition from tab %ld to %ld", [self selectedIndex], (long)index);
+    //    NSLog(@"Will transition from tab %ld to %ld", [self selectedIndex], (long)index);
 }
 
 - (void)tabPager:(GUITabPagerViewController *)tabPager didTransitionToTabAtIndex:(NSInteger)index {
-//    NSLog(@"Did transition to tab %ld", (long)index);
+    //    NSLog(@"Did transition to tab %ld", (long)index);
 }
 
 

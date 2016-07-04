@@ -11,8 +11,9 @@
 @protocol ProfilePageCustomCellDelegate <NSObject>
 
 @optional
-- (void)clickedPeerRanking:(UIButton *)sender;
-- (void)clickedKPIRanking:(UIButton *)sender;
+
+- (void)clickedPeerRanking:(UIButton *)sender atIndex:(NSUInteger)index;
+- (void)clickedKPIRanking:(UIButton *)sender atIndex:(NSUInteger)index;
 
 @end
 
@@ -31,7 +32,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *kPIDetailsButton;
 @property (weak, nonatomic) IBOutlet UILabel *rankNumber;
 @property (weak, nonatomic) id <ProfilePageCustomCellDelegate> delegate;
+@property (assign, nonatomic,readonly) NSUInteger index;
 
-- (void) updateCell :(IncentiveDataModel *)incentiveDataModel;
+- (void) updateCell :(IncentiveDataModel *)incentiveDataModel atIndex:(NSUInteger)index;
 
 @end

@@ -32,15 +32,23 @@
     for (NSDictionary * obj in incentives) {
         
         IncentiveDataModel *incentiveDataModel = [IncentiveDataModel new];
-        
         incentiveDataModel.rank = [obj valueForKeySafe:@"rank"];
         incentiveDataModel.incentiveName = [obj valueForKeySafe:@"incentivename"];
+        incentiveDataModel.statusDescription = [obj valueForKeySafe:@"statusDescription"];
         incentiveDataModel.statusTitle = [obj valueForKeySafe:@"statusTitle"];
         incentiveDataModel.overAllIncentiveProgress = [obj valueForKeySafe:@"overAllIncentiveProgress"];
         incentiveDataModel.minIncentiveRange = [obj valueForKeySafe:@"minIncentiveRange"];
         incentiveDataModel.maxIncentiveRange = [obj valueForKeySafe:@"maxIncentiveRange"];
         incentiveDataModel.progressunit = [obj valueForKeySafe:@"progressunit"];
-
+        
+        NSArray *kpiDetails = [obj valueForKeySafe:@"kpis"];
+        
+        if(kpiDetails && kpiDetails.count) {
+            
+            incentiveDataModel.kpisDetails = kpiDetails;
+        }
+        
+        
         [resultsArray addObject:incentiveDataModel];
     }
     

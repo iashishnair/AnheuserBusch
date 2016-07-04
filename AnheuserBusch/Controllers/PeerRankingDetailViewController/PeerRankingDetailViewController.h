@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseChildViewController.h"
+#import "IncentiveDataModel.h"
 
 @interface PeerRankingDetailViewController : BaseChildViewController
 
-@property (weak, nonatomic) IBOutlet UITableView *userRankingTable;
+@property (strong, nonatomic)  IncentiveDataModel *incentiveDataModel;
 
 @end

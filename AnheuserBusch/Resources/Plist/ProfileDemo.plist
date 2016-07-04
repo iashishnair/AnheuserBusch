@@ -23,6 +23,8 @@
 			<string>points</string>
 			<key>statusTitle</key>
 			<string>Good!!</string>
+			<key>statusDescription</key>
+			<string>Out of 11 KPIs you have 8 KPIs in green</string>
 			<key>kpis</key>
 			<array>
 				<dict>
@@ -100,6 +102,8 @@
 			<string>points</string>
 			<key>statusTitle</key>
 			<string>Way to go!!</string>
+			<key>statusDescription</key>
+			<string>Out of 10 KPIs you have 8 KPIs in green</string>
 			<key>kpis</key>
 			<array>
 				<dict>
@@ -177,6 +181,8 @@
 			<string>points</string>
 			<key>statusTitle</key>
 			<string>Good!!</string>
+			<key>statusDescription</key>
+			<string>Out of 13 KPIs you have 8 KPIs in green</string>
 			<key>kpis</key>
 			<array>
 				<dict>
@@ -254,6 +260,8 @@
 			<string>points</string>
 			<key>statusTitle</key>
 			<string>Good!!</string>
+			<key>statusDescription</key>
+			<string>Out of 15 KPIs you have 14 KPIs in green</string>
 			<key>kpis</key>
 			<array>
 				<dict>

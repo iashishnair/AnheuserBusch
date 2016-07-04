@@ -270,3 +270,17 @@
 
 
 @end
+
+@implementation NSArray (HelperUtil)
+
++ (nullable id)objectFromArray:(nullable NSArray *)anArray atIndex:(NSUInteger)index {
+    
+    if(![anArray isKindOfClass:[NSNull class]] && anArray && anArray.count > index ) {
+        
+        return  anArray[index];
+    }
+    
+    return nil;
+}
+
+@end

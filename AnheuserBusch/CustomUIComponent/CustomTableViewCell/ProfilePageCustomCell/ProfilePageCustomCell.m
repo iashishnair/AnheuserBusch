@@ -15,6 +15,7 @@
 
 @property (weak, nonatomic) IncentiveDataModel *incentiveDataModel;
 @property (strong, nonatomic) IncentivesProgressBarView * incentivesProgressBarView;
+@property (assign, nonatomic, readwrite) NSUInteger index;
 
 @end
 @implementation ProfilePageCustomCell
@@ -44,7 +45,9 @@
 
 #pragma mark - Public Method
 
--(void)updateCell:(IncentiveDataModel *)incentiveDataModel {
+-(void)updateCell:(IncentiveDataModel *)incentiveDataModel atIndex:(NSUInteger)index{
+    
+    _index = index;
     
     if(!incentiveDataModel) return;
     
@@ -87,24 +90,26 @@
         self.incentivesProgressBarView.maxRange = self.incentiveDataModel.maxIncentiveRange;
         self.incentivesProgressBarView.progressAmount = self.incentiveDataModel.overAllIncentiveProgress;
         self.incentivesProgressBarView.unitName = @"point  ";
+        self.incentivesProgressBarView.layer.cornerRadius = 3;
+        self.incentivesProgressBarView.clipsToBounds = YES;
     }
 }
 
 #pragma mark - IB Action
 
-- (IBAction)clickedPeerRanking:(UIButton *)sender {
+- (IBAction)clickedPeerRanking:(UIButton *)sender atIndex:(NSUInteger)index {
     
-    if(self.delegate && [self.delegate respondsToSelector:@selector(clickedPeerRanking:)]) {
+    if(self.delegate && [self.delegate respondsToSelector:@selector(clickedPeerRanking:atIndex:)]) {
         
-        [self.delegate  clickedPeerRanking:sender];
+        [self.delegate clickedPeerRanking:sender atIndex:self.index];
     }
 }
 
 - (IBAction)clickedKPIRanking:(UIButton *)sender {
     
-    if(self.delegate && [self.delegate respondsToSelector:@selector(clickedKPIRanking:)]) {
+    if(self.delegate && [self.delegate respondsToSelector:@selector(clickedKPIRanking:atIndex:)]) {
         
-        [self.delegate  clickedKPIRanking:sender];
+        [self.delegate clickedKPIRanking:sender atIndex:self.index];
     }
 }
 

@@ -84,14 +84,12 @@
     
     cell.delegate = self;
     
-    if(self.incentiveDetailsDataSource.count > indexPath.row)
-    {
-        IncentiveDataModel *incentiveDataModel = [self.incentiveDetailsDataSource objectAtIndex:indexPath.row];
+        IncentiveDataModel *incentiveDataModel = (IncentiveDataModel *) [NSArray objectFromArray:self.incentiveDetailsDataSource atIndex:indexPath.row];
         
         if(incentiveDataModel) {
-            [cell updateCell:incentiveDataModel];
+            
+            [cell updateCell:incentiveDataModel atIndex:indexPath.row];
         }
-    }
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
@@ -100,7 +98,7 @@
 
 #pragma mark ProfilePageCustomCellDelegate
 
-- (void)clickedPeerRanking:(UIButton *)sender {
+- (void)clickedPeerRanking:(UIButton *)sender atIndex:(NSUInteger)index {
     
     
     PeerRankingDetailViewController *peerRankingDetailViewController = (PeerRankingDetailViewController *)[UIViewController instantiateViewControllerWithIdentifier:kStoryBoardIDPeerRankingDetailViewController];
@@ -109,11 +107,17 @@
     
 }
 
-- (void)clickedKPIRanking:(UIButton *)sender {
+- (void)clickedKPIRanking:(UIButton *)sender atIndex:(NSUInteger)index {
     
-    KPIRankingViewController *kPIRankingViewController = (KPIRankingViewController *)[UIViewController instantiateViewControllerWithIdentifier:kStoryBoardIDKPIRankingViewController];
+    IncentiveDataModel *incentiveDataModel = [NSArray objectFromArray:self.incentiveDetailsDataSource atIndex:index];
     
-    [self.navigationController pushViewController:kPIRankingViewController animated:YES];
-    
+    if(incentiveDataModel) {
+       
+        KPIRankingViewController *kPIRankingViewController = (KPIRankingViewController *)[UIViewController instantiateViewControllerWithIdentifier:kStoryBoardIDKPIRankingViewController];
+        kPIRankingViewController.incentiveDataModel = incentiveDataModel;
+        
+        [self.navigationController pushViewController:kPIRankingViewController animated:YES];
+        
+    }
 }
 @end
