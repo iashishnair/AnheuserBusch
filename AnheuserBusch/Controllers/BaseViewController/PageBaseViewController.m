@@ -8,6 +8,7 @@
 
 #import "PageBaseViewController.h"
 #import "CustomSideMenuController.h"
+#import "AnnouncementsViewController.h"
 
 @implementation PageBaseViewController
 
@@ -45,7 +46,7 @@
 
 - (void)addRightMenuButtonWithImage:(UIImage *)buttonImage {
 	
-	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:buttonImage style:UIBarButtonItemStylePlain target:self action:@selector(clickedRightMenuButton)];
+    UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:buttonImage style:UIBarButtonItemStylePlain target:self action:@selector(clickedNotificationButton)];
 	self.navigationItem.rightBarButtonItem = menuButton;
 }
 
@@ -69,8 +70,12 @@
 	[[self sideMenuController] toggleMenu];
 }
 
-- (void)clickedRightMenuButton {
-	
+- (void)clickedNotificationButton {
+    
+    AnnouncementsViewController *announcementsViewController = (AnnouncementsViewController *)[UIViewController instantiateViewControllerWithIdentifier:kStoryBoardIDAnnouncementsViewController];
+    
+    [self.navigationController pushViewController:announcementsViewController animated:YES];
+    	
 }
 
 -(void)setShowMenuButton:(BOOL)showMenuButton {

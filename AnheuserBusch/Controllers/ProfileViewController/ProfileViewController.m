@@ -85,10 +85,6 @@
 #pragma mark - IBAction
 
 
-- (void)clickedRightMenuButton {
-    
-}
-
 #pragma mark ProfilePageCustomCellDelegate
 
 - (void)clickedPeerRanking:(UIButton *)sender {

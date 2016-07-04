@@ -29,7 +29,8 @@
     kPIRankingViewController.view.frame = self.kPIDetailsView.bounds;
     [self.kPIDetailsView addSubview:kPIRankingViewController.view];
     [self addChildViewController:kPIRankingViewController];
-    [kPIRankingViewController didMoveToParentViewController:self];  }
+    [kPIRankingViewController didMoveToParentViewController:self];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

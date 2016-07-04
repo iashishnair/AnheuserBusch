@@ -19,7 +19,7 @@
     // Do any additional setup after loading the view.
 	
 	
-	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"notification"] style:UIBarButtonItemStylePlain target:self action:@selector(clickedRightMenuButton)];
+	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"notification"] style:UIBarButtonItemStylePlain target:self action:@selector(clickedNotificationButton)];
 	self.navigationItem.rightBarButtonItem = menuButton;
 
 }
@@ -36,7 +36,7 @@
 	
 }
 
-- (void)clickedRightMenuButton {
+- (void)clickedNotificationButton {
 	
 	
 }
