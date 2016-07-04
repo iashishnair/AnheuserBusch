@@ -53,6 +53,8 @@
 		B50FEC881D22553B00EA34D4 /* IncentiveDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B50FEC871D22553B00EA34D4 /* IncentiveDataModel.m */; };
 		B50FEC8B1D225DFD00EA34D4 /* ProfileViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B50FEC8A1D225DFD00EA34D4 /* ProfileViewPresenter.m */; };
 		B51EED501D255FBC00F9A97E /* PeerProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51EED4F1D255FBC00F9A97E /* PeerProfileViewController.m */; };
+		B565B4411D2A74A400191CBD /* AnnouncementsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B565B4401D2A74A400191CBD /* AnnouncementsDetailViewController.m */; };
+		B565B4461D2A9C4500191CBD /* AnnouncementDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B565B4451D2A9C4500191CBD /* AnnouncementDataModel.m */; };
 		B58F29ED1D268FD300B307CA /* KPIRankingViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B58F29EC1D268FD300B307CA /* KPIRankingViewPresenter.m */; };
 		B58F29F01D268FFC00B307CA /* KPIRankingViewProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = B58F29EF1D268FFC00B307CA /* KPIRankingViewProtocol.m */; };
 		B58F29F31D26902300B307CA /* PeerProfileViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B58F29F21D26902300B307CA /* PeerProfileViewPresenter.m */; };
@@ -177,6 +179,10 @@
 		B50FEC8C1D225E3B00EA34D4 /* ProfileViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewProtocol.h; sourceTree = "<group>"; };
 		B51EED4E1D255FBC00F9A97E /* PeerProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerProfileViewController.h; sourceTree = "<group>"; };
 		B51EED4F1D255FBC00F9A97E /* PeerProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerProfileViewController.m; sourceTree = "<group>"; };
+		B565B43F1D2A74A400191CBD /* AnnouncementsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnouncementsDetailViewController.h; sourceTree = "<group>"; };
+		B565B4401D2A74A400191CBD /* AnnouncementsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnouncementsDetailViewController.m; sourceTree = "<group>"; };
+		B565B4441D2A9C4500191CBD /* AnnouncementDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnouncementDataModel.h; sourceTree = "<group>"; };
+		B565B4451D2A9C4500191CBD /* AnnouncementDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnouncementDataModel.m; sourceTree = "<group>"; };
 		B58F29EB1D268FD300B307CA /* KPIRankingViewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPIRankingViewPresenter.h; sourceTree = "<group>"; };
 		B58F29EC1D268FD300B307CA /* KPIRankingViewPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPIRankingViewPresenter.m; sourceTree = "<group>"; };
 		B58F29EE1D268FFB00B307CA /* KPIRankingViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPIRankingViewProtocol.h; sourceTree = "<group>"; };
@@ -711,6 +717,15 @@
 			path = PeerProfileViewController;
 			sourceTree = "<group>";
 		};
+		B565B4421D2A9BED00191CBD /* AnnouncementDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				B565B4441D2A9C4500191CBD /* AnnouncementDataModel.h */,
+				B565B4451D2A9C4500191CBD /* AnnouncementDataModel.m */,
+			);
+			path = AnnouncementDataModel;
+			sourceTree = "<group>";
+		};
 		B5B04ED51D23F55D002BAC9F /* PeerRankingDataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -740,6 +755,8 @@
 				B5B26EF21D2A528900457362 /* AnnouncementsViewPresenter.h */,
 				B5B26EF31D2A528900457362 /* AnnouncementsViewPresenter.m */,
 				B5B26EF51D2A52AF00457362 /* AnnouncementsViewProtocol.h */,
+				B565B43F1D2A74A400191CBD /* AnnouncementsDetailViewController.h */,
+				B565B4401D2A74A400191CBD /* AnnouncementsDetailViewController.m */,
 			);
 			path = AnnouncementsViewController;
 			sourceTree = "<group>";
@@ -767,6 +784,7 @@
 		EA8497841D0B70630034B44F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B565B4421D2A9BED00191CBD /* AnnouncementDataModel */,
 				84272A461D258424000EEB1C /* WorkProfileDataModel.h */,
 				84272A471D258424000EEB1C /* WorkProfileDataModel.m */,
 				B5B04ED51D23F55D002BAC9F /* PeerRankingDataModel */,
@@ -1007,6 +1025,7 @@
 				847E5E321D22E6D8006B9854 /* ChatterViewControllerPresenter.m in Sources */,
 				847E5E421D22E6FB006B9854 /* ActorDataModel.m in Sources */,
 				84272A481D258424000EEB1C /* WorkProfileDataModel.m in Sources */,
+				B565B4411D2A74A400191CBD /* AnnouncementsDetailViewController.m in Sources */,
 				84272A3B1D257A53000EEB1C /* GUITabPagerViewController.m in Sources */,
 				844AF8811D2637B200397D09 /* IncentivesProgressBarViewModel.m in Sources */,
 				847E5E351D22E6D8006B9854 /* FeedListTableViewCell.m in Sources */,
@@ -1023,6 +1042,7 @@
 				847E5E451D22E6FB006B9854 /* FeedDataModel.m in Sources */,
 				84272A2A1D257951000EEB1C /* PeerRankingDetailPageCell.m in Sources */,
 				84272A271D257951000EEB1C /* CStorePLTableViewCell.m in Sources */,
+				B565B4461D2A9C4500191CBD /* AnnouncementDataModel.m in Sources */,
 				847E5E431D22E6FB006B9854 /* CommentItemModel.m in Sources */,
 				84272A2B1D257951000EEB1C /* ProfilePageCustomCell.m in Sources */,
 				B5B26EF11D2A526800457362 /* AnnouncementsViewController.m in Sources */,
