@@ -8,37 +8,41 @@
 
 #import "ProfilePageCustomCell.h"
 #import "IncentiveDataModel.h"
+#import "Constants.h"
 
 @implementation ProfilePageCustomCell
 
--(void) updateCell :(IncentiveDataModel *)incentiveDataModel {
+-(void)updateCell:(IncentiveDataModel *)incentiveDataModel {
     
-    if(incentiveDataModel.incentiveName)
-    {
-        NSString *incentiveName =incentiveDataModel.incentiveName;
-
+    
+    if(!incentiveDataModel) return;
+    
+    self.RankLabel.text = @"Rank";
+    
+    NSString *incentiveName = incentiveDataModel.incentiveName;
+    
+    
+    if(![NSString isNULLString:incentiveName]) {
+        
         self.IncentiveName.text = incentiveName;
     }
     
-    self.RankLabel.text = @"Rank";
-
+    NSString *rank = incentiveDataModel.rank;
     
-    if(incentiveDataModel.rank)
-    {
-        NSString *rank = incentiveDataModel.rank;
+    if(![NSString isNULLString:rank]) {
         self.rankNumber.text = rank;
-          }
-    
-    if(incentiveDataModel.statusTitle)
-    {
-        NSString *status = incentiveDataModel.statusTitle;
-        self.statusTitleLabel.text = status;
     }
     
-    if(incentiveDataModel.statusDescription)
-    {
-        NSString *description = incentiveDataModel.statusDescription;
-        self.statusDescriptionLabel.text = description;
+    NSString *statusTitle = incentiveDataModel.statusTitle;
+    
+    if(![NSString isNULLString:statusTitle]) {
+        self.statusTitleLabel.text = statusTitle;
+    }
+    
+    NSString *statusDescription = incentiveDataModel.statusDescription;
+    
+    if(![NSString isNULLString:statusDescription]) {
+        self.statusDescriptionLabel.text = statusDescription;
     }
 }
 

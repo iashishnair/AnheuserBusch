@@ -10,10 +10,17 @@
 
 @interface IncentiveDataModel : NSObject
 
-@property (nonatomic, strong) NSString *incentiveImageName;
-@property (nonatomic, strong) NSString *incentiveName;
-@property (nonatomic, strong) NSString *rank;
-@property (nonatomic, strong) NSString *statusTitle;
-@property (nonatomic, strong) NSString *statusDescription;
+@property (strong, nonatomic) NSString *profileUserName;
+@property (strong, nonatomic) NSString *rank;
+@property (strong, nonatomic) NSString *incentiveName;
+@property (strong, nonatomic) NSString *overAllIncentiveProgress;
+@property (strong, nonatomic) NSString *minIncentiveRange;
+@property (strong, nonatomic) NSString *maxIncentiveRange;
+@property (strong, nonatomic) NSString *progressunit;
+@property (strong, nonatomic) NSString *statusTitle;
+@property (strong, nonatomic) NSString *statusDescription;
 
+
+@property (strong, nonatomic) NSArray *kpisDetails;
+@property (strong, nonatomic) NSArray *peerDetails;
 @end
