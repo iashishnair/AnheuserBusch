@@ -10,4 +10,10 @@
 
 @interface KPIsDetailsDataModel : NSObject
 
+@property (strong, nonatomic) NSString *kpiName;
+@property (strong, nonatomic) NSNumber *progress;
+@property (strong, nonatomic) NSNumber *minRange;
+@property (strong, nonatomic) NSNumber *maxRange;
+@property (strong, nonatomic) NSString *progressUnit;
+
 @end

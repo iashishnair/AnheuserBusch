@@ -32,8 +32,6 @@
 					<string>% of Micro</string>
 					<key>progress</key>
 					<integer>91</integer>
-					<key>progresstype</key>
-					<integer>0</integer>
 					<key>minprogress</key>
 					<integer>0</integer>
 					<key>maxprogress</key>
@@ -46,8 +44,6 @@
 					<string>He SAP</string>
 					<key>progress</key>
 					<real>1.5</real>
-					<key>progresstype</key>
-					<integer>1</integer>
 					<key>minprogress</key>
 					<integer>1</integer>
 					<key>maxprogress</key>
@@ -60,8 +56,6 @@
 					<string>FMB SAP</string>
 					<key>progress</key>
 					<real>0.8</real>
-					<key>progresstype</key>
-					<integer>1</integer>
 					<key>minprogress</key>
 					<integer>1</integer>
 					<key>maxprogress</key>
@@ -74,8 +68,6 @@
 					<string>Ultra Distributation</string>
 					<key>progress</key>
 					<integer>62</integer>
-					<key>progresstype</key>
-					<integer>0</integer>
 					<key>progressunit</key>
 					<string>%</string>
 					<key>minprogress</key>

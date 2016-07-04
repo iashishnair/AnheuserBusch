@@ -18,8 +18,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *hintTextLabel;
 @property (weak, nonatomic) IBOutlet UIView *pageViewControllerContainerView;
+
 @property (strong, nonatomic) GUITabPagerViewController *customPageManagerViewController;
-@property (nonatomic,strong) CStorePLViewConroller *customViewConroller;
+@property (strong, nonatomic) NSArray *kpiDetails;
+
 @end
 
 @implementation KPIRankingViewController
@@ -43,7 +45,6 @@
 - (void)dealloc {
     
     _customPageManagerViewController = nil;
-    _customViewConroller = nil;
 }
 
 #pragma mark - Private Method
@@ -75,7 +76,7 @@
         
         _customPageManagerViewController = [[GUITabPagerViewController alloc] init];
         
-        //       _customPageManagerViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
+        //_customPageManagerViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
         [_customPageManagerViewController setDataSource:self];
         [_customPageManagerViewController setDelegate:self];
     }
@@ -83,7 +84,24 @@
     return _customPageManagerViewController;
 }
 
+- (CStorePLViewConroller *)customViewConroller {
+    
+    CStorePLViewConroller * customViewConroller = [[CStorePLViewConroller alloc]init];
+    customViewConroller.kpiDetsils =  self.kpiDetails;
+    return  customViewConroller;
+}
 
+#pragma mark - Public Method
+
+-(void)setIncentiveDataModel:(IncentiveDataModel *)incentiveDataModel {
+    
+    _incentiveDataModel = incentiveDataModel;
+}
+
+- (NSArray*)kpiDetails {
+    
+    return self.incentiveDataModel.kpisDetails;
+}
 
 #pragma mark - Tab Pager Data Source
 
@@ -93,19 +111,10 @@
 
 - (UIViewController *)viewControllerForIndex:(NSInteger)index {
     
-    return [[CStorePLViewConroller alloc] init];
+    return [self customViewConroller];
 }
 
--(CStorePLViewConroller *)customViewConroller {
-    
-    if(!_customViewConroller) {
-        
-        _customViewConroller = [[CStorePLViewConroller alloc]init];
-    }
-    
-    return  _customViewConroller;
-    
-}
+
 // Implement either viewForTabAtIndex: or titleForTabAtIndex:
 //- (UIView *)viewForTabAtIndex:(NSInteger)index {
 //  return <#UIView#>;
@@ -127,7 +136,7 @@
 
 - (UIColor *)tabBackgroundColor {
     // Default: [UIColor colorWithWhite:0.95f alpha:1.0f];
-    return [UIColor lightTextColor];
+    return [UIColor whiteColor];
 }
 
 - (UIFont *)titleFont {

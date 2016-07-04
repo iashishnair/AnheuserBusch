@@ -10,6 +10,7 @@
 #import "ProfileViewProtocol.h"
 #import "IncentiveDataModel.h"
 #import "Constants.h"
+#import "KPIsDetailsDataModel.h"
 
 @implementation ProfileViewPresenter
 
@@ -28,7 +29,7 @@
     
     
     NSMutableArray *resultsArray = [[NSMutableArray alloc]init];
-
+    
     for (NSDictionary * obj in incentives) {
         
         IncentiveDataModel *incentiveDataModel = [IncentiveDataModel new];
@@ -41,13 +42,11 @@
         incentiveDataModel.maxIncentiveRange = [obj valueForKeySafe:@"maxIncentiveRange"];
         incentiveDataModel.progressunit = [obj valueForKeySafe:@"progressunit"];
         
-        NSArray *kpiDetails = [obj valueForKeySafe:@"kpis"];
         
-        if(kpiDetails && kpiDetails.count) {
-            
-            incentiveDataModel.kpisDetails = kpiDetails;
-        }
+        NSMutableArray *kpis = [self populateKIPS:[obj valueForKeySafe:@"kpis"]];
         
+        if(kpis.count)
+            incentiveDataModel.kpisDetails = kpis;
         
         [resultsArray addObject:incentiveDataModel];
     }
@@ -55,4 +54,22 @@
     return resultsArray;
 }
 
+- (NSMutableArray *)populateKIPS:(NSArray *) kpiDetails {
+    
+    NSMutableArray *kpis = [NSMutableArray array];
+    
+    for (NSDictionary * kip in kpiDetails) {
+        
+        KPIsDetailsDataModel *kpisDetailsDataModel  = [KPIsDetailsDataModel new];
+        kpisDetailsDataModel.kpiName = [kip valueForKeySafe:@"name"];
+        kpisDetailsDataModel.maxRange = [kip valueForKeySafe:@"maxprogress"];
+        kpisDetailsDataModel.minRange = [kip valueForKeySafe:@"minprogress"];
+        kpisDetailsDataModel.progress = [kip valueForKeySafe:@"progress"];
+        kpisDetailsDataModel.progressUnit = [kip valueForKeySafe:@"progressunit"];
+        [kpis addObject:kpisDetailsDataModel];
+    }
+    
+    return kpis;
+    
+}
 @end

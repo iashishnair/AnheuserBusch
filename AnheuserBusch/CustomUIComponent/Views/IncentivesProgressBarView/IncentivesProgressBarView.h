@@ -26,4 +26,5 @@
 @property (nonatomic, strong) UIColor *unitTextColor;
 @property (nonatomic, strong) UIFont *unitTextFont;
 
+- (instancetype)initWithBarType:(NSInteger)type;
 @end

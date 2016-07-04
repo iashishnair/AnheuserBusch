@@ -351,13 +351,6 @@
 			path = SalesForceSOQLHelper;
 			sourceTree = "<group>";
 		};
-		845A4B3E1D2A59F000209263 /* ProfileDataModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ProfileDataModel;
-			sourceTree = "<group>";
-		};
 		845A4B421D2A5C0500209263 /* KPIsDetailsDataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -758,7 +751,6 @@
 			isa = PBXGroup;
 			children = (
 				845A4B421D2A5C0500209263 /* KPIsDetailsDataModel */,
-				845A4B3E1D2A59F000209263 /* ProfileDataModel */,
 				84272A461D258424000EEB1C /* WorkProfileDataModel.h */,
 				84272A471D258424000EEB1C /* WorkProfileDataModel.m */,
 				B5B04ED51D23F55D002BAC9F /* PeerRankingDataModel */,
