@@ -31,7 +31,7 @@
     segmentTitles = @[@"Cstore/PL 1", @"Large Format", @"On Premises"];
 
     [self customPageManagerViewController];
-    [self configureaUI];
+    [self configureUI];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -47,7 +47,7 @@
 
 #pragma mark - Private Method
 
-- (void) configureaUI {
+- (void) configureUI {
     
     [self.pageViewControllerContainerView addSubview:self.customPageManagerViewController.view];
     
@@ -131,7 +131,7 @@
 
 - (UIFont *)titleFont {
     // Default: [UIFont fontWithName:@"HelveticaNeue-Thin" size:20.0f];
-    return [UIFont fontWithName:@"HelveticaNeue-Bold" size:20.0f];
+    return [UIFont fontWithName:@"HelveticaNeue-Bold" size:15.0f];
 }
 
 - (UIColor *)titleColor {

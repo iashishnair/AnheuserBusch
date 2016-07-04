@@ -11,6 +11,7 @@
 #import "PeerRankingDataModel.h"
 #import "PeerRankingDetailPageCell.h"
 #import "Constants.h"
+#import "PeerProfileViewController.h"
 
 @interface PeerRankingDetailViewController ()
 
@@ -84,6 +85,14 @@
     cell.backgroundColor = [UIColor clearColor];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //Initialize new viewController
+     PeerProfileViewController *peerProfileViewController = (PeerProfileViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"PeerProfileViewController"];
+       //Push new view to navigationController stack
+    [self.navigationController pushViewController:peerProfileViewController animated:YES];
 }
 
 @end

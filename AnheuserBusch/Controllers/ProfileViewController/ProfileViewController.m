@@ -67,6 +67,7 @@
     }
     
     cell.delegate = self;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     if(_incentiveDetailsDataSource.count > indexPath.row)
     {
