@@ -13,9 +13,9 @@
 @property (strong, nonatomic) NSString *profileUserName;
 @property (strong, nonatomic) NSString *rank;
 @property (strong, nonatomic) NSString *incentiveName;
-@property (strong, nonatomic) NSString *overAllIncentiveProgress;
-@property (strong, nonatomic) NSString *minIncentiveRange;
-@property (strong, nonatomic) NSString *maxIncentiveRange;
+@property (strong, nonatomic) NSNumber *overAllIncentiveProgress;
+@property (strong, nonatomic) NSNumber *minIncentiveRange;
+@property (strong, nonatomic) NSNumber *maxIncentiveRange;
 @property (strong, nonatomic) NSString *progressunit;
 @property (strong, nonatomic) NSString *statusTitle;
 @property (strong, nonatomic) NSString *statusDescription;

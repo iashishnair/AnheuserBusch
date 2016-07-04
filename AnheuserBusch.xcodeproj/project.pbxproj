@@ -18,7 +18,6 @@
 		84272A441D257A87000EEB1C /* SalesForceChatterHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 84272A401D257A87000EEB1C /* SalesForceChatterHelper.m */; };
 		84272A451D257A87000EEB1C /* SalesForceSOQL.m in Sources */ = {isa = PBXBuildFile; fileRef = 84272A431D257A87000EEB1C /* SalesForceSOQL.m */; };
 		84272A481D258424000EEB1C /* WorkProfileDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84272A471D258424000EEB1C /* WorkProfileDataModel.m */; };
-		844AF8811D2637B200397D09 /* IncentivesProgressBarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 844AF8801D2637B200397D09 /* IncentivesProgressBarViewModel.m */; };
 		845A4B451D2A5C0C00209263 /* KPIsDetailsDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 845A4B441D2A5C0C00209263 /* KPIsDetailsDataModel.m */; };
 		8468C8D51D0AA58B00B30DCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8468C8D41D0AA58B00B30DCF /* main.m */; };
 		8468C8DE1D0AA58B00B30DCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8468C8DC1D0AA58B00B30DCF /* Main.storyboard */; };
@@ -110,8 +109,6 @@
 		84272A431D257A87000EEB1C /* SalesForceSOQL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SalesForceSOQL.m; sourceTree = "<group>"; };
 		84272A461D258424000EEB1C /* WorkProfileDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkProfileDataModel.h; sourceTree = "<group>"; };
 		84272A471D258424000EEB1C /* WorkProfileDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkProfileDataModel.m; sourceTree = "<group>"; };
-		844AF87F1D2637B200397D09 /* IncentivesProgressBarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncentivesProgressBarViewModel.h; sourceTree = "<group>"; };
-		844AF8801D2637B200397D09 /* IncentivesProgressBarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncentivesProgressBarViewModel.m; sourceTree = "<group>"; };
 		845A4B431D2A5C0C00209263 /* KPIsDetailsDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPIsDetailsDataModel.h; sourceTree = "<group>"; };
 		845A4B441D2A5C0C00209263 /* KPIsDetailsDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPIsDetailsDataModel.m; sourceTree = "<group>"; };
 		8468C8D01D0AA58B00B30DCF /* AnheuserBusch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnheuserBusch.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -352,15 +349,6 @@
 				84272A431D257A87000EEB1C /* SalesForceSOQL.m */,
 			);
 			path = SalesForceSOQLHelper;
-			sourceTree = "<group>";
-		};
-		844AF87E1D2637A200397D09 /* IncentivesProgressBarViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				844AF87F1D2637B200397D09 /* IncentivesProgressBarViewModel.h */,
-				844AF8801D2637B200397D09 /* IncentivesProgressBarViewModel.m */,
-			);
-			path = IncentivesProgressBarViewModel;
 			sourceTree = "<group>";
 		};
 		845A4B3E1D2A59F000209263 /* ProfileDataModel */ = {
@@ -690,7 +678,6 @@
 		84852EBF1D240E9800C4DE42 /* IncentivesProgressBarView */ = {
 			isa = PBXGroup;
 			children = (
-				844AF87E1D2637A200397D09 /* IncentivesProgressBarViewModel */,
 				84852EC01D240EAC00C4DE42 /* IncentivesProgressBarView.h */,
 				84852EC11D240EAC00C4DE42 /* IncentivesProgressBarView.m */,
 			);
@@ -1012,7 +999,6 @@
 				847E5E421D22E6FB006B9854 /* ActorDataModel.m in Sources */,
 				84272A481D258424000EEB1C /* WorkProfileDataModel.m in Sources */,
 				84272A3B1D257A53000EEB1C /* GUITabPagerViewController.m in Sources */,
-				844AF8811D2637B200397D09 /* IncentivesProgressBarViewModel.m in Sources */,
 				847E5E351D22E6D8006B9854 /* FeedListTableViewCell.m in Sources */,
 				EADDBBD71D244D90000908A9 /* BaseChildViewController.m in Sources */,
 				8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */,

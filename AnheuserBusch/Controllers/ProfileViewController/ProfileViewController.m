@@ -97,12 +97,6 @@
     return cell;
 }
 
-#pragma mark - IBAction
-
-
-- (void)clickedRightMenuButton {
-    
-}
 
 #pragma mark ProfilePageCustomCellDelegate
 
