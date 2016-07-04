@@ -63,3 +63,15 @@
 + (nullable instancetype)instantiateViewControllerWithIdentifier:(nonnull NSString *)identifier;
 
 @end
+
+
+@interface NSDictionary (HelperUtil)
+
++ (BOOL)isValidDictionary:(nullable NSDictionary *)dictionary;
+- (nullable id)valueForKeySafe:(nonnull NSString *)key;
+
+@end
+
+@interface NSArray (HelperUtil)
++ (nullable id)objectFromArray:(nullable NSArray *)anArray atIndex:(NSUInteger)index;
+@end

@@ -11,13 +11,16 @@
 #import "PeerRankingDataModel.h"
 #import "PeerRankingDetailPageCell.h"
 #import "Constants.h"
+#import "PeerProfileViewController.h"
 
 @interface PeerRankingDetailViewController ()
 
-@property (strong, nonatomic) NSMutableArray *peerRankingDetailsDataSource;
-@property (strong, nonatomic) id <PeerRankingDetailProtocol> presenter;
+@property (weak, nonatomic) IBOutlet UITableView *userRankingTable;
 @property (weak, nonatomic) IBOutlet UILabel *noOfDaysLabel;
 @property (weak, nonatomic) IBOutlet UILabel *viewHeading;
+
+@property (strong, nonatomic) NSMutableArray *peerRankingDetailsDataSource;
+@property (strong, nonatomic) id <PeerRankingDetailProtocol> presenter;
 
 @end
 
@@ -84,6 +87,14 @@
     cell.backgroundColor = [UIColor clearColor];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //Initialize new viewController
+     PeerProfileViewController *peerProfileViewController = (PeerProfileViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"PeerProfileViewController"];
+       //Push new view to navigationController stack
+    [self.navigationController pushViewController:peerProfileViewController animated:YES];
 }
 
 @end

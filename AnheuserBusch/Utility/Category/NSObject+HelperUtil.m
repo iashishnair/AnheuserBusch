@@ -245,3 +245,42 @@
 }
 
 @end
+
+@implementation NSDictionary (HelperUtil)
+
++ (BOOL)isValidDictionary:(NSDictionary *)dictionary {
+    
+   return  ![dictionary isKindOfClass:[NSNull class]] && dictionary && dictionary.count;
+}
+
+- (id)valueForKeySafe:(NSString *)key {
+    
+    if([NSString isNULLString:key]) return nil;
+    
+    id object = nil;
+    
+    if([NSDictionary isValidDictionary:self] && [[self allKeys]containsObject:key]) {
+        
+        object = self[key];
+        
+    }
+    
+    return object;
+}
+
+
+@end
+
+@implementation NSArray (HelperUtil)
+
++ (nullable id)objectFromArray:(nullable NSArray *)anArray atIndex:(NSUInteger)index {
+    
+    if(![anArray isKindOfClass:[NSNull class]] && anArray && anArray.count > index ) {
+        
+        return  anArray[index];
+    }
+    
+    return nil;
+}
+
+@end

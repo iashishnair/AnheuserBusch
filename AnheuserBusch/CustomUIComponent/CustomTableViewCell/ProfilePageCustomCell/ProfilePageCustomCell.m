@@ -8,55 +8,111 @@
 
 #import "ProfilePageCustomCell.h"
 #import "IncentiveDataModel.h"
+#import "Constants.h"
+#import "IncentivesProgressBarView.h"
 
+@interface ProfilePageCustomCell ()
+
+@property (weak, nonatomic) IncentiveDataModel *incentiveDataModel;
+@property (strong, nonatomic) IncentivesProgressBarView * incentivesProgressBarView;
+@property (assign, nonatomic, readwrite) NSUInteger index;
+
+@end
 @implementation ProfilePageCustomCell
 
--(void) updateCell :(IncentiveDataModel *)incentiveDataModel {
+- (void)dealloc {
     
-    if(incentiveDataModel.incentiveName)
-    {
-        NSString *incentiveName =incentiveDataModel.incentiveName;
+    _incentivesProgressBarView = nil;
+    
+}
 
+#pragma mark - Private Method
+
+- (IncentivesProgressBarView *)incentivesProgressBarView {
+    
+    if(!_incentivesProgressBarView) {
+        
+        _incentivesProgressBarView = [IncentivesProgressBarView new];
+
+        _incentivesProgressBarView.translatesAutoresizingMaskIntoConstraints = NO;
+        [self.chartView addSubview:_incentivesProgressBarView];
+        [_incentivesProgressBarView fitToParentView:self.chartView];
+    }
+    
+    return _incentivesProgressBarView;
+}
+
+
+#pragma mark - Public Method
+
+-(void)updateCell:(IncentiveDataModel *)incentiveDataModel atIndex:(NSUInteger)index{
+    
+    _index = index;
+    
+    if(!incentiveDataModel) return;
+    
+    self.incentiveDataModel = incentiveDataModel;
+    
+    self.RankLabel.text = @"Rank";
+    
+    NSString *incentiveName = incentiveDataModel.incentiveName;
+    
+    
+    if(![NSString isNULLString:incentiveName]) {
+        
         self.IncentiveName.text = incentiveName;
     }
     
-    self.RankLabel.text = @"Rank";
-
+    NSString *rank = incentiveDataModel.rank;
     
-    if(incentiveDataModel.rank)
-    {
-        NSString *rank = incentiveDataModel.rank;
+    if(![NSString isNULLString:rank]) {
         self.rankNumber.text = rank;
-          }
-    
-    if(incentiveDataModel.statusTitle)
-    {
-        NSString *status = incentiveDataModel.statusTitle;
-        self.statusTitleLabel.text = status;
     }
     
-    if(incentiveDataModel.statusDescription)
-    {
-        NSString *description = incentiveDataModel.statusDescription;
-        self.statusDescriptionLabel.text = description;
-    }
-}
-
-
-- (IBAction)clickedPeerRanking:(UIButton *)sender {
+    NSString *statusTitle = incentiveDataModel.statusTitle;
     
-    if(self.delegate && [self.delegate respondsToSelector:@selector(clickedPeerRanking:)]) {
+    if(![NSString isNULLString:statusTitle]) {
+        self.statusTitleLabel.text = statusTitle;
+    }
+    
+    NSString *statusDescription = incentiveDataModel.statusDescription;
+    
+    if(![NSString isNULLString:statusDescription]) {
+        self.statusDescriptionLabel.text = statusDescription;
+    }
+    
+    if(self.chartView) {
+        self.chartView.backgroundColor = [UIColor clearColor];
         
-        [self.delegate  clickedPeerRanking:sender];
+        self.incentivesProgressBarView.barBackGroundColor = [UIColor whiteColor];
+        self.incentivesProgressBarView.progressColor = [UIColor greenColor];
+        self.incentivesProgressBarView.minRange = self.incentiveDataModel.minIncentiveRange;
+        self.incentivesProgressBarView.maxRange = self.incentiveDataModel.maxIncentiveRange;
+        self.incentivesProgressBarView.progressAmount = self.incentiveDataModel.overAllIncentiveProgress;
+        self.incentivesProgressBarView.unitName = @"point  ";
+        self.incentivesProgressBarView.layer.cornerRadius = 3;
+        self.incentivesProgressBarView.clipsToBounds = YES;
+        self.incentivesProgressBarView.layer.borderWidth = 1.0;
+        self.incentivesProgressBarView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+
     }
 }
 
+#pragma mark - IB Action
+
+- (IBAction)clickedPeerRanking:(UIButton *)sender atIndex:(NSUInteger)index {
+    
+    if(self.delegate && [self.delegate respondsToSelector:@selector(clickedPeerRanking:atIndex:)]) {
+        
+        [self.delegate clickedPeerRanking:sender atIndex:self.index];
+    }
+}
 
 - (IBAction)clickedKPIRanking:(UIButton *)sender {
     
-    if(self.delegate && [self.delegate respondsToSelector:@selector(clickedKPIRanking:)]) {
+    if(self.delegate && [self.delegate respondsToSelector:@selector(clickedKPIRanking:atIndex:)]) {
         
-        [self.delegate  clickedKPIRanking:sender];
+        [self.delegate clickedKPIRanking:sender atIndex:self.index];
     }
 }
 

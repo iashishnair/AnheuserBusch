@@ -10,4 +10,6 @@
 
 @interface CStorePLViewConroller : UIViewController
 
+@property (strong, nonatomic) NSArray *kpiDetsils;
+
 @end

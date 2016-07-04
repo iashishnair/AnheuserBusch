@@ -16,8 +16,7 @@
 @interface ProfileViewController () <ProfilePageCustomCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *headingLabel;
-
-@property (strong, nonatomic) NSMutableArray *incentiveDetailsDataSource;
+@property (strong, nonatomic) NSArray *incentiveDetailsDataSource;
 @property (strong, nonatomic) id <ProfileViewProtocol> presenter;
 
 
@@ -25,15 +24,25 @@
 
 @implementation ProfileViewController
 
+
+#pragma mark - View Controller Life Cycle
+
 -(void)viewDidLoad {
     
     [super  viewDidLoad];
-    self.incentiveDetailsDataSource = [self.presenter incentiveDataSourcePopulate];
+  
     self.title = MenuItems[0];
-    
     self.headingLabel.text = @"My Incentives";
 }
 
+-(void)dealloc {
+    
+    _presenter = nil;
+    _incentiveDetailsDataSource = nil;
+    
+}
+
+#pragma mark - Private Method
 
 - (id <ProfileViewProtocol> )presenter {
     
@@ -45,16 +54,21 @@
     return _presenter;
 }
 
--(void)dealloc {
+- (NSArray *)incentiveDetailsDataSource {
     
+    if(!_incentiveDetailsDataSource) {
+        
+        _incentiveDetailsDataSource = [self.presenter incentiveDataSourcePopulate];
+    }
     
+    return _incentiveDetailsDataSource;
 }
 
 #pragma mark - table view delegate methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 10;
+    return self.incentiveDetailsDataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -62,35 +76,29 @@
     static NSString *cellIdentifier = @"myCell";
     
     ProfilePageCustomCell *cell = (ProfilePageCustomCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+   
     if (cell == nil) {
+        
         cell = [[ProfilePageCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     cell.delegate = self;
     
-    if(_incentiveDetailsDataSource.count > indexPath.row)
-    {
-        IncentiveDataModel *incentiveDataModel = [self.incentiveDetailsDataSource objectAtIndex:indexPath.row];
+        IncentiveDataModel *incentiveDataModel = (IncentiveDataModel *) [NSArray objectFromArray:self.incentiveDetailsDataSource atIndex:indexPath.row];
         
         if(incentiveDataModel) {
-            [cell updateCell:incentiveDataModel];
+            
+            [cell updateCell:incentiveDataModel atIndex:indexPath.row];
         }
-    }
     
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
-    
 }
 
-#pragma mark - IBAction
-
-
-- (void)clickedRightMenuButton {
-    
-}
 
 #pragma mark ProfilePageCustomCellDelegate
 
-- (void)clickedPeerRanking:(UIButton *)sender {
+- (void)clickedPeerRanking:(UIButton *)sender atIndex:(NSUInteger)index {
     
     
     PeerRankingDetailViewController *peerRankingDetailViewController = (PeerRankingDetailViewController *)[UIViewController instantiateViewControllerWithIdentifier:kStoryBoardIDPeerRankingDetailViewController];
@@ -99,11 +107,17 @@
     
 }
 
-- (void)clickedKPIRanking:(UIButton *)sender {
+- (void)clickedKPIRanking:(UIButton *)sender atIndex:(NSUInteger)index {
     
-    KPIRankingViewController *kPIRankingViewController = (KPIRankingViewController *)[UIViewController instantiateViewControllerWithIdentifier:kStoryBoardIDKPIRankingViewController];
+    IncentiveDataModel *incentiveDataModel = [NSArray objectFromArray:self.incentiveDetailsDataSource atIndex:index];
     
-    [self.navigationController pushViewController:kPIRankingViewController animated:YES];
-    
+    if(incentiveDataModel) {
+       
+        KPIRankingViewController *kPIRankingViewController = (KPIRankingViewController *)[UIViewController instantiateViewControllerWithIdentifier:kStoryBoardIDKPIRankingViewController];
+        kPIRankingViewController.incentiveDataModel = incentiveDataModel;
+        
+        [self.navigationController pushViewController:kPIRankingViewController animated:YES];
+        
+    }
 }
 @end
