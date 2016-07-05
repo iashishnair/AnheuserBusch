@@ -109,19 +109,37 @@
 
 - (UIViewController *)viewControllerForIndex:(NSInteger)index {
     
-    return [[AnnouncementsDetailViewController alloc] init];
+    //return [[AnnouncementsDetailViewController alloc] init];
+    //return [self customViewConroller] ;
+    //return self.customViewConroller;
+    _customViewConroller = [[AnnouncementsDetailViewController alloc]init];
+    
+    //  AnnouncementDataModel *datamodel = [self.segmentTitles objectAtIndex:self.index];
+    
+    // }
+    AnnouncementDataModel *datamodel = [self.segmentTitles objectAtIndex:index];
+    _customViewConroller.incentiveName = datamodel.incentiveName;
+    _customViewConroller.minsToGo = datamodel.minsText;
+    _customViewConroller.daysLeft = datamodel.daysText;
+    _customViewConroller.announcementText = datamodel.announcementText;
+    
+    return  _customViewConroller;
 }
 
 -(AnnouncementsDetailViewController *)customViewConroller {
     
-    if(!_customViewConroller) {
+   // if(!_customViewConroller) {
         
         _customViewConroller = [[AnnouncementsDetailViewController alloc]init];
 
       //  AnnouncementDataModel *datamodel = [self.segmentTitles objectAtIndex:self.index];
-        AnnouncementDataModel *datamodel = [self.segmentTitles objectAtIndex:4];
-        _customViewConroller.incentiveName = datamodel.incentiveName;
-    }
+      
+   // }
+    AnnouncementDataModel *datamodel = [self.segmentTitles objectAtIndex:self.index];
+    _customViewConroller.incentiveName = datamodel.incentiveName;
+    _customViewConroller.minsToGo = datamodel.minsText;
+    _customViewConroller.daysLeft = datamodel.daysText;
+    _customViewConroller.announcementText = datamodel.announcementText;
     
     return  _customViewConroller;
     
@@ -140,7 +158,7 @@
 
 - (CGFloat)tabHeight {
     // Default: 44.0f
-    return 0.0f;
+    return 50.0f;
 }
 
 - (UIColor *)tabColor {
