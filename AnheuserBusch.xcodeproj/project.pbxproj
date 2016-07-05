@@ -58,6 +58,7 @@
 		B56A9A361D2BCEC80073C315 /* PageBaseViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B56A9A351D2BCEC80073C315 /* PageBaseViewPresenter.m */; };
 		B56A9A391D2BCF580073C315 /* BaseChildViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B56A9A381D2BCF580073C315 /* BaseChildViewPresenter.m */; };
 		B56A9A3C1D2BDFDE0073C315 /* ProfilePageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B56A9A3B1D2BDFDE0073C315 /* ProfilePageDataModel.m */; };
+		B56A9A401D2BE96F0073C315 /* PeerProfileDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B56A9A3F1D2BE96F0073C315 /* PeerProfileDataModel.m */; };
 		B58F29ED1D268FD300B307CA /* KPIRankingViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B58F29EC1D268FD300B307CA /* KPIRankingViewPresenter.m */; };
 		B58F29F01D268FFC00B307CA /* KPIRankingViewProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = B58F29EF1D268FFC00B307CA /* KPIRankingViewProtocol.m */; };
 		B58F29F31D26902300B307CA /* PeerProfileViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B58F29F21D26902300B307CA /* PeerProfileViewPresenter.m */; };
@@ -194,6 +195,8 @@
 		B56A9A381D2BCF580073C315 /* BaseChildViewPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseChildViewPresenter.m; sourceTree = "<group>"; };
 		B56A9A3A1D2BDFDE0073C315 /* ProfilePageDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfilePageDataModel.h; path = AnheuserBusch/Controllers/BaseViewController/ProfilePageDataModel.h; sourceTree = SOURCE_ROOT; };
 		B56A9A3B1D2BDFDE0073C315 /* ProfilePageDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfilePageDataModel.m; path = AnheuserBusch/Controllers/BaseViewController/ProfilePageDataModel.m; sourceTree = SOURCE_ROOT; };
+		B56A9A3E1D2BE96F0073C315 /* PeerProfileDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerProfileDataModel.h; sourceTree = "<group>"; };
+		B56A9A3F1D2BE96F0073C315 /* PeerProfileDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerProfileDataModel.m; sourceTree = "<group>"; };
 		B58F29EB1D268FD300B307CA /* KPIRankingViewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPIRankingViewPresenter.h; sourceTree = "<group>"; };
 		B58F29EC1D268FD300B307CA /* KPIRankingViewPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPIRankingViewPresenter.m; sourceTree = "<group>"; };
 		B58F29EE1D268FFB00B307CA /* KPIRankingViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPIRankingViewProtocol.h; sourceTree = "<group>"; };
@@ -745,6 +748,15 @@
 			path = AnnouncementDataModel;
 			sourceTree = "<group>";
 		};
+		B56A9A3D1D2BE9530073C315 /* PeerProfileDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				B56A9A3E1D2BE96F0073C315 /* PeerProfileDataModel.h */,
+				B56A9A3F1D2BE96F0073C315 /* PeerProfileDataModel.m */,
+			);
+			path = PeerProfileDataModel;
+			sourceTree = "<group>";
+		};
 		B5B04ED51D23F55D002BAC9F /* PeerRankingDataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -803,6 +815,7 @@
 		EA8497841D0B70630034B44F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B56A9A3D1D2BE9530073C315 /* PeerProfileDataModel */,
 				B565B4421D2A9BED00191CBD /* AnnouncementDataModel */,
 				84272A461D258424000EEB1C /* WorkProfileDataModel.h */,
 				84272A471D258424000EEB1C /* WorkProfileDataModel.m */,
@@ -1067,6 +1080,7 @@
 				847E5E431D22E6FB006B9854 /* CommentItemModel.m in Sources */,
 				84272A2B1D257951000EEB1C /* ProfilePageCustomCell.m in Sources */,
 				B5B26EF11D2A526800457362 /* AnnouncementsViewController.m in Sources */,
+				B56A9A401D2BE96F0073C315 /* PeerProfileDataModel.m in Sources */,
 				84272A451D257A87000EEB1C /* SalesForceSOQL.m in Sources */,
 				847E5E201D22E6B7006B9854 /* CustomSideMenuOptions.m in Sources */,
 				84852EC21D240EAC00C4DE42 /* IncentivesProgressBarView.m in Sources */,

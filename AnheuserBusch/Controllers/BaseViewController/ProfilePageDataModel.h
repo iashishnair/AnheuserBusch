@@ -14,4 +14,6 @@
 @property (strong, nonatomic) NSString *imageName;
 @property (strong, nonatomic) NSArray *badgesArray;
 
+
+
 @end

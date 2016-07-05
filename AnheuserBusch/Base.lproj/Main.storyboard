@@ -239,7 +239,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCK-YD-xVW">
-                                        <rect key="frame" x="215" y="16" width="42" height="12"/>
+                                        <rect key="frame" x="215" y="16" width="38" height="12"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -250,21 +250,35 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11Q-1g-y7f">
+                                        <rect key="frame" x="256" y="0.0" width="16" height="28"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="11Q-1g-y7f" firstAttribute="centerX" secondItem="2UG-K9-z3j" secondAttribute="centerX" id="1RE-35-gAI"/>
                                     <constraint firstItem="2BU-8R-u8q" firstAttribute="leading" secondItem="aL1-K2-e2t" secondAttribute="leading" constant="25" id="5Ev-CT-YE7"/>
                                     <constraint firstItem="1nk-Jo-Vmu" firstAttribute="leading" secondItem="2BU-8R-u8q" secondAttribute="trailing" constant="8" id="6Ez-w0-ysP"/>
                                     <constraint firstItem="1nk-Jo-Vmu" firstAttribute="top" secondItem="2oT-el-AJI" secondAttribute="bottom" constant="8" id="ECx-qD-wCk"/>
+                                    <constraint firstItem="11Q-1g-y7f" firstAttribute="leading" secondItem="2UG-K9-z3j" secondAttribute="leading" id="ENG-xE-iux"/>
+                                    <constraint firstItem="11Q-1g-y7f" firstAttribute="width" secondItem="2UG-K9-z3j" secondAttribute="width" id="EmJ-Qk-xrp"/>
                                     <constraint firstItem="2BU-8R-u8q" firstAttribute="centerY" secondItem="aL1-K2-e2t" secondAttribute="centerY" constant="-6" id="Gk4-Av-K1X"/>
                                     <constraint firstAttribute="trailing" secondItem="2UG-K9-z3j" secondAttribute="trailing" constant="8" id="Osb-QX-T47"/>
                                     <constraint firstItem="2UG-K9-z3j" firstAttribute="leading" secondItem="DCK-YD-xVW" secondAttribute="trailing" constant="-1" id="TqC-pH-Bj7"/>
                                     <constraint firstItem="Syk-bG-rdX" firstAttribute="leading" secondItem="1nk-Jo-Vmu" secondAttribute="trailing" constant="1" id="XRm-Wj-OD7"/>
                                     <constraint firstItem="2UG-K9-z3j" firstAttribute="top" secondItem="aL1-K2-e2t" secondAttribute="top" id="Ysj-3A-Dk0"/>
                                     <constraint firstAttribute="height" constant="128" id="cmK-we-tXE"/>
+                                    <constraint firstItem="11Q-1g-y7f" firstAttribute="top" secondItem="2UG-K9-z3j" secondAttribute="top" id="dah-C2-9aN"/>
                                     <constraint firstItem="2oT-el-AJI" firstAttribute="leading" secondItem="2BU-8R-u8q" secondAttribute="trailing" constant="8" id="dgy-XX-rQs"/>
+                                    <constraint firstItem="11Q-1g-y7f" firstAttribute="trailing" secondItem="2UG-K9-z3j" secondAttribute="trailing" id="fEs-HR-exs"/>
+                                    <constraint firstItem="11Q-1g-y7f" firstAttribute="height" secondItem="2UG-K9-z3j" secondAttribute="height" id="kbu-mG-Lr0"/>
                                     <constraint firstItem="DCK-YD-xVW" firstAttribute="baseline" secondItem="2UG-K9-z3j" secondAttribute="baseline" constant="-4" id="lhW-GP-uYH"/>
+                                    <constraint firstItem="11Q-1g-y7f" firstAttribute="bottom" secondItem="2UG-K9-z3j" secondAttribute="bottom" id="p9E-lv-fyb"/>
                                     <constraint firstItem="2BU-8R-u8q" firstAttribute="centerX" secondItem="aL1-K2-e2t" secondAttribute="centerX" id="pzO-pj-ct0"/>
+                                    <constraint firstItem="11Q-1g-y7f" firstAttribute="centerY" secondItem="2UG-K9-z3j" secondAttribute="centerY" id="rd2-xO-jyF"/>
                                     <constraint firstItem="1nk-Jo-Vmu" firstAttribute="bottom" secondItem="Syk-bG-rdX" secondAttribute="bottom" id="wXM-6r-Pbs"/>
                                 </constraints>
                                 <variation key="default">
@@ -290,6 +304,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="kPIDetailsView" destination="9Xp-vK-Km0" id="whg-7i-hXI"/>
+                        <outlet property="points" destination="1nk-Jo-Vmu" id="kOd-Gf-W1q"/>
+                        <outlet property="rank" destination="11Q-1g-y7f" id="xjy-Zh-s8Y"/>
+                        <outlet property="userName" destination="2oT-el-AJI" id="2II-xU-t0c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="At4-6S-ZA3" userLabel="First Responder" sceneMemberID="firstResponder"/>

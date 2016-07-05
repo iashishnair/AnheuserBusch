@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PeerRankingDataModel.h"
 
 @interface PeerProfileViewController : UIViewController
+
+@property (strong, nonatomic) PeerRankingDataModel *peerDataModel;
 
 @end
