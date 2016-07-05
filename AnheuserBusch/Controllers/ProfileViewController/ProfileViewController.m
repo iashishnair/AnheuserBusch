@@ -12,6 +12,7 @@
 #import "ProfileViewPresenter.h"
 #import "PeerRankingDetailViewController.h"
 #import "KPIRankingViewController.h"
+#import "ProfilePageDataModel.h"
 
 @interface ProfileViewController () <ProfilePageCustomCellDelegate>
 
@@ -19,6 +20,8 @@
 
 @property (strong, nonatomic) NSMutableArray *incentiveDetailsDataSource;
 @property (strong, nonatomic) id <ProfileViewProtocol> presenter;
+@property (strong, nonatomic) ProfilePageDataModel *profileDataModel;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 
 
 @end
@@ -29,9 +32,17 @@
     
     [super  viewDidLoad];
     self.incentiveDetailsDataSource = [self.presenter incentiveDataSourcePopulate];
+    self.profileDataModel = [self.presenter profileInfoPopulate];
     self.title = MenuItems[0];
+    [self configureUI];
     
+}
+
+#pragma mark- private methods
+
+-(void)configureUI {
     self.headingLabel.text = @"My Incentives";
+    self.userNameLabel.text = self.profileDataModel.userName;
 }
 
 

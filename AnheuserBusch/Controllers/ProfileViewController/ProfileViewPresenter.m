@@ -27,4 +27,12 @@
     return resultsArray;
 }
 
+-(ProfilePageDataModel *)profileInfoPopulate {
+    
+    ProfilePageDataModel *dataModel = [ProfilePageDataModel new];
+    dataModel.userName = @"Jack Peterson";
+    
+    return dataModel;
+}
+
 @end

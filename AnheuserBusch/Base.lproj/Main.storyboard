@@ -319,7 +319,7 @@
                                             <constraint firstAttribute="width" constant="85" id="wAv-ew-0He"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gh-cJ-Ddd">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Gh-cJ-Ddd">
                                         <rect key="frame" x="130" y="49" width="226" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="DeN-Vf-BAo"/>
@@ -609,6 +609,7 @@
                     <connections>
                         <outlet property="headingLabel" destination="KXt-hE-WHe" id="pR3-zn-CnA"/>
                         <outlet property="incentiveTableView" destination="Fi5-jD-eJg" id="1ma-Pk-B1f"/>
+                        <outlet property="userNameLabel" destination="2Gh-cJ-Ddd" id="g31-ug-SHz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Q3-kC-b1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -627,7 +628,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjS-Q2-765">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjS-Q2-765">
                                 <rect key="frame" x="16" y="25" width="288" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>

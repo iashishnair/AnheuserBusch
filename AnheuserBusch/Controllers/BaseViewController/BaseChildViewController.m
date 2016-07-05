@@ -7,6 +7,7 @@
 //
 
 #import "BaseChildViewController.h"
+#import "AnnouncementsViewController.h"
 
 @interface BaseChildViewController ()
 
@@ -38,6 +39,11 @@
 
 - (void)clickedNotificationButton {
 	
+    AnnouncementsViewController *announcementsViewController = (AnnouncementsViewController *)[UIViewController instantiateViewControllerWithIdentifier:kStoryBoardIDAnnouncementsViewController];
+    
+    
+    [self.navigationController pushViewController:announcementsViewController animated:YES];
+
 	
 }
 
