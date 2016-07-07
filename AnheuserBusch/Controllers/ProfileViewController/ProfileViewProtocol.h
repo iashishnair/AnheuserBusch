@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "IncentiveDataModel.h"
+#import "ProfilePageDataModel.h"
 
 @protocol ProfileViewProtocol <NSObject>
 
 -(NSMutableArray *)incentiveDataSourcePopulate;
+-(ProfilePageDataModel *)profileInfoPopulate;
 
 
 

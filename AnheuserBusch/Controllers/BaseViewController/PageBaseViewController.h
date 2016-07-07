@@ -15,5 +15,6 @@
 @property (nonatomic, assign) BOOL showMenuButton;
 @property (nonatomic, assign) BOOL showBackButton;
 
+-(NSMutableArray *)announcementDataSourcePopulate;
 
 @end

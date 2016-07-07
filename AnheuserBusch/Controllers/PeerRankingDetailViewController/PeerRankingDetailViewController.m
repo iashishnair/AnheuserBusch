@@ -93,6 +93,12 @@
 {
     //Initialize new viewController
      PeerProfileViewController *peerProfileViewController = (PeerProfileViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"PeerProfileViewController"];
+    
+    
+    PeerRankingDataModel *peerRankingDataModel = [self.peerRankingDetailsDataSource objectAtIndex:indexPath.row];
+    peerProfileViewController.peerDataModel = peerRankingDataModel;
+    
+    
        //Push new view to navigationController stack
     [self.navigationController pushViewController:peerProfileViewController animated:YES];
 }

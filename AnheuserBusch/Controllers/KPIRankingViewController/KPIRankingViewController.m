@@ -55,8 +55,8 @@
     
     CGRect rect = _pageViewControllerContainerView.bounds;
     self.customPageManagerViewController.view.frame = rect;
+       //[self addConstrains];
     
-    //    [self addConstrains];
     
     [self.customPageManagerViewController reloadData];
 }

@@ -12,12 +12,15 @@
 #import "ProfileViewPresenter.h"
 #import "PeerRankingDetailViewController.h"
 #import "KPIRankingViewController.h"
+#import "ProfilePageDataModel.h"
 
 @interface ProfileViewController () <ProfilePageCustomCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *headingLabel;
 @property (strong, nonatomic) NSArray *incentiveDetailsDataSource;
 @property (strong, nonatomic) id <ProfileViewProtocol> presenter;
+@property (strong, nonatomic) ProfilePageDataModel *profileDataModel;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 
 
 @end
@@ -30,9 +33,20 @@
 -(void)viewDidLoad {
     
     [super  viewDidLoad];
+    self.incentiveDetailsDataSource = [self.presenter incentiveDataSourcePopulate];
+    self.profileDataModel = [self.presenter profileInfoPopulate];
+    self.title = MenuItems[0];
+    [self configureUI];
+    
+}
+
+#pragma mark- private methods
+
+-(void)configureUI {
   
     self.title = MenuItems[0];
     self.headingLabel.text = @"My Incentives";
+    self.userNameLabel.text = self.profileDataModel.userName;
 }
 
 -(void)dealloc {
@@ -95,6 +109,7 @@
     return cell;
 }
 
+#pragma mark - IBAction
 
 #pragma mark ProfilePageCustomCellDelegate
 

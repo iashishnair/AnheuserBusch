@@ -54,6 +54,14 @@
     return resultsArray;
 }
 
+-(ProfilePageDataModel *)profileInfoPopulate {
+    
+    ProfilePageDataModel *dataModel = [ProfilePageDataModel new];
+    dataModel.userName = @"Jack Peterson";
+    
+    return dataModel;
+}
+
 - (NSMutableArray *)populateKIPS:(NSArray *) kpiDetails {
     
     NSMutableArray *kpis = [NSMutableArray array];
@@ -68,8 +76,6 @@
         kpisDetailsDataModel.progressUnit = [kip valueForKeySafe:@"progressunit"];
         [kpis addObject:kpisDetailsDataModel];
     }
-    
     return kpis;
-    
 }
 @end

@@ -12,6 +12,9 @@
 
 @interface PeerProfileViewController()
 @property (weak, nonatomic) IBOutlet UIView *kPIDetailsView;
+@property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (weak, nonatomic) IBOutlet UILabel *points;
+@property (weak, nonatomic) IBOutlet UILabel *rank;
 
 
 
@@ -24,12 +27,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    KPIRankingViewController *kPIRankingViewController=(KPIRankingViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"KPIRankingViewController"];
-
-    kPIRankingViewController.view.frame = self.kPIDetailsView.bounds;
-    [self.kPIDetailsView addSubview:kPIRankingViewController.view];
-    [self addChildViewController:kPIRankingViewController];
-    [kPIRankingViewController didMoveToParentViewController:self];  }
+   // self.peerDataModel =
+    
+    [self configureUI];
+   
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -39,5 +41,20 @@
 - (void)dealloc {
     
     }
+
+-(void)configureUI {
+    
+    self.userName.text = self.peerDataModel.userName;
+    self.points.text = self.peerDataModel.incentivePoints;
+    self.rank.text = self.peerDataModel.userRank;
+    
+    KPIRankingViewController *kPIRankingViewController=(KPIRankingViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"KPIRankingViewController"];
+    
+    kPIRankingViewController.view.frame = self.kPIDetailsView.bounds;
+    [self.kPIDetailsView addSubview:kPIRankingViewController.view];
+    [self addChildViewController:kPIRankingViewController];
+    [kPIRankingViewController didMoveToParentViewController:self];
+    
+}
 
 @end
