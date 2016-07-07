@@ -48,7 +48,7 @@
 -(void)configureUI {
   
     //self.view =
-    self.headingLabel.font = PROFILE_INCENTIVE_TITLE_FONT;
+    self.headingLabel.font = PROFILE_INCENTIVE_TABLE_HEADING_FONT;
     self.title = MenuItems[0];
     self.headingLabel.text = @"My Incentives";
     self.userNameLabel.text = self.profileDataModel.userName;

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-# define PROFILE_INCENTIVE_TITLE_FONT [UIFont systemFontOfSize:28.0f]
+# define PROFILE_INCENTIVE_TABLE_HEADING_FONT [UIFont systemFontOfSize:28.0f]
+# define PROFILE_USER_NAME_FONT [UIFont systemFontOfSize:17.0f]
 
 
 @interface UIView (Common)

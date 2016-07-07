@@ -572,10 +572,10 @@
                                         <connections>
                                             <outlet property="IncentiveLogo" destination="FOb-65-Nhg" id="b71-Z6-hcp"/>
                                             <outlet property="IncentiveName" destination="LXL-DO-VJO" id="Yo9-nu-XbH"/>
-                                            <outlet property="KPIDetailsButton" destination="atl-UE-aqq" id="NWq-R9-yQn"/>
-                                            <outlet property="PeerRankingButton" destination="SXK-Z4-xGp" id="SwI-8l-ihl"/>
                                             <outlet property="RankImage" destination="W28-EW-JgP" id="ErP-5j-7qI"/>
                                             <outlet property="chartView" destination="mIK-jq-y4Z" id="fuQ-xU-SwG"/>
+                                            <outlet property="kPIDetailsButton" destination="atl-UE-aqq" id="kJP-EO-V80"/>
+                                            <outlet property="peerRankingButton" destination="SXK-Z4-xGp" id="2JO-6k-hF5"/>
                                             <outlet property="rankNumber" destination="Z3Q-5J-nyK" id="cMZ-qy-KUe"/>
                                             <outlet property="statusTitleLabel" destination="1Kr-z8-Lmx" id="828-f1-jCK"/>
                                         </connections>
