@@ -49,8 +49,6 @@
     
     _index = index;
     
-    
-    
     [[self.peerRankingButton layer] setBorderWidth:1.5f];
     self.peerRankingButton.layer.borderColor = [UIColor defaultThemeBlueColor].CGColor ;
     self.peerRankingButton.backgroundColor = [UIColor whiteColor];
@@ -94,18 +92,15 @@
     }
     
     if(self.chartView) {
-        self.chartView.backgroundColor = [UIColor yellowColor];
-        
         self.incentivesProgressBarView.barBackGroundColor = [UIColor brownColor];
         self.incentivesProgressBarView.progressColor = [UIColor greenColor];
         self.incentivesProgressBarView.minRange = self.incentiveDataModel.minIncentiveRange;
         self.incentivesProgressBarView.maxRange = self.incentiveDataModel.maxIncentiveRange;
         self.incentivesProgressBarView.progressAmount = self.incentiveDataModel.overAllIncentiveProgress;
-        self.incentivesProgressBarView.unitName = @"point  ";
+        self.incentivesProgressBarView.unitName = @"points";
         self.incentivesProgressBarView.descriptionText = @"Way to Go";
         self.incentivesProgressBarView.unitTextFont = [UIFont boldSystemFontOfSize:12];
         self.incentivesProgressBarView.descriptionTextColor = [UIColor blackColor];
-        
         self.incentivesProgressBarView.descriptionTextFont = [UIFont systemFontOfSize:10];
         self.incentivesProgressBarView.descriptionTextColor = [UIColor blackColor];
 

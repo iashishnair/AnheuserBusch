@@ -44,14 +44,14 @@
 }
 
 
-+ (UIColor *)defaultIncentiveRedColor {
++ (UIColor *)incentiveExceededColor {
     
     
     return [UIColor redColor];
 
 }
 
-+ (UIColor *)defaultIncentiveGreenColor {
++ (UIColor *)incentiveMinimumColor {
     
     
     return [UIColor greenColor];
@@ -64,6 +64,7 @@
     return [UIColor orangeColor];
     
 }
+
 
 @end
 

@@ -11,6 +11,7 @@
 #import "NSLayoutConstraint+LayoutConstraintHelper.h"
 
 #define BAR_CORNER_RADIUS 7.0f
+#define ANNOTATION_IMAGE_VIEW_WIDTH 10.0
 
 @interface IncentivesProgressBarView  ()
 
@@ -140,10 +141,11 @@
                             
                             };
     
+    NSDictionary *metrics = @{@"annotationImageViewWidth": @(ANNOTATION_IMAGE_VIEW_WIDTH)};
     
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[descriptionTextLabel]" options:0 metrics:nil views:dict]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[unitTextLabel]" options:0 metrics:nil views:dict]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[annotationImageView(10)]" options:0 metrics:nil views:dict]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[annotationImageView(annotationImageViewWidth)]" options:0 metrics:metrics views:dict]];
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[annotationImageView(20)]" options:0 metrics:nil views:dict]];
 
     
@@ -168,24 +170,22 @@
     _progressBarViewWidthConstraint = [NSLayoutConstraint width:self.progressBarView toItem:self.barBackgroundView multiplier:0 constant:0];
     [self addConstraint:_progressBarViewWidthConstraint];
     
-//    //------- unitTextLabel and descriptionTextLabel
-//    _unitTextLabelWidthConstraint = [NSLayoutConstraint width:self.unitTextLabel toItem:self.barBackgroundView multiplier:0 constant:0];
-//    [self addConstraint:_unitTextLabelWidthConstraint];
-    
-    // annotationImageView
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.unitTextLabel attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.progressBarView attribute:NSLayoutAttributeRight multiplier:1 constant:0]];
-    
-  
     // horizontallyCenter descriptionTextLabel and unitTextLabel
     [self addConstraint:[NSLayoutConstraint horizontallyCenter:self.descriptionTextLabel  toItem:self.unitTextLabel]];
-    
     // Same Width descriptionTextLabel and unitTextLabel
     [self addConstraint:[NSLayoutConstraint width:self.descriptionTextLabel toItem:self.unitTextLabel multiplier:1 constant:0]];
+    
+    
+    // annotationImageView
+//    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.unitTextLabel attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.progressBarView attribute:NSLayoutAttributeRight multiplier:1 constant:0]];
+    
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.unitTextLabel attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.progressBarView attribute:NSLayoutAttributeWidth multiplier:1 constant:-(ANNOTATION_IMAGE_VIEW_WIDTH +2)]];
+
     
     // annotationImageView
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.annotationImageView attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.progressBarView attribute:NSLayoutAttributeRight multiplier:1 constant:0]];
     
-//    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.annotationImageView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.progressBarView attribute:NSLayoutAttributeTop multiplier:1 constant:-2]];
+ [self addConstraint:[NSLayoutConstraint constraintWithItem:self.annotationImageView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.progressBarView attribute:NSLayoutAttributeTop multiplier:1 constant:-2]];
     
     
     
@@ -273,6 +273,8 @@
     _progressBarViewWidthConstraint = [NSLayoutConstraint width:self.progressBarView toItem:self.barBackgroundView multiplier:multiplier constant:0];
     [self addConstraint:_progressBarViewWidthConstraint];
     
+    
+    
   
     [self setNeedsUpdateConstraints];
     
@@ -297,6 +299,15 @@
     _unitTextLabel.text = unitNameTemp;
     
     
+}
+
+
+- (UIColor *)progressColor:(CGFloat)multiplier {
+    
+    if(multiplier > 0.8) {
+        
+        return [UIColor ]
+    }
 }
 
 #pragma mark - Public Method

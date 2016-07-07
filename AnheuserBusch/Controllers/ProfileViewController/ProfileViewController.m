@@ -46,7 +46,7 @@
 #pragma mark- private methods
 
 -(void)configureUI {
-  
+    
     self.incentiveTableView.backgroundColor = [UIColor defaultPageBGColor];
     self.headingLabel.font = PROFILE_INCENTIVE_TABLE_HEADING_FONT;
     self.title = MenuItems[0];
@@ -112,7 +112,7 @@
     static NSString *cellIdentifier = @"myCell";
     
     ProfilePageCustomCell *cell = (ProfilePageCustomCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-   
+    
     if (cell == nil) {
         
         cell = [[ProfilePageCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
@@ -120,12 +120,12 @@
     
     cell.delegate = self;
     
-        IncentiveDataModel *incentiveDataModel = (IncentiveDataModel *) [NSArray objectFromArray:self.incentiveDetailsDataSource atIndex:indexPath.section];
+    IncentiveDataModel *incentiveDataModel = (IncentiveDataModel *) [NSArray objectFromArray:self.incentiveDetailsDataSource atIndex:indexPath.section];
+    
+    if(incentiveDataModel) {
         
-        if(incentiveDataModel) {
-            
-            [cell updateCell:incentiveDataModel atIndex:indexPath.section];
-        }
+        [cell updateCell:incentiveDataModel atIndex:indexPath.section];
+    }
     
     UIView *view = [[UIView alloc]initWithFrame:cell.bounds];
     view.backgroundColor = [UIColor whiteColor];
@@ -155,7 +155,7 @@
     IncentiveDataModel *incentiveDataModel = [NSArray objectFromArray:self.incentiveDetailsDataSource atIndex:index];
     
     if(incentiveDataModel) {
-       
+        
         KPIRankingViewController *kPIRankingViewController = (KPIRankingViewController *)[UIViewController instantiateViewControllerWithIdentifier:kStoryBoardIDKPIRankingViewController];
         kPIRankingViewController.incentiveDataModel = incentiveDataModel;
         
