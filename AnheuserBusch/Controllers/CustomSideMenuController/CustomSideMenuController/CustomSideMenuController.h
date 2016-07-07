@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "CustomSideMenuOptions.h"
-@class MenuListViewController;
 /** View controller that allow  */
 @interface CustomSideMenuController : UIViewController
 
 /** View controller showed as menu view @see changeMenuViewController:closeMenu: */
-@property (nonatomic, strong, readonly) MenuListViewController *menuViewController;
+@property (nonatomic, strong, readonly) UIViewController *menuViewController;
 
 /** View controller showed as content view @see changeContentViewController:closeMenu: */
 @property (nonatomic, strong, readonly) UIViewController *contentViewController;

@@ -109,6 +109,6 @@
 
 @interface UIImageView (UIComponentUtility)
 
-- (void)imageWithURLString:(NSString *)imageURLString;
+- (void)imageWithURLString:(nullable NSString *)imageURLString;
 
 @end

@@ -15,7 +15,6 @@
 #import "OnBoardingViewController.h"
 #import "LoginViewController.h"
 #import "ProfileViewController.h"
-#import "CustomNavigationController.h"
 
 @interface AppDelegate () <MenuListViewControllerDelegate>
 {
@@ -172,7 +171,7 @@
 	
 	OnBoardingViewController * onBoardingViewController = (OnBoardingViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"OnBoardingViewController"];
 	
-	CustomNavigationController *rootViewController = [[CustomNavigationController alloc] initWithRootViewController:onBoardingViewController];
+	UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:onBoardingViewController];
 	
 	self.window.rootViewController = rootViewController;
 }
@@ -180,7 +179,7 @@
 	
 	LoginViewController * loginViewController = (LoginViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"LoginViewController"];
 	
-	CustomNavigationController *rootViewController = [[CustomNavigationController alloc] initWithRootViewController:loginViewController];
+	UINavigationController *rootViewController = [[UINavigationController alloc] initWithRootViewController:loginViewController];
 	
 	self.window.rootViewController = rootViewController;
 }
@@ -402,7 +401,7 @@
 
 -(void)loadController:(UIViewController *)controller {
 	
-	CustomNavigationController *navigationController = [[CustomNavigationController alloc] initWithRootViewController:controller];
+	UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
 	
 	[[customSideMenuController sideMenuController] changeContentViewController:navigationController closeMenu:NO];
 }

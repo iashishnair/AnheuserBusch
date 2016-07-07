@@ -1,5 +1,5 @@
 //
-//  InternalViewController.h
+//  OnBoardingInternalPageViewController.h
 //  ABIPOC
 //
 //  Created by Prsenjit Goswami on 6/10/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InternalViewController : UIViewController
+@interface OnBoardingInternalPageViewController : UIViewController
 
 @property (assign,nonatomic) NSUInteger pageIndex;
 @property (strong,nonatomic) NSString *titleText;

@@ -23,8 +23,8 @@ typedef struct {
 
 @interface CustomSideMenuController () <UIGestureRecognizerDelegate>
 
-@property (nonatomic, strong) MenuListViewController *menuViewController;
-@property (nonatomic, strong) UIViewController *contentViewController;
+@property (strong, nonatomic) UIViewController *menuViewController;
+@property (strong, nonatomic) UIViewController *contentViewController;
 @property (strong, nonatomic) UIView *contentContainerView;
 @property (strong, nonatomic) UIView *menuContainerView;
 @property (strong, nonatomic) UIView *opacityView;
@@ -53,7 +53,7 @@ typedef struct {
 					  contentViewController:contentViewController
 									options:[[CustomSideMenuOptions alloc] init]];
 }
-
+	//MenuListViewController
 - (id)initWithMenuViewController:(UIViewController *)menuViewController
 		   contentViewController:(UIViewController *)contentViewController
 						 options:(CustomSideMenuOptions *)options {
@@ -76,8 +76,6 @@ typedef struct {
 	[self setUpContentViewController:_contentViewController];
 	
 	[self addGestures];
-    
- 
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -99,7 +97,7 @@ typedef struct {
     }
 }
 
-- (NSUInteger)supportedInterfaceOrientations {
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     if (self.contentViewController) {
         return [self.contentViewController supportedInterfaceOrientations];
     } else {
@@ -190,8 +188,11 @@ typedef struct {
 	
 	[self openMenuWithVelocity:0.0f];
     
-    
-    [_menuViewController reloadMenuList];
+	if([_menuViewController isKindOfClass:[MenuListViewController class]]) {
+		
+		MenuListViewController *vc = (MenuListViewController *)_menuViewController;
+		[vc reloadMenuList];
+	}
 }
 
 - (void)toggleMenu {

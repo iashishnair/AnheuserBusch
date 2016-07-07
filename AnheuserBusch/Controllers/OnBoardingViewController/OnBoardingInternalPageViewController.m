@@ -1,15 +1,15 @@
 //
-//  InternalViewController.m
+//  OnBoardingInternalPageViewController.m
 //  ABIPOC
 //
 //  Created by Prsenjit Goswami on 6/10/16.
 //  Copyright © 2016 Manu's Sena's. All rights reserved.
 //
 
-#import "InternalViewController.h"
+#import "OnBoardingInternalPageViewController.h"
 #import "Constants.h"
 
-@interface InternalViewController ()
+@interface OnBoardingInternalPageViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *screenName;
 @property (weak, nonatomic) IBOutlet UIImageView *screenImage;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation InternalViewController
+@implementation OnBoardingInternalPageViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
