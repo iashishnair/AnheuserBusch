@@ -143,7 +143,7 @@
     
 }
 
-+(nullable UIButton *)customButtonWithBackgroungImage:(nullable UIImage *)backgroundImage
++(UIButton *)customButtonWithBackgroungImage:(nullable UIImage *)backgroundImage
                                       backgroungColor:(nullable UIColor *)backgroungColor
                                                   tag:(NSInteger)tag
                                             addTarget:(nullable id)target
@@ -172,7 +172,7 @@
     
 }
 
-+(nullable UIButton *)customButtonWithBackgroungImage:(nullable UIImage *)backgroundImage
++ (UIButton *)customButtonWithBackgroungImage:(nullable UIImage *)backgroundImage
                                       backgroungColor:(nullable UIColor *)backgroungColor
                                          cornerRadius:(CGFloat)cornerRadius
                                       borderLineWidth:(CGFloat)borderLineWidth
@@ -365,16 +365,31 @@
     
     if(textColor)
         label.textColor = textColor;
-    
-    if(label.translatesAutoresizingMaskIntoConstraints)
-        label.autoresizingMask =  UIViewAutoresizingFlexibleWidth;
-    
+	
+	
+	label.translatesAutoresizingMaskIntoConstraints = NO;
+	
+//	if(label.translatesAutoresizingMaskIntoConstraints)
+//        label.autoresizingMask =  UIViewAutoresizingFlexibleWidth;
+	
     return label;
 }
 
 @end
 
 @implementation UIImageView (UIComponentUtility)
+
++ (UIImageView *)initWithImage:(UIImage *)image {
+	
+	UIImageView *imageView = [UIImageView new];
+	imageView.translatesAutoresizingMaskIntoConstraints = NO;
+
+	if(image)
+		imageView.image = image;
+	
+	return imageView;
+}
+
 
 - (void)imageWithURLString:(NSString *)imageURLString {
     
@@ -406,5 +421,25 @@
     return result;
 }
 
+
+@end
+
+@implementation UITableView (UIComponentUtility)
+
++ (UITableView *)plainTableView {
+	
+	UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
+	tableView.translatesAutoresizingMaskIntoConstraints = NO;
+	
+	return tableView;
+}
+
++ (UITableView *)groupedTableView {
+	
+	UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+	tableView.translatesAutoresizingMaskIntoConstraints = NO;
+	
+	return tableView;
+}
 
 @end

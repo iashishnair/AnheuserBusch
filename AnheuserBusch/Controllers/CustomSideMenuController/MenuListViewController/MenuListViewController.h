@@ -15,10 +15,9 @@
 @end
 
 @interface MenuListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet UIImageView *userImageView;
-@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
-@property (nonatomic, strong)  NSDictionary *userInfoDict;
-@property(nonatomic, weak) id <MenuListViewControllerDelegate> delegate;
+
+@property (strong, nonatomic)  NSDictionary *userInfoDict;
+@property (strong, nonatomic) id <MenuListViewControllerDelegate> delegate;
 
 -(void)reloadMenuList;
 @end

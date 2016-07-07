@@ -12,17 +12,22 @@
 
 @end
 
+@interface UITableView (UIComponentUtility)
++ (nonnull UITableView *)plainTableView;
++ (nonnull UITableView *)groupedTableView;
+@end
+
 // MARK: -------------- UIButton -----------------
 
 @interface UIButton (UIComponentUtility)
 
-+(nullable UIButton *)customButtonWithImage:(nullable UIImage *)image
++(nonnull UIButton *)customButtonWithImage:(nullable UIImage *)image
                                         tag:(NSInteger)tag
                                   addTarget:(nullable id)target
                                      action:(nullable SEL)action
                            forControlEvents:(UIControlEvents)controlEvents;
 
-+(nullable UIButton *)customButtonWithImage:(nullable UIImage *)image
++(nonnull UIButton *)customButtonWithImage:(nullable UIImage *)image
                                cornerRadius:(CGFloat)cornerRadius
                             borderLineWidth:(CGFloat)borderLineWidth
                             borderLineColor:(nullable UIColor *)borderLineColor
@@ -32,7 +37,7 @@
                                      action:(nullable SEL)action
                            forControlEvents:(UIControlEvents)controlEvents;
 
-+(nullable UIButton *)customButtonWithTitle:(nullable NSString *)title
++(nonnull UIButton *)customButtonWithTitle:(nullable NSString *)title
                                  titleColor:(nullable UIColor *)titleColour
                                   titleFont:(nullable UIFont *)titleFont
                             backgroungImage:(nullable UIImage *)backgroundImage
@@ -41,7 +46,7 @@
                                      action:(nullable SEL)action
                            forControlEvents:(UIControlEvents)controlEvents;
 
-+(nullable UIButton *)customButtonWithTitle:(nullable NSString *)title
++(nonnull UIButton *)customButtonWithTitle:(nullable NSString *)title
                                  titleColor:(nullable UIColor *)titleColour
                                   titleFont:(nullable UIFont *)titleFont
                             backgroungImage:(nullable UIImage *)backgroundImage
@@ -53,7 +58,7 @@
                                      action:(nullable SEL)action
                            forControlEvents:(UIControlEvents)controlEvents;
 
-+(nullable UIButton *)customButtonWithTitle:(nullable NSString *)title
++(nonnull UIButton *)customButtonWithTitle:(nullable NSString *)title
                                  titleColor:(nullable UIColor *)titleColour
                                   titleFont:(nullable UIFont *)titleFont
                             backgroungColor:(nullable UIColor *)backgroungColor
@@ -62,7 +67,7 @@
                                      action:(nullable SEL)action
                            forControlEvents:(UIControlEvents)controlEvents;
 
-+(nullable UIButton *)customButtonWithTitle:(nullable NSString *)title
++(nonnull UIButton *)customButtonWithTitle:(nullable NSString *)title
                                  titleColor:(nullable UIColor *)titleColour
                                   titleFont:(nullable UIFont *)titleFont
                             backgroungColor:(nullable UIColor *)backgroungColor
@@ -75,7 +80,7 @@
                            forControlEvents:(UIControlEvents)controlEvents;
 ;
 
-+(nullable UIButton *)customButtonWithBackgroungImage:(nullable UIImage *)backgroundImage
++(nonnull UIButton *)customButtonWithBackgroungImage:(nullable UIImage *)backgroundImage
                                       backgroungColor:(nullable UIColor *)backgroungColor
                                                   tag:(NSInteger)tag
                                             addTarget:(nullable id)target
@@ -83,7 +88,7 @@
                                      forControlEvents:(UIControlEvents)controlEvents;
 
 
-+(nullable UIButton *)customButtonWithBackgroungImage:(nullable UIImage *)backgroundImage
++(nonnull UIButton *)customButtonWithBackgroungImage:(nullable UIImage *)backgroundImage
                                       backgroungColor:(nullable UIColor *)backgroungColor
                                          cornerRadius:(CGFloat)cornerRadius
                                       borderLineWidth:(CGFloat)borderLineWidth
@@ -108,6 +113,8 @@
 
 
 @interface UIImageView (UIComponentUtility)
+
++ (nonnull UIImageView *)initWithImage:(nullable UIImage *)image ;
 
 - (void)imageWithURLString:(nullable NSString *)imageURLString;
 

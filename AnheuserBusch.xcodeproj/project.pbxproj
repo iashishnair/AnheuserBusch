@@ -55,9 +55,7 @@
 		EA7BFFE91D2EE80C004F841F /* CustomSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF611D2EE80C004F841F /* CustomSideMenuController.m */; };
 		EA7BFFEA1D2EE80C004F841F /* CustomSideMenuOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF631D2EE80C004F841F /* CustomSideMenuOptions.m */; };
 		EA7BFFEB1D2EE80C004F841F /* MenuListTableViewListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF671D2EE80C004F841F /* MenuListTableViewListCell.m */; };
-		EA7BFFEC1D2EE80C004F841F /* MenuListTableViewListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA7BFF681D2EE80C004F841F /* MenuListTableViewListCell.xib */; };
 		EA7BFFED1D2EE80C004F841F /* MenuListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF6A1D2EE80C004F841F /* MenuListViewController.m */; };
-		EA7BFFEE1D2EE80C004F841F /* MenuListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA7BFF6B1D2EE80C004F841F /* MenuListViewController.xib */; };
 		EA7BFFEF1D2EE80C004F841F /* KPIRankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF6E1D2EE80C004F841F /* KPIRankingViewController.m */; };
 		EA7BFFF01D2EE80C004F841F /* KPIRankingViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF701D2EE80C004F841F /* KPIRankingViewPresenter.m */; };
 		EA7BFFF11D2EE80C004F841F /* KPIRankingViewProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF721D2EE80C004F841F /* KPIRankingViewProtocol.m */; };
@@ -149,10 +147,8 @@
 		EA7BFF631D2EE80C004F841F /* CustomSideMenuOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSideMenuOptions.m; sourceTree = "<group>"; };
 		EA7BFF661D2EE80C004F841F /* MenuListTableViewListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuListTableViewListCell.h; sourceTree = "<group>"; };
 		EA7BFF671D2EE80C004F841F /* MenuListTableViewListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuListTableViewListCell.m; sourceTree = "<group>"; };
-		EA7BFF681D2EE80C004F841F /* MenuListTableViewListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuListTableViewListCell.xib; sourceTree = "<group>"; };
 		EA7BFF691D2EE80C004F841F /* MenuListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuListViewController.h; sourceTree = "<group>"; };
 		EA7BFF6A1D2EE80C004F841F /* MenuListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuListViewController.m; sourceTree = "<group>"; };
-		EA7BFF6B1D2EE80C004F841F /* MenuListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuListViewController.xib; sourceTree = "<group>"; };
 		EA7BFF6D1D2EE80C004F841F /* KPIRankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPIRankingViewController.h; sourceTree = "<group>"; };
 		EA7BFF6E1D2EE80C004F841F /* KPIRankingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KPIRankingViewController.m; sourceTree = "<group>"; };
 		EA7BFF6F1D2EE80C004F841F /* KPIRankingViewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KPIRankingViewPresenter.h; sourceTree = "<group>"; };
@@ -493,7 +489,6 @@
 				EA7BFF651D2EE80C004F841F /* MenuListTableViewListCell */,
 				EA7BFF691D2EE80C004F841F /* MenuListViewController.h */,
 				EA7BFF6A1D2EE80C004F841F /* MenuListViewController.m */,
-				EA7BFF6B1D2EE80C004F841F /* MenuListViewController.xib */,
 			);
 			path = MenuListViewController;
 			sourceTree = "<group>";
@@ -503,7 +498,6 @@
 			children = (
 				EA7BFF661D2EE80C004F841F /* MenuListTableViewListCell.h */,
 				EA7BFF671D2EE80C004F841F /* MenuListTableViewListCell.m */,
-				EA7BFF681D2EE80C004F841F /* MenuListTableViewListCell.xib */,
 			);
 			path = MenuListTableViewListCell;
 			sourceTree = "<group>";
@@ -951,10 +945,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA7BFFEE1D2EE80C004F841F /* MenuListViewController.xib in Resources */,
 				8468C8E61D0AA58B00B30DCF /* LaunchScreen.storyboard in Resources */,
 				8468C8DE1D0AA58B00B30DCF /* Main.storyboard in Resources */,
-				EA7BFFEC1D2EE80C004F841F /* MenuListTableViewListCell.xib in Resources */,
 				EA7B000A1D2EE80C004F841F /* Assets.xcassets in Resources */,
 				EA7B000B1D2EE80C004F841F /* ProfileDemo.plist in Resources */,
 				EA7B000C1D2EE80C004F841F /* ProfileDemo.plist.zip in Resources */,
