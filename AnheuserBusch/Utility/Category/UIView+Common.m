@@ -22,7 +22,6 @@
 + (UIColor *) defaultPageBGColor {
 	
 	return [UIColor colorWithRed:236.0f/255.0f green:235.0f/255.0f blue:235.0f/255.0f alpha:1.0];
-    //return [UIColor clearColor];
 }
 
 
@@ -31,19 +30,12 @@
     
     return [UIColor colorWithRed:34.0/255.0f green:17.0/255.0f blue:0.0f/255.0f alpha:1.0];
 
-    // 192.185,169
-    
-    // 34, 17, 0
 }
 
 + (UIColor *)defaultSeparatorColor {
     
-    
     return [UIColor colorWithRed:192.0f/255.0f green:185.0/255.0f blue:169.0f/255.0f alpha:1.0];
-    
-    // 192.185,169
-    
-    // 34, 17, 0
+   
 }
 
 

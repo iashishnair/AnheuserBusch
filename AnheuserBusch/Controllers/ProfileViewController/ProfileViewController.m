@@ -88,9 +88,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.incentiveDetailsDataSource.count;
+    return 1;
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    
+    return  self.incentiveDetailsDataSource.count;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 10.0)];
+    headerView.backgroundColor = [UIColor clearColor];
+    return headerView;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *cellIdentifier = @"myCell";
@@ -104,12 +115,16 @@
     
     cell.delegate = self;
     
-        IncentiveDataModel *incentiveDataModel = (IncentiveDataModel *) [NSArray objectFromArray:self.incentiveDetailsDataSource atIndex:indexPath.row];
+        IncentiveDataModel *incentiveDataModel = (IncentiveDataModel *) [NSArray objectFromArray:self.incentiveDetailsDataSource atIndex:indexPath.section];
         
         if(incentiveDataModel) {
             
-            [cell updateCell:incentiveDataModel atIndex:indexPath.row];
+            [cell updateCell:incentiveDataModel atIndex:indexPath.section];
         }
+    
+    UIView *view = [[UIView alloc]initWithFrame:cell.bounds];
+    view.backgroundColor = [UIColor redColor];
+    cell.backgroundView = view;
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;

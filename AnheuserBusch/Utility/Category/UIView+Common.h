@@ -31,7 +31,7 @@
 
 + (UIFont *)defaultTextFont;
 + (UIFont *)userRankTextFont;
-+(UIFont *)badgeNumberTextFont;
++ (UIFont *)badgeNumberTextFont;
 
 
 @end
