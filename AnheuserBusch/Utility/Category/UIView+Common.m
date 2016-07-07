@@ -24,6 +24,11 @@
 	return [UIColor colorWithRed:236.0f/255.0f green:235.0f/255.0f blue:235.0f/255.0f alpha:1.0];
 }
 
++(UIColor *)defaultThemeBlueColor {
+    
+    return [UIColor colorWithRed:32.0f/255.0f green:114.0f/255.0f blue:183.0f/255.0f alpha:1.0];
+}
+
 
 + (UIColor *)defaultTextColor {
     
