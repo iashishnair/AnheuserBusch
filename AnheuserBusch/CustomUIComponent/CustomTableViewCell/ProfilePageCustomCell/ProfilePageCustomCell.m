@@ -103,10 +103,10 @@
         self.incentivesProgressBarView.progressAmount = self.incentiveDataModel.overAllIncentiveProgress;
         self.incentivesProgressBarView.unitName = @"point  ";
         self.incentivesProgressBarView.descriptionText = @"Way to Go";
-        self.incentivesProgressBarView.unitTextFont = [UIFont boldSystemFontOfSize:20];
+        self.incentivesProgressBarView.unitTextFont = [UIFont boldSystemFontOfSize:12];
         self.incentivesProgressBarView.descriptionTextColor = [UIColor blackColor];
         
-        self.incentivesProgressBarView.descriptionTextFont = [UIFont boldSystemFontOfSize:13];
+        self.incentivesProgressBarView.descriptionTextFont = [UIFont systemFontOfSize:10];
         self.incentivesProgressBarView.descriptionTextColor = [UIColor blackColor];
 
     }
