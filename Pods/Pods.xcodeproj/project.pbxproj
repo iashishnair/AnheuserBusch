@@ -2297,7 +2297,7 @@
 				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					FD8DF3F6775400F8419A926D0ECCA233 = {
-						DevelopmentTeam = H828M88P97;
+						DevelopmentTeam = 2H4679V59S;
 					};
 				};
 			};

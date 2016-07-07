@@ -302,13 +302,10 @@
 }
 
 
-- (UIColor *)progressColor:(CGFloat)multiplier {
-    
-    if(multiplier > 0.8) {
-        
-        return [UIColor ]
-    }
-}
+//- (UIColor *)progressColor:(CGFloat)multiplier {
+//    
+////	
+//}
 
 #pragma mark - Public Method
 

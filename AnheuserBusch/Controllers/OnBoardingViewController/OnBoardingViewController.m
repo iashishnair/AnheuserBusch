@@ -36,8 +36,7 @@
     [super viewDidLoad];
     
     self.navigationController.navigationBarHidden = YES;
-    [self setOnboardingIsShown];
-    
+	
     self.pageTitles = [[NSMutableArray alloc]initWithObjects:@"First Page  First Page  First Page  First Page  First Page  First Page  First Page  First Page  First Page  First Page",@"Second Page",@"Third Page",@"Fourth Page", nil];
     self.pageImages = [[NSMutableArray alloc]initWithObjects:@"Page1.jpg",@"Page2.jpeg",@"Page3.png",@"Page4.png", nil];
     self.pageHeadings = [[NSMutableArray alloc]initWithObjects:@"Heading 1",@"Heading 2",@"Heading 3",@"Heading 4", nil];
@@ -65,11 +64,6 @@
 
 #pragma mark - Private Method
 
-- (void)setOnboardingIsShown {
-    
-    [NSUserDefaults saveObject:@(YES) forKey:kOnboardingIsShown];
-    
-}
 
 - (void)configureUI {
     
