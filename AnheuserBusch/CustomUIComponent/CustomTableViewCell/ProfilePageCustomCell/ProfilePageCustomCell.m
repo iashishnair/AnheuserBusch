@@ -90,10 +90,6 @@
         self.incentivesProgressBarView.maxRange = self.incentiveDataModel.maxIncentiveRange;
         self.incentivesProgressBarView.progressAmount = self.incentiveDataModel.overAllIncentiveProgress;
         self.incentivesProgressBarView.unitName = @"point  ";
-        self.incentivesProgressBarView.layer.cornerRadius = 3;
-        self.incentivesProgressBarView.clipsToBounds = YES;
-        self.incentivesProgressBarView.layer.borderWidth = 1.0;
-        self.incentivesProgressBarView.layer.borderColor = [UIColor lightGrayColor].CGColor;
 
     }
 }
