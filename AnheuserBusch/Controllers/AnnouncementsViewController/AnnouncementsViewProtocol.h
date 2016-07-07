@@ -10,4 +10,6 @@
 
 @protocol AnnouncementsViewProtocol <NSObject>
 
+- (NSMutableArray *)announcementDataSourcePopulate ;
+
 @end

@@ -56,8 +56,6 @@
 		B51EED501D255FBC00F9A97E /* PeerProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B51EED4F1D255FBC00F9A97E /* PeerProfileViewController.m */; };
 		B565B4411D2A74A400191CBD /* AnnouncementsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B565B4401D2A74A400191CBD /* AnnouncementsDetailViewController.m */; };
 		B565B4461D2A9C4500191CBD /* AnnouncementDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B565B4451D2A9C4500191CBD /* AnnouncementDataModel.m */; };
-		B56A9A361D2BCEC80073C315 /* PageBaseViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B56A9A351D2BCEC80073C315 /* PageBaseViewPresenter.m */; };
-		B56A9A391D2BCF580073C315 /* BaseChildViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B56A9A381D2BCF580073C315 /* BaseChildViewPresenter.m */; };
 		B56A9A3C1D2BDFDE0073C315 /* ProfilePageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B56A9A3B1D2BDFDE0073C315 /* ProfilePageDataModel.m */; };
 		B56A9A401D2BE96F0073C315 /* PeerProfileDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B56A9A3F1D2BE96F0073C315 /* PeerProfileDataModel.m */; };
 		B58F29ED1D268FD300B307CA /* KPIRankingViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B58F29EC1D268FD300B307CA /* KPIRankingViewPresenter.m */; };
@@ -190,11 +188,6 @@
 		B565B4441D2A9C4500191CBD /* AnnouncementDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnouncementDataModel.h; sourceTree = "<group>"; };
 		B565B4451D2A9C4500191CBD /* AnnouncementDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnouncementDataModel.m; sourceTree = "<group>"; };
 		B56A9A2F1D2BCDB80073C315 /* PageBaseViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageBaseViewProtocol.h; sourceTree = "<group>"; };
-		B56A9A301D2BCDDB0073C315 /* BaseChildViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseChildViewProtocol.h; sourceTree = "<group>"; };
-		B56A9A341D2BCEC80073C315 /* PageBaseViewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageBaseViewPresenter.h; sourceTree = "<group>"; };
-		B56A9A351D2BCEC80073C315 /* PageBaseViewPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageBaseViewPresenter.m; sourceTree = "<group>"; };
-		B56A9A371D2BCF580073C315 /* BaseChildViewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseChildViewPresenter.h; sourceTree = "<group>"; };
-		B56A9A381D2BCF580073C315 /* BaseChildViewPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseChildViewPresenter.m; sourceTree = "<group>"; };
 		B56A9A3A1D2BDFDE0073C315 /* ProfilePageDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProfilePageDataModel.h; path = AnheuserBusch/Controllers/BaseViewController/ProfilePageDataModel.h; sourceTree = SOURCE_ROOT; };
 		B56A9A3B1D2BDFDE0073C315 /* ProfilePageDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProfilePageDataModel.m; path = AnheuserBusch/Controllers/BaseViewController/ProfilePageDataModel.m; sourceTree = SOURCE_ROOT; };
 		B56A9A3E1D2BE96F0073C315 /* PeerProfileDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerProfileDataModel.h; sourceTree = "<group>"; };
@@ -584,11 +577,6 @@
 				B56A9A2F1D2BCDB80073C315 /* PageBaseViewProtocol.h */,
 				EADDBBD51D244D90000908A9 /* BaseChildViewController.h */,
 				EADDBBD61D244D90000908A9 /* BaseChildViewController.m */,
-				B56A9A301D2BCDDB0073C315 /* BaseChildViewProtocol.h */,
-				B56A9A341D2BCEC80073C315 /* PageBaseViewPresenter.h */,
-				B56A9A351D2BCEC80073C315 /* PageBaseViewPresenter.m */,
-				B56A9A371D2BCF580073C315 /* BaseChildViewPresenter.h */,
-				B56A9A381D2BCF580073C315 /* BaseChildViewPresenter.m */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -1065,7 +1053,6 @@
 				84272A3B1D257A53000EEB1C /* GUITabPagerViewController.m in Sources */,
 				847E5E351D22E6D8006B9854 /* FeedListTableViewCell.m in Sources */,
 				EADDBBD71D244D90000908A9 /* BaseChildViewController.m in Sources */,
-				B56A9A361D2BCEC80073C315 /* PageBaseViewPresenter.m in Sources */,
 				8468C9691D0AF78300B30DCF /* NSObject+HelperUtil.m in Sources */,
 				B5B04EE01D23F5B9002BAC9F /* PeerRankingDetailViewController.m in Sources */,
 				EADDBBDB1D244EB9000908A9 /* CustomNavigationController.m in Sources */,
@@ -1074,7 +1061,6 @@
 				B50FEC881D22553B00EA34D4 /* IncentiveDataModel.m in Sources */,
 				B51EED501D255FBC00F9A97E /* PeerProfileViewController.m in Sources */,
 				B58F29F01D268FFC00B307CA /* KPIRankingViewProtocol.m in Sources */,
-				B56A9A391D2BCF580073C315 /* BaseChildViewPresenter.m in Sources */,
 				EA895D7C1D0B55BD00BF8902 /* PageBaseViewController.m in Sources */,
 				847E5E451D22E6FB006B9854 /* FeedDataModel.m in Sources */,
 				84272A2A1D257951000EEB1C /* PeerRankingDetailPageCell.m in Sources */,

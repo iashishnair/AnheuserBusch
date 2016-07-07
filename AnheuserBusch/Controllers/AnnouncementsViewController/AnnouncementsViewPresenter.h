@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AnnouncementsViewProtocol.h"
 
-@interface AnnouncementsViewPresenter : UIViewController
+@interface AnnouncementsViewPresenter : NSObject <AnnouncementsViewProtocol>
 
 @end

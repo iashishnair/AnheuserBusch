@@ -9,8 +9,7 @@
 #import "AnnouncementsDetailViewController.h"
 #import "CStorePLTableViewCell.h"
 
-@interface AnnouncementsDetailViewController
- ()
+@interface AnnouncementsDetailViewController ()
 
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UILabel *incentiveLabelView;
@@ -29,29 +28,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     [self createUI];
-    
-    UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRecognizer:)];
-    recognizer.direction = UISwipeGestureRecognizerDirectionRight;
-    recognizer.delegate = self;
-    [self.view addGestureRecognizer:recognizer];
-}
-
-
-
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-    UISwipeGestureRecognizer *recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRecognizer:)];
-    recognizer.direction = UISwipeGestureRecognizerDirectionRight;
-    recognizer.delegate = self;
-    [self.view addGestureRecognizer:recognizer];
-}
-
-- (void)swipeRecognizer:(UISwipeGestureRecognizer *)sender {
-    if (sender.direction == UISwipeGestureRecognizerDirectionRight){
-        
-    }
 }
 
 
@@ -65,7 +43,7 @@
 }
 
 - (void)dealloc {
-
+    
     _incentiveLabelView = nil;
     _minsLabelView = nil;
     _daysLabelView = nil;
@@ -80,19 +58,24 @@
     self.incentiveLabelView = [[UILabel alloc]init];
     self.incentiveLabelView.text = self.incentiveName;
     self.incentiveLabelView.translatesAutoresizingMaskIntoConstraints = NO;
+   
     self.minsLabelView = [[UILabel alloc]init];
     self.minsLabelView.text = self.minsToGo;
     self.minsLabelView.translatesAutoresizingMaskIntoConstraints = NO;
+   
     self.daysLabelView = [[UILabel alloc]init];
     self.daysLabelView.text = self.daysLeft;
     self.daysLabelView.translatesAutoresizingMaskIntoConstraints = NO;
+   
     self.announcementImageView = [[UIImageView alloc]init];
     self.announcementImageView.backgroundColor = [UIColor grayColor];
     self.announcementImageView.translatesAutoresizingMaskIntoConstraints = NO;
+   
     self.announcementTextView = [[UITextView alloc]init];
     self.announcementTextView.backgroundColor = [UIColor lightGrayColor];
     self.announcementTextView.translatesAutoresizingMaskIntoConstraints = NO;
     self.announcementTextView.text = self.announcementText;
+  
     [self.view addSubview:self.incentiveLabelView];
     [self.view addSubview:self.minsLabelView];
     [self.view addSubview:self.daysLabelView];
@@ -112,12 +95,16 @@
                             };
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[incentiveLabelView(120)]-80-[minsLabelView]-|" options:0 metrics:nil views:views]];
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[daysLabelView]|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[daysLabelView]-|" options:0 metrics:nil views:views]];
+  
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[incentiveLabelView(20)]-1-[daysLabelView(20)]-5-[announcementImageView(150)]-5-[announcementTextView]|" options:0 metrics:nil views:views]];
-      [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[minsLabelView(20)]|" options:0 metrics:nil views:views]];
+   
+//    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-10-[minsLabelView(20)]|" options:0 metrics:nil views:views]];
+    
     //Need to ask//
-     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[announcementImageView]-10-|" options:0 metrics:nil views:views]];
-     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[announcementTextView]-10-|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[announcementImageView]-|" options:0 metrics:nil views:views]];
+   
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-100-[announcementTextView]-100-|" options:0 metrics:nil views:views]];
     
 }
 

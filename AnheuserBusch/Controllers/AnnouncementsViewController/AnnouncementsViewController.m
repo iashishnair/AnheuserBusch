@@ -12,40 +12,33 @@
 #import "GUITabPagerViewController.h"
 #import "CStorePLViewConroller.h"
 #import "AnnouncementsDetailViewController.h"
+#import "AnnouncementsViewPresenter.h"
 #import "AnnouncementDataModel.h"
 
 @interface AnnouncementsViewController () <GUITabPagerDataSource, GUITabPagerDelegate> {
-    
     NSArray *viewControllers;
-  // NSArray *segmentTitles;
 }
 
-@property (strong, nonatomic) GUITabPagerViewController *customPageManagerViewController;
-@property (nonatomic,strong) AnnouncementsDetailViewController *customViewConroller;
 @property (weak, nonatomic) IBOutlet UIView *pageViewControllerContainerView;
+@property (nonatomic, strong) GUITabPagerViewController *customPageManagerViewController;
 @property (nonatomic, strong) NSMutableArray *segmentTitles;
 @property (nonatomic, assign) NSUInteger index ;
+@property (nonatomic, strong) id <AnnouncementsViewProtocol> presenter;
+
 
 @end
 @implementation AnnouncementsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-//    KPIRankingViewController *kPIRankingViewController=(KPIRankingViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"KPIRankingViewController"];
-//    
-//    kPIRankingViewController.view.frame = self.view.bounds;
-//    [self.view addSubview:kPIRankingViewController.view];
-//    [self addChildViewController:kPIRankingViewController];
-//    [kPIRankingViewController didMoveToParentViewController:self];
+  
     self.index  = 0;
     
-   //segmentTitles = @[@"a", @"b", @"c" , @"d"];
-    self.segmentTitles = [super announcementDataSourcePopulate];
+    self.segmentTitles = [self.presenter announcementDataSourcePopulate];
     
     [self customPageManagerViewController];
     [self configureUI];
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,7 +49,6 @@
 - (void)dealloc {
     
     _customPageManagerViewController = nil;
-    _customViewConroller = nil;
 }
 
 #pragma mark - Private Method
@@ -65,10 +57,7 @@
     
     [self.pageViewControllerContainerView addSubview:self.customPageManagerViewController.view];
     
-//    CGRect rect = _pageViewControllerContainerView.bounds;
-//    self.customPageManagerViewController.view.frame = rect;
-    
-     [self addConstrains];
+    [self addConstrains];
     
     [self.customPageManagerViewController reloadData];
     
@@ -90,8 +79,6 @@
     if(!_customPageManagerViewController) {
         
         _customPageManagerViewController = [[GUITabPagerViewController alloc] init];
-        
-        //       _customPageManagerViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
         [_customPageManagerViewController setDataSource:self];
         [_customPageManagerViewController setDelegate:self];
     }
@@ -99,7 +86,15 @@
     return _customPageManagerViewController;
 }
 
-
+- (id <AnnouncementsViewProtocol>)presenter {
+    
+    if(!_presenter) {
+        
+        _presenter = [AnnouncementsViewPresenter new];
+    }
+    
+    return _presenter;
+}
 
 #pragma mark - Tab Pager Data Source
 
@@ -109,41 +104,23 @@
 
 - (UIViewController *)viewControllerForIndex:(NSInteger)index {
     
-    //return [[AnnouncementsDetailViewController alloc] init];
-    //return [self customViewConroller] ;
-    //return self.customViewConroller;
-    _customViewConroller = [[AnnouncementsDetailViewController alloc]init];
-    
-    //  AnnouncementDataModel *datamodel = [self.segmentTitles objectAtIndex:self.index];
-    
-    // }
-    AnnouncementDataModel *datamodel = [self.segmentTitles objectAtIndex:index];
-    _customViewConroller.incentiveName = datamodel.incentiveName;
-    _customViewConroller.minsToGo = datamodel.minsText;
-    _customViewConroller.daysLeft = datamodel.daysText;
-    _customViewConroller.announcementText = datamodel.announcementText;
-    
-    return  _customViewConroller;
-}
+    AnnouncementsDetailViewController *customViewConroller = [[AnnouncementsDetailViewController alloc]init];
 
--(AnnouncementsDetailViewController *)customViewConroller {
+    AnnouncementDataModel *datamodel = [NSArray objectFromArray:self.segmentTitles atIndex:index];
     
-   // if(!_customViewConroller) {
+    if(datamodel) {
         
-        _customViewConroller = [[AnnouncementsDetailViewController alloc]init];
-
-      //  AnnouncementDataModel *datamodel = [self.segmentTitles objectAtIndex:self.index];
-      
-   // }
-    AnnouncementDataModel *datamodel = [self.segmentTitles objectAtIndex:self.index];
-    _customViewConroller.incentiveName = datamodel.incentiveName;
-    _customViewConroller.minsToGo = datamodel.minsText;
-    _customViewConroller.daysLeft = datamodel.daysText;
-    _customViewConroller.announcementText = datamodel.announcementText;
+        customViewConroller.incentiveName = datamodel.incentiveName;
+        customViewConroller.minsToGo = datamodel.minsText;
+        customViewConroller.daysLeft = datamodel.daysText;
+        customViewConroller.announcementText = datamodel.announcementText;
+    }
+   
     
-    return  _customViewConroller;
-    
+    return  customViewConroller;
 }
+
+
 // Implement either viewForTabAtIndex: or titleForTabAtIndex:
 //- (UIView *)viewForTabAtIndex:(NSInteger)index {
 //  return <#UIView#>;
@@ -152,32 +129,27 @@
 - (NSString *)titleForTabAtIndex:(NSInteger)index {
     
     AnnouncementDataModel *item = _segmentTitles[index];
-  
-    return   item.incentiveName;
+    
+    return item.incentiveName;
 }
 
 - (CGFloat)tabHeight {
-    // Default: 44.0f
-    return 50.0f;
+    return 0.0f;
 }
 
 - (UIColor *)tabColor {
-    // Default: [UIColor orangeColor];
     return [UIColor blackColor];
 }
 
 - (UIColor *)tabBackgroundColor {
-    // Default: [UIColor colorWithWhite:0.95f alpha:1.0f];
     return [UIColor lightTextColor];
 }
 
 - (UIFont *)titleFont {
-    // Default: [UIFont fontWithName:@"HelveticaNeue-Thin" size:20.0f];
     return [UIFont fontWithName:@"HelveticaNeue-Bold" size:15.0f];
 }
 
 - (UIColor *)titleColor {
-    // Default: [UIColor blackColor];
     return [UIColor darkGrayColor];
 }
 
@@ -185,25 +157,15 @@
 
 - (void)tabPager:(GUITabPagerViewController *)tabPager willTransitionToTabAtIndex:(NSInteger)index {
     self.index  = index;
-
-    //    NSLog(@"Will transition from tab %ld to %ld", [self selectedIndex], (long)index);
+  
 }
 
 - (void)tabPager:(GUITabPagerViewController *)tabPager didTransitionToTabAtIndex:(NSInteger)index {
     
     
     self.index  = index;
-
-    //    NSLog(@"Did transition to tab %ld", (long)index);
+    
 }
-
-
-
-
-
-
-
-
 
 
 

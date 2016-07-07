@@ -16,7 +16,6 @@
 
 @implementation BaseChildViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -38,12 +37,6 @@
 		self.navigationController.interactivePopGestureRecognizer.enabled = NO;
 	}
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 #pragma mark - Private Method
 
@@ -76,6 +69,11 @@
     [self.navigationController pushViewController:announcementsViewController animated:YES];
 
 	
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 

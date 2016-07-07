@@ -33,6 +33,7 @@
 -(void)viewDidLoad {
     
     [super  viewDidLoad];
+    
     self.incentiveDetailsDataSource = [self.presenter incentiveDataSourcePopulate];
     self.profileDataModel = [self.presenter profileInfoPopulate];
     self.title = MenuItems[0];
