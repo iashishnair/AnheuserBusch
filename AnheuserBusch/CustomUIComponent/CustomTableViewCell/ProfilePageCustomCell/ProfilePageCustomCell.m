@@ -82,14 +82,20 @@
     }
     
     if(self.chartView) {
-        self.chartView.backgroundColor = [UIColor clearColor];
+        self.chartView.backgroundColor = [UIColor yellowColor];
         
-        self.incentivesProgressBarView.barBackGroundColor = [UIColor whiteColor];
+        self.incentivesProgressBarView.barBackGroundColor = [UIColor brownColor];
         self.incentivesProgressBarView.progressColor = [UIColor greenColor];
         self.incentivesProgressBarView.minRange = self.incentiveDataModel.minIncentiveRange;
         self.incentivesProgressBarView.maxRange = self.incentiveDataModel.maxIncentiveRange;
         self.incentivesProgressBarView.progressAmount = self.incentiveDataModel.overAllIncentiveProgress;
         self.incentivesProgressBarView.unitName = @"point  ";
+        self.incentivesProgressBarView.descriptionText = @"Way to Go";
+        self.incentivesProgressBarView.unitTextFont = [UIFont boldSystemFontOfSize:20];
+        self.incentivesProgressBarView.descriptionTextColor = [UIColor blackColor];
+        
+        self.incentivesProgressBarView.descriptionTextFont = [UIFont boldSystemFontOfSize:13];
+        self.incentivesProgressBarView.descriptionTextColor = [UIColor blackColor];
 
     }
 }
