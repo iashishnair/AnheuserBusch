@@ -110,7 +110,6 @@ static NSString * taskTableHeading = @"My Tasks For This Week";
 
 static NSString * viewHeading = @"Overall KPI ranking";
 
-// Slide Menu
 
 
 //Font

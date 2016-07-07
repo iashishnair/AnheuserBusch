@@ -104,7 +104,7 @@
     //Need to ask//
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[announcementImageView]-|" options:0 metrics:nil views:views]];
    
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-100-[announcementTextView]-100-|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[announcementTextView]-100-|" options:0 metrics:nil views:views]];
     
 }
 
