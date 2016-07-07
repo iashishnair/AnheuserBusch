@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NSObject+HelperUtil.h"
 #import "UIView+Common.h"
+#import "NSLayoutConstraint+LayoutConstraintHelper.h"
 
 typedef struct {
     
@@ -107,15 +108,15 @@ static NSString * viewHeading = @"Overall KPI ranking";
 	//--------------------------- SLIDE MENU CONSTANT ---------------------------
 
 //Font
-#define SLIDE_MENU_SELECTED_LABEL_TEXT_FONT [UIFont systemFontOfSize:12]
-#define SLIDE_MENU_DESELECTED_LABEL_TEXT_FONT [UIFont systemFontOfSize:12]
+#define SLIDE_MENU_SELECTED_LABEL_TEXT_FONT [UIFont systemFontOfSize:20]
+#define SLIDE_MENU_DESELECTED_LABEL_TEXT_FONT [UIFont systemFontOfSize:20]
 //Color
 #define SLIDE_MENU_SEPERATOR_LINE_COLOR [UIColor redColor]
 
-#define SLIDE_MENU_SELECTED_LABEL_TEXT_COLOR [UIColor blackColor]
-#define SLIDE_MENU_DESELECTED_LABEL_TEXT_COLOR [UIColor blueColor]
+#define SLIDE_MENU_SELECTED_LABEL_TEXT_COLOR [UIColor darkGreyColorABI]
+#define SLIDE_MENU_DESELECTED_LABEL_TEXT_COLOR [UIColor blueColorABI]
 
-#define SLIDE_MENU_SELECTED_CELL_BG_COLOR [UIColor lightGrayColor]
+#define SLIDE_MENU_SELECTED_CELL_BG_COLOR [UIColor lightGreyColorABI]
 #define SLIDE_MENU_DESELECTED_CELL_BG_COLOR [UIColor whiteColor]
 
 	//--------------------------- HEX COLOR CODE ---------------------------
@@ -128,7 +129,7 @@ static NSString * viewHeading = @"Overall KPI ranking";
 #define HEX_COLOR_CODE_8dba00_GREEN  @"#8dba00" //(141,186,0)
 #define HEX_COLOR_CODE_fe9611_ORANGE  @"#fe9611" //(254,150,17)
 #define HEX_COLOR_CODE_f25957_OFFRED  @"#f25957" //(242,89,87)
-#define HEX_COLOR_CODE_cccccc_DARK_GREY @"#cccccc" //(204,204,204)
-#define HEX_COLOR_CODE_333333_LIGHTGREY  @"#333333" //(51,51,51)
+#define HEX_COLOR_CODE_cccccc_DARK_GREY @"#333333" //(204,204,204)
+#define HEX_COLOR_CODE_333333_LIGHTGREY  @"#cccccc" //(51,51,51)
 
 

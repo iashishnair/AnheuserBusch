@@ -19,11 +19,13 @@
 @interface ProfileViewController () <ProfilePageCustomCellDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *headingLabel;
-@property (strong, nonatomic) NSArray *incentiveDetailsDataSource;
-@property (strong, nonatomic) id <ProfileViewProtocol> presenter;
-@property (strong, nonatomic) ProfilePageDataModel *profileDataModel;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UIView *profileDetailsView;
+
+@property (strong, nonatomic) id <ProfileViewProtocol> presenter;
+@property (strong, nonatomic) ProfilePageDataModel *profileDataModel;
+@property (strong, nonatomic) NSArray *incentiveDetailsDataSource;
+
 
 @end
 
@@ -137,9 +139,8 @@
     return cell;
 }
 
-#pragma mark - IBAction
+#pragma mark - IBAction <ProfilePageCustomCellDelegate>
 
-#pragma mark ProfilePageCustomCellDelegate
 
 - (void)clickedPeerRanking:(UIButton *)sender atIndex:(NSUInteger)index {
     
@@ -163,4 +164,6 @@
         
     }
 }
+
+
 @end

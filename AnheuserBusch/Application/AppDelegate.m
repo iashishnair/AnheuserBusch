@@ -34,23 +34,24 @@
 	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 	
 	
-	BOOL isLogedIn = [SFUserAccountManager sharedInstance].isCurrentUserAnonymous && [SFUserAccountManager sharedInstance].currentUser.credentials.accessToken ;
-	
-	id OnboardingIsShown  = [NSUserDefaults readUserDefault:kOnboardingIsShown];
-	
-	if(![OnboardingIsShown boolValue]) {
-		
-		[self setOnBoardingViewControllerAsRootViewController];
-		
-	} else if(!isLogedIn) {
-		
-		[self setLoginViewControllerAsRootViewController];
-		
-	} else {
-		
-		[self setupSlideMenuViewController];
-	}
-	
+//	BOOL isLogedIn = [SFUserAccountManager sharedInstance].isCurrentUserAnonymous && [SFUserAccountManager sharedInstance].currentUser.credentials.accessToken ;
+//	
+//	id OnboardingIsShown  = [NSUserDefaults readUserDefault:kOnboardingIsShown];
+//	
+//	if(![OnboardingIsShown boolValue]) {
+//		
+//		[self setOnBoardingViewControllerAsRootViewController];
+//		
+//	} else if(!isLogedIn) {
+//		
+//		[self setLoginViewControllerAsRootViewController];
+//		
+//	} else {
+//		
+//		[self setupSlideMenuViewController];
+//	}
+//	
+	[self setupSlideMenuViewController];
 	[self.window makeKeyAndVisible];
 	
 	return YES;

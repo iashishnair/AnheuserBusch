@@ -53,7 +53,8 @@
 - (void)fitToParentView:(nullable UIView * ) toItem;
 - (void)widthMultiplierBy:(CGFloat)multiplier toItem:(nonnull id)toItem;
 - (void)heightMultiplierBy:(CGFloat)multiplier toItem:(nonnull id)toItem;
-- (void)centerXToItem:(nonnull id)toItem;
+- (void)centerXToParent:(nonnull id)toItem;
+-(void)addConstraintsWithVisualFormat:(nullable NSString *)format options:(NSLayoutFormatOptions)opts metrics:(nullable NSDictionary<NSString *,id> *)metrics views:(nonnull NSDictionary<NSString *, id> *)views ;
 @end
 
 

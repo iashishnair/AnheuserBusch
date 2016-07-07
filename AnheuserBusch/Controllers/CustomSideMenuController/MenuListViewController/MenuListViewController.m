@@ -15,42 +15,34 @@
 #import "SalesForceChatterHelper.h"
 #import "FeedDataModel.h"
 #import "UIResponder+UIComponentUtility.h"
+#import "Constants.h"
 
 @interface MenuListViewController ()
 
-@property (nonatomic, weak) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray *menuItems;
-@property (weak, nonatomic) IBOutlet UIView *roundConerView;
-@property (strong, nonatomic) NSIndexPath *selectedIndexPath;;
+@property (strong, nonatomic) UIImageView *bgImageView;
+@property (strong, nonatomic) UIImageView *userImageView;
+@property (strong, nonatomic) UILabel *userNameLabel;
+@property (strong, nonatomic) UITableView *tableView;
+
+@property (strong, nonatomic) NSIndexPath *selectedIndexPath;
+@property (strong, nonatomic) NSArray *menuItems;
 
 @end
 
 @implementation MenuListViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-	if (self) {
-			// Custom initialization
-	}
-	return self;
-}
 
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+	
+	self.selectedIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+
+	[self configureUI];
+	
     
-    self.selectedIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
 		// Do any additional setup after loading the view from its nib.
-	[self.tableView registerNib:[UINib nibWithNibName:@"MenuListTableViewListCell" bundle:nil] forCellReuseIdentifier:@"MenuCell"];
-    self.tableView.separatorColor = SLIDE_MENU_SEPERATOR_LINE_COLOR;
-    
-    
-  
-	self.userImageView.layer.cornerRadius = 50.0f;
-	self.userImageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
-	self.userImageView.clipsToBounds = YES;
-	self.userImageView.layer.borderWidth = 3.0f;
+//	[self.tableView registerNib:[UINib nibWithNibName:@"MenuListTableViewListCell" bundle:nil] forCellReuseIdentifier:@"MenuCell"];
 	
 	id username = [NSUserDefaults readUserDefault:@"username"];
 	
@@ -60,6 +52,9 @@
 		_userNameLabel.text = username;
 		
 	}
+	
+	return;
+	
 	__weak typeof(self) weakself = self;
 	
 	[[SalesForceChatterHelper shareInstance]fetchUserAllDetails:^(NSArray *results) {
@@ -111,17 +106,98 @@
 	[super didReceiveMemoryWarning];
 	
 }
--(void)viewDidLayoutSubviews
-{
-    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
-        [self.tableView setSeparatorInset:UIEdgeInsetsZero];
-    }
-    
-    if ([self.tableView respondsToSelector:@selector(setLayoutMargins:)]) {
-        [self.tableView setLayoutMargins:UIEdgeInsetsZero];
-    }
-}
+
+
 #pragma mark - Private Method
+
+-(void)configureUI {
+	_userImageView = nil;
+	
+	_userNameLabel = nil;
+
+	[self.view addSubview:self.bgImageView];
+	[self.view addSubview:self.userImageView];
+	[self.view addSubview:self.userNameLabel];
+	[self.view addSubview:self.tableView];
+
+	[self addConstraint];
+}
+
+
+-(void)addConstraint {
+	
+	
+	NSDictionary *views = @{@"bgImageView": self.bgImageView,
+							@"userImageView": self.userImageView,
+							@"userNameLabel": self.userNameLabel,
+							@"tableView": self.tableView};
+	
+	[self.view addConstraintsWithVisualFormat:@"H:|[bgImageView]|" options:0 metrics:nil views:views];
+	[self.view addConstraintsWithVisualFormat:@"V:|[bgImageView]|" options:0 metrics:nil views:views];
+	[self.view addConstraintsWithVisualFormat:@"H:[userImageView(100)]" options:0 metrics:nil views:views];
+	[self.view addConstraintsWithVisualFormat:@"H:[userNameLabel]" options:0 metrics:nil views:views];
+	[self.view addConstraintsWithVisualFormat:@"H:|[tableView]|" options:0 metrics:nil views:views];
+
+
+	[self.view addConstraintsWithVisualFormat:@"V:|-20-[userImageView(100)]-10-[userNameLabel(30)]-20-[tableView]|" options:0 metrics:nil views:views];
+	
+	[self.userImageView centerXToParent:self.view];
+	[self.userNameLabel centerXToParent:self.view];
+
+
+}
+- (UIImageView *)bgImageView {
+	
+	if(!_bgImageView) {
+		
+		_bgImageView = [UIImageView initWithImage:nil];
+		_bgImageView.backgroundColor = [UIColor whiteColorABI];
+	}
+	
+	return _bgImageView;
+}
+
+- (UIImageView *)userImageView {
+	
+	
+	if(!_userImageView) {
+		
+		_userImageView = [UIImageView initWithImage:nil];
+		_userImageView.layer.cornerRadius = 50.0f;
+		_userImageView.layer.borderColor = [UIColor blueColorABI].CGColor;
+		_userImageView.clipsToBounds = YES;
+		_userImageView.layer.borderWidth = 5.0f;
+
+	}
+	
+	return _userImageView;
+}
+
+- (UILabel *)userNameLabel {
+	
+	if(!_userNameLabel) {
+		
+		_userNameLabel = [UILabel labelWithText:@"" textColor:[UIColor whiteColorABI] textFont:[UIFont systemFontOfSize:16] textAlignment:NSTextAlignmentCenter numberOfLines:1 backgroundColor:nil];
+		
+		_userNameLabel.text = @"eee";
+
+	}
+	
+	return _userNameLabel;
+}
+
+-(UITableView *)tableView {
+	
+	if(!_tableView) {
+		
+		_tableView = [UITableView plainTableView];
+		_tableView.backgroundColor = [UIColor whiteColor];
+		_tableView.separatorColor = [UIColor clearColor];
+	}
+	
+	return _tableView;
+}
+
 
 - (NSArray *)menuItems {
 	
@@ -152,21 +228,31 @@
 	static NSString *cellIdentifier = @"MenuCell";
 	
 	MenuListTableViewListCell *cell = (MenuListTableViewListCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+	
+	if(!cell) {
+		
+		cell = [[MenuListTableViewListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+		
+	}
 	NSString *item = [self.menuItems objectAtIndex:indexPath.row];
 	cell.menuTitleLabel.text = item;
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     [cell updateOnSelection:(self.selectedIndexPath.section == indexPath.section && self.selectedIndexPath.row ==indexPath.row)];
-   
+	cell.backgroundColor = [UIColor whiteColor];
+	
 	return cell;
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-	return 44.0f;
+	return 60.0f;
 }
-
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+		// This will create a "invisible" footer
+	return 0.01f;
+}
 #pragma mark – UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
