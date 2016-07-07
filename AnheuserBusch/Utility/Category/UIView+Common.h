@@ -10,7 +10,6 @@
 # define PROFILE_INCENTIVE_TABLE_HEADING_FONT [UIFont systemFontOfSize:17.0f]
 # define PROFILE_USER_NAME_FONT [UIFont systemFontOfSize:20.0f]
 
-
 @interface UIView (Common)
 
 @end
@@ -18,13 +17,21 @@
 
 @interface UIColor (Common)
 
-+ (UIColor *) defaultPageBGColor;
-+ (UIColor *) defaultThemeBlueColor;
++ (UIColor *)colorWithHexString:(NSString *)hexString;
++ (UIColor *)defaultPageBGColor;
 + (UIColor *)defaultTextColor;
 + (UIColor *)defaultSeparatorColor;
-+ (UIColor *)defaultIncentiveRedColor;
-+ (UIColor *)defaultIncentiveGreenColor;
-+ (UIColor *)defaultIncentiveOrangeColor;
+
++ (UIColor *)blueColorABI;
++ (UIColor *)cyanColorABI;
++ (UIColor *)whiteColorABI;
++ (UIColor *)blackColorABI;
++ (UIColor *)greenColorABI;
++ (UIColor *)orangeColorABI;
++ (UIColor *)redColorABI;
++ (UIColor *)darkGreyColorABI;
++ (UIColor *)lightGreyColorABI;
+
 @end
 
 

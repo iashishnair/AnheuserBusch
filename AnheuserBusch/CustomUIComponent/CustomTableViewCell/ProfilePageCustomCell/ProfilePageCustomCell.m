@@ -50,9 +50,9 @@
     _index = index;
     
     [[self.peerRankingButton layer] setBorderWidth:1.5f];
-    self.peerRankingButton.layer.borderColor = [UIColor defaultThemeBlueColor].CGColor ;
+    self.peerRankingButton.layer.borderColor = [UIColor blueColorABI].CGColor ;
     self.peerRankingButton.backgroundColor = [UIColor whiteColor];
-    self.kPIDetailsButton.backgroundColor = [UIColor defaultThemeBlueColor];
+    self.kPIDetailsButton.backgroundColor = [UIColor blueColorABI];
     self.peerRankingButton.layer.cornerRadius = 3; // this value vary as per your desire
     self.peerRankingButton.clipsToBounds = YES;
     self.kPIDetailsButton.layer.cornerRadius = 3; // this value vary as per your desire
@@ -92,6 +92,7 @@
     }
     
     if(self.chartView) {
+		
         self.incentivesProgressBarView.barBackGroundColor = [UIColor brownColor];
         self.incentivesProgressBarView.progressColor = [UIColor greenColor];
         self.incentivesProgressBarView.minRange = self.incentiveDataModel.minIncentiveRange;
