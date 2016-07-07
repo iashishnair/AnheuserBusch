@@ -21,6 +21,9 @@
 + (UIColor *) defaultPageBGColor;
 + (UIColor *)defaultTextColor;
 + (UIColor *)defaultSeparatorColor;
++ (UIColor *)defaultIncentiveRedColor;
++ (UIColor *)defaultIncentiveGreenColor;
++ (UIColor *)defaultIncentiveOrangeColor;
 @end
 
 
