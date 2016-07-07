@@ -96,7 +96,12 @@
     
     return  self.incentiveDetailsDataSource.count;
 }
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    
+    return 10.0f;
+    
+}
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 10.0)];
     headerView.backgroundColor = [UIColor clearColor];
@@ -123,7 +128,8 @@
         }
     
     UIView *view = [[UIView alloc]initWithFrame:cell.bounds];
-    view.backgroundColor = [UIColor redColor];
+    view.backgroundColor = [UIColor lightGrayColor];
+    view.layer.cornerRadius = 3.0f;
     cell.backgroundView = view;
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
