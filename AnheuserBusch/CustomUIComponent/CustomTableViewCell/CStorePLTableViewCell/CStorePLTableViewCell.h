@@ -12,5 +12,6 @@
 @interface CStorePLTableViewCell : UITableViewCell
 
 @property (nonatomic, strong) IncentivesProgressBarView *incentiveBarChartView;
+@property (nonatomic, strong) NSString *kpiName;
 
 @end

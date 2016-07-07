@@ -15,10 +15,12 @@
 
 @interface PeerRankingDetailViewController ()
 
-@property (strong, nonatomic) NSMutableArray *peerRankingDetailsDataSource;
-@property (strong, nonatomic) id <PeerRankingDetailProtocol> presenter;
+@property (weak, nonatomic) IBOutlet UITableView *userRankingTable;
 @property (weak, nonatomic) IBOutlet UILabel *noOfDaysLabel;
 @property (weak, nonatomic) IBOutlet UILabel *viewHeading;
+
+@property (strong, nonatomic) NSMutableArray *peerRankingDetailsDataSource;
+@property (strong, nonatomic) id <PeerRankingDetailProtocol> presenter;
 
 @end
 

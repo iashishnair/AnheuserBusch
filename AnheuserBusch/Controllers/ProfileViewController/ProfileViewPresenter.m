@@ -9,21 +9,48 @@
 #import "ProfileViewPresenter.h"
 #import "ProfileViewProtocol.h"
 #import "IncentiveDataModel.h"
+#import "Constants.h"
+#import "KPIsDetailsDataModel.h"
 
 @implementation ProfileViewPresenter
 
--(NSMutableArray *)incentiveDataSourcePopulate {
+- (NSMutableArray *)incentiveDataSourcePopulate {
+    
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource: @"ProfileDemo" ofType: @"plist"];
+    NSMutableDictionary *dictplist =[[NSMutableDictionary alloc] initWithContentsOfFile:path];
+    
+    
+    if(![NSDictionary isValidDictionary:dictplist]) return nil;
+    
+    NSArray *incentives = [dictplist valueForKeySafe:@"incentives"];
+    
+    if(!incentives || !incentives.count) return nil;
+    
     
     NSMutableArray *resultsArray = [[NSMutableArray alloc]init];
-    for(int i = 0;i<10;i++)
-    {
-    IncentiveDataModel *dataModel = [IncentiveDataModel new];
-    dataModel.rank = [NSString stringWithFormat:@"%d",i+1];;
-    dataModel.incentiveName = [NSString stringWithFormat:@"Incentive %d",i+1];
-        dataModel.statusTitle = @"Way to Go !!!";
-        dataModel.statusDescription = @"Out of 15 KPIs you have achieved 12";
-       [resultsArray addObject:dataModel];
+    
+    for (NSDictionary * obj in incentives) {
+        
+        IncentiveDataModel *incentiveDataModel = [IncentiveDataModel new];
+        incentiveDataModel.rank = [obj valueForKeySafe:@"rank"];
+        incentiveDataModel.incentiveName = [obj valueForKeySafe:@"incentivename"];
+        incentiveDataModel.statusDescription = [obj valueForKeySafe:@"statusDescription"];
+        incentiveDataModel.statusTitle = [obj valueForKeySafe:@"statusTitle"];
+        incentiveDataModel.overAllIncentiveProgress = [obj valueForKeySafe:@"overAllIncentiveProgress"];
+        incentiveDataModel.minIncentiveRange = [obj valueForKeySafe:@"minIncentiveRange"];
+        incentiveDataModel.maxIncentiveRange = [obj valueForKeySafe:@"maxIncentiveRange"];
+        incentiveDataModel.progressunit = [obj valueForKeySafe:@"progressunit"];
+        
+        
+        NSMutableArray *kpis = [self populateKIPS:[obj valueForKeySafe:@"kpis"]];
+        
+        if(kpis.count)
+            incentiveDataModel.kpisDetails = kpis;
+        
+        [resultsArray addObject:incentiveDataModel];
     }
+    
     return resultsArray;
 }
 
@@ -35,4 +62,20 @@
     return dataModel;
 }
 
+- (NSMutableArray *)populateKIPS:(NSArray *) kpiDetails {
+    
+    NSMutableArray *kpis = [NSMutableArray array];
+    
+    for (NSDictionary * kip in kpiDetails) {
+        
+        KPIsDetailsDataModel *kpisDetailsDataModel  = [KPIsDetailsDataModel new];
+        kpisDetailsDataModel.kpiName = [kip valueForKeySafe:@"name"];
+        kpisDetailsDataModel.maxRange = [kip valueForKeySafe:@"maxprogress"];
+        kpisDetailsDataModel.minRange = [kip valueForKeySafe:@"minprogress"];
+        kpisDetailsDataModel.progress = [kip valueForKeySafe:@"progress"];
+        kpisDetailsDataModel.progressUnit = [kip valueForKeySafe:@"progressunit"];
+        [kpis addObject:kpisDetailsDataModel];
+    }
+    return kpis;
+}
 @end
