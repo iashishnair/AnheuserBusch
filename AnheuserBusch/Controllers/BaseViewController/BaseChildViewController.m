@@ -8,12 +8,14 @@
 
 #import "BaseChildViewController.h"
 #import "AnnouncementsViewController.h"
+#import "CustomSideMenuController.h"
 
 @interface BaseChildViewController ()
 
 @end
 
 @implementation BaseChildViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,7 +24,8 @@
 	
 	UIBarButtonItem *menuButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"notification"] style:UIBarButtonItemStylePlain target:self action:@selector(clickedNotificationButton)];
 	self.navigationItem.rightBarButtonItem = menuButton;
-
+    
+    [self addLeftEdgeGesture];
 }
 
 
@@ -34,8 +37,36 @@
 		
 		self.navigationController.interactivePopGestureRecognizer.enabled = NO;
 	}
-	
 }
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+
+#pragma mark - Private Method
+
+- (void)addLeftEdgeGesture {
+    UIScreenEdgePanGestureRecognizer *leftEdgeGesture = [[UIScreenEdgePanGestureRecognizer alloc] initWithTarget:self action:@selector(handleLeftEdgeGesture:)];
+    leftEdgeGesture.edges = UIRectEdgeLeft;
+    leftEdgeGesture.delegate = self.navigationController.interactivePopGestureRecognizer.delegate;
+    [self.view addGestureRecognizer:leftEdgeGesture];
+}
+- (void)handleLeftEdgeGesture:(UIScreenEdgePanGestureRecognizer *)gesture {
+    // Get the current view we are touching
+    //    UIView *view = [self.view hitTest:[gesture locationInView:gesture.view] withEvent:nil];
+    
+    if(
+       
+       UIGestureRecognizerStateBegan == gesture.state) {
+        
+        [[self sideMenuController] toggleMenu];
+       
+    } 
+}
+
+#pragma mark - IB Action
 
 - (void)clickedNotificationButton {
 	
@@ -45,11 +76,6 @@
     [self.navigationController pushViewController:announcementsViewController animated:YES];
 
 	
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
