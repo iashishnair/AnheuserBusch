@@ -19,6 +19,7 @@
 @interface UIColor (Common)
 
 + (UIColor *) defaultPageBGColor;
++ (UIColor *) defaultThemeBlueColor;
 + (UIColor *)defaultTextColor;
 + (UIColor *)defaultSeparatorColor;
 + (UIColor *)defaultIncentiveRedColor;

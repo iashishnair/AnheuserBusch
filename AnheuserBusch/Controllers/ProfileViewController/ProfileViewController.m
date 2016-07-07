@@ -47,7 +47,7 @@
 
 -(void)configureUI {
   
-    //self.view =
+    self.incentiveTableView.backgroundColor = [UIColor defaultPageBGColor];
     self.headingLabel.font = PROFILE_INCENTIVE_TABLE_HEADING_FONT;
     self.title = MenuItems[0];
     self.headingLabel.text = @"My Incentives";
@@ -128,9 +128,10 @@
         }
     
     UIView *view = [[UIView alloc]initWithFrame:cell.bounds];
-    view.backgroundColor = [UIColor lightGrayColor];
-    view.layer.cornerRadius = 3.0f;
+    view.backgroundColor = [UIColor whiteColor];
+    view.layer.cornerRadius = 5.0f;
     cell.backgroundView = view;
+    cell.backgroundColor = [UIColor clearColor];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;

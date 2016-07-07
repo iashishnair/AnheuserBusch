@@ -49,6 +49,18 @@
     
     _index = index;
     
+    
+    
+    [[self.peerRankingButton layer] setBorderWidth:1.5f];
+    self.peerRankingButton.layer.borderColor = [UIColor defaultThemeBlueColor].CGColor ;
+    self.peerRankingButton.backgroundColor = [UIColor whiteColor];
+    self.kPIDetailsButton.backgroundColor = [UIColor defaultThemeBlueColor];
+    self.peerRankingButton.layer.cornerRadius = 3; // this value vary as per your desire
+    self.peerRankingButton.clipsToBounds = YES;
+    self.kPIDetailsButton.layer.cornerRadius = 3; // this value vary as per your desire
+    self.kPIDetailsButton.clipsToBounds = YES;
+    //[self.peerRankingButton layer]s
+    
     if(!incentiveDataModel) return;
     
     self.incentiveDataModel = incentiveDataModel;
