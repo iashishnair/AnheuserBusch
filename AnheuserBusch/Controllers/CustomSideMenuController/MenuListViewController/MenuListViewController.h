@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-
 @protocol MenuListViewControllerDelegate <NSObject>
 
 - (void)didSelectRowAtIndexPath:(NSIndexPath *)indexPath;

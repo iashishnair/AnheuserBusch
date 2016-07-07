@@ -45,6 +45,29 @@
     
     // 34, 17, 0
 }
+
+
++ (UIColor *)defaultIncentiveRedColor {
+    
+    
+    return [UIColor redColor];
+
+}
+
++ (UIColor *)defaultIncentiveGreenColor {
+    
+    
+    return [UIColor greenColor];
+    
+}
+
++ (UIColor *)defaultIncentiveOrangeColor {
+    
+    
+    return [UIColor orangeColor];
+    
+}
+
 @end
 
 @implementation UIFont (Common)
