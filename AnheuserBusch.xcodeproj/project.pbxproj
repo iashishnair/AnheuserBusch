@@ -43,8 +43,7 @@
 		EA7BFFDC1D2EE80C004F841F /* AnnouncementsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF3F1D2EE80C004F841F /* AnnouncementsDetailViewController.m */; };
 		EA7BFFDD1D2EE80C004F841F /* AnnouncementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF411D2EE80C004F841F /* AnnouncementsViewController.m */; };
 		EA7BFFDE1D2EE80C004F841F /* AnnouncementsViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF431D2EE80C004F841F /* AnnouncementsViewPresenter.m */; };
-		EA7BFFDF1D2EE80C004F841F /* BaseChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF471D2EE80C004F841F /* BaseChildViewController.m */; };
-		EA7BFFE01D2EE80C004F841F /* PageBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF491D2EE80C004F841F /* PageBaseViewController.m */; };
+		EA7BFFE01D2EE80C004F841F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF491D2EE80C004F841F /* BaseViewController.m */; };
 		EA7BFFE11D2EE80C004F841F /* ProfilePageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF4B1D2EE80C004F841F /* ProfilePageDataModel.m */; };
 		EA7BFFE21D2EE80C004F841F /* ChatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF4E1D2EE80C004F841F /* ChatterViewController.m */; };
 		EA7BFFE31D2EE80C004F841F /* ChatterViewControllerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF501D2EE80C004F841F /* ChatterViewControllerPresenter.m */; };
@@ -122,10 +121,8 @@
 		EA7BFF421D2EE80C004F841F /* AnnouncementsViewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnouncementsViewPresenter.h; sourceTree = "<group>"; };
 		EA7BFF431D2EE80C004F841F /* AnnouncementsViewPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnnouncementsViewPresenter.m; sourceTree = "<group>"; };
 		EA7BFF441D2EE80C004F841F /* AnnouncementsViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnouncementsViewProtocol.h; sourceTree = "<group>"; };
-		EA7BFF461D2EE80C004F841F /* BaseChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseChildViewController.h; sourceTree = "<group>"; };
-		EA7BFF471D2EE80C004F841F /* BaseChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseChildViewController.m; sourceTree = "<group>"; };
-		EA7BFF481D2EE80C004F841F /* PageBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageBaseViewController.h; sourceTree = "<group>"; };
-		EA7BFF491D2EE80C004F841F /* PageBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageBaseViewController.m; sourceTree = "<group>"; };
+		EA7BFF481D2EE80C004F841F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		EA7BFF491D2EE80C004F841F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		EA7BFF4A1D2EE80C004F841F /* ProfilePageDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePageDataModel.h; sourceTree = "<group>"; };
 		EA7BFF4B1D2EE80C004F841F /* ProfilePageDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePageDataModel.m; sourceTree = "<group>"; };
 		EA7BFF4D1D2EE80C004F841F /* ChatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatterViewController.h; sourceTree = "<group>"; };
@@ -426,10 +423,8 @@
 		EA7BFF451D2EE80C004F841F /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EA7BFF461D2EE80C004F841F /* BaseChildViewController.h */,
-				EA7BFF471D2EE80C004F841F /* BaseChildViewController.m */,
-				EA7BFF481D2EE80C004F841F /* PageBaseViewController.h */,
-				EA7BFF491D2EE80C004F841F /* PageBaseViewController.m */,
+				EA7BFF481D2EE80C004F841F /* BaseViewController.h */,
+				EA7BFF491D2EE80C004F841F /* BaseViewController.m */,
 				EA7BFF4A1D2EE80C004F841F /* ProfilePageDataModel.h */,
 				EA7BFF4B1D2EE80C004F841F /* ProfilePageDataModel.m */,
 			);
@@ -1034,7 +1029,7 @@
 				EA7BFFFE1D2EE80C004F841F /* IncentivesProgressBarView.m in Sources */,
 				EA7BFFF61D2EE80C004F841F /* PeerProfileViewPresenter.m in Sources */,
 				EA7BFFEB1D2EE80C004F841F /* MenuListTableViewListCell.m in Sources */,
-				EA7BFFE01D2EE80C004F841F /* PageBaseViewController.m in Sources */,
+				EA7BFFE01D2EE80C004F841F /* BaseViewController.m in Sources */,
 				EA7BFFEF1D2EE80C004F841F /* KPIRankingViewController.m in Sources */,
 				EA7BFFDE1D2EE80C004F841F /* AnnouncementsViewPresenter.m in Sources */,
 				EA7B00061D2EE80C004F841F /* KPIsDetailsDataModel.m in Sources */,
@@ -1075,7 +1070,6 @@
 				EA7B00021D2EE80C004F841F /* CommentItemModel.m in Sources */,
 				EA7BFFE91D2EE80C004F841F /* CustomSideMenuController.m in Sources */,
 				EA7B00081D2EE80C004F841F /* PeerRankingDataModel.m in Sources */,
-				EA7BFFDF1D2EE80C004F841F /* BaseChildViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
