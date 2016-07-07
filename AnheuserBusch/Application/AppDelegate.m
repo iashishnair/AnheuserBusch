@@ -407,6 +407,8 @@
 		default:
 			break;
 	}
+    
+    [customSideMenuController closeMenu];
 }
 
 
@@ -414,7 +416,7 @@
 	
 	CustomNavigationController *navigationController = [[CustomNavigationController alloc] initWithRootViewController:controller];
 
-	[[customSideMenuController sideMenuController] changeContentViewController:navigationController closeMenu:YES];
+	[[customSideMenuController sideMenuController] changeContentViewController:navigationController closeMenu:NO];
 }
 
 
