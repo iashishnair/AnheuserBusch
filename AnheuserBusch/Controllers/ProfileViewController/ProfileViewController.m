@@ -14,6 +14,7 @@
 #import "KPIRankingViewController.h"
 #import "ProfilePageDataModel.h"
 #import "Constants.h"
+#import "UIView+Common.h"
 
 @interface ProfileViewController () <ProfilePageCustomCellDelegate>
 

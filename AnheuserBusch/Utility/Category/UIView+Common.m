@@ -17,6 +17,8 @@
 
 @implementation UIColor (Common)
 
+
+
 + (UIColor *) defaultPageBGColor {
 	
 	return [UIColor colorWithRed:236.0f/255.0f green:235.0f/255.0f blue:235.0f/255.0f alpha:1.0];
