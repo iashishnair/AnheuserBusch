@@ -8,8 +8,7 @@
 
 #import "CustomSideMenuController.h"
 #import <QuartzCore/QuartzCore.h>
-
-
+#import "MenuListViewController.h"
 
 typedef NS_ENUM(NSInteger, MVYSideMenuAction){
 	MVYSideMenuOpen,
@@ -24,7 +23,7 @@ typedef struct {
 
 @interface CustomSideMenuController () <UIGestureRecognizerDelegate>
 
-@property (nonatomic, strong) UIViewController *menuViewController;
+@property (nonatomic, strong) MenuListViewController *menuViewController;
 @property (nonatomic, strong) UIViewController *contentViewController;
 @property (strong, nonatomic) UIView *contentContainerView;
 @property (strong, nonatomic) UIView *menuContainerView;
@@ -85,7 +84,6 @@ typedef struct {
     
     [super viewWillAppear:animated];
     
-    self.view.backgroundColor = [UIColor lightGrayColor];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -191,6 +189,9 @@ typedef struct {
 - (void)openMenu {
 	
 	[self openMenuWithVelocity:0.0f];
+    
+    
+    [_menuViewController reloadMenuList];
 }
 
 - (void)toggleMenu {

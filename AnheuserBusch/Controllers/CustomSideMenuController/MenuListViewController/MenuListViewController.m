@@ -21,6 +21,7 @@
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSArray *menuItems;
 @property (weak, nonatomic) IBOutlet UIView *roundConerView;
+@property (strong, nonatomic) NSIndexPath *selectedIndexPath;;
 
 @end
 
@@ -38,11 +39,15 @@
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
+    
+    self.selectedIndexPath = [NSIndexPath indexPathForRow:0 inSection:0];
 		// Do any additional setup after loading the view from its nib.
 	[self.tableView registerNib:[UINib nibWithNibName:@"MenuListTableViewListCell" bundle:nil] forCellReuseIdentifier:@"MenuCell"];
-	
+    self.tableView.separatorColor = SLIDE_MENU_SEPERATOR_LINE_COLOR;
+    
+    
+  
 	self.userImageView.layer.cornerRadius = 50.0f;
-	self.userImageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
 	self.userImageView.layer.borderColor = [UIColor lightGrayColor].CGColor;
 	self.userImageView.clipsToBounds = YES;
 	self.userImageView.layer.borderWidth = 3.0f;
@@ -96,12 +101,26 @@
 	}];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [_tableView reloadData];
+    
+}
 - (void)didReceiveMemoryWarning
 {
 	[super didReceiveMemoryWarning];
 	
 }
-
+-(void)viewDidLayoutSubviews
+{
+    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+    }
+    
+    if ([self.tableView respondsToSelector:@selector(setLayoutMargins:)]) {
+        [self.tableView setLayoutMargins:UIEdgeInsetsZero];
+    }
+}
 #pragma mark - Private Method
 
 - (NSArray *)menuItems {
@@ -114,12 +133,19 @@
 	return _menuItems;
 }
 
+-(void)reloadMenuList {
+    
+    if(_tableView) {
+        [_tableView reloadData];
+    }
+}
 #pragma mark – UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	
 	return self.menuItems.count;
 }
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	
@@ -129,12 +155,15 @@
 	NSString *item = [self.menuItems objectAtIndex:indexPath.row];
 	cell.menuTitleLabel.text = item;
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
-	cell.backgroundColor = [UIColor clearColor];
+    
+    [cell updateOnSelection:(self.selectedIndexPath.section == indexPath.section && self.selectedIndexPath.row ==indexPath.row)];
+   
 	return cell;
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 	return 44.0f;
 }
 
@@ -142,12 +171,13 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	
-	
+    self.selectedIndexPath = indexPath;
+
 	if(self.delegate && [self.delegate respondsToSelector:@selector(didSelectRowAtIndexPath:)]) {
 		
 		[self.delegate didSelectRowAtIndexPath:indexPath];
-		
 	}
+    
 }
 
 @end

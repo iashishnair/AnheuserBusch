@@ -110,4 +110,18 @@ static NSString * taskTableHeading = @"My Tasks For This Week";
 
 static NSString * viewHeading = @"Overall KPI ranking";
 
+// Slide Menu
+
+
+//Font
+#define SLIDE_MENU_SELECTED_LABEL_TEXT_FONT [UIFont systemFontOfSize:12]
+#define SLIDE_MENU_DESELECTED_LABEL_TEXT_FONT [UIFont systemFontOfSize:12]
+//Color
+#define SLIDE_MENU_SEPERATOR_LINE_COLOR [UIColor redColor]
+
+#define SLIDE_MENU_SELECTED_LABEL_TEXT_COLOR [UIColor blackColor]
+#define SLIDE_MENU_DESELECTED_LABEL_TEXT_COLOR [UIColor blueColor]
+
+#define SLIDE_MENU_SELECTED_CELL_BG_COLOR [UIColor lightGrayColor]
+#define SLIDE_MENU_DESELECTED_CELL_BG_COLOR [UIColor whiteColor]
 

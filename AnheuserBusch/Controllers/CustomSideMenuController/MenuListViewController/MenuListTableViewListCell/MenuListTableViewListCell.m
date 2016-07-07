@@ -7,6 +7,7 @@
 //
 
 #import "MenuListTableViewListCell.h"
+#include "Constants.h"
 
 @implementation MenuListTableViewListCell
 
@@ -19,6 +20,17 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+    
+}
+
+- (void)updateOnSelection:(BOOL)selected {
+    
+  
+    _menuTitleLabel.textColor = selected ? SLIDE_MENU_SELECTED_LABEL_TEXT_COLOR :SLIDE_MENU_DESELECTED_LABEL_TEXT_COLOR;
+   
+    _menuTitleLabel.font =  selected? SLIDE_MENU_SELECTED_LABEL_TEXT_FONT : SLIDE_MENU_DESELECTED_LABEL_TEXT_FONT;
+   
+    self.backgroundColor = selected ? SLIDE_MENU_SELECTED_CELL_BG_COLOR :SLIDE_MENU_DESELECTED_CELL_BG_COLOR;
 }
 
 @end

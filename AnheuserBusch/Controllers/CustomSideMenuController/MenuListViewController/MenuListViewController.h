@@ -21,4 +21,5 @@
 @property (nonatomic, strong)  NSDictionary *userInfoDict;
 @property(nonatomic, weak) id <MenuListViewControllerDelegate> delegate;
 
+-(void)reloadMenuList;
 @end

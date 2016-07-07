@@ -11,5 +11,5 @@
 @interface MenuListTableViewListCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *menuIconimageView;
 @property (weak, nonatomic) IBOutlet UILabel *menuTitleLabel;
-
+- (void)updateOnSelection:(BOOL)selected ;
 @end
