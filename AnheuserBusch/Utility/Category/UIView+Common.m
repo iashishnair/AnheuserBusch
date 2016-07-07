@@ -19,8 +19,8 @@
 
 + (UIColor *) defaultPageBGColor {
 	
-	//return [UIColor colorWithRed:123.0f/255.0f green:123.0f/255.0f blue:123.0f/255.0f alpha:1.0];
-    return [UIColor clearColor];
+	return [UIColor colorWithRed:236.0f/255.0f green:235.0f/255.0f blue:235.0f/255.0f alpha:1.0];
+    //return [UIColor clearColor];
 }
 
 
@@ -58,5 +58,6 @@
 +(UIFont *)badgeNumberTextFont {
     return [UIFont systemFontOfSize:28.0f];
 }
+
 
 @end

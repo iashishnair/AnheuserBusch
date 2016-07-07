@@ -110,4 +110,6 @@ static NSString * taskTableHeading = @"My Tasks For This Week";
 
 static NSString * viewHeading = @"Overall KPI ranking";
 
+//
+# define PROFILE_INCENTIVE_TITLE_FONT [UIFont systemFontOfSize:28.0f]
 

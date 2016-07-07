@@ -13,6 +13,7 @@
 #import "PeerRankingDetailViewController.h"
 #import "KPIRankingViewController.h"
 #import "ProfilePageDataModel.h"
+#import "Constants.h"
 
 @interface ProfileViewController () <ProfilePageCustomCellDelegate>
 
@@ -21,7 +22,7 @@
 @property (strong, nonatomic) id <ProfileViewProtocol> presenter;
 @property (strong, nonatomic) ProfilePageDataModel *profileDataModel;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
-
+@property (weak, nonatomic) IBOutlet UIView *profileDetailsView;
 
 @end
 
@@ -45,9 +46,12 @@
 
 -(void)configureUI {
   
+    //self.view =
+    self.headingLabel.font = PROFILE_INCENTIVE_TITLE_FONT;
     self.title = MenuItems[0];
     self.headingLabel.text = @"My Incentives";
     self.userNameLabel.text = self.profileDataModel.userName;
+    
 }
 
 -(void)dealloc {
