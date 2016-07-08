@@ -8,13 +8,14 @@
 
 #import "GUITabPagerViewController.h"
 #import "GUITabScrollView.h"
+#import "NSObject+HelperUtil.h"
 
 @interface GUITabPagerViewController () <GUITabScrollDelegate, UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (strong, nonatomic) GUITabScrollView *header;
+@property (strong, nonatomic) UIView *hintView;
 @property (assign, nonatomic) NSInteger selectedIndex;
-
 @property (strong, nonatomic) NSMutableArray *viewControllers;
 @property (strong, nonatomic) NSMutableArray *tabTitles;
 @property (strong, nonatomic) UIColor *headerColor;
@@ -101,7 +102,7 @@
     }
     
     NSInteger index = [self.viewControllers indexOfObject:pendingViewControllers[0]];
-    [[self header] animateToTabAtIndex:index];
+    [self.header animateToTabAtIndex:index];
     
     if ([[self delegate] respondsToSelector:@selector(tabPager:willTransitionToTabAtIndex:)]) {
         [[self delegate] tabPager:self willTransitionToTabAtIndex:index];
@@ -114,7 +115,7 @@
         return;
     }
     [self setSelectedIndex:[self.viewControllers indexOfObject:[[self pageViewController] viewControllers][0]]];
-    [[self header] animateToTabAtIndex:[self selectedIndex]];
+    [self.header animateToTabAtIndex:[self selectedIndex]];
     
     if ([[self delegate] respondsToSelector:@selector(tabPager:didTransitionToTabAtIndex:)]) {
         [[self delegate] tabPager:self didTransitionToTabAtIndex:[self selectedIndex]];
@@ -175,11 +176,12 @@
     
     [self reloadTabs];
     
-    CGRect frame = [[self view] frame];
-    frame.origin.y = [self headerHeight];
-    frame.size.height -= [self headerHeight];
+    [self addHintView];
     
-    [[[self pageViewController] view] setFrame:frame];
+//    CGRect frame = [self.view frame];
+//    frame.origin.y = [self headerHeight];
+//    frame.size.height -= [self headerHeight];
+//    [[[self pageViewController] view] setFrame:frame];
     
     [self.pageViewController setViewControllers:@[self.viewControllers[0]]
                                       direction:UIPageViewControllerNavigationDirectionReverse
@@ -188,7 +190,25 @@
     [self setSelectedIndex:0];
 }
 
+- (void)addHintView {
+    
+    CGRect frame = [self.view frame];
+    frame.origin.y = [self headerHeight];
+ 
+    if(self.hintView) {
+        [self.view addSubview:self.hintView];
+        frame.size.height = 44;
+        self.hintView.frame = frame;
+        frame.origin.y += 44.0f + 2;
+    }
+    
+    frame.size.height = self.view.bounds.size.height - frame.origin.y;
+    [[[self pageViewController] view] setFrame:frame];
+}
+
 - (void)reloadTabs {
+    
+    
     if ([[self dataSource] numberOfViewControllers] == 0)
         return;
     
@@ -249,20 +269,33 @@
         }
     }
     
-    if ([self header]) {
-        [[self header] removeFromSuperview];
+    if (self.header) {
+        [self.header removeFromSuperview];
     }
     CGRect frame = self.view.frame;
     frame.origin.y = 0;
     frame.size.height = [self headerHeight];
     [self setHeader:[[GUITabScrollView alloc] initWithFrame:frame tabViews:tabViews tabBarHeight:[self headerHeight] tabColor:[self headerColor] backgroundColor:[self tabBackgroundColor] selectedTabIndex:self.selectedIndex]];
-    [[self header] setTabScrollDelegate:self];
+    [self.header setTabScrollDelegate:self];
     
-    [self header].autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    self.header.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     
-    [[self view] addSubview:[self header]];
+    [self.view addSubview:self.header];
 }
 
+- (UIView *)hintView {
+    
+    
+    if(_dataSource && [_dataSource respondsToSelector:@selector(hintView)]) {
+        
+        if(!_hintView) {
+            _hintView = [_dataSource hintView];
+            _hintView.backgroundColor = [UIColor redColor];
+        }
+    }
+    
+    return _hintView;
+}
 #pragma mark - Public Methods
 
 - (void)selectTabbarIndex:(NSInteger)index {
@@ -279,7 +312,7 @@
                                       direction:UIPageViewControllerNavigationDirectionReverse
                                        animated:animation
                                      completion:nil];
-    [[self header] animateToTabAtIndex:index animated:animation];
+    [self.header animateToTabAtIndex:index animated:animation];
     [self setSelectedIndex:index];
 }
 

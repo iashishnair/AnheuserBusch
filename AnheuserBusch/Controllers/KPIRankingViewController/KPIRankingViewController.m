@@ -42,10 +42,7 @@
     
     _tabPageViewController = nil;
 }
--(void)viewDidLayoutSubviews{
-    
-    
-}
+
 #pragma mark - Private Method
 
 - (void) configureUI {
@@ -104,7 +101,8 @@
 #pragma mark - Tab Pager Data Source
 
 - (NSInteger)numberOfViewControllers {
-    return 3;
+   
+    return segmentTitles.count;
 }
 
 - (UIViewController *)viewControllerForIndex:(NSInteger)index {
@@ -130,6 +128,11 @@
 
 - (UIColor *)titleColor {
     return [UIColor whiteColorABI];
+}
+
+- (UIView *)hintView {
+    
+    return [UIView loadViewFromNIB:@"IncentiveHintView"];
 }
 
 #pragma mark - Tab Pager Delegate

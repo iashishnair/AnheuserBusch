@@ -49,7 +49,7 @@
 @interface  UIView (HelperUtil)
 
 + (nullable instancetype)loadViewFromNIB ;
-
++ (instancetype)loadViewFromNIB:(NSString *)nibName;
 - (void)fitToParentView:(nullable UIView * ) toItem;
 - (void)widthMultiplierBy:(CGFloat)multiplier toItem:(nonnull id)toItem;
 - (void)heightMultiplierBy:(CGFloat)multiplier toItem:(nonnull id)toItem;

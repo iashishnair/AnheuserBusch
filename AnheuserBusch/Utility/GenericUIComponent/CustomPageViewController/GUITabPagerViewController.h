@@ -31,6 +31,7 @@
 - (UIViewController *)viewControllerForIndex:(NSInteger)index;
 
 @optional
+- (UIView *)hintView;
 - (UIView *)viewForTabAtIndex:(NSInteger)index;
 - (NSString *)titleForTabAtIndex:(NSInteger)index;
 - (CGFloat)tabHeight;

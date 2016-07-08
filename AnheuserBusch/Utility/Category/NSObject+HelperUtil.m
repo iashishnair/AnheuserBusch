@@ -157,6 +157,13 @@
     return (nibs && nibs.count) ? [nibs firstObject] : nil;
 }
 
++ (instancetype)loadViewFromNIB:(NSString *)nibName {
+    
+    NSArray * nibs =  [[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil];
+    
+    return (nibs && nibs.count) ? [nibs firstObject] : nil;
+}
+
 /*!
  *  Add NSLay
  *

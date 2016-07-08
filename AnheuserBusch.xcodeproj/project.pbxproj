@@ -18,6 +18,8 @@
 		8468C9401D0AACFC00B30DCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468C93F1D0AACFC00B30DCF /* CoreGraphics.framework */; };
 		8468C9421D0AAD0300B30DCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468C9411D0AAD0300B30DCF /* Foundation.framework */; };
 		84F86A411D2F98BF0031B5DD /* ProfilePageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F86A401D2F98BF0031B5DD /* ProfilePageDataModel.m */; };
+		84F86A441D2FB01E0031B5DD /* IncentiveHintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F86A431D2FB01E0031B5DD /* IncentiveHintView.m */; };
+		84F86A461D2FB0330031B5DD /* IncentiveHintView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84F86A451D2FB0330031B5DD /* IncentiveHintView.xib */; };
 		EA7B00001D2EE80C004F841F /* AnnouncementDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFFA21D2EE80C004F841F /* AnnouncementDataModel.m */; };
 		EA7B00011D2EE80C004F841F /* ActorDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFFA61D2EE80C004F841F /* ActorDataModel.m */; };
 		EA7B00021D2EE80C004F841F /* CommentItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFFA91D2EE80C004F841F /* CommentItemModel.m */; };
@@ -109,6 +111,9 @@
 		8468C9411D0AAD0300B30DCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84F86A3F1D2F98BF0031B5DD /* ProfilePageDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePageDataModel.h; sourceTree = "<group>"; };
 		84F86A401D2F98BF0031B5DD /* ProfilePageDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePageDataModel.m; sourceTree = "<group>"; };
+		84F86A421D2FB01E0031B5DD /* IncentiveHintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncentiveHintView.h; sourceTree = "<group>"; };
+		84F86A431D2FB01E0031B5DD /* IncentiveHintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncentiveHintView.m; sourceTree = "<group>"; };
+		84F86A451D2FB0330031B5DD /* IncentiveHintView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IncentiveHintView.xib; sourceTree = "<group>"; };
 		D81035F868542EEDBC8DF2DC /* Pods_AnheuserBusch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnheuserBusch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7B00161D2EE853004F841F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		EA7B00171D2EE853004F841F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -800,6 +805,9 @@
 				EA7BFFD11D2EE80C004F841F /* GUITabPagerViewController.m */,
 				EA7BFFD21D2EE80C004F841F /* GUITabScrollView.h */,
 				EA7BFFD31D2EE80C004F841F /* GUITabScrollView.m */,
+				84F86A421D2FB01E0031B5DD /* IncentiveHintView.h */,
+				84F86A431D2FB01E0031B5DD /* IncentiveHintView.m */,
+				84F86A451D2FB0330031B5DD /* IncentiveHintView.xib */,
 			);
 			path = CustomPageViewController;
 			sourceTree = "<group>";
@@ -938,6 +946,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8468C8E61D0AA58B00B30DCF /* LaunchScreen.storyboard in Resources */,
+				84F86A461D2FB0330031B5DD /* IncentiveHintView.xib in Resources */,
 				8468C8DE1D0AA58B00B30DCF /* Main.storyboard in Resources */,
 				EA7B000A1D2EE80C004F841F /* Assets.xcassets in Resources */,
 				EA7B000B1D2EE80C004F841F /* ProfileDemo.plist in Resources */,
@@ -1014,6 +1023,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F86A441D2FB01E0031B5DD /* IncentiveHintView.m in Sources */,
 				EA7BFFF11D2EE80C004F841F /* KPIRankingViewProtocol.m in Sources */,
 				EA7B00101D2EE80C004F841F /* UIView+Common.m in Sources */,
 				EA7BFFFB1D2EE80C004F841F /* CStorePLTableViewCell.m in Sources */,
