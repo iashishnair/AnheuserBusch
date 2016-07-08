@@ -108,8 +108,11 @@ static NSString * viewHeading = @"Overall KPI ranking";
 	//--------------------------- SLIDE MENU CONSTANT ---------------------------
 
 //Font
-#define SLIDE_MENU_SELECTED_LABEL_TEXT_FONT [UIFont systemFontOfSize:20]
-#define SLIDE_MENU_DESELECTED_LABEL_TEXT_FONT [UIFont systemFontOfSize:20]
+#define SLIDE_MENU_USER_NAME_TEXT_FONT [UIFont systemFontOfSize:18]
+#define SLIDE_MENU_USER_NAME_TEXT_COLOR [UIColor darkGreyColorABI]
+
+#define SLIDE_MENU_SELECTED_LABEL_TEXT_FONT [UIFont systemFontOfSize:18]
+#define SLIDE_MENU_DESELECTED_LABEL_TEXT_FONT [UIFont systemFontOfSize:18]
 //Color
 #define SLIDE_MENU_SEPERATOR_LINE_COLOR [UIColor redColor]
 

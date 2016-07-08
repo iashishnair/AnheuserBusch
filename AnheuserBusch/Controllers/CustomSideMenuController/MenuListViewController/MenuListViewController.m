@@ -173,7 +173,7 @@
 	
 	if(!_userNameLabel) {
 		
-		_userNameLabel = [UILabel labelWithText:@"" textColor:[UIColor whiteColorABI] textFont:[UIFont systemFontOfSize:16] textAlignment:NSTextAlignmentCenter numberOfLines:1 backgroundColor:nil];
+		_userNameLabel = [UILabel labelWithText:@"" textColor:SLIDE_MENU_USER_NAME_TEXT_COLOR textFont:SLIDE_MENU_USER_NAME_TEXT_FONT textAlignment:NSTextAlignmentCenter numberOfLines:1 backgroundColor:nil];
 		
 		_userNameLabel.text = @"eee";
 
