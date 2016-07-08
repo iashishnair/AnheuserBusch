@@ -204,7 +204,7 @@
 	
 	[self setOnboardingIsShown];
 	
-	menuListViewController = [[MenuListViewController alloc] initWithNibName:@"MenuListViewController" bundle:nil];
+	menuListViewController = [[MenuListViewController alloc] init];
 	menuListViewController.delegate = self;
 	
 	ProfileViewController * profileViewController = (ProfileViewController *)[UIViewController instantiateViewControllerWithIdentifier:@"ProfileViewController"];
