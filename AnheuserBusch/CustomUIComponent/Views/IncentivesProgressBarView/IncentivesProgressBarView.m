@@ -9,6 +9,7 @@
 
 #import "IncentivesProgressBarView.h"
 #import "NSLayoutConstraint+LayoutConstraintHelper.h"
+#import "Constants.h"
 
 #define BAR_CORNER_RADIUS 7.0f
 #define ANNOTATION_IMAGE_VIEW_WIDTH 10.0
@@ -289,10 +290,10 @@
     
     if(self.unitName && [self.unitName isEqualToString:@"%"]) {
         
-        unitNameTemp = [NSString stringWithFormat:@"%.0f%@", self.multiplier*100,self.unitName.length ? self.unitName :@""];
+        unitNameTemp = [NSString stringWithFormat:@"%.0f %@", self.multiplier*100,self.unitName.length ? self.unitName :@""];
         
     } else {
-        unitNameTemp = [NSString stringWithFormat:@"%.0f%@",self.progressAmount.floatValue,_unitName.length ? _unitName : @""];
+        unitNameTemp = [NSString stringWithFormat:@"%.0f %@",self.progressAmount.floatValue,_unitName.length ? _unitName : @""];
         
     }
     
@@ -323,6 +324,8 @@
     
     
     [self updateProgressBarViewWidthConstraint: _multiplier];
+    
+    self.progressBarView.backgroundColor = [UIColor colorForIncentiveInPercentage:_multiplier];
 }
 
 -(void)setProgressAmountInPercent:(NSNumber *)progressAmountInPercent {
@@ -339,11 +342,11 @@
     self.barBackgroundView.backgroundColor = _barBackGroundColor;
 }
 
-- (void)setProgressColor:(UIColor *)progressColor {
-    
-    _progressColor = progressColor;
-    self.progressBarView.backgroundColor = progressColor;
-}
+//- (void)setProgressColor:(UIColor *)progressColor {
+//    
+//    _progressColor = progressColor;
+//    self.progressBarView.backgroundColor = [UIColor colorForIncentiveInPercentage:_multiplier];
+//}
 
 
 

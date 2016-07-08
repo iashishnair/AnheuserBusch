@@ -81,32 +81,30 @@
         self.rankNumber.text = rank;
     }
     
-    NSString *statusTitle = incentiveDataModel.statusTitle;
-    
-    if(![NSString isNULLString:statusTitle]) {
-        self.statusTitleLabel.text = statusTitle;
-    }
+//    //
     
     NSString *statusDescription = incentiveDataModel.statusDescription;
     
     if(![NSString isNULLString:statusDescription]) {
-        self.statusDescriptionLabel.text = statusDescription;
+        self.statusTitleLabel .text = statusDescription;
     }
     
     if(self.chartView) {
 		
-        self.incentivesProgressBarView.barBackGroundColor = [UIColor brownColor];
+        self.incentivesProgressBarView.barBackGroundColor = [UIColor lightGreyColorABI];
         self.incentivesProgressBarView.progressColor = [UIColor greenColor];
         self.incentivesProgressBarView.minRange = self.incentiveDataModel.minIncentiveRange;
         self.incentivesProgressBarView.maxRange = self.incentiveDataModel.maxIncentiveRange;
         self.incentivesProgressBarView.progressAmount = self.incentiveDataModel.overAllIncentiveProgress;
-        self.incentivesProgressBarView.unitName = @"points";
-        self.incentivesProgressBarView.descriptionText = @"Way to Go";
-        self.incentivesProgressBarView.unitTextFont = [UIFont boldSystemFontOfSize:12];
+        self.incentivesProgressBarView.unitName = self.incentiveDataModel.progressUnit;
+        self.incentivesProgressBarView.unitTextFont = [UIFont boldSystemFontOfSize:16];
         self.incentivesProgressBarView.descriptionTextColor = [UIColor blackColor];
-        self.incentivesProgressBarView.descriptionTextFont = [UIFont systemFontOfSize:10];
-        self.incentivesProgressBarView.descriptionTextColor = [UIColor blackColor];
+        self.incentivesProgressBarView.descriptionTextFont = [UIFont systemFontOfSize:12];
 
+        NSString *statusTitle = incentiveDataModel.statusTitle;
+        if(![NSString isNULLString:statusTitle]) {
+            self.incentivesProgressBarView.descriptionText = statusTitle;
+        }
     }
 }
 
@@ -114,6 +112,7 @@
     
     self.IncentiveName.font =  INCENTIVE_NAME_FONT_SIZE;
     self.statusTitleLabel.font = STATUS_TITLE_FONT_SIZE;
+    
     [[self.peerRankingButton layer] setBorderWidth:1.5f];
     self.peerRankingButton.layer.borderColor = [UIColor defaultABIThemeBlueColor].CGColor ;
     self.peerRankingButton.backgroundColor = [UIColor whiteColor];

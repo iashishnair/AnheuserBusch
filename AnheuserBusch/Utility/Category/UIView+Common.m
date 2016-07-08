@@ -129,6 +129,22 @@
 	return [UIColor colorWithHexString:HEX_COLOR_CODE_333333_LIGHTGREY];
 }
 
++ (UIColor *)colorForIncentiveInPercentage:(CGFloat)multiplier {
+    
+    if(multiplier > 0.8) {
+        
+        return [UIColor incentiveExceededColor];
+    } else if(multiplier > 0.4) {
+        
+        return [UIColor incentiveMinimumColor];
+    } else {
+        
+        return [UIColor incentiveVeryLessColor];
+    }
+    
+    return nil;
+}
+
 @end
 
 @implementation UIFont (Common)

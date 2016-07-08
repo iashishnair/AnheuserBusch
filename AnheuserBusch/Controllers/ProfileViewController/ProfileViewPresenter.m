@@ -35,12 +35,12 @@
         IncentiveDataModel *incentiveDataModel = [IncentiveDataModel new];
         incentiveDataModel.rank = [obj valueForKeySafe:@"rank"];
         incentiveDataModel.incentiveName = [obj valueForKeySafe:@"incentivename"];
-        //incentiveDataModel.statusDescription = [obj valueForKeySafe:@"statusDescription"];
-        incentiveDataModel.statusTitle = [obj valueForKeySafe:@"statusDescription"];
+        incentiveDataModel.statusDescription = [obj valueForKeySafe:@"statusDescription"];
+        incentiveDataModel.statusTitle = [obj valueForKeySafe:@"statusTitle"];
         incentiveDataModel.overAllIncentiveProgress = [obj valueForKeySafe:@"overAllIncentiveProgress"];
         incentiveDataModel.minIncentiveRange = [obj valueForKeySafe:@"minIncentiveRange"];
         incentiveDataModel.maxIncentiveRange = [obj valueForKeySafe:@"maxIncentiveRange"];
-        incentiveDataModel.progressunit = [obj valueForKeySafe:@"progressunit"];
+        incentiveDataModel.progressUnit = [obj valueForKeySafe:@"progressunit"];
         
         
         NSMutableArray *kpis = [self populateKPIS:[obj valueForKeySafe:@"kpis"]];
@@ -75,7 +75,12 @@
         kpisDetailsDataModel.progress = [kip valueForKeySafe:@"progress"];
         kpisDetailsDataModel.progressUnit = [kip valueForKeySafe:@"progressunit"];
         [kpis addObject:kpisDetailsDataModel];
+        
+        
     }
     return kpis;
 }
+
+
+
 @end

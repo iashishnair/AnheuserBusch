@@ -29,7 +29,6 @@
 		EA7B00091D2EE80C004F841F /* ProfileDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFFBD1D2EE80C004F841F /* ProfileDataModel.m */; };
 		EA7B000A1D2EE80C004F841F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA7BFFC01D2EE80C004F841F /* Assets.xcassets */; };
 		EA7B000B1D2EE80C004F841F /* ProfileDemo.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA7BFFC21D2EE80C004F841F /* ProfileDemo.plist */; };
-		EA7B000C1D2EE80C004F841F /* ProfileDemo.plist.zip in Resources */ = {isa = PBXBuildFile; fileRef = EA7BFFC31D2EE80C004F841F /* ProfileDemo.plist.zip */; };
 		EA7B000D1D2EE80C004F841F /* NSLayoutConstraint+LayoutConstraintHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFFC71D2EE80C004F841F /* NSLayoutConstraint+LayoutConstraintHelper.m */; };
 		EA7B000E1D2EE80C004F841F /* NSObject+HelperUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFFC91D2EE80C004F841F /* NSObject+HelperUtil.m */; };
 		EA7B000F1D2EE80C004F841F /* UIResponder+UIComponentUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFFCB1D2EE80C004F841F /* UIResponder+UIComponentUtility.m */; };
@@ -203,7 +202,6 @@
 		EA7BFFBD1D2EE80C004F841F /* ProfileDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileDataModel.m; sourceTree = "<group>"; };
 		EA7BFFC01D2EE80C004F841F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA7BFFC21D2EE80C004F841F /* ProfileDemo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProfileDemo.plist; sourceTree = "<group>"; };
-		EA7BFFC31D2EE80C004F841F /* ProfileDemo.plist.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = ProfileDemo.plist.zip; sourceTree = "<group>"; };
 		EA7BFFC61D2EE80C004F841F /* NSLayoutConstraint+LayoutConstraintHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+LayoutConstraintHelper.h"; sourceTree = "<group>"; };
 		EA7BFFC71D2EE80C004F841F /* NSLayoutConstraint+LayoutConstraintHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+LayoutConstraintHelper.m"; sourceTree = "<group>"; };
 		EA7BFFC81D2EE80C004F841F /* NSObject+HelperUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HelperUtil.h"; sourceTree = "<group>"; };
@@ -758,7 +756,6 @@
 			isa = PBXGroup;
 			children = (
 				EA7BFFC21D2EE80C004F841F /* ProfileDemo.plist */,
-				EA7BFFC31D2EE80C004F841F /* ProfileDemo.plist.zip */,
 			);
 			path = Plist;
 			sourceTree = "<group>";
@@ -944,7 +941,6 @@
 				8468C8DE1D0AA58B00B30DCF /* Main.storyboard in Resources */,
 				EA7B000A1D2EE80C004F841F /* Assets.xcassets in Resources */,
 				EA7B000B1D2EE80C004F841F /* ProfileDemo.plist in Resources */,
-				EA7B000C1D2EE80C004F841F /* ProfileDemo.plist.zip in Resources */,
 				EA7BFFE51D2EE80C004F841F /* CommentVIew.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

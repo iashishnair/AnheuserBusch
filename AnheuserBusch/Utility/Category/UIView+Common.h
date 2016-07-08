@@ -36,6 +36,7 @@
 + (UIColor *)darkGreyColorABI;
 + (UIColor *)lightGreyColorABI;
 + (UIColor *)defaultABIThemeBlueColor;
++ (UIColor *)colorForIncentiveInPercentage:(CGFloat)multiplier;
 @end
 
 

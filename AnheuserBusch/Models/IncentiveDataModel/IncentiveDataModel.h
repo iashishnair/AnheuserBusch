@@ -16,7 +16,7 @@
 @property (strong, nonatomic) NSNumber *overAllIncentiveProgress;
 @property (strong, nonatomic) NSNumber *minIncentiveRange;
 @property (strong, nonatomic) NSNumber *maxIncentiveRange;
-@property (strong, nonatomic) NSString *progressunit;
+@property (strong, nonatomic) NSString *progressUnit;
 @property (strong, nonatomic) NSString *statusTitle;
 @property (strong, nonatomic) NSString *statusDescription;
 
