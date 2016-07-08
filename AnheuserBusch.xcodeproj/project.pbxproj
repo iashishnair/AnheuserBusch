@@ -17,6 +17,7 @@
 		8468C93E1D0AACF200B30DCF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468C93D1D0AACF200B30DCF /* UIKit.framework */; };
 		8468C9401D0AACFC00B30DCF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468C93F1D0AACFC00B30DCF /* CoreGraphics.framework */; };
 		8468C9421D0AAD0300B30DCF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8468C9411D0AAD0300B30DCF /* Foundation.framework */; };
+		84F86A411D2F98BF0031B5DD /* ProfilePageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F86A401D2F98BF0031B5DD /* ProfilePageDataModel.m */; };
 		EA7B00001D2EE80C004F841F /* AnnouncementDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFFA21D2EE80C004F841F /* AnnouncementDataModel.m */; };
 		EA7B00011D2EE80C004F841F /* ActorDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFFA61D2EE80C004F841F /* ActorDataModel.m */; };
 		EA7B00021D2EE80C004F841F /* CommentItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFFA91D2EE80C004F841F /* CommentItemModel.m */; };
@@ -43,7 +44,6 @@
 		EA7BFFDD1D2EE80C004F841F /* AnnouncementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF411D2EE80C004F841F /* AnnouncementsViewController.m */; };
 		EA7BFFDE1D2EE80C004F841F /* AnnouncementsViewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF431D2EE80C004F841F /* AnnouncementsViewPresenter.m */; };
 		EA7BFFE01D2EE80C004F841F /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF491D2EE80C004F841F /* BaseViewController.m */; };
-		EA7BFFE11D2EE80C004F841F /* ProfilePageDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF4B1D2EE80C004F841F /* ProfilePageDataModel.m */; };
 		EA7BFFE21D2EE80C004F841F /* ChatterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF4E1D2EE80C004F841F /* ChatterViewController.m */; };
 		EA7BFFE31D2EE80C004F841F /* ChatterViewControllerPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF501D2EE80C004F841F /* ChatterViewControllerPresenter.m */; };
 		EA7BFFE41D2EE80C004F841F /* CommentVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = EA7BFF531D2EE80C004F841F /* CommentVIew.m */; };
@@ -107,6 +107,8 @@
 		8468C93D1D0AACF200B30DCF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8468C93F1D0AACFC00B30DCF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8468C9411D0AAD0300B30DCF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		84F86A3F1D2F98BF0031B5DD /* ProfilePageDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePageDataModel.h; sourceTree = "<group>"; };
+		84F86A401D2F98BF0031B5DD /* ProfilePageDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePageDataModel.m; sourceTree = "<group>"; };
 		D81035F868542EEDBC8DF2DC /* Pods_AnheuserBusch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnheuserBusch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA7B00161D2EE853004F841F /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		EA7B00171D2EE853004F841F /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -122,8 +124,6 @@
 		EA7BFF441D2EE80C004F841F /* AnnouncementsViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnnouncementsViewProtocol.h; sourceTree = "<group>"; };
 		EA7BFF481D2EE80C004F841F /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		EA7BFF491D2EE80C004F841F /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		EA7BFF4A1D2EE80C004F841F /* ProfilePageDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfilePageDataModel.h; sourceTree = "<group>"; };
-		EA7BFF4B1D2EE80C004F841F /* ProfilePageDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfilePageDataModel.m; sourceTree = "<group>"; };
 		EA7BFF4D1D2EE80C004F841F /* ChatterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatterViewController.h; sourceTree = "<group>"; };
 		EA7BFF4E1D2EE80C004F841F /* ChatterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatterViewController.m; sourceTree = "<group>"; };
 		EA7BFF4F1D2EE80C004F841F /* ChatterViewControllerPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatterViewControllerPresenter.h; sourceTree = "<group>"; };
@@ -423,8 +423,6 @@
 			children = (
 				EA7BFF481D2EE80C004F841F /* BaseViewController.h */,
 				EA7BFF491D2EE80C004F841F /* BaseViewController.m */,
-				EA7BFF4A1D2EE80C004F841F /* ProfilePageDataModel.h */,
-				EA7BFF4B1D2EE80C004F841F /* ProfilePageDataModel.m */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -729,6 +727,8 @@
 		EA7BFFBB1D2EE80C004F841F /* ProfileDataModel */ = {
 			isa = PBXGroup;
 			children = (
+				84F86A3F1D2F98BF0031B5DD /* ProfilePageDataModel.h */,
+				84F86A401D2F98BF0031B5DD /* ProfilePageDataModel.m */,
 				EA7BFFBC1D2EE80C004F841F /* ProfileDataModel.h */,
 				EA7BFFBD1D2EE80C004F841F /* ProfileDataModel.m */,
 			);
@@ -1031,7 +1031,6 @@
 				EA7B00061D2EE80C004F841F /* KPIsDetailsDataModel.m in Sources */,
 				EA7BFFDC1D2EE80C004F841F /* AnnouncementsDetailViewController.m in Sources */,
 				EA7B000E1D2EE80C004F841F /* NSObject+HelperUtil.m in Sources */,
-				EA7BFFE11D2EE80C004F841F /* ProfilePageDataModel.m in Sources */,
 				EA7BFFF51D2EE80C004F841F /* PeerProfileViewController.m in Sources */,
 				EA7BFFE71D2EE80C004F841F /* CStorePLViewConroller.m in Sources */,
 				EA7BFFE61D2EE80C004F841F /* FeedListTableViewCell.m in Sources */,
@@ -1065,6 +1064,7 @@
 				EA7B00121D2EE80C004F841F /* GUITabScrollView.m in Sources */,
 				EA7B00021D2EE80C004F841F /* CommentItemModel.m in Sources */,
 				EA7BFFE91D2EE80C004F841F /* CustomSideMenuController.m in Sources */,
+				84F86A411D2F98BF0031B5DD /* ProfilePageDataModel.m in Sources */,
 				EA7B00081D2EE80C004F841F /* PeerRankingDataModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,19 +27,18 @@
 	
 	self.view.backgroundColor = [UIColor defaultPageBGColor];
 	
-	if(self.navigationController.viewControllers.count>1) {
+	if(self.navigationController.viewControllers.count > 1) {
 		
 		[self commonHeaderWithLeftMenuButtonImage:nil rightMenuButtonImage:[UIImage imageNamed:@"notification"]];
+        self.navigationController.navigationBar.topItem.title = @"";
+
 	}
 	else {
 		
 			[self commonHeaderWithLeftMenuButtonImage:[UIImage imageNamed:@"menu_icon"] rightMenuButtonImage:[UIImage imageNamed:@"notification"]];
 	}
 
-	
-	
-	
-
+		
 	
 //	[[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColorABI], NSForegroundColorAttributeName, [UIFont systemFontOfSize:12.0], NSFontAttributeName, nil]];
 //

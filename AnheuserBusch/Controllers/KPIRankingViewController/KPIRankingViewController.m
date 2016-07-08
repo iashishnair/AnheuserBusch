@@ -50,12 +50,15 @@
 
 - (void) configureUI {
     
+    self.title = _incentiveDataModel.incentiveName;
+    
     [self addChildViewController:self.tabPageViewController];
     [self.view addSubview:self.tabPageViewController.view];
     [self didMoveToParentViewController:self.tabPageViewController];
     [self addConstrains];
     [self.tabPageViewController reloadData];
 }
+
 
 - (void)addConstrains {
     
