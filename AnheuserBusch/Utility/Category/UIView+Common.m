@@ -41,7 +41,7 @@
 
 + (UIColor *) defaultPageBGColor {
 	
-	return [UIColor blueColorABI];
+	return [UIColor lightGreyColorABI];
 }
 
 + (UIColor *)defaultTextColor {

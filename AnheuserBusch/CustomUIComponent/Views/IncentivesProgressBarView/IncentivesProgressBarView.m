@@ -294,19 +294,10 @@
         
     } else {
         unitNameTemp = [NSString stringWithFormat:@"%.0f %@",self.progressAmount.floatValue,_unitName.length ? _unitName : @""];
-        
     }
-    
     _unitTextLabel.text = unitNameTemp;
-    
-    
 }
 
-
-//- (UIColor *)progressColor:(CGFloat)multiplier {
-//    
-////	
-//}
 
 #pragma mark - Public Method
 
