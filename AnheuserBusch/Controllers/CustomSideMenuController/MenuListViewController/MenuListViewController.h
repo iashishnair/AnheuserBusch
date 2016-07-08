@@ -17,7 +17,7 @@
 @interface MenuListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic)  NSDictionary *userInfoDict;
-@property (strong, nonatomic) id <MenuListViewControllerDelegate> delegate;
+@property (weak, nonatomic) id <MenuListViewControllerDelegate> delegate;
 
 -(void)reloadMenuList;
 @end

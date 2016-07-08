@@ -78,6 +78,10 @@
 	
 }
 
++ (UIColor *)defaultABIThemeBlueColor {
+    
+    return [UIColor blueColorABI];
+}
 
 + (UIColor *)blueColorABI {
 

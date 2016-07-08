@@ -50,7 +50,7 @@
 -(void)configureUI {
     
     self.incentiveTableView.backgroundColor = [UIColor defaultPageBGColor];
-    self.headingLabel.font = PROFILE_INCENTIVE_TABLE_HEADING_FONT;
+    self.headingLabel.font = PROFILE_INCENTIVE_TABLE_HEADING_FONT_SIZE;
     self.title = MenuItems[0];
     self.headingLabel.text = @"My Incentives";
     self.userNameLabel.text = self.profileDataModel.userName;

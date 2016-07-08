@@ -40,12 +40,8 @@
 
 	[self configureUI];
 	
-    
-		// Do any additional setup after loading the view from its nib.
-//	[self.tableView registerNib:[UINib nibWithNibName:@"MenuListTableViewListCell" bundle:nil] forCellReuseIdentifier:@"MenuCell"];
 	
 	id username = [NSUserDefaults readUserDefault:@"username"];
-	
 	
 	if(![NSString isNULLString:username]) {
 		
@@ -53,7 +49,6 @@
 		
 	}
 	
-	return;
 	
 	__weak typeof(self) weakself = self;
 	
@@ -114,7 +109,8 @@
 	_userImageView = nil;
 	
 	_userNameLabel = nil;
-
+    _tableView = nil;
+    
 	[self.view addSubview:self.bgImageView];
 	[self.view addSubview:self.userImageView];
 	[self.view addSubview:self.userNameLabel];
@@ -191,6 +187,9 @@
 	if(!_tableView) {
 		
 		_tableView = [UITableView plainTableView];
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+
 		_tableView.backgroundColor = [UIColor whiteColor];
 		_tableView.separatorColor = [UIColor clearColor];
 	}

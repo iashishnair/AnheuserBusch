@@ -57,6 +57,8 @@
     self.peerRankingButton.clipsToBounds = YES;
     self.kPIDetailsButton.layer.cornerRadius = 3; // this value vary as per your desire
     self.kPIDetailsButton.clipsToBounds = YES;
+    [self configureUI];
+    
     //[self.peerRankingButton layer]s
     
     if(!incentiveDataModel) return;
@@ -106,6 +108,24 @@
         self.incentivesProgressBarView.descriptionTextColor = [UIColor blackColor];
 
     }
+}
+
+-(void)configureUI {
+    
+    self.IncentiveName.font =  INCENTIVE_NAME_FONT_SIZE;
+    self.statusTitleLabel.font = STATUS_TITLE_FONT_SIZE;
+    [[self.peerRankingButton layer] setBorderWidth:1.5f];
+    self.peerRankingButton.layer.borderColor = [UIColor defaultABIThemeBlueColor].CGColor ;
+    self.peerRankingButton.backgroundColor = [UIColor whiteColor];
+    self.kPIDetailsButton.backgroundColor = [UIColor blueColorABI];
+    self.peerRankingButton.layer.cornerRadius = 3; // this value vary as per your desire
+    self.peerRankingButton.clipsToBounds = YES;
+    self.kPIDetailsButton.layer.cornerRadius = 3; // this value vary as per your desire
+    self.kPIDetailsButton.clipsToBounds = YES;
+    
+    [self.peerRankingButton setTitleColor:[UIColor defaultABIThemeBlueColor] forState:UIControlStateNormal];
+    [self.kPIDetailsButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
 }
 
 #pragma mark - IB Action
