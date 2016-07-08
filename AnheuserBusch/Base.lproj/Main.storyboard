@@ -682,6 +682,7 @@
                     <connections>
                         <outlet property="headingLabel" destination="KXt-hE-WHe" id="pR3-zn-CnA"/>
                         <outlet property="incentiveTableView" destination="Fi5-jD-eJg" id="1ma-Pk-B1f"/>
+                        <outlet property="profileImgView" destination="AAS-Km-S6n" id="UoG-EL-bK1"/>
                         <outlet property="userNameLabel" destination="2Gh-cJ-Ddd" id="g31-ug-SHz"/>
                     </connections>
                 </viewController>

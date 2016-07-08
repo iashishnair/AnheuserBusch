@@ -22,6 +22,7 @@
 @property (strong, nonatomic) ProfilePageDataModel *profileDataModel;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 
+@property (weak, nonatomic) IBOutlet UIImageView *profileImgView;
 
 @end
 
@@ -33,7 +34,10 @@
 -(void)viewDidLoad {
     
     [super  viewDidLoad];
-    
+    //change Shape to circular for image view
+
+    self.profileImgView.layer.cornerRadius=self.profileImgView.frame.size.width / 2;
+    self.profileImgView.clipsToBounds=YES;
     self.incentiveDetailsDataSource = [self.presenter incentiveDataSourcePopulate];
     self.profileDataModel = [self.presenter profileInfoPopulate];
     self.title = MenuItems[0];
