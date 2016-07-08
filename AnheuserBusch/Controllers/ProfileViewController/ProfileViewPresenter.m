@@ -57,7 +57,8 @@
 -(ProfilePageDataModel *)profileInfoPopulate {
     
     ProfilePageDataModel *dataModel = [ProfilePageDataModel new];
-    dataModel.userName = @"Jack Peterson";
+    dataModel.userName = [NSUserDefaults readUserDefault:@"username"];
+    dataModel.userImageURLString = [NSUserDefaults readUserDefault:@"standardEmailPhotoUrl"];
     
     return dataModel;
 }

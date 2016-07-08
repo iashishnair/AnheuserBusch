@@ -38,6 +38,8 @@
 - (UIColor *)tabBackgroundColor;
 - (UIFont *)titleFont;
 - (UIColor *)titleColor;
+- (UIColor *)titleDeSelectColor;
+
 
 @end
 

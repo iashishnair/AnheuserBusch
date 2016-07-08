@@ -70,14 +70,14 @@
                             @"incentiveBarChartView": self.incentiveBarChartView};
     
     
-    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[customBackgroundView]|" options:0 metrics:views views:views]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-5-[customBackgroundView]-5-|" options:0 metrics:views views:views]];
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[customBackgroundView]-|" options:0 metrics:views views:views]];
-
+    
     
     [self.customBackgroundView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[incentiveTitleLabel]-|" options:0 metrics:views views:views]];
     
     [self.customBackgroundView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[seperatorView]-|" options:0 metrics:views views:views]];
-
+    
     [self.customBackgroundView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-[incentiveBarChartView]-|" options:0 metrics:views views:views]];
     
     [self.customBackgroundView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[incentiveTitleLabel]-[seperatorView(2)]-16-[incentiveBarChartView(20)]" options:0 metrics:views views:views]];
@@ -90,9 +90,8 @@
     if(!_customBackgroundView) {
         
         _customBackgroundView = [UIView new];
-        _customBackgroundView.backgroundColor = [UIColor redColor];
         _customBackgroundView.translatesAutoresizingMaskIntoConstraints =  NO;
-        _customBackgroundView.backgroundColor = [UIColor colorWithWhite:.7 alpha:.8];
+        _customBackgroundView.layer.cornerRadius = DEFAULT_CELL_CORNER_RADIUS;
     }
     
     return _customBackgroundView;
@@ -123,9 +122,35 @@
         
         _seperatorView = [UIView new];
         _seperatorView.translatesAutoresizingMaskIntoConstraints =  NO;
-        _seperatorView.backgroundColor = [UIColor blackColor];
     }
     
     return _seperatorView;
+}
+
+#pragma mark - Public Method
+- (void)setBackGroundViewColor:(UIColor *)backGroundViewColor {
+    
+    _backGroundViewColor = backGroundViewColor;
+    
+    if(_customBackgroundView && _backGroundViewColor)
+        _customBackgroundView.backgroundColor = _backGroundViewColor;
+    
+}
+- (void)setSeperatorColorColor:(UIColor *)seperatorColorColor {
+    
+    _seperatorColorColor = seperatorColorColor;
+    
+    if(_seperatorView && _seperatorColorColor)
+        _seperatorView.backgroundColor = [UIColor lightGreyColorABI];
+    
+}
+- (void)setTitleTextColor:(UIColor *)titleTextColor {
+    
+    _titleTextColor = titleTextColor;
+    
+    if(_incentiveTitleLabel && _titleTextColor)
+        _incentiveTitleLabel.textColor = _titleTextColor;
+    
+    
 }
 @end

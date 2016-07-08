@@ -106,6 +106,9 @@ static NSString * viewHeading = @"Overall KPI ranking";
 
 
 	//--------------------------- SLIDE MENU CONSTANT ---------------------------
+#define DEFAULT_CELL_CORNER_RADIUS 4.0f
+#define DEFAULT_CELL_PADDING 10.0F
+
 
 //Font
 #define SLIDE_MENU_USER_NAME_TEXT_FONT [UIFont systemFontOfSize:18]

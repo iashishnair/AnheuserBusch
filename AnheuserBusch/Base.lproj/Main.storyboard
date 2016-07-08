@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -311,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="At4-6S-ZA3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2000" y="-1645"/>
+            <point key="canvasLocation" x="-2180" y="-1709"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="dAW-tf-Mq9">
@@ -668,12 +668,13 @@
                         <outlet property="headingLabel" destination="KXt-hE-WHe" id="pR3-zn-CnA"/>
                         <outlet property="incentiveTableView" destination="Fi5-jD-eJg" id="6Rw-31-n6d"/>
                         <outlet property="profileDetailsView" destination="fdJ-31-ShK" id="hFC-Us-fyi"/>
+                        <outlet property="userImageVIew" destination="AAS-Km-S6n" id="PT4-86-CXt"/>
                         <outlet property="userNameLabel" destination="2Gh-cJ-Ddd" id="g31-ug-SHz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Q3-kC-b1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2412" y="-2100"/>
+            <point key="canvasLocation" x="-2570" y="-2149"/>
         </scene>
         <!--Ranking View Controller-->
         <scene sceneID="mhC-sv-0wc">
@@ -686,39 +687,13 @@
                     <view key="view" contentMode="scaleToFill" id="iIs-su-fwD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjS-Q2-765">
-                                <rect key="frame" x="16" y="25" width="288" height="21"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bpe-rR-e3D">
-                                <rect key="frame" x="0.0" y="66" width="320" height="413"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="jf0-d9-pSY" firstAttribute="top" secondItem="Bpe-rR-e3D" secondAttribute="bottom" constant="1" id="1Eg-6m-6lG"/>
-                            <constraint firstAttribute="trailing" secondItem="sjS-Q2-765" secondAttribute="trailing" constant="16" id="7t6-vY-zzD"/>
-                            <constraint firstItem="Bpe-rR-e3D" firstAttribute="leading" secondItem="iIs-su-fwD" secondAttribute="leading" id="INt-EM-q65"/>
-                            <constraint firstItem="Bpe-rR-e3D" firstAttribute="top" secondItem="sjS-Q2-765" secondAttribute="bottom" constant="20" id="XKb-i4-mbD"/>
-                            <constraint firstItem="sjS-Q2-765" firstAttribute="leading" secondItem="iIs-su-fwD" secondAttribute="leading" constant="16" id="jDT-8C-iil"/>
-                            <constraint firstAttribute="trailing" secondItem="Bpe-rR-e3D" secondAttribute="trailing" id="jPW-wk-eBT"/>
-                            <constraint firstItem="sjS-Q2-765" firstAttribute="top" secondItem="QvZ-D2-ciw" secondAttribute="bottom" constant="5" id="oks-UA-qC2"/>
-                        </constraints>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="hintTextLabel" destination="sjS-Q2-765" id="9GS-b6-HvC"/>
-                        <outlet property="pageViewControllerContainerView" destination="Bpe-rR-e3D" id="owz-fz-Mqv"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="smM-Dt-22o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2000" y="-2228"/>
+            <point key="canvasLocation" x="-2180" y="-2277"/>
         </scene>
         <!--Peer Ranking Detail View Controller-->
         <scene sceneID="EUS-cm-GaX">

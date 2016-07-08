@@ -18,6 +18,7 @@
 
 @interface ProfileViewController () <ProfilePageCustomCellDelegate>
 
+@property (weak, nonatomic) IBOutlet UIImageView *userImageVIew;
 @property (weak, nonatomic) IBOutlet UILabel *headingLabel;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 @property (weak, nonatomic) IBOutlet UIView *profileDetailsView;
@@ -101,7 +102,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     
     return 10.0f;
-    
 }
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {

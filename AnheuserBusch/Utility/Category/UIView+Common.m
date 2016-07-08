@@ -44,12 +44,7 @@
 	return [UIColor lightGreyColorABI];
 }
 
-+ (UIColor *)defaultTextColor {
-	
-	
-	return [UIColor colorWithRed:34.0/255.0f green:17.0/255.0f blue:0.0f/255.0f alpha:1.0];
-	
-}
+
 
 + (UIColor *)defaultSeparatorColor {
 	
@@ -127,6 +122,11 @@
 + (UIColor *)lightGreyColorABI {
 	
 	return [UIColor colorWithHexString:HEX_COLOR_CODE_333333_LIGHTGREY];
+}
+
++ (UIColor *)defaultTextColor {
+    
+    return [UIColor darkGreyColorABI];
 }
 
 + (UIColor *)colorForIncentiveInPercentage:(CGFloat)multiplier {
