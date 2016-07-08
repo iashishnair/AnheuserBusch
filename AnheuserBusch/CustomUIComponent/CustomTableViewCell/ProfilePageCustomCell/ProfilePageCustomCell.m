@@ -49,6 +49,18 @@
     
     _index = index;
     
+    [[self.peerRankingButton layer] setBorderWidth:1.5f];
+    self.peerRankingButton.layer.borderColor = [UIColor blueColorABI].CGColor ;
+    self.peerRankingButton.backgroundColor = [UIColor whiteColor];
+    self.kPIDetailsButton.backgroundColor = [UIColor blueColorABI];
+    self.peerRankingButton.layer.cornerRadius = 3; // this value vary as per your desire
+    self.peerRankingButton.clipsToBounds = YES;
+    self.kPIDetailsButton.layer.cornerRadius = 3; // this value vary as per your desire
+    self.kPIDetailsButton.clipsToBounds = YES;
+    [self configureUI];
+    
+    //[self.peerRankingButton layer]s
+    
     if(!incentiveDataModel) return;
     
     self.incentiveDataModel = incentiveDataModel;
@@ -69,33 +81,50 @@
         self.rankNumber.text = rank;
     }
     
-    NSString *statusTitle = incentiveDataModel.statusTitle;
-    
-    if(![NSString isNULLString:statusTitle]) {
-        self.statusTitleLabel.text = statusTitle;
-    }
+//    //
     
     NSString *statusDescription = incentiveDataModel.statusDescription;
     
     if(![NSString isNULLString:statusDescription]) {
-        self.statusDescriptionLabel.text = statusDescription;
+        self.statusTitleLabel .text = statusDescription;
     }
     
     if(self.chartView) {
-        self.chartView.backgroundColor = [UIColor clearColor];
-        
-        self.incentivesProgressBarView.barBackGroundColor = [UIColor whiteColor];
+		
+        self.incentivesProgressBarView.barBackGroundColor = [UIColor lightGreyColorABI];
         self.incentivesProgressBarView.progressColor = [UIColor greenColor];
         self.incentivesProgressBarView.minRange = self.incentiveDataModel.minIncentiveRange;
         self.incentivesProgressBarView.maxRange = self.incentiveDataModel.maxIncentiveRange;
         self.incentivesProgressBarView.progressAmount = self.incentiveDataModel.overAllIncentiveProgress;
-        self.incentivesProgressBarView.unitName = @"point  ";
-        self.incentivesProgressBarView.layer.cornerRadius = 3;
-        self.incentivesProgressBarView.clipsToBounds = YES;
-        self.incentivesProgressBarView.layer.borderWidth = 1.0;
-        self.incentivesProgressBarView.layer.borderColor = [UIColor lightGrayColor].CGColor;
+        self.incentivesProgressBarView.unitName = self.incentiveDataModel.progressUnit;
+        self.incentivesProgressBarView.unitTextFont = [UIFont boldSystemFontOfSize:16];
+        self.incentivesProgressBarView.descriptionTextColor = [UIColor blackColor];
+        self.incentivesProgressBarView.descriptionTextFont = [UIFont systemFontOfSize:12];
 
+        NSString *statusTitle = incentiveDataModel.statusTitle;
+        if(![NSString isNULLString:statusTitle]) {
+            self.incentivesProgressBarView.descriptionText = statusTitle;
+        }
     }
+}
+
+-(void)configureUI {
+    
+    self.IncentiveName.font =  INCENTIVE_NAME_FONT_SIZE;
+    self.statusTitleLabel.font = STATUS_TITLE_FONT_SIZE;
+    
+    [[self.peerRankingButton layer] setBorderWidth:1.5f];
+    self.peerRankingButton.layer.borderColor = [UIColor defaultABIThemeBlueColor].CGColor ;
+    self.peerRankingButton.backgroundColor = [UIColor whiteColor];
+    self.kPIDetailsButton.backgroundColor = [UIColor blueColorABI];
+    self.peerRankingButton.layer.cornerRadius = 3; // this value vary as per your desire
+    self.peerRankingButton.clipsToBounds = YES;
+    self.kPIDetailsButton.layer.cornerRadius = 3; // this value vary as per your desire
+    self.kPIDetailsButton.clipsToBounds = YES;
+    
+    [self.peerRankingButton setTitleColor:[UIColor defaultABIThemeBlueColor] forState:UIControlStateNormal];
+    [self.kPIDetailsButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
 }
 
 #pragma mark - IB Action

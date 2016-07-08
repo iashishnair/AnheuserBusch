@@ -40,10 +40,10 @@
         incentiveDataModel.overAllIncentiveProgress = [obj valueForKeySafe:@"overAllIncentiveProgress"];
         incentiveDataModel.minIncentiveRange = [obj valueForKeySafe:@"minIncentiveRange"];
         incentiveDataModel.maxIncentiveRange = [obj valueForKeySafe:@"maxIncentiveRange"];
-        incentiveDataModel.progressunit = [obj valueForKeySafe:@"progressunit"];
+        incentiveDataModel.progressUnit = [obj valueForKeySafe:@"progressunit"];
         
         
-        NSMutableArray *kpis = [self populateKIPS:[obj valueForKeySafe:@"kpis"]];
+        NSMutableArray *kpis = [self populateKPIS:[obj valueForKeySafe:@"kpis"]];
         
         if(kpis.count)
             incentiveDataModel.kpisDetails = kpis;
@@ -57,12 +57,13 @@
 -(ProfilePageDataModel *)profileInfoPopulate {
     
     ProfilePageDataModel *dataModel = [ProfilePageDataModel new];
-    dataModel.userName = @"Jack Peterson";
+    dataModel.userName = [NSUserDefaults readUserDefault:@"username"];
+    dataModel.userImageURLString = [NSUserDefaults readUserDefault:@"standardEmailPhotoUrl"];
     
     return dataModel;
 }
 
-- (NSMutableArray *)populateKIPS:(NSArray *) kpiDetails {
+- (NSMutableArray *)populateKPIS:(NSArray *) kpiDetails {
     
     NSMutableArray *kpis = [NSMutableArray array];
     
@@ -75,7 +76,12 @@
         kpisDetailsDataModel.progress = [kip valueForKeySafe:@"progress"];
         kpisDetailsDataModel.progressUnit = [kip valueForKeySafe:@"progressunit"];
         [kpis addObject:kpisDetailsDataModel];
+        
+        
     }
     return kpis;
 }
+
+
+
 @end

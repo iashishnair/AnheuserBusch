@@ -7,7 +7,7 @@
 //
 
 #import "OnBoardingViewController.h"
-#import "InternalViewController.h"
+#import "OnBoardingInternalPageViewController.h"
 #import "Constants.h"
 #import "LoginViewController.h"
 
@@ -36,8 +36,7 @@
     [super viewDidLoad];
     
     self.navigationController.navigationBarHidden = YES;
-    [self setOnboardingIsShown];
-    
+	
     self.pageTitles = [[NSMutableArray alloc]initWithObjects:@"First Page  First Page  First Page  First Page  First Page  First Page  First Page  First Page  First Page  First Page",@"Second Page",@"Third Page",@"Fourth Page", nil];
     self.pageImages = [[NSMutableArray alloc]initWithObjects:@"Page1.jpg",@"Page2.jpeg",@"Page3.png",@"Page4.png", nil];
     self.pageHeadings = [[NSMutableArray alloc]initWithObjects:@"Heading 1",@"Heading 2",@"Heading 3",@"Heading 4", nil];
@@ -65,11 +64,6 @@
 
 #pragma mark - Private Method
 
-- (void)setOnboardingIsShown {
-    
-    [NSUserDefaults saveObject:@(YES) forKey:kOnboardingIsShown];
-    
-}
 
 - (void)configureUI {
     
@@ -100,7 +94,7 @@
 
 - (void)pagesDataSource {
     
-    InternalViewController *internalViewController = [[InternalViewController alloc]init];
+    OnBoardingInternalPageViewController *internalViewController = [[OnBoardingInternalPageViewController alloc]init];
     
     if(internalViewController) {
         
@@ -108,7 +102,7 @@
     }
 }
 
-- (InternalViewController *)viewControllerAtIndex:(NSUInteger)index {
+- (OnBoardingInternalPageViewController *)viewControllerAtIndex:(NSUInteger)index {
     
     
     if (([self.pageTitles count] == 0) || (index >= [self.pageTitles count])) {
@@ -116,7 +110,7 @@
     }
     
     // Create a new view controller and pass suitable data.
-    InternalViewController *internalViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"InternalViewController"];
+    OnBoardingInternalPageViewController *internalViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"InternalViewController"];
     internalViewController.imageFile = self.pageImages[index];
     internalViewController.titleText = self.pageTitles[index];
     internalViewController.pageIndex = index;
@@ -138,7 +132,7 @@
             _pageViewController.dataSource = self;
      
             
-            InternalViewController *startingViewController = [self viewControllerAtIndex:0];
+            OnBoardingInternalPageViewController *startingViewController = [self viewControllerAtIndex:0];
             NSArray *viewControllers = @[startingViewController];
             [_pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:NULL];
             
@@ -170,7 +164,7 @@
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController
       viewControllerBeforeViewController:(UIViewController *)viewController {
     
-    NSUInteger index = ((InternalViewController*) viewController).pageIndex;
+    NSUInteger index = ((OnBoardingInternalPageViewController*) viewController).pageIndex;
     
     if ((index == 0) || (index == NSNotFound)) {
         return nil;
@@ -183,7 +177,7 @@
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
     
-    NSUInteger index = ((InternalViewController*) viewController).pageIndex;
+    NSUInteger index = ((OnBoardingInternalPageViewController*) viewController).pageIndex;
     
     if (index == NSNotFound) {
         return nil;

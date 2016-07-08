@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseChildViewController.h"
+#import "BaseViewController.h"
 #import "IncentiveDataModel.h"
 
-@interface KPIRankingViewController : BaseChildViewController
+@interface KPIRankingViewController : BaseViewController
 
 @property (strong, nonatomic)  IncentiveDataModel *incentiveDataModel;
 

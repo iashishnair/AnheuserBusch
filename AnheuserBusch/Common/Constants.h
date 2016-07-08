@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "NSObject+HelperUtil.h"
 #import "UIView+Common.h"
+#import "NSLayoutConstraint+LayoutConstraintHelper.h"
 
 typedef struct {
     
@@ -82,9 +83,6 @@ static NSString * const OAuthRedirectURI        = @"sfdc://success";
 #define kOnboardingIsShown  @"OnboardingIsShown"
 
 
-static NSString * kClassNameLoginViewController = @"LoginViewController";
-static NSString * kClassNameLeaderBoardViewController = @"LeaderBoardViewController";
-static NSString * kClassNameDashBoardViewController = @"DashBoardViewController";
 
 //StoryBoard ID
 static NSString * kStoryBoardIDPeerRankingDetailViewController = @"PeerRankingDetailViewController";
@@ -92,10 +90,6 @@ static NSString * kStoryBoardIDKPIRankingViewController = @"KPIRankingViewContro
 static NSString * kStoryBoardIDAnnouncementsViewController = @"AnnouncementsViewController";
 
 
-//
-static NSString * kPageTitleLoginViewController = @"LoginView";
-static NSString * kPageTitleLeaderBoardViewController = @"LeaderBoard";
-static NSString * kPageTitleDashBoardViewController = @"DashBoard";
 
 static NSString * kName = @"Name";
 static NSString * kRank = @"Rank";
@@ -109,5 +103,39 @@ static NSString * taskTableHeading = @"My Tasks For This Week";
 //Peer Ranking Details View Controller
 
 static NSString * viewHeading = @"Overall KPI ranking";
+
+
+	//--------------------------- SLIDE MENU CONSTANT ---------------------------
+#define DEFAULT_CELL_CORNER_RADIUS 4.0f
+#define DEFAULT_CELL_PADDING 10.0F
+
+
+//Font
+#define SLIDE_MENU_USER_NAME_TEXT_FONT [UIFont systemFontOfSize:18]
+#define SLIDE_MENU_USER_NAME_TEXT_COLOR [UIColor darkGreyColorABI]
+
+#define SLIDE_MENU_SELECTED_LABEL_TEXT_FONT [UIFont systemFontOfSize:18]
+#define SLIDE_MENU_DESELECTED_LABEL_TEXT_FONT [UIFont systemFontOfSize:18]
+//Color
+#define SLIDE_MENU_SEPERATOR_LINE_COLOR [UIColor redColor]
+
+#define SLIDE_MENU_SELECTED_LABEL_TEXT_COLOR [UIColor darkGreyColorABI]
+#define SLIDE_MENU_DESELECTED_LABEL_TEXT_COLOR [UIColor blueColorABI]
+
+#define SLIDE_MENU_SELECTED_CELL_BG_COLOR [UIColor lightGreyColorABI]
+#define SLIDE_MENU_DESELECTED_CELL_BG_COLOR [UIColor whiteColor]
+
+	//--------------------------- HEX COLOR CODE ---------------------------
+
+#define HEX_COLOR_CODE_0e71b9_BLUE   @"#0e71b9" //(14,113,185)
+#define HEX_COLOR_CODE_7ad2f7_SKY   @"#7ad2f7" //(122,210,247)
+#define HEX_COLOR_CODE_ffffff_WHITE   @"#ffffff"
+#define HEX_COLOR_CODE_000000_BLACK  @"#000000"
+
+#define HEX_COLOR_CODE_8dba00_GREEN  @"#8dba00" //(141,186,0)
+#define HEX_COLOR_CODE_fe9611_ORANGE  @"#fe9611" //(254,150,17)
+#define HEX_COLOR_CODE_f25957_OFFRED  @"#f25957" //(242,89,87)
+#define HEX_COLOR_CODE_cccccc_DARK_GREY @"#333333" //(204,204,204)
+#define HEX_COLOR_CODE_333333_LIGHTGREY  @"#cccccc" //(51,51,51)
 
 

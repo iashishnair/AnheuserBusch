@@ -31,22 +31,8 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
     self.view.backgroundColor = [UIColor whiteColor];
-	
     self.navigationController.navigationBarHidden = YES;
-
-    
-//    // Open It for Sales force Login
-//    if(![SFUserAccountManager sharedInstance].isCurrentUserAnonymous || ![SFUserAccountManager sharedInstance].currentUser.credentials.accessToken ) {
-//        
-//        
-//        [self initialishedSalesForce];
-//    }
-//    else {
-//        
-//        // [[SalesforceSDKManager sharedManager] launch];
-//    }
 }
 
 
@@ -91,13 +77,8 @@
         //
         
         [weakSelf log:SFLogLevelInfo format:@"Post-launch: launch actions taken: %@", [SalesforceSDKManager launchActionsStringRepresentation:launchActionList]];
-        
         [weakSelf setupRootViewController];
-        
-        
-        //        weakSelf.menuDataSource = nil;
-        //        weakSelf.isLogedIn = YES;
-        //        [weakSelf.customSlideMenu.tableView reloadData];
+		
         
     };
     

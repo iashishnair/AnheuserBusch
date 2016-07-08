@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PageBaseViewController.h"
+#import "BaseViewController.h"
 
-@interface AnnouncementsViewController : PageBaseViewController
+@interface AnnouncementsViewController : BaseViewController
 
 @end

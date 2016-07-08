@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PageBaseViewController.h"
+#import "BaseViewController.h"
 
-@interface ProfileViewController : PageBaseViewController <UITableViewDelegate, UITableViewDataSource>
+@interface ProfileViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *incentiveTableView;
 

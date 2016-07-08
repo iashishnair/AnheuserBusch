@@ -13,14 +13,19 @@
 #import "PeerRankingDetailViewController.h"
 #import "KPIRankingViewController.h"
 #import "ProfilePageDataModel.h"
+#import "Constants.h"
+#import "UIView+Common.h"
 
 @interface ProfileViewController () <ProfilePageCustomCellDelegate>
 
+@property (weak, nonatomic) IBOutlet UIImageView *userImageVIew;
 @property (weak, nonatomic) IBOutlet UILabel *headingLabel;
-@property (strong, nonatomic) NSArray *incentiveDetailsDataSource;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
+@property (weak, nonatomic) IBOutlet UIView *profileDetailsView;
+
 @property (strong, nonatomic) id <ProfileViewProtocol> presenter;
 @property (strong, nonatomic) ProfilePageDataModel *profileDataModel;
-@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
+@property (strong, nonatomic) NSArray *incentiveDetailsDataSource;
 
 
 @end
@@ -44,10 +49,13 @@
 #pragma mark- private methods
 
 -(void)configureUI {
-  
+    
+    self.incentiveTableView.backgroundColor = [UIColor defaultPageBGColor];
+    self.headingLabel.font = PROFILE_INCENTIVE_TABLE_HEADING_FONT_SIZE;
     self.title = MenuItems[0];
     self.headingLabel.text = @"My Incentives";
     self.userNameLabel.text = self.profileDataModel.userName;
+    
 }
 
 -(void)dealloc {
@@ -83,15 +91,30 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.incentiveDetailsDataSource.count;
+    return 1;
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    
+    return  self.incentiveDetailsDataSource.count;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    
+    return 10.0f;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.frame.size.width, 10.0)];
+    headerView.backgroundColor = [UIColor clearColor];
+    return headerView;
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *cellIdentifier = @"myCell";
     
     ProfilePageCustomCell *cell = (ProfilePageCustomCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-   
+    
     if (cell == nil) {
         
         cell = [[ProfilePageCustomCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
@@ -99,20 +122,25 @@
     
     cell.delegate = self;
     
-        IncentiveDataModel *incentiveDataModel = (IncentiveDataModel *) [NSArray objectFromArray:self.incentiveDetailsDataSource atIndex:indexPath.row];
+    IncentiveDataModel *incentiveDataModel = (IncentiveDataModel *) [NSArray objectFromArray:self.incentiveDetailsDataSource atIndex:indexPath.section];
+    
+    if(incentiveDataModel) {
         
-        if(incentiveDataModel) {
-            
-            [cell updateCell:incentiveDataModel atIndex:indexPath.row];
-        }
+        [cell updateCell:incentiveDataModel atIndex:indexPath.section];
+    }
+    
+    UIView *view = [[UIView alloc]initWithFrame:cell.bounds];
+    view.backgroundColor = [UIColor whiteColor];
+    view.layer.cornerRadius = 5.0f;
+    cell.backgroundView = view;
+    cell.backgroundColor = [UIColor clearColor];
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
-#pragma mark - IBAction
+#pragma mark - IBAction <ProfilePageCustomCellDelegate>
 
-#pragma mark ProfilePageCustomCellDelegate
 
 - (void)clickedPeerRanking:(UIButton *)sender atIndex:(NSUInteger)index {
     
@@ -128,7 +156,7 @@
     IncentiveDataModel *incentiveDataModel = [NSArray objectFromArray:self.incentiveDetailsDataSource atIndex:index];
     
     if(incentiveDataModel) {
-       
+        
         KPIRankingViewController *kPIRankingViewController = (KPIRankingViewController *)[UIViewController instantiateViewControllerWithIdentifier:kStoryBoardIDKPIRankingViewController];
         kPIRankingViewController.incentiveDataModel = incentiveDataModel;
         
@@ -136,4 +164,6 @@
         
     }
 }
+
+
 @end

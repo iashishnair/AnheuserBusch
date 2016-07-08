@@ -16,24 +16,20 @@
     NSArray *segmentTitles;
 }
 
-@property (weak, nonatomic) IBOutlet UILabel *hintTextLabel;
-@property (weak, nonatomic) IBOutlet UIView *pageViewControllerContainerView;
 
-@property (strong, nonatomic) GUITabPagerViewController *customPageManagerViewController;
+@property (strong, nonatomic) GUITabPagerViewController *tabPageViewController;
 @property (strong, nonatomic) NSArray *kpiDetails;
 
 @end
 
 @implementation KPIRankingViewController
 
-
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     segmentTitles = @[@"Cstore/PL 1", @"Large Format", @"On Premises"];
     
-    [self customPageManagerViewController];
+    [self tabPageViewController];
     [self configureUI];
 }
 
@@ -44,44 +40,43 @@
 
 - (void)dealloc {
     
-    _customPageManagerViewController = nil;
+    _tabPageViewController = nil;
 }
 
 #pragma mark - Private Method
 
 - (void) configureUI {
     
-    [self.pageViewControllerContainerView addSubview:self.customPageManagerViewController.view];
+    self.title = _incentiveDataModel.incentiveName;
     
-    CGRect rect = _pageViewControllerContainerView.bounds;
-    self.customPageManagerViewController.view.frame = rect;
-       //[self addConstrains];
-    
-    
-    [self.customPageManagerViewController reloadData];
+    [self addChildViewController:self.tabPageViewController];
+    [self.view addSubview:self.tabPageViewController.view];
+    [self didMoveToParentViewController:self.tabPageViewController];
+    [self addConstrains];
+    [self.tabPageViewController reloadData];
 }
+
 
 - (void)addConstrains {
     
-    NSDictionary *views = @{@"customPageManagerViewController": self.customPageManagerViewController.view};
+    NSDictionary *views = @{@"tabPageViewController": self.tabPageViewController.view};
     
-    [self.pageViewControllerContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[customPageManagerViewController]-10-|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tabPageViewController]|" options:0 metrics:nil views:views]];
     
-    [self.pageViewControllerContainerView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[customPageManagerViewController]|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[tabPageViewController]|" options:0 metrics:nil views:views]];
 }
 
-- (GUITabPagerViewController *)customPageManagerViewController{
+- (GUITabPagerViewController *)tabPageViewController{
     
-    if(!_customPageManagerViewController) {
+    if(!_tabPageViewController) {
         
-        _customPageManagerViewController = [[GUITabPagerViewController alloc] init];
-        
-        //_customPageManagerViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
-        [_customPageManagerViewController setDataSource:self];
-        [_customPageManagerViewController setDelegate:self];
+        _tabPageViewController = [[GUITabPagerViewController alloc] init];
+        _tabPageViewController.view.translatesAutoresizingMaskIntoConstraints = NO;
+        [_tabPageViewController setDataSource:self];
+        [_tabPageViewController setDelegate:self];
     }
     
-    return _customPageManagerViewController;
+    return _tabPageViewController;
 }
 
 - (CStorePLViewConroller *)customViewConroller {
@@ -106,7 +101,8 @@
 #pragma mark - Tab Pager Data Source
 
 - (NSInteger)numberOfViewControllers {
-    return 3;
+   
+    return segmentTitles.count;
 }
 
 - (UIViewController *)viewControllerForIndex:(NSInteger)index {
@@ -114,39 +110,29 @@
     return [self customViewConroller];
 }
 
-
-// Implement either viewForTabAtIndex: or titleForTabAtIndex:
-//- (UIView *)viewForTabAtIndex:(NSInteger)index {
-//  return <#UIView#>;
-//}
-
 - (NSString *)titleForTabAtIndex:(NSInteger)index {
     return segmentTitles[index];
 }
 
-- (CGFloat)tabHeight {
-    // Default: 44.0f
-    return 50.0f;
-}
-
 - (UIColor *)tabColor {
-    // Default: [UIColor orangeColor];
-    return [UIColor blackColor];
+    return [UIColor cyanColorABI];
 }
 
 - (UIColor *)tabBackgroundColor {
-    // Default: [UIColor colorWithWhite:0.95f alpha:1.0f];
-    return [UIColor whiteColor];
+    return [UIColor defaultABIThemeBlueColor];
 }
 
 - (UIFont *)titleFont {
-    // Default: [UIFont fontWithName:@"HelveticaNeue-Thin" size:20.0f];
     return [UIFont fontWithName:@"HelveticaNeue-Bold" size:15.0f];
 }
 
 - (UIColor *)titleColor {
-    // Default: [UIColor blackColor];
-    return [UIColor darkGrayColor];
+    return [UIColor whiteColorABI];
+}
+
+- (UIView *)hintView {
+    
+    return [UIView loadViewFromNIB:@"IncentiveHintView"];
 }
 
 #pragma mark - Tab Pager Delegate

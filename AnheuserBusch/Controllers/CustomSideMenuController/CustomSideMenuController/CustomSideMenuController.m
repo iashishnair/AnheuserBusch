@@ -8,8 +8,7 @@
 
 #import "CustomSideMenuController.h"
 #import <QuartzCore/QuartzCore.h>
-
-
+#import "MenuListViewController.h"
 
 typedef NS_ENUM(NSInteger, MVYSideMenuAction){
 	MVYSideMenuOpen,
@@ -24,8 +23,8 @@ typedef struct {
 
 @interface CustomSideMenuController () <UIGestureRecognizerDelegate>
 
-@property (nonatomic, strong) UIViewController *menuViewController;
-@property (nonatomic, strong) UIViewController *contentViewController;
+@property (strong, nonatomic) UIViewController *menuViewController;
+@property (strong, nonatomic) UIViewController *contentViewController;
 @property (strong, nonatomic) UIView *contentContainerView;
 @property (strong, nonatomic) UIView *menuContainerView;
 @property (strong, nonatomic) UIView *opacityView;
@@ -54,7 +53,7 @@ typedef struct {
 					  contentViewController:contentViewController
 									options:[[CustomSideMenuOptions alloc] init]];
 }
-
+	//MenuListViewController
 - (id)initWithMenuViewController:(UIViewController *)menuViewController
 		   contentViewController:(UIViewController *)contentViewController
 						 options:(CustomSideMenuOptions *)options {
@@ -77,15 +76,12 @@ typedef struct {
 	[self setUpContentViewController:_contentViewController];
 	
 	[self addGestures];
-    
- 
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
     
-    self.view.backgroundColor = [UIColor lightGrayColor];
 }
 - (void)didReceiveMemoryWarning
 {
@@ -101,7 +97,7 @@ typedef struct {
     }
 }
 
-- (NSUInteger)supportedInterfaceOrientations {
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
     if (self.contentViewController) {
         return [self.contentViewController supportedInterfaceOrientations];
     } else {
@@ -191,6 +187,12 @@ typedef struct {
 - (void)openMenu {
 	
 	[self openMenuWithVelocity:0.0f];
+    
+	if([_menuViewController isKindOfClass:[MenuListViewController class]]) {
+		
+		MenuListViewController *vc = (MenuListViewController *)_menuViewController;
+		[vc reloadMenuList];
+	}
 }
 
 - (void)toggleMenu {
@@ -264,14 +266,12 @@ typedef struct {
 }
 
 - (void)addGestures {
-    UIWindow *currentWindow = [UIApplication sharedApplication].keyWindow;
 
     if (!_panGesture) {
         _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGesture:)];
 		[_panGesture setDelegate:self];
         
-        [currentWindow addGestureRecognizer:_panGesture];
-//        [self.view addGestureRecognizer:_panGesture];
+[self.view addGestureRecognizer:_panGesture];
     }
     
     self.view.backgroundColor = [UIColor redColor];
@@ -279,9 +279,8 @@ typedef struct {
 	if (!_tapGesture) {
         _tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(toggleMenu)];
         [_tapGesture setDelegate:self];
-        [currentWindow addGestureRecognizer:_tapGesture];
 
-		//[self.view addGestureRecognizer:_tapGesture];
+		[self.view addGestureRecognizer:_tapGesture];
     }
 }
 

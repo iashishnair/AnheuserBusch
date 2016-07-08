@@ -11,6 +11,8 @@
 @interface ProfilePageDataModel : NSObject
 
 @property (strong, nonatomic) NSString *userName;
+@property (strong, nonatomic) NSString *userImageURLString;
+
 @property (strong, nonatomic) NSString *imageName;
 @property (strong, nonatomic) NSArray *badgesArray;
 

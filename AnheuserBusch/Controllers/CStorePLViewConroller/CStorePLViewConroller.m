@@ -76,6 +76,7 @@
         _tableView.delegate = self;
         _tableView.translatesAutoresizingMaskIntoConstraints = NO;
         _tableView.separatorColor = [UIColor clearColor];
+        _tableView.backgroundColor = [UIColor clearColor];
     }
     
     return _tableView;
@@ -84,15 +85,26 @@
 
 #pragma mark - TableView Datasource
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    return 120.0f;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     return self.kpiDetsils.count;
+//return 1;
 }
+
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+//{
+//    
+//    return self.kpiDetsils.count;
+//}
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+//    
+//    return 10.0f;
+//}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    return 140.0f;
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -110,12 +122,10 @@
     
     if(kpisDetailsDataModel) {
         
-        NSLog(@"%@",kpisDetailsDataModel);
         
         cell.kpiName = kpisDetailsDataModel.kpiName;
         
-        cell.incentiveBarChartView.barBackGroundColor = [UIColor blueColor];
-        cell.incentiveBarChartView.progressColor = [UIColor yellowColor];
+        cell.incentiveBarChartView.barBackGroundColor = [UIColor lightGreyColorABI];
         cell.incentiveBarChartView.minRange = kpisDetailsDataModel.minRange;
         cell.incentiveBarChartView.maxRange = kpisDetailsDataModel.maxRange;
         cell.incentiveBarChartView.progressAmount = kpisDetailsDataModel.progress;
@@ -123,7 +133,12 @@
 
     }
 
+    cell.backGroundViewColor = [UIColor whiteColorABI];
+    cell.seperatorColorColor = [UIColor lightGreyColorABI];
+    cell.titleTextColor = [UIColor defaultTextColor];
 
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.backgroundColor = [UIColor clearColor];
     return cell;
 }
 

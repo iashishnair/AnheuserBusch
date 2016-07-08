@@ -19,12 +19,16 @@
 @property (nonatomic, strong) NSNumber *progressAmount;
 @property (nonatomic, strong) NSNumber *progressAmountInPercent;
 @property (nonatomic, strong) NSString *unitName;
+@property (nonatomic, strong) NSString *descriptionText;
 
 @property (nonatomic, strong) UIColor *barBackGroundColor;
 @property (nonatomic, strong) UIColor *progressColor;
 
 @property (nonatomic, strong) UIColor *unitTextColor;
 @property (nonatomic, strong) UIFont *unitTextFont;
+
+@property (nonatomic, strong) UIColor *descriptionTextColor;
+@property (nonatomic, strong) UIFont *descriptionTextFont;
 
 - (instancetype)initWithBarType:(NSInteger)type;
 @end

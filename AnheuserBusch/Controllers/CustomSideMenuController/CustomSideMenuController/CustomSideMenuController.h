@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "CustomSideMenuOptions.h"
-
 /** View controller that allow  */
 @interface CustomSideMenuController : UIViewController
 

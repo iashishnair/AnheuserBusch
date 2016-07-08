@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface MenuListTableViewListCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *menuIconimageView;
-@property (weak, nonatomic) IBOutlet UILabel *menuTitleLabel;
-
+@property (strong, nonatomic)  UIImageView *menuIconimageView, *seperatorImageView;
+@property (strong, nonatomic)  UILabel *menuTitleLabel;
+- (void)updateOnSelection:(BOOL)selected ;
 @end

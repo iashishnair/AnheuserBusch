@@ -13,5 +13,8 @@
 
 @property (nonatomic, strong) IncentivesProgressBarView *incentiveBarChartView;
 @property (nonatomic, strong) NSString *kpiName;
+@property (nonatomic, strong) UIColor *backGroundViewColor;
+@property (nonatomic, strong) UIColor *seperatorColorColor;
+@property (nonatomic, strong) UIColor *titleTextColor;
 
 @end

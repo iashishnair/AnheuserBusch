@@ -157,17 +157,31 @@
     return (nibs && nibs.count) ? [nibs firstObject] : nil;
 }
 
++ (instancetype)loadViewFromNIB:(NSString *)nibName {
+    
+    NSArray * nibs =  [[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil];
+    
+    return (nibs && nibs.count) ? [nibs firstObject] : nil;
+}
+
 /*!
  *  Add NSLay
  *
  *
  */
+-(void)addConstraintsWithVisualFormat:(NSString *)format options:(NSLayoutFormatOptions)opts metrics:(nullable NSDictionary<NSString *,id> *)metrics views:(NSDictionary<NSString *, id> *)views {
+	
+	
+	if(views == nil || format.length == 0 ) return;
+	
+	[self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:format options:opts metrics:metrics views:views]];
+}
+
 - (void)fitToParentView:(nullable UIView * ) toItem {
     
     if(!toItem) return;
     
     
-        toItem.translatesAutoresizingMaskIntoConstraints = NO;
     [toItem addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[selfView]|" options:0 metrics:nil views:@{@"selfView": self}]];
     
     [toItem addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[selfView]|" options:0 metrics:nil views:@{@"selfView": self}]];
@@ -188,12 +202,14 @@
     [toItem addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:toItem attribute:NSLayoutAttributeHeight multiplier:multiplier constant:0]];
 }
 
-- (void)centerXToItem:(id)toItem   {
+- (void)centerXToParent:(id)toItem   {
     
     if(!toItem) return;
     
     [toItem addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:toItem attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
 }
+
+
 
 @end
 

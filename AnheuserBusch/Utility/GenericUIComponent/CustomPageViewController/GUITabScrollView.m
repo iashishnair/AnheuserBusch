@@ -148,13 +148,13 @@
         animatedDuration = 0.0f;
     }
     
-    CGFloat x = [[self tabViews][0] frame].origin.x - 5;
+    CGFloat x = [self.tabViews[0] frame].origin.x - 5;
     
     for (int i = 0; i < index; i++) {
-        x += [[self tabViews][i] frame].size.width + 10;
+        x += [self.tabViews[i] frame].size.width + 10;
     }
     
-    CGFloat w = [[self tabViews][index] frame].size.width + 10;
+    CGFloat w = [self.tabViews[index] frame].size.width + 10;
     [UIView animateWithDuration:animatedDuration
                      animations:^{
                          CGFloat p = x - (self.frame.size.width - w) / 2;
@@ -179,13 +179,13 @@
 #pragma mark - Private Methods
 
 - (void)_initTabbatAtIndex:(NSInteger)index {
-    CGFloat x = [[self tabViews][0] frame].origin.x - 5;
+    CGFloat x = [self.tabViews[0] frame].origin.x - 5;
     
     for (int i = 0; i < index; i++) {
-        x += [[self tabViews][i] frame].size.width + 10;
+        x += [self.tabViews[i] frame].size.width + 10;
     }
     
-    CGFloat w = [[self tabViews][index] frame].size.width + 10;
+    CGFloat w = [self.tabViews[index] frame].size.width + 10;
     
     CGFloat p = x - (self.frame.size.width - w) / 2;
     CGFloat min = 0;

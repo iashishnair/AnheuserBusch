@@ -1,5 +1,5 @@
 //
-//  RankingCarouselView.h
+//  PageBaseViewController.h
 //  AnheuserBusch
 //
 //  Created by Prsenjit Goswami on 11/06/16.
@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Constants.h"
 
-@interface RankingCarouselView : UIView
+@interface BaseViewController : UIViewController
 
-@property (nonatomic, strong) NSArray *rankingDataSources;
 @end

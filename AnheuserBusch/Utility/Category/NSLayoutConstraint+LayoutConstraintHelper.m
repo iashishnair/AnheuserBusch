@@ -78,7 +78,7 @@
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:anItem attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:toItem attribute:NSLayoutAttributeCenterY multiplier:1 constant:0];
     
     
-    [toItem addConstraint:constraint];
+    //[toItem addConstraint:constraint];
     return constraint;
     
 }
@@ -90,7 +90,7 @@
     
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:anItem attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:toItem attribute:NSLayoutAttributeCenterX multiplier:1 constant:0];
     
-    [toItem addConstraint:constraint];
+ //   [toItem addConstraint:constraint];
     
     return constraint;
 }
